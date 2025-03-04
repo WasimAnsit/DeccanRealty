@@ -2492,4 +2492,6 @@
   inherits: false;
 }
 @property --tw-duration {
-  synta
+  syntax: "*";
+  inherits: false;
+}
