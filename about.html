@@ -1,269 +1,217 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About DECCANREALTY.COM - Call Now : +91 7303062845</title>
-  <meta name="keywords" content="Free property ads posting sites">
-  <meta name="description" content="Free property ads posting sites, No matter you are renting, selling or buying a property in Delhi NCR We are here for you to help!">
-  <link rel="canonical" href="https://www.dncrproperty.com/about.html">
-  <meta property="og:title" content="dncrproperty.com">
-  <meta property="og:site_name" content="dncrproperty.com">
-  <meta property="og:type" content="website">
-  <meta property="og:description" content="dncrproperty.com is your trusted partner in the Real Estate sector of Delhi NCR.">
-  <meta name="author" content="dncrproperty.com">
-  <meta name="googlebot" content="index, follow">
-  <meta name="robots" content="index, follow">
-  <meta name="distribution" content="INDIA">
-  <meta name="revisit-after" content="3 days">
-  <meta name="rating" content="general">
-  <meta name="language" content="en-us">
-  <meta name="document-type" content="Public">
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="script.js" defer></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Listing Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('active');
+        }
+    </script>
+    <style>
+        .nav-gradient {
+            background: linear-gradient(to right, #0A1128, #1A2B4A);
+        }
+    </style>
 </head>
+<body class="bg-white">
+<!-- Navigation -->
+<nav class="nav-gradient text-white fixed top-0 left-0 right-0 z-50 bg-[#0B0F2F]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between py-5">
+          <!-- Increased Logo Size -->
+          <div class="flex items-center">
+              <img class="h-20 w-20 rounded-full object-contain" 
+                   src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN 1.svg" 
+                   alt="Logo">
+          </div>
 
-<body class="bg-gray-50">
-  <!-- Header -->
-  <header class="bg-white shadow-md">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-      <div class="w-40">
-        <img src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN.png" alt="Deccan Realty Logo" class="w-full">
+          <!-- Navigation Links -->
+          <div class="hidden md:flex space-x-6 text-lg font-medium">
+              <a href="#" class="hover:text-orange-500 transition">Home</a>
+              <a href="#" class="hover:text-orange-500 transition">Contact</a>
+              <a href="#" class="hover:text-orange-500 transition">FAQ</a>
+              <a href="#" class="hover:text-orange-500 transition">Career</a>
+              <a href="#" class="hover:text-orange-500 transition">Home Loan</a>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+              <button id="menu-icon" onclick="toggleMobileMenu()" 
+                      class="p-2 rounded-md text-white hover:bg-blue-800 focus:outline-none">
+                  <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                  </svg>
+              </button>
+          </div>
       </div>
-      <div class="md:hidden cursor-pointer" onclick="toggleMobileMenu()">
-        <i class="fa fa-bars text-2xl"></i>
-      </div>
-      <nav class="hidden md:block"> 
-        <ul class="flex space-x-6">
-            <li><a href="index.html" class="text-gray-800 font-medium transition-colors duration-300 text-[22px] hover:text-blue-600">Home</a></li>
-            <li><a href="about.html" class="text-gray-800 font-medium transition-colors duration-300 text-[22px] hover:text-blue-600">About</a></li>
-            <li><a href="contact.html" class="text-gray-800 font-medium transition-colors duration-300 text-[22px] hover:text-blue-600">Contact</a></li>
-            <li><a href="faq.html" class="text-gray-800 font-medium transition-colors duration-300 text-[22px] hover:text-blue-600">FAQ</a></li>
-            <li><a href="homeloan.html" class="text-[#2ECC71] text-[22px] font-medium transition-colors duration-300 hover:text-green-700">Home Loan</a></li>
-
-        </ul>
-    </nav>
-    
-    
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden">
-      <ul class="bg-white px-4 py-2">
-        <li class="py-2"><a href="index.html" class="text-gray-700">Home</a></li>
-        <li class="py-2"><a href="about.html" class="text-gray-700 font-medium">About</a></li>
-        <li class="py-2"><a href="contact.html" class="text-gray-700">Contact</a></li>
-        <li class="py-2"><a href="faq.html" class="text-gray-700">FAQ</a></li>
-        <li class="py-2"><a href="careers.html" class="text-gray-700">Career</a></li>
-        <li class="py-2"><a href="homeloan.html" class="text-blue-600">Home Loan</a></li>
-      </ul>
-    </div>
-  </header>
-
-  <!-- WhatsApp icon -->
-  <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-3 rounded-full shadow-lg z-50 hover:bg-green-600 transition">
-    <i class="fa fa-whatsapp text-2xl"></i>
-  </a>
-
-  <!-- Hero Section -->
-  <div class="relative">
-    <img src="./assets/images/free_property_listing_sites.jpg" alt="dncrproperty.com-about" class="w-full h-96 object-cover">
-    <div class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 text-white px-4">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 text-center">What is deccanrealty.com All About?</h1>
-      <p class="text-xl md:text-2xl text-center max-w-3xl">deccanrealty.com is your trusted partner in the Real Estate sector of Delhi NCR.</p>
-    </div>
   </div>
 
-  <div class="container mx-auto px-4 py-12">
-    <p class="text-center text-lg mb-4">We take pride in being a unique and customer-centric platform that helps people find places they can call of their own and live in. Every day we look for better ways to serve our clients and keep ourselves as a top choice for the people of Delhi, NCR.</p>
-    <p class="text-center text-lg">Although today we indeed do more than just finding you a place to reside in. We simplify the search for a home, free from fake listings and endless site visits. Still, our business is all about<i> People and Places!</i></p>
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden bg-[#0B0F2F] px-4 pb-4">
+      <a href="#" class="block py-2 text-white hover:text-orange-500">Home</a>
+      <a href="#" class="block py-2 text-white hover:text-orange-500">Contact</a>
+      <a href="#" class="block py-2 text-white hover:text-orange-500">FAQ</a>
+      <a href="#" class="block py-2 text-white hover:text-orange-500">Career</a>
+      <a href="#" class="block py-2 text-white hover:text-orange-500">Home Loan</a>
   </div>
+</nav>
 
-  <div class="container mx-auto px-4 py-8">
-    <div class="grid md:grid-cols-2 gap-12">
-      <div class="relative">
-        <img src="./assets/images/free_property_listing_websites.png" alt="House interior" class="w-full rounded-lg shadow-lg">
-        <img src="./assets/images/free_property_ads_posting_sites.jpg" alt="House interior" class="absolute -bottom-8 -right-8 w-2/3 rounded-lg shadow-lg hidden md:block">
-      </div>
-      <div>
-        <h3 class="text-2xl font-bold text-blue-600 mb-4">About</h3>
-        <p class="mb-4">The first thing we ask everyone we meet, right after we get to know their names, is <i>"Where is your home?"</i></p>
-        <p class="mb-4">The home becomes part of people's self-definition. This is why home changes its meaning from a place to a feeling so warm!</p>
-        <p class="mb-4">It's where you can't get out of your comfy bed in the morning; a tiny toothbrush waits for you in the bathroom, your car's keys tinkle, a puppy curls up with you at the bedtime, where you catch fireflies in the lawn with your kiddos, where popsicles are always in the freezer, and where the sun comes through the window every morning.</p>
-        <p class="mb-4">See how fascinating the concept of a home is. It's human nature to want a place to belong…</p>
-        <ul class="list-disc pl-8 mb-4 text-gray-700">
-          <li class="mb-2"><i>A place that gives them Safety, Security, and Stability</i></li>
-          <li class="mb-2"><i>A place where they can be 100% themselves</i></li>
-          <li class="mb-2"><i>A place to make memories</i></li>
-          <li class="mb-2"><i>A place to set foundations for the future</i></li>
-        </ul>
-        <p>What can be more heavenly than a business that connects people and places? – This very thought made us envision our business.</p>
-      </div>
+<!-- Mobile Menu Toggle Script -->
+<script>
+function toggleMobileMenu() {
+  document.getElementById("mobile-menu").classList.toggle("hidden");
+}
+</script>
+
+<!-- Hero Section -->
+<header class="relative text-white pt-40 pb-24 bg-[#0B0F2F] min-h-[80vh] flex items-center">
+    <!-- Background Image with Overlay -->
+    <div class="absolute inset-0">
+        <img src="assets/images/headerabout.png" class="w-full h-full object-cover opacity-30">
+        <div class="absolute inset-0 bg-[#0B0F2F] opacity-50"></div> <!-- Blue Overlay -->
     </div>
 
-    <div class="mt-12">
-      <p class="mb-4">Since the time we started nesting people, till today when we have become one of the best free property listing websites in Delhi NCR, we are loyal to our customers. We love the process, and there's no going back.</p>
-      <p class="mb-4">We take pride in providing people with cherished memories that will last forever!!!</p>
-      <p class="mb-4">We love to make your journey to finding a perfect home for you a delight. We get your back from the moment you set out finding your dream home to the moment you step in with a sweet smile and say, <i>"Hello, new home!"</i></p>
-    </div>
-
-    <!-- Service Cards -->
-    <div class="mt-16">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="flex justify-center mb-4">
-            <img src="./assets/images/selling_or_buying_a_property_in_Delhi_NCR.png" alt="Service icon" class="w-16 h-16">
-          </div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3 text-center">Our Vision:</h3>
-          <p class="text-gray-700">
-            We believe a trustworthy relationship between our clients and us is vital. Therefore, we aim for an enduring and balanced relationship with our clients and shape a better future – of the Real Estate Sector in Delhi, NCR, and of the people, of course!
-          </p>
+    <!-- Right Side Image with Space Above & Below -->
+    <div class="absolute inset-y-10 right-12 w-[25%]"> 
+        <div class="relative w-full h-full">
+            <img src="assets/images/Apartments_for_sale.jpg" class="h-[85%] w-full object-cover rounded-lg opacity-80">
+            <div class="absolute inset-0 bg-[#0B0F2F] opacity-20"></div> <!-- Light Overlay -->
         </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="flex justify-center mb-4">
-            <img src="./assets/images/No_matter_you_are_renting.png" alt="Service icon" class="w-16 h-16">
-          </div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3 text-center">Our Mission:</h3>
-          <p class="text-gray-700">
-            We thrive on meeting and exceeding the property objectives of the people of Delhi, NCR, by providing clear, concise, and personalized advice through our deep understanding of the property sector. Also, we leave no stone unturned to provide you with innovative property solutions that add value to their lives and property.
-          </p>
-        </div>
-
-        <div class="bg-white p-6 rounded-lg shadow-md">
-          <div class="flex justify-center mb-4">
-            <img src="./assets/images/Home_is_where_the_heart_is.png" alt="Service icon" class="w-16 h-16">
-          </div>
-          <h3 class="text-xl font-bold text-blue-600 mb-3 text-center">Our Goal:</h3>
-          <p class="text-gray-700 mb-3">
-            To work responsibly in partnership to enhance people's life and living conditions, to be the team behind every right choice you make, and to be the partners you can rely upon in your renting, buying, or selling journey.
-          </p>
-          <p class="text-gray-700 mb-3">
-            We achieve our goals by putting data, design, technology, and one secret ingredient to use.
-          </p>
-          <p class="text-gray-700">
-            Know what the secret ingredient is? Our passion is to deliver value to our people and shareholders!
-          </p>
-        </div>
-      </div>
     </div>
 
-    <!-- Why Choose Us -->
-    <div class="mt-16 grid md:grid-cols-2 gap-12">
-      <div>
-        <h3 class="text-2xl font-bold text-blue-600 mb-6">Why Choose Us?</h3>
-        <p class="mb-4">We understand that a new home is an investment that will reap the rewards for a lifetime. Therefore, we make our happy place with our clients and give them reasons (good ones) to choose us.</p>
-        <p class="mb-4">Here is your time to know your why…</p>
-        <p class="mb-4"><span class="font-bold">Specificity:</span> Our platform is dedicated to Delhi-NCR region-based clients.</p>
-        <p class="mb-4"><span class="font-bold">Trust:</span> Trust is the main pillar of the relationship with our clients. We earn trust by proving ourselves more than just a brokerage. We don't leave our customers in the middle of nowhere. Instead, we walk with them in every step, provide transparent insights, advice, and solutions to support your financial strategies.</p>
-        <p class="mb-4"><span class="font-bold">Accessibility:</span> With our phone lines open Monday to Friday, you can reach out to us on working days between 6 am to 9 pm. Or, email us for any further assistance or concerns.</p>
-        <p class="mb-4"><span class="font-bold">Knowledge of the Locations:</span> Our team, with its best knowledge and matchless expertise, guides you about the region of Delhi, Noida, Ghaziabad, Gurugram, and Faridabad.</p>
-        <p class="mb-4"><span class="font-bold">Comprehensive services:</span> We deal in property and housing-related services and serve the people of the Region of Delhi NCR.</p>
-        <p class="mb-4"><span class="font-bold">Video-oriented Site Experience:</span> While partnering with us, you don't need to visit the site physically. You can get the whole idea of the site with our detail-oriented video.</p>
-      </div>
-      <div class="relative">
-        <img src="./assets/images/free_property_listing_websites.png" alt="House interior" class="w-full rounded-lg shadow-lg">
-        <img src="./assets/images/free_property_ads_posting_sites.jpg" alt="House interior" class="absolute -bottom-8 -left-8 w-2/3 rounded-lg shadow-lg hidden md:block">
-      </div>
+    <!-- Content -->
+    <div class="max-w-4xl mx-auto px-6 sm:px-8 lg:px-10 relative z-10">
+        <h1 class="text-6xl font-bold mb-6 leading-tight text-center sm:text-left">
+            About <span class="text-orange-500">Us</span>
+        </h1>
+        <p class="text-2xl leading-relaxed">
+            What do we do? We turn your 
+            <span class="inline-block">endless property scrolling</span> <br> 
+            <span class="font-bold relative z-20">
+                <span class="bg-[#0B0F2F] px-2">into actual</span> 
+                <span class="bg-[#0B0F2F] px-2">homeownership!</span>
+            </span>
+        </p>
     </div>
+</header>
 
-    <div class="mt-6">
-      <p><span class="font-bold">Our App:</span> Even better, you can use our app to make things a lot easier. For example, you can use filters to search, find new projects, stay up to date, manage your listings and connect with other buyers/sellers.</p>
-    </div>
-  </div>
+  
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white mt-16">
-    <div class="container mx-auto px-4 pt-12 pb-8">
-      <div class="grid md:grid-cols-3 gap-8">
-        <div>
-          <h2 class="text-xl font-bold mb-4">Company</h2>
-          <ul class="space-y-2">
-            <li><a href="about.html" class="hover:text-blue-300">About</a></li>
-            <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
-            <li><a href="faq.html" class="hover:text-blue-300">FAQ</a></li>
-            <li><a href="terms_conditions.html" class="hover:text-blue-300">Terms & Conditions</a></li>
-            <li><a href="privacy_policy.html" class="hover:text-blue-300">Privacy Policy</a></li>
-          </ul>
+    <!-- Who We Are Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <img src="assets/images/e8c6d57fa636e3a7a4cff3032fd43126.jpg" alt="Property" class="w-full rounded-lg shadow-lg">
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-blue-900">WHO WE ARE</h2>
+                    <p class="mb-4 text-gray-700">The first thing we tell everyone we meet: right after we get to know their name, we get to know their home. We believe every home becomes part of people's self-definition.</p>
+                    <ul class="list-disc pl-5 space-y-2 text-gray-700">
+                        <li>A place that gives them Safety, Security, and Stability</li>
+                        <li>A place where they can be 100% themselves</li>
+                        <li>A place to make memories</li>
+                        <li>A place to see the Future</li>
+                        <li>A place that connects people and places</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-          <h2 class="text-xl font-bold mb-4">Contact</h2>
-          <ul class="space-y-4">
-            <li class="flex">
-              <i class="fa fa-map-marker text-xl mt-1 mr-2"></i>
-              <a href="http://maps.google.com/?q=C-116, 1st Floor, Office ON, C Block, Sector 2, Noida, Uttar Pradesh 201301" target="_blank" class="hover:text-blue-300">
-                C-116 GF, OfficeOn<br>
-                Sector 2, Noida<br>
-                Uttar Pradesh - 201301
-              </a>
-            </li>
-            <li class="flex items-center">
-              <i class="fa fa-phone text-xl mr-2"></i>
-              <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="mr-2"><i class="fa fa-whatsapp text-xl"></i></a>
-              <a href="https://api.whatsapp.com/send?phone=7303062845" class="hover:text-blue-300">+91 7303062845</a>
-            </li>
-            <li class="ml-6">
-              <a href="https://api.whatsapp.com/send?phone=917303062845" class="hover:text-blue-300">+91 9718361550</a>
-            </li>
-            <li class="flex items-center">
-              <i class="fa fa-envelope text-xl mr-2"></i>
-              <a href="mailto:info@dncrproperty.com" class="hover:text-blue-300">info@deccanrealty.com</a>
-            </li>
-          </ul>
-        </div>
-        <div class="flex flex-col items-center">
-          <img src="./assets/images/DNCRprperty_white_logo.png" alt="dncrproperty.com" class="h-32 mb-6">
-          <div class="flex space-x-4">
-            <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="bg-green-600 p-2 rounded-full hover:bg-green-700">
-              <i class="fa fa-whatsapp text-lg"></i>
-            </a>
-            <a href="https://www.youtube.com/@dncrproperty" target="_blank" class="bg-red-600 p-2 rounded-full hover:bg-red-700">
-              <i class="fa fa-youtube text-lg"></i>
-            </a>
-            <a href="https://www.facebook.com/dncrproperty1" target="_blank" class="bg-blue-600 p-2 rounded-full hover:bg-blue-700">
-              <i class="fa fa-facebook text-lg"></i>
-            </a>
-            <a href="https://www.instagram.com/dncrproperty2/" target="_blank" class="bg-pink-600 p-2 rounded-full hover:bg-pink-700">
-              <i class="fa fa-instagram text-lg"></i>
-            </a>
-            <a href="https://www.google.com/" target="_blank" class="bg-yellow-600 p-2 rounded-full hover:bg-yellow-700">
-              <i class="fa fa-google text-lg"></i>
-            </a>
-            <a href="https://www.linkedin.com/in/dncrproperty/" target="_blank" class="bg-blue-700 p-2 rounded-full hover:bg-blue-800">
-              <i class="fa fa-linkedin text-lg"></i>
-            </a>
-            <a href="https://twitter.com/dncrproperty2" target="_blank" class="bg-blue-400 p-2 rounded-full hover:bg-blue-500">
-              <i class="fa fa-twitter text-lg"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="border-t border-gray-700 py-6">
-      <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
-        <h6 class="text-center text-gray-400 mb-4 md:mb-0">
-          Copyright &copy;2022-<span id="get-year">2021</span>&nbsp;DECCANREALTY.COM All rights reserved.
-        </h6>
-        <a class="text-gray-400 hover:text-gray-300 flex items-center" href="https://ansits.com" target="_blank">
-          <span class="mr-2">Powered by</span><img src="./assets/images/footer_logo_ANSIT.png" alt="ansit.com" class="h-6">
-        </a>
-      </div>
-    </div>
-  </footer>
+    </section>
 
-  <script>
-    // Mobile menu toggle
-    function toggleMobileMenu() {
-      const menu = document.getElementById('mobile-menu');
-      menu.classList.toggle('hidden');
-    }
-    
-    // Update year
-    const d = new Date();
-    var year = d.getFullYear();
-    document.getElementById("get-year").innerHTML = year;
-  </script>
+    <!-- Why Choose Us Section -->
+    <section class="bg-green-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-blue-900">Why Choose Us?</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                    <div class="bg-orange-500 text-white w-12 h-12 flex items-center justify-center rounded mb-4 text-xl font-bold">1</div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Trust</h3>
+                    <p class="text-gray-700">Trust is more pillar of the relationship with our clients.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                    <div class="bg-green-500 text-white w-12 h-12 flex items-center justify-center rounded mb-4 text-xl font-bold">2</div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Accessibility</h3>
+                    <p class="text-gray-700">With our phone lines open Monday to Friday, you can reach out to us.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md transform transition hover:scale-105">
+                    <div class="bg-blue-900 text-white w-12 h-12 flex items-center justify-center rounded mb-4 text-xl font-bold">3</div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Knowledge of Locations</h3>
+                    <p class="text-gray-700">Our team with best knowledge and matches expertise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Sections from Original Design -->
+    <section class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-pink-500 text-white w-12 h-12 flex items-center justify-center rounded mb-4 text-xl font-bold">4</div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Knowledge of the Locations</h3>
+                    <p class="text-gray-700">Our team with best knowledge and matches expertise.</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="bg-purple-500 text-white w-12 h-12 flex items-center justify-center rounded mb-4 text-xl font-bold">5</div>
+                    <h3 class="text-xl font-semibold mb-4 text-blue-900">Video-Oriented Site Experience</h3>
+                    <p class="text-gray-700">While partnering with you, you don't need to visit the site.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-blue-300">About</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-blue-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li>+91 9876 5432 10</li>
+                        <li>+91 9876 5432 11</li>
+                        <li>info@example.com</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Address</h4>
+                    <p>123 Property Street,
+                    Sector 44, Noida,
+                    Uttar Pradesh, India</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Download Our App</h4>
+                    <div class="flex space-x-4">
+                        <img src="/api/placeholder/150/50" alt="Google Play" class="h-12">
+                        <img src="/api/placeholder/150/50" alt="App Store" class="h-12">
+                    </div>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-white hover:text-blue-300"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8 border-t border-blue-700 pt-4">
+                <p>Copyright ©2022-2024 Occasionally.com All rights reserved</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

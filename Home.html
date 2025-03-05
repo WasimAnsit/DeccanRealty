@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <script src="ltscript.js" defer></script>
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="testimonial.css">
+</head>
+
+<body>
+    <section>
+
+        <header class="h-screen bg-cover bg-center bg-no-repeat"
+            style="background-image: url('assets/images/homeimg.png');">
+            <nav class="w-full flex justify-between items-center ">
+                <!-- Logo -->
+                <div>
+                    <img src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN 1.svg" alt="Logo" class="w-40">
+                </div>
+
+                <!-- Desktop Menu -->
+                <ul class="hidden md:flex gap-5 p-3 rounded-lg">
+                    <li>
+                        <a href="#"
+                            class="text-white bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">Home</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">About</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">Contact</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">Faq</a>
+                    </li>
+                    <li>
+                        <a href="#"
+                            class="text-white bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">Home
+                            Loan</a>
+                    </li>
+                </ul>
+
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-black text-3xl">
+                    &#9776; <!-- Hamburger Icon -->
+                </button>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <ul id="mobile-menu"
+                class="hidden flex-col items-center bg-black/50 text-white text-center w-full md:hidden">
+                <li class="py-2"><a href="#">Home</a></li>
+                <li class="py-2"><a href="#">About</a></li>
+                <li class="py-2"><a href="#">Contact</a></li>
+                <li class="py-2"><a href="#">Faq</a></li>
+                <li class="py-2"><a href="#">Home Loan</a></li>
+            </ul>
+        </header>
+    </section>
+
+    <section class="px-10 mt-10">
+            <h2 class="text-xl text-green-700 font-bold">Properties That stand Out</h2>
+            <p>Find a place that both makes you feel comfortable and allows others to realize how unique you are.</p>
+    </section>
+
+    <section class="my-7 w-[80%] mx-auto">
+        <h1 class="text-4xl text-green-700 font-bold text-center ">Trending Properties</h1>
+            <div id="propertyGrid" class="flex gap-6  whitespace-nowrap mt-9 justify-between ">
+                <!-- Cards will be inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <section class="my-7 w-[80%] mx-auto">
+    
+            <h1 class="text-4xl text-green-700 font-bold text-center">Services</h1>
+            <div id="servicesGrid" class="flex gap-6  whitespace-nowrap mt-9 justify-between">
+                <!-- Cards will be inserted here -->
+            </div>
+        
+    </section>
+    
+    <!-- properly mainted property -->
+    <section class="container mx-auto p-6 text-center">
+        <h2 class="text-4xl text-green-700 font-bold text-center">Properly Maintained Property</h2>
+        <p class="text-lg text-gray-600 mb-6">Join us as we go around the globe in pursuit of a sanctuary that resonates with your beliefs and principles.</p>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/628bbafe1c25b8c8ebb8b90d71646b74.jpg" alt="White Building" 
+                    class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110 hover:z-10">
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <img src="assets/images/4bacc58326e7ff32cc104e775663dc4c.jpg" alt="Modern Red Building" 
+                    class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110 hover:z-10">
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <img src="assets/images/45200057d3c39d8b09a95c4cc342ce29.jpg" alt="Colorful Residential Building" 
+                    class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110 hover:z-10">
+            </div>
+            
+            <div class="relative overflow-hidden">
+                <img src="assets/images/b2e2be52481bdbc2550529a5812f774c.jpg" alt="Modern Apartment Building" 
+                    class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110 hover:z-10">
+            </div>
+        </div>
+    </section>
+
+      <!-- Quote Section -->
+   <section class="text-center  text-xl">
+   <span class="font-bold">&quot;</span> <span class="quote">Helping you find not just a property, but a place to call home.</span><span class="font-bold">&quot;</span>
+</section>
+    
+<!-- Testimonial -->
+<section class="testimonial-section">
+    <div class="testimonial-container">
+        <div class="testimonial-image" x>
+            <img src="assets\images\42b327881a23c3b4eb47fd3b2a3d6550.jpg" alt="Agent Image">
+            <div class="agent-card" style="margin-left:  50px !important;">
+                <div class="icon">
+                    <i class="fas fa-home"></i>
+                </div>
+                <h3 class="agent-name" >Kirti Sharma</h3>
+                <p class="agent-description">She has this unique ability to instantly understand what a client really wants, and she provides the best service to the client.</p>
+            </div>
+        </div>
+        <div class="testimonial-content" style=" padding: 20px 110px 0px 100px !important;">
+            <h2 class="testimonial-heading">What we have done & what our Customers say</h2>
+            <p class="testimonial-text">We are to help you build a excellent build, with us nothing is impossible. See what we have done and what they have to say about our work perform.</p>
+        </div>
+    </div>
+    <div class="nav-buttons">
+        <button class="nav-btn"><i class="fas fa-arrow-left"></i></button>
+        <button class="nav-btn"><i class="fas fa-arrow-right"></i></button>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3 class="footer-heading">Company</h3>
+            <a href="about.html" class="footer-link">About</a>
+            <a href="contact.html" class="footer-link">Contact</a>
+            <a href="terms_conditions.html" class="footer-link">Term & Condition</a>
+            <a href="privacy_policy.html" class="footer-link">Privacy Policy</a>
+            <a href="faq.html" class="footer-link">FAQ</a>
+            
+        </div>
+        <div class="footer-column">
+            <h3 class="footer-heading">Contact</h3>
+            <div class="contact-item">
+                <i class="fas fa-phone"></i>
+                +91 78030 62845, +91 95504 52845
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-envelope"></i>
+                info@deccanrealty.com
+            </div>
+            <div class="contact-item">
+                <i class="fas fa-map-marker-alt"></i>
+                C-19 OP, OfficOn, Sector 2, Uttar Pradesh
+            </div>
+            <div class="social-icons">
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+            </div>
+        </div>
+        <div  class="footer-column">
+            <h3 class="footer-heading">Download Our App Now</h3>
+            <div class="app-buttons">
+                <a href="#"><img src="assets\logos\visual-identity_badges_880x57.max-1920x1070.format-webp.webp" alt="Google Play" class="app-button"></a>
+                <a href="#"><img src="assets\logos\visual-identity_badges_880x57.max-1920x1070.format-webp.webp" alt="App Store" class="app-button"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="copyright">
+    Copyright &copy;2022-2024 deccanrealty.com All rights reserved.
+</div>
+
+</body>
+</html>
