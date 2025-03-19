@@ -1,30 +1,30 @@
 const properties = [
     {
-      imageURL: { src: "assets/images/image 14.jpg", alt: "Modern House" },
-      propertyName: "Luxury Villa",
-      propertyDescription: "Los Angeles, USA",
+      imageURL: { src: "assets/images/GODREJ LAKESIDE ORCHARD.jpg", alt: "Modern House" },
+      propertyName: "Godrej Lakeside Orchard",
+      propertyDescription: "India",
     },
     {
-      imageURL: { src: "assets/images/image 10.jpg", alt: "Luxury Villa" },
-      propertyName: "Dream Home",
-      propertyDescription: "New York, USA",
+      imageURL: { src: "assets/images/BIRLA EVARA.jpg", alt: "Luxury Villa" },
+      propertyName: "Birla Evara",
+      propertyDescription: "India",
     },
     {
-      imageURL: { src: "assets/images/image 11.jpg", alt: "Modern Apartment" },
-      propertyName: "Sky High Condo",
-      propertyDescription: "Miami, USA",
+      imageURL: { src: "assets/images/NAMBIAR DISTRICT 25.jpg", alt: "Modern Apartment" },
+      propertyName: "Nambiar District 25",
+      propertyDescription: "India",
     },
     {
-      imageURL: { src: "assets/images/image 14.jpg", alt: "Modern House" },
-      propertyName: "Luxury Villa",
-      propertyDescription: "Los Angeles, USA",
+      imageURL: { src: "assets/images/PRESTIEGE PINE FOREST.jpg", alt: "Modern House" },
+      propertyName: "Prestige Pine Forest",
+      propertyDescription: "India",
     },
   ];
   
   const services = [
     {
       imageURL: {
-        src: "assets/images/e8c6d57fa636e3a7a4cff3032fd43126.jpg",
+        src: "assets/images/BUY.jpg",
         alt: "Buy Service",
       },
       serviceTitle: "Buy Property",
@@ -32,7 +32,7 @@ const properties = [
     },
     {
       imageURL: {
-        src: "assets/images/1bc4d8c6697d82c1186592ed59775bcd.jpg",
+        src: "assets/images/SELL.jpg",
         alt: "Sell Service",
       },
       serviceTitle: "Sell Property",
@@ -41,7 +41,7 @@ const properties = [
   
     {
       imageURL: {
-        src: "assets/images/9878bb6c6da80ecd6d0d45a0d755efca.jpg",
+        src: "assets/images/RENT.jpg",
         alt: "Rent Service",
       },
       serviceTitle: "Rent Property",
@@ -49,11 +49,11 @@ const properties = [
     },
     {
       imageURL: {
-        src: "assets/images/e8c6d57fa636e3a7a4cff3032fd43126.jpg",
+        src: "assets/images/COMMERCIAL.jpg",
         alt: "Buy Service",
       },
-      serviceTitle: "Buy Property",
-      serviceAddress: "We help you buy the best!",
+      serviceTitle: "Commercial Property",
+      serviceAddress: "We help you buy the best Commerical!",
     },
   ];
   
@@ -75,7 +75,7 @@ const properties = [
               </div>
               ${
                 type === "property"
-                  ? `<div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 text-sm rounded-full">Featured</div>`
+                  ? `<div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 text-sm rounded-full">Trending</div>`
                   : ""
               }
           </div>
