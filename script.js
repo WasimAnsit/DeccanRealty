@@ -1,70 +1,84 @@
 const properties = [
   {
-    imageURL: { src: "assets/images/GODREJ LAKESIDE ORCHARD.jpg", alt: "Modern House" },
+    imageURL: {
+      src: "assets/images/GODREJ LAKESIDE ORCHARD.jpg",
+      alt: "Modern House",
+    },
     propertyName: "Godrej Lakeside Orchard",
     priceRange: "₹ 1.09 Cr - 3.12 Cr.",
     location: "Sarjapur Road, South Bangalore",
     pricePerSqFt: "₹ 11.63K - ₹ 33.81K /Sq.Ft.",
     sizes: "(Super Area) 323 - 2679 Sq.Ft.",
     possessionDate: "Possession Starts Jan 2030",
-    configurations: "2BHK, 3BHK, 3.5BHK, 4BHK, 4.5BHK Apartment & Studio Apartments",
-    propertyDescription: ""
+    configurations:
+      "2BHK, 3BHK, 3.5BHK, 4BHK, 4.5BHK Apartment & Studio Apartments",
+    propertyDescription: "",
   },
   {
     imageURL: { src: "assets/images/BIRLA EVARA.jpg", alt: "Luxury Villa" },
     propertyName: "Birla Evara",
-    priceRange: "71.0 L - 3.16 Cr",
-    location: "Kodathi Vilage, Bangalore East, Bangalore",
+    priceRange: "₹71.0 L - 3.16 Cr",
+    location: "Kodathi Vilage, East Bangalore East",
     pricePerSqFt: "₹14.98 K - 17.96 K/sq.ft",
     sizes: "(Super Area) 474.00 - 1759.00 sq.ft",
     possessionDate: "Possession Starts Dec, 2031",
     configurations: "1BHK, 2BHK, 3BHK, 4BHK Apartments & Studio Apartments",
-    propertyDescription: ""
+    propertyDescription: "",
   },
   {
-    imageURL: { src: "assets/images/NAMBIAR DISTRICT 25.jpg", alt: "Modern Apartment" },
+    imageURL: {
+      src: "assets/images/NAMBIAR DISTRICT 25.jpg",
+      alt: "Modern Apartment",
+    },
     propertyName: "Nambiar District 25",
     priceRange: "₹ 1.44 Cr - 3.0 Cr.",
-    location: "Muthanallur Cross, Sarjapur Road, Bangalore East",
+    location: "MSarjapur Road, Bangalore East",
     pricePerSqFt: "₹ 12 k/sq.ft",
     sizes: "(Super Area) 1200.00 - 2500 Sq.Ft.",
     possessionDate: "Possession Starts Jan 2030",
     configurations: "2BHK, 3BHK, 4BHK, Apartments Configuration",
-    propertyDescription: ""
+    propertyDescription: "",
   },
   {
-    imageURL: { src: "assets/images/PRESTIEGE PINE FOREST.jpg", alt: "Modern House" },
+    imageURL: {
+      src: "assets/images/PRESTIEGE PINE FOREST.jpg",
+      alt: "Modern House",
+    },
     propertyName: "Prestige Pine Forest",
     priceRange: "₹ 3.76 Cr - 3.89 Cr.",
-    location: "ECC Road, Whitefield, Bangalore East, Bangalore",
+    location: "ECC Road, Whitefield,East Bangalore",
     pricePerSqFt: "₹10.94K - ₹14.351K /Sq.Ft.",
     sizes: "(Super Area) 2621.00 - 3556.00 Sq.Ft.",
     possessionDate: "Possession Starts Dec 2028",
     configurations: "3BHK, 4BHK, Apartments Configuration",
-    propertyDescription: ""
+    propertyDescription: "",
   },
 ];
 
 const services = [
   {
     imageURL: { src: "assets/images/BUY.jpg", alt: "Buy Service" },
-    serviceTitle: "Buy your Dream Home",
-    serviceAddress: "Are you in search of a home in Delhi, NCR? dncrproperty.com is your place to start. We’ll find you the best residential flats in Delhi NCR. Find your new home with an enticing video experience. Our residential properties in Delhi NCR include the best possible listings and the features you would not find anywhere else",
+    serviceTitle: "Buy Your Dream Property",
+    serviceAddress:
+      "Looking for a home in Bangalore? DeccanRealty.com offers the best residential listings with exclusive features and immersive video experiences. Start your search today!",
   },
   {
     imageURL: { src: "assets/images/SELL.jpg", alt: "Sell Service" },
-    serviceTitle: "Sell your Home",
-    serviceAddress: "Looking for an ideal buyer to hand over your home? We know that selling your home is an emotional experience as well as an arduous task. We help overcome the challenges of selling a home and find you a buyer to whom you can peacefully entrust your belonging. Moreover, we’ll provide you with the full backup to navigate through the process!",
+    serviceTitle: "Sell Your Property with Ease",
+    serviceAddress:
+      "Looking for the right buyer? DeccanRealty.com simplifies the selling process, ensuring a smooth and stress-free experience. Trust us to find the perfect buyer and support you every step of the way!",
   },
   {
     imageURL: { src: "assets/images/RENT.jpg", alt: "Rent Service" },
-    serviceTitle: "Rent your Home",
-    serviceAddress: "Want to rent a home? You can put your trust in dncrproperty.com. We can assist you in finding the best flats and apartments for rent in the Delhi NCR. We provide high-quality and ready-to-move-in residential apartments for rent in the Delhi NCR for you to enjoy a hassle-free stay",
+    serviceTitle: "Find Your Perfect Rental Home",
+    serviceAddress:
+      "Looking to rent a home in Bangalore? DeccanRealty.com offers top-quality, ready-to-move-in apartments for a hassle-free living experience. Let us help you find the perfect place!",
   },
   {
     imageURL: { src: "assets/images/COMMERCIAL.jpg", alt: "Buy Service" },
-    serviceTitle: "Commercial Property",
-    serviceAddress: "Looking to rent a commercial property? Trust dncrproperty.com to help you find the best office spaces and commercial properties for rent in Delhi NCR. We offer high-quality, ready-to-move-in commercial spaces to ensure a hassle-free leasing experience.",
+    serviceTitle:  "Invest in Prime Commercial Properties",
+    serviceAddress:
+      "Looking for rental income or short-term investment opportunities? DeccanRealty.com offers premium, ready-to-move-in commercial properties in Bangalore for a seamless investment and leasing experience.",
   },
 ];
 
@@ -72,9 +86,7 @@ const services = [
 function createCard(item, type) {
   return `
       <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-[0_10px_15px_rgba(0,0,0,0.1),10px_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_25px_rgba(0,0,0,0.15),15px_0_25px_rgba(0,0,0,0.15)] transform transition-all duration-300 ${
-        type === "property"
-          ? "hover:scale-105"
-          : "hover:scale-105"
+        type === "property" ? "hover:scale-105" : "hover:scale-105"
       } flex-shrink-0 card-container" data-type="${type}">
             <div class="relative">
                 <img src="${item.imageURL.src}" alt="${
@@ -92,19 +104,20 @@ function createCard(item, type) {
                       type === "property"
                         ? `
                         <div class="property-header mb-4">
-                            <h3 class="property-name text-xl font-bold text-gray-900 leading-tight">${item.propertyName}</h3>
-                            <span class="property-price text-lg font-semibold text-green-600 block mt-2">${item.priceRange}</span>
-                        </div>
+    <h3 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h3>
+    <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
+    <span class="property-price text-[16px] font-semibold text-black block">${item.priceRange}<span class="text-[12px]"> (${item.pricePerSqFt})</span></span>
+</div>
                         <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
-                            <p><i class="fas fa-map-marker-alt text-green-500 mr-2"></i>${item.location}</p>
+                            
+                        <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
                             <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
-                            <p><i class="fas fa-wallet text-green-500 mr-2"></i>${item.pricePerSqFt}</p>
+                           
                             <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
-                            <p class="truncate"><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
                         </div>
                     `
                         : `
-                        <h4 class="text-2xl font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h4>
+                        <h4 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h4>
                         <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
                     `
                     }
@@ -123,13 +136,6 @@ function createCard(item, type) {
     `;
 }
 
-// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
-// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
-
-// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
-// Rest of the JavaScript remains the same
-// populateSlider("propertyGrid", properties, "property");
-// populateSlider("servicesGrid", services, "service");
 
 // Function to populate and duplicate cards for infinite scroll
 function populateSlider(gridId, items, type) {
@@ -145,3 +151,4 @@ function populateSlider(gridId, items, type) {
 // Populate both sections
 populateSlider("propertyGrid", properties, "property");
 populateSlider("servicesGrid", services, "service");
+

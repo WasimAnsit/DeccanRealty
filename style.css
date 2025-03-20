@@ -1,5 +1,6 @@
+
 /* Core animations */
-@keyframes slide {
+/* @keyframes slide {
   0% {
     transform: translateX(0);
   }
@@ -7,7 +8,7 @@
   100% {
     transform: translateX(-50%);
   }
-}
+} */
 
 .animate-slide {
   display: flex;
@@ -26,7 +27,8 @@
 
 /* Card styling */
 .card-container {
-  height: 550px;
+  height: 520px;
+  max-width: 22vw;
   display: flex;
   flex-direction: column;
   transform-style: preserve-3d;
@@ -56,15 +58,17 @@
   padding-bottom: 1rem;
 }
 
+
 .property-price {
-  background: rgba(0, 128, 0, 0.1);
-  padding: 0.25rem 0.75rem;
+  padding: 4px;
   border-radius: 9999px;
   display: inline-block;
 }
 
 .property-details {
   flex-grow: 1;
+  max-height: 40;
+  overflow: hidden;
 }
 
 .property-details p {
