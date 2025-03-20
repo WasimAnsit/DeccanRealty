@@ -7,8 +7,6 @@
   100% {
     transform: translateX(-50%);
   }
-
-  /* Changed to -50% since we double items */
 }
 
 .animate-slide {
@@ -24,48 +22,49 @@
 #propertyGrid.animate-slide,
 #servicesGrid.animate-slide {
   animation-duration: 40s;
-  /* Faster scroll for better UX */
 }
 
 /* Card styling */
 .card-container {
-  height: 520px;
+  height: 550px;
   display: flex;
-  /* width: max-content; */
   flex-direction: column;
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  transform-style: preserve-3d;
+  perspective: 1000px;
 }
 
 .card-container:hover img {
-  transform: scale(1.05);
+  transform: scale(1.05) translateZ(20px);
 }
 
 .card-content {
   flex-grow: 1;
+  transform: translateZ(10px);
+  display: flex;
+  flex-direction: column;
 }
 
 .card-buttons {
+  transform: translateZ(15px);
   margin-top: auto;
+  /* Ensures buttons stay at the bottom */
 }
 
 /* Property specific styling */
 .property-header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   padding-bottom: 1rem;
-  display: flex;
-  gap:10px;
-  flex-direction: column;
-}
-
-.property-name {
-  min-width: max-content;
 }
 
 .property-price {
   background: rgba(0, 128, 0, 0.1);
   padding: 0.25rem 0.75rem;
   border-radius: 9999px;
-  min-width: max-content;
+  display: inline-block;
+}
+
+.property-details {
+  flex-grow: 1;
 }
 
 .property-details p {
@@ -75,7 +74,7 @@
 }
 
 .property-details p:hover {
-  transform: translateX(5px);
+  transform: translateX(5px) translateZ(5px);
 }
 
 /* WhatsApp button */
@@ -91,7 +90,7 @@
 }
 
 .whatsapp-btn:hover {
-  transform: scale(1.1);
+  transform: scale(1.1) translateZ(10px);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -109,7 +108,6 @@
 
   .property-name {
     font-size: 1rem;
-    max-width: 50%;
   }
 
   .property-price {
@@ -118,5 +116,7 @@
 
   .property-details {
     font-size: 0.75rem;
+    max-height: 32px;
+    /* Adjusted for mobile */
   }
 }
