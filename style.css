@@ -1,0 +1,105 @@
+@keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .animate-slide {
+    display: flex;
+    animation: slide linear infinite;
+    will-change: transform;
+  }
+  
+  .animate-slide:hover {
+    animation-play-state: paused;
+  }
+  
+  #propertyGrid.animate-slide {
+    animation-duration: 60s !important;
+  }
+  
+  #servicesGrid.animate-slide {
+    animation-duration: 60s !important;
+  }
+  
+  .card-container {
+    height: 500px; /* Increased height to fit content better */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .card-content {
+    flex-grow: 1;
+  }
+  
+  .card-buttons {
+    margin-top: auto; /* Ensures buttons stay at the bottom */
+  }
+  
+  /* Table styling for properties */
+  .property-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .property-table td {
+    padding: 9px 1px; /* Increased padding for better spacing */
+    border: none;
+    vertical-align: top;
+    color: #6b7280; /* text-gray-500 */
+    font-size: 0.875rem; /* text-sm */
+  }
+  
+  .property-table td:first-child {
+    text-align: left;
+  }
+  
+  .property-table td:last-child {
+    text-align: left;
+  }
+  
+  /* Specific styling for property name and price */
+  .property-name {
+    font-size: 18px !important;
+    font-weight: 700; /* bold */
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .property-price {
+    font-size: 2rem; /* text-lg */
+    font-weight: 700; /* semibold */
+    color: black; /* text-gray-800 */
+  }
+  
+  /* Full-width row for configurations */
+  .property-table .full-width {
+    text-align: left;
+    padding-top: 6px;
+  }
+  .whatsapp-btn {
+    display: inline-flex;          /* Changed to inline-flex for better centering */
+    background-color: #0bf05f;     /* WhatsApp green */
+    width: 64px;                  /* Fixed width */
+    height: 64px;                 /* Fixed height, equal to width for circle */
+    border-radius: 50%;           /* Perfect circle */
+    align-items: center;          /* Vertical centering */
+    justify-content: center;      /* Horizontal centering */
+    text-decoration: none;        /* Remove underline */
+    transition: background-color 0.3s; /* Smooth hover transition */
+  }
+
+  .whatsapp-btn:hover {
+    background-color: rgba(22, 225, 22, 0.402);    /* Twitter blue for testing hover */
+  }
+
+  .whatsapp-btn i {
+    color: white;                 /* White icon */
+    font-size: 2.5rem;           /* 40px, similar to text-4xl */
+  }
