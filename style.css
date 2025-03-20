@@ -1,105 +1,122 @@
+/* Core animations */
 @keyframes slide {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-100%);
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .animate-slide {
-    display: flex;
-    animation: slide linear infinite;
-    will-change: transform;
+
+  100% {
+    transform: translateX(-50%);
   }
-  
-  .animate-slide:hover {
-    animation-play-state: paused;
-  }
-  
-  #propertyGrid.animate-slide {
-    animation-duration: 60s !important;
-  }
-  
-  #servicesGrid.animate-slide {
-    animation-duration: 60s !important;
-  }
-  
+
+  /* Changed to -50% since we double items */
+}
+
+.animate-slide {
+  display: flex;
+  animation: slide linear infinite;
+  will-change: transform;
+}
+
+.animate-slide:hover {
+  animation-play-state: paused;
+}
+
+#propertyGrid.animate-slide,
+#servicesGrid.animate-slide {
+  animation-duration: 40s;
+  /* Faster scroll for better UX */
+}
+
+/* Card styling */
+.card-container {
+  height: 520px;
+  display: flex;
+  /* width: max-content; */
+  flex-direction: column;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.card-container:hover img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  flex-grow: 1;
+}
+
+.card-buttons {
+  margin-top: auto;
+}
+
+/* Property specific styling */
+.property-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-bottom: 1rem;
+  display: flex;
+  gap:10px;
+  flex-direction: column;
+}
+
+.property-name {
+  min-width: max-content;
+}
+
+.property-price {
+  background: rgba(0, 128, 0, 0.1);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  min-width: max-content;
+}
+
+.property-details p {
+  display: flex;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.property-details p:hover {
+  transform: translateX(5px);
+}
+
+/* WhatsApp button */
+.whatsapp-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-btn i {
+  color: white;
+  font-size: 1.75rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
   .card-container {
-    height: 500px; /* Increased height to fit content better */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 300px;
+    height: 480px;
   }
-  
-  .card-content {
-    flex-grow: 1;
-  }
-  
-  .card-buttons {
-    margin-top: auto; /* Ensures buttons stay at the bottom */
-  }
-  
-  /* Table styling for properties */
-  .property-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .property-table td {
-    padding: 9px 1px; /* Increased padding for better spacing */
-    border: none;
-    vertical-align: top;
-    color: #6b7280; /* text-gray-500 */
-    font-size: 0.875rem; /* text-sm */
-  }
-  
-  .property-table td:first-child {
-    text-align: left;
-  }
-  
-  .property-table td:last-child {
-    text-align: left;
-  }
-  
-  /* Specific styling for property name and price */
+
   .property-name {
-    font-size: 18px !important;
-    font-weight: 700; /* bold */
-    color: black;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1rem;
+    max-width: 50%;
   }
-  
+
   .property-price {
-    font-size: 2rem; /* text-lg */
-    font-weight: 700; /* semibold */
-    color: black; /* text-gray-800 */
-  }
-  
-  /* Full-width row for configurations */
-  .property-table .full-width {
-    text-align: left;
-    padding-top: 6px;
-  }
-  .whatsapp-btn {
-    display: inline-flex;          /* Changed to inline-flex for better centering */
-    background-color: #0bf05f;     /* WhatsApp green */
-    width: 64px;                  /* Fixed width */
-    height: 64px;                 /* Fixed height, equal to width for circle */
-    border-radius: 50%;           /* Perfect circle */
-    align-items: center;          /* Vertical centering */
-    justify-content: center;      /* Horizontal centering */
-    text-decoration: none;        /* Remove underline */
-    transition: background-color 0.3s; /* Smooth hover transition */
+    font-size: 0.875rem;
   }
 
-  .whatsapp-btn:hover {
-    background-color: rgba(22, 225, 22, 0.402);    /* Twitter blue for testing hover */
+  .property-details {
+    font-size: 0.75rem;
   }
-
-  .whatsapp-btn i {
-    color: white;                 /* White icon */
-    font-size: 2.5rem;           /* 40px, similar to text-4xl */
-  }
+}
