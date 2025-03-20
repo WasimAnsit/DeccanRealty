@@ -117,6 +117,11 @@
   font-size: 1.75rem;
 }
 
+@media(max-width:400px){
+  .property-card{
+    width: 83vw !important;
+  }
+}
 /* Responsive design */
 @media (max-width: 768px) {
 
@@ -187,6 +192,7 @@
 .property-card {
   display: flex;
   flex-direction: column;
+  width:22vw;
   height: auto !important;
   /* Force auto height instead of 100% */
   background-color: white;
