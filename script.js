@@ -68,51 +68,68 @@ const services = [
   },
 ];
 
+
 function createCard(item, type) {
   return `
-    <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-lg transform transition-all duration-300 hover:scale-110 hover:z-10 flex-shrink-0 card-container">
-      <img src="${item.imageURL.src}" alt="${item.imageURL.alt}" class="w-full h-40 object-cover">
-      <div class="p-4 flex flex-col h-full">
-        <div class="card-content">
-          ${type === "property" ? `
-            <table class="property-table">
-              <tr>
-                <td class="property-name">${item.propertyName}</td>
-                <td class="property-price">${item.priceRange}</td>
-              </tr>
-              <tr>
-                <td>${item.location}</td>
-                <td>${item.pricePerSqFt}</td>
-              </tr>
-              <tr>
-                <td>Sizes: ${item.sizes}</td>
-                <td>${item.possessionDate}</td>
-              </tr>
-              <tr>
-                <td colspan="2" class="full-width">${item.configurations}</td>
-              </tr>
-            </table>
-          ` : `
-            <div class="flex justify-between items-center">
-              <h4 class="text-lg font-semibold text-gray-800 truncate">${item.serviceTitle}</h4>
+      <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-[0_10px_15px_rgba(0,0,0,0.1),10px_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_25px_rgba(0,0,0,0.15),15px_0_25px_rgba(0,0,0,0.15)] transform transition-all duration-300 ${
+        type === "property"
+          ? "hover:scale-105"
+          : "hover:scale-105"
+      } flex-shrink-0 card-container" data-type="${type}">
+            <div class="relative">
+                <img src="${item.imageURL.src}" alt="${
+    item.imageURL.alt
+  }" class="w-full h-48 object-cover transition-transform duration-300">
+                ${
+                  type === "property"
+                    ? `<span class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
+                    : ""
+                }
             </div>
-            <p class="text-gray-500 text-sm mt-1">${item.serviceAddress}</p>
-          `}
+            <div class="p-5 flex flex-col h-full bg-gradient-to-b from-gray-50 to-white">
+                <div class="card-content flex-grow overflow-hidden">
+                    ${
+                      type === "property"
+                        ? `
+                        <div class="property-header mb-4">
+                            <h3 class="property-name text-xl font-bold text-gray-900 leading-tight">${item.propertyName}</h3>
+                            <span class="property-price text-lg font-semibold text-green-600 block mt-2">${item.priceRange}</span>
+                        </div>
+                        <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
+                            <p><i class="fas fa-map-marker-alt text-green-500 mr-2"></i>${item.location}</p>
+                            <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
+                            <p><i class="fas fa-wallet text-green-500 mr-2"></i>${item.pricePerSqFt}</p>
+                            <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
+                            <p class="truncate"><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
+                        </div>
+                    `
+                        : `
+                        <h4 class="text-2xl font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
+                    `
+                    }
+                </div>
+                <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
+                    <button onclick="window.location.href='contact.html'" 
+                        class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                        Enquiry Now
+                    </button>
+                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="card-buttons flex justify-between items-center mt-4">
-          <button onclick="window.location.href='contact.html'" 
-            class="bg-[#ff7b2a] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#b1853f]">
-            Enquiry Now
-          </button>
-    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-        </div>
-      </div>
-      ${type === "property" ? `<div class="absolute top-4 right-4 bg-blue-500 text-white px-3 py-1 text-sm rounded-full">Trending</div>` : ""}
-    </div>
-  `;
+    `;
 }
+
+// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
+// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
+
+// Rest of the JavaScript (properties, services, populateSlider) remains unchanged
+// Rest of the JavaScript remains the same
+// populateSlider("propertyGrid", properties, "property");
+// populateSlider("servicesGrid", services, "service");
 
 // Function to populate and duplicate cards for infinite scroll
 function populateSlider(gridId, items, type) {
