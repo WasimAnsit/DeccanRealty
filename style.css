@@ -11,15 +11,18 @@
 /* Move the logo upward */
 .logo-link img {
   margin-top: -1rem;
+
   /* Adjust this value (e.g., -0.5rem, -2rem) to move it more or less upward */
 }
 
 /* Optional: Ensure responsiveness */
 @media (max-width: 768px) {
   .logo-link img {
-    margin-top: -0.75rem;
-    margin-left: 7rem;
+    margin-bottom: 40px;
     /* Slightly less movement on mobile if needed */
+  }
+  .anchor-icon{
+    margin-right: 6rem;
   }
 }
 
