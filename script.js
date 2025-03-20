@@ -18,7 +18,7 @@ const properties = [
     imageURL: { src: "assets/images/BIRLA EVARA.jpg", alt: "Luxury Villa" },
     propertyName: "Birla Evara",
     priceRange: "₹71.0 L - 3.16 Cr",
-    location: "Kodathi Vilage, East Bangalore East",
+    location: "Kodathi Vilage, East Bangalore",
     pricePerSqFt: "₹14.98 K - 17.96 K/sq.ft",
     sizes: "(Super Area) 474.00 - 1759.00 sq.ft",
     possessionDate: "Possession Starts Dec, 2031",
@@ -152,3 +152,26 @@ function populateSlider(gridId, items, type) {
 populateSlider("propertyGrid", properties, "property");
 populateSlider("servicesGrid", services, "service");
 
+function toggleDescription(id, button) {
+  const desc = document.getElementById(id);
+
+  if (desc.classList.contains("expanded")) {
+    desc.classList.remove("expanded");
+    button.textContent = "See More";
+  } else {
+    desc.classList.add("expanded");
+    button.textContent = "See Less";
+  }
+}
+
+// Initially hide "See More" if content fits within max-height
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".description-container").forEach((container) => {
+    const btn = container.nextElementSibling;
+    // Compare scrollHeight (total content height) with maxHeight (CSS max-height)
+    const maxHeight = parseInt(window.getComputedStyle(container).maxHeight);
+    if (container.scrollHeight <= maxHeight) {
+      btn.classList.add("hidden");
+    }
+  });
+});

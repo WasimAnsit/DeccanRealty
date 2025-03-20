@@ -169,3 +169,48 @@
     /* Prevent clipping on mobile */
   }
 }
+
+
+/* card toogle css */
+
+/* Fixed height for description with overflow hidden */
+.description-container {
+  max-height: 100px;
+  /* Adjust this value as needed */
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+/* Expanded state */
+.description-container.expanded {
+  max-height: 500px;
+  /* Large enough to show full content */
+}
+
+/* Card layout to ensure buttons stay at the bottom */
+.property-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  /* Ensure all cards stretch to the same height */
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.toggle-btn {
+  color: #2d6a4f;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  display: inline-block;
+}
+
+/* Hide toggle button if content fits */
+.toggle-btn.hidden {
+  display: none;
+}
