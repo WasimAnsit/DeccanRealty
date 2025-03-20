@@ -9,6 +9,7 @@
     --color-orange-500: oklch(0.705 0.213 47.604);
     --color-orange-600: oklch(0.646 0.222 41.116);
     --color-orange-700: oklch(0.553 0.195 38.402);
+    --color-amber-50: oklch(0.987 0.022 95.277);
     --color-green-50: oklch(0.982 0.018 155.826);
     --color-green-500: oklch(0.723 0.219 149.579);
     --color-green-600: oklch(0.627 0.194 149.214);
@@ -950,6 +951,10 @@
     --tw-leading: var(--leading-tight);
     line-height: var(--leading-tight);
   }
+  .font-\[20px\] {
+    --tw-font-weight: 20px;
+    font-weight: 20px;
+  }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
@@ -961,6 +966,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-amber-50 {
+    color: var(--color-amber-50);
   }
   .text-black {
     color: var(--color-black);
