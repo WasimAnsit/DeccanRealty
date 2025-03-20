@@ -152,26 +152,52 @@ function populateSlider(gridId, items, type) {
 populateSlider("propertyGrid", properties, "property");
 populateSlider("servicesGrid", services, "service");
 
-function toggleDescription(id, button) {
-  const desc = document.getElementById(id);
 
-  if (desc.classList.contains("expanded")) {
-    desc.classList.remove("expanded");
-    button.textContent = "See More";
-  } else {
-    desc.classList.add("expanded");
-    button.textContent = "See Less";
-  }
-}
-
-// Initially hide "See More" if content fits within max-height
 document.addEventListener("DOMContentLoaded", () => {
-  document.querySelectorAll(".description-container").forEach((container) => {
-    const btn = container.nextElementSibling;
-    // Compare scrollHeight (total content height) with maxHeight (CSS max-height)
-    const maxHeight = parseInt(window.getComputedStyle(container).maxHeight);
-    if (container.scrollHeight <= maxHeight) {
-      btn.classList.add("hidden");
+  // Attach event listeners to all toggle buttons
+  document.querySelectorAll(".toggle-btn").forEach((button) => {
+    button.addEventListener("click", (event) => {
+      // Prevent the default behavior and stop propagation
+      event.preventDefault();
+      event.stopPropagation();
+
+      // Get the target ID for this specific button
+      const targetId = button.getAttribute("data-target");
+      const desc = document.getElementById(targetId);
+
+      if (!desc) {
+        console.error(`Element with ID ${targetId} not found`);
+        return;
+      }
+
+      // Toggle only this specific description container
+      if (desc.classList.contains("expanded")) {
+        desc.classList.remove("expanded");
+        button.textContent = "See More";
+      } else {
+        desc.classList.add("expanded");
+        button.textContent = "See Less";
+      }
+    });
+
+    // Initially check if "See More" should be hidden because content fits
+    const targetId = button.getAttribute("data-target");
+    const desc = document.getElementById(targetId);
+
+    if (desc) {
+      // Use setTimeout to ensure content is fully rendered before checking height
+      setTimeout(() => {
+        const maxHeight = parseInt(window.getComputedStyle(desc).maxHeight);
+        if (desc.scrollHeight <= maxHeight) {
+          button.classList.add("hidden");
+        }
+      }, 10);
     }
   });
+
+  // Make sure grid container has correct alignment
+  const gridContainer = document.querySelector(".grid");
+  if (gridContainer) {
+    gridContainer.classList.add("items-start");
+  }
 });
