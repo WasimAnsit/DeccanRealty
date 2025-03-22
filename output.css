@@ -1284,6 +1284,15 @@
   .text-\[12px\] {
     font-size: 12px;
   }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
+  .text-\[14px\] {
+    font-size: 14px;
+  }
+  .text-\[15px\] {
+    font-size: 15px;
+  }
   .text-\[16px\] {
     font-size: 16px;
   }
@@ -1334,6 +1343,9 @@
   }
   .text-\[\#ff6b35\] {
     color: #ff6b35;
+  }
+  .text-\[x\] {
+    color: x;
   }
   .text-black {
     color: var(--color-black);
