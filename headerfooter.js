@@ -7,7 +7,7 @@ function createHeader() {
 
   const header = document.createElement("header");
   header.className = "bg-[#060d42] text-white p-4 sticky top-0 z-50 w-full";
-  header.style.position = "sticky"; // Ensure stickiness
+  header.style.position = "sticky";
   header.style.top = "0";
   header.style.zIndex = "50";
   header.style.width = "100%";
@@ -26,12 +26,12 @@ function createHeader() {
         <li><a href="faq.html" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">FAQ</a></li>
         <li><a href="homeloan.html" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition hover:bg-white hover:text-[#060d42]">Home Loan</a></li>
       </ul>
-      <ul class="mobile-menu hidden md:hidden flex-col items-center bg-[#060d42] w-full absolute left-0 top-full transition-all duration-300">
-        <li><a href="index.html" class="text-lg font-medium py-3 w-full text-center hover:text-gray-300">Home</a></li>
-        <li><a href="about.html" class="text-lg font-medium py-3 w-full text-center hover:text-gray-300">About</a></li>
-        <li><a href="contact.html" class="text-lg font-medium py-3 w-full text-center hover:text-gray-300">Contact</a></li>
-        <li><a href="faq.html" class="text-lg font-medium py-3 w-full text-center hover:text-gray-300">FAQ</a></li>
-        <li><a href="homeloan.html" class="text-lg font-medium border border-white px-3 py-1 rounded-md hover:bg-white hover:text-[#060d42] transition w-full text-center">Home Loan</a></li>
+      <ul class="mobile-menu hidden md:hidden flex-col items-center bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300">
+        <li class="w-full"><a href="index.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">Home</a></li>
+        <li class="w-full"><a href="about.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">About</a></li>
+        <li class="w-full"><a href="contact.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">Contact</a></li>
+        <li class="w-full"><a href="faq.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">FAQ</a></li>
+        <li class="w-full"><a href="homeloan.html" class="block text-lg font-medium border border-white px-3 py-1 rounded-md hover:bg-white hover:text-[#060d42] transition w-full text-center">Home Loan</a></li>
       </ul>
     </div>
   `;
