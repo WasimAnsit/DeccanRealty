@@ -75,7 +75,7 @@ function createFooter() {
   if (!footerContainer) return;
 
   const footer = document.createElement("footer");
-  footer.className = "bg-black text-white py-10 md:py-20 px-4 md:px-20";
+  footer.className = "bg-black text-white  md:py-4 px-4 md:px-20";
   footer.innerHTML = `
     <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
       <div>
@@ -134,9 +134,9 @@ function createFooter() {
         </div>
       </div>
     </div>
-    <div class="bg-black text-center text-white py-4 text-base md:text-lg">
-      Copyright ©2025 deccanrealty.com All rights reserved.
-    </div>
+   <div  class="bg-black text-center text-white  text-base md:text-lg">
+  Copyright ©2025 deccanrealty.com All rights reserved.
+</div>
   `;
 
   footerContainer.innerHTML = "";
