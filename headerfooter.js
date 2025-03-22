@@ -96,11 +96,11 @@ function createFooter() {
         </p>
         <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
           <i class="fas fa-phone text-2xl"></i> 
-          +91 73030 62845
+          <a href="https://api.whatsapp.com/send?phone=917303062845">+91 73030 62845</a>
         </p>
         <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
           <i class="fa-brands fa-whatsapp text-2xl"></i> 
-          +91 97183 61550
+          <a href="https://api.whatsapp.com/send?phone=917718361550">+91 97183 61550</a>
         </p>
         <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
           <i class="fas fa-envelope text-2xl"></i> 
