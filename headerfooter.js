@@ -19,7 +19,7 @@ function createHeader() {
         </a>
       </div>
       <button class="md:hidden text-2xl text-white mobile-menu-btn">☰</button>
-      <ul class="nav-menu hidden md:flex items-center space-x-6">
+      <ul class="nav-menu hidden md:flex items-center space-x-4">
         <li><a href="index.html" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">Home</a></li>
         <li><a href="about.html" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">About</a></li>
         <li><a href="contact.html" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">Contact</a></li>
