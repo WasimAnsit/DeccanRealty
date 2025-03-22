@@ -300,8 +300,8 @@
         <div class="flex flex-col md:flex-row items-center md:items-start">
             <!-- Customer Image -->
             <div class="w-full md:w-1/2 flex justify-center relative">
-                <img id="customerImage" src="assets/images/profiledemologo.jpg" alt="Customer" class="rounded-lg shadow-lg w-32 sm:w-40 md:w-52">
-                <div id="reviewContent" class="absolute -bottom-2 left-[50%] sm:left-[55%] md:left-[70%] transform -translate-x-[50%] sm:-translate-x-[55%] md:-translate-x-[45%] translate-y-4 bg-white text-gray-800 p-3 rounded-lg shadow-lg w-32 sm:w-40 md:w-52">
+                <img id="customerImage" src="assets/images/profiledemologo.jpg" alt="Customer" class="rounded-lg shadow-lg w-32 sm:w-40 md:w-52 transition-transform duration-500 ease-in-out transform hover:scale-105">
+                <div id="reviewContent" class="absolute -bottom-2 left-[50%] sm:left-[55%] md:left-[70%] transform -translate-x-[50%] sm:-translate-x-[55%] md:-translate-x-[45%] translate-y-4 bg-white text-gray-800 p-3 rounded-lg shadow-lg w-32 sm:w-40 md:w-52 transition-opacity duration-500 ease-in-out">
                     <div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-green-500 text-white p-2 rounded-full sm:-top-5 sm:left-1/2 sm:transform sm:-translate-x-1/2 sm:p-2">
                         ✔
                     </div>
@@ -313,11 +313,13 @@
             </div>
             <!-- Text Content -->
             <div class="w-full md:w-1/2 text-white mt-6 md:mt-0 md:pl-4 text-center md:text-left">
-                <h2 class="text-base sm:text-lg font-bold">What we have done & what our Customers say</h2>
-                <p class="mt-2 text-gray-300 text-xs sm:text-sm">We are here to help you build an excellent build, with us nothing is impossible. See what we have done and what they have to say about our work performance.</p>
+                <div id="textContent" class="transition-opacity duration-500 ease-in-out">
+                    <h2 class="text-base sm:text-lg font-bold">What we have done & what our Customers say</h2>
+                    <p class="mt-2 text-gray-300 text-xs sm:text-sm">We are here to help you build an excellent build, with us nothing is impossible. See what we have done and what they have to say about our work performance.</p>
+                </div>
                 <div class="flex justify-center md:justify-end items-center mt-4">
-                    <button id="prevBtn" class="bg-gray-700 text-white p-2 rounded-full hover:bg-gray-600 text-xs sm:text-sm mx-1">&#8592;</button>
-                    <button id="nextBtn" class="bg-green-600 text-white p-2 rounded-full hover:bg-green-500 text-xs sm:text-sm mx-1">&#8594;</button>
+                    <button id="prevBtn" class="bg-gray-700 text-white p-2 rounded-full hover:bg-gray-600 text-xs sm:text-sm mx-1 transition-transform duration-300 ease-in-out transform hover:scale-110">&#8592;</button>
+                    <button id="nextBtn" class="bg-green-600 text-white p-2 rounded-full hover:bg-green-500 text-xs sm:text-sm mx-1 transition-transform duration-300 ease-in-out transform hover:scale-110">&#8594;</button>
                 </div>
             </div>
         </div>
