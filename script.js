@@ -276,3 +276,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Initialize with the first review
     updateReview(currentReviewIndex);
+
+
+
+    
