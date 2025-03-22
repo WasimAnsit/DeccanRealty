@@ -126,17 +126,19 @@
 @media (max-width: 768px) {
 
   /* Override sliding layout for mobile */
-  #propertyGrid.animate-slide,
+#propertyGrid.animate-slide,
   #servicesGrid.animate-slide {
     display: flex;
     flex-direction: column;
-    /* Stack cards vertically */
     animation: none;
-    /* Disable sliding animation */
     gap: 1.5rem;
-    /* Consistent spacing between cards */
   }
-
+    #propertyGrid .card-container:nth-child(n + 5),
+    /* Assuming 4 original properties */
+    #servicesGrid .card-container:nth-child(n + 5) {
+      /* Assuming 4 original services */
+      display: none;
+    }
   .card-container {
     width: 100%;
     /* Full width on mobile */

@@ -3,655 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous"></script>
     <title>Home Loan - Property Solutions</title>
-      <script src="ltscript.js" defer></script>
-    <link rel="stylesheet" href="output.css">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="testimonial.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Your Scripts -->
+    <script src="ltscript.js" defer></script>
+     <link rel="stylesheet" href="output.css">
+    <script src="script.js" defer></script>
+    <script src="headerfooter.js" defer></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-        /* Reset CSS */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        /* Global Styles */
         body {
-            line-height: 1.6;
-            color: #333;
-            overflow-x: hidden;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 25px;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        /* Header Styles */
-        header {
-            background-color: #060d42;
-            color: white;
-            padding: 10px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 110px;
-            height: 100px;
-            border-radius: 50%;
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-        }
-
-        .nav-menu li {
-            margin-left: 20px;
-        }
-
-        .nav-menu li a {
-            color: white;
-            font-weight: 500;
-            font-size: 20px;
-        }
-
-        .nav-menu li:last-child a {
-            background-color: transparent;
-            border: 1px solid white;
-            padding: 6px 12px;
-            border-radius: 5px;
-        }
-
-        /* Hero Section */
-        .hero {
-            position: relative;
-            height: 600px;
-            background-color: #060d42;
-            color: white;
-            padding: 60px 0;
-        }
-
-        .hero-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 30px;
-        }
-
-        .hero-text {
-            position: absolute;
-            top: 100px;
-            width: 78%;
-           
-            font-weight: 200;
-            /* width: 60%; */
-            z-index: 99;
-        }
-
-        .hero-text h1 {
-            font-size: 60px;
-            margin-bottom: 20px;
-            font-weight: 200;
-        }
-
-        .hero-text h1 span {
-            color: #ff6b35;
-            font-weight: 600;
-        }
-
-        .hero-text p {
-            font-size: 50px;
-            line-height: 1.4;
-        }
-
-        .hero-text p span {
-            font-weight: bold;
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 0px;
-            top: 30px;
-            width: 35%;
-        }
-
-        .hero-image img {
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-
-        /* About Section */
-        .about {
-            padding: 30px 0;
-            background-color: #f9f9f9;
-        }
-
-        .about-content {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .about p {
-            margin-bottom: 15px;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-
-        /* Who We Are Section */
-        .who-we-are {
-            padding: 40px 0;
-            background-color: white;
-        }
-
-        .who-we-are-header {
-            margin-bottom: 30px;
-        }
-
-        .who-we-are-header h2 {
-            font-size: 28px;
-            text-align: center;
-        }
-
-        .who-we-are-header h2 span {
-            color: #ff6b35;
-        }
-
-        .who-we-are-content {
-            display: flex;
-            align-items: flex-start;
-            gap: 30px;
-        }
-
-        .who-we-are-image {
-            width: 400px;
-            position: relative;
-        }
-
-        #first-image {
-
-        }
-
-        #second-image {
-            position: absolute;
-            bottom: 0;
-            right: -0px;
-            width: 50px;
-        }
-
-        .who-we-are-image img {
-            /* width: 100%; */
-            /* height: auto; */
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-
-        .who-we-are-text {
-            width: 65%;
-            font-size: 15px;
-        }
-
-        .who-we-are-text p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .who-we-are-bullets {
-            margin-top: 15px;
-        }
-
-        .who-we-are-bullets p {
-            margin-bottom: 8px;
-            position: relative;
-            padding-left: 20px;
-        }
-
-        .who-we-are-bullets p:before {
-            content: "•";
-            position: absolute;
-            left: 0;
-            color: #ff6b35;
-        }
-
-        /* Vision Mission Section */
-        .vision-mission {
-            padding: 40px 0;
-            background: url('/assets/images/rahul-ranjit-4Pmr__6Cme4-unsplash.jpg') no-repeat center center/cover;
-            position: relative;
-            color: #333;
-        }
-
-        .vision-mission::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(1, 10, 58, 0.57); /* Dark blue overlay with opacity */
-         /* Blur effect */
-        }
-
-        .vision-mission-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .vision-box, .mission-box, .goal-box {
-            background-color: rgba(41, 41, 41, 0.16);
-            padding: 25px;
-            border-radius: 10px;
-            text-align: center;
-            width: 33.33%;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .vision-box img, .mission-box img, .goal-box img {
-            width: 60px;
-            height: 60px;
-            margin-bottom: 15px;
-            object-fit: contain;
-        }
-
-        .vision-box h3, .mission-box h3, .goal-box h3 {
-            color: white;
-            margin-bottom: 15px;
-            font-size: 18px;
-        }
-
-        .vision-box p, .mission-box p {
-            font-size: 14px;
-            color: white;
-            text-align: left;
-            line-height: 1.5;
-        }
-
-        .goal-box ul {
-            text-align: left;
-            padding-left: 20px;
-            font-size: 14px;
-        }
-
-        .goal-box li {
-            color: white;
-            margin-bottom: 10px;
-            list-style-type: disc;
-        }
-
-        /* Why Choose Us Section */
-        .why-choose {
-            padding: 40px 0;
-            background-color: white;
-        }
-
-        .why-choose-header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .why-choose-header h2 {
-            font-size: 28px;
-        }
-
-        .why-choose-header h2 span {
-            color: #ff6b35;
-        }
-
-        .why-choose-content {
-            display: flex;
-            justify-content: space-between;
-            gap: 40px;
-        }
-
-        .why-choose-text {
-            width: 45%;
-            font-size: 14px;
-            text-align: left;
-        }
-
-        .why-choose-text p {
-            margin-bottom: 15px;
-            line-height: 1.5;
-        }
-
-        .reasons-column {
-            width: 55%;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 30px 20px;
-        }
-
-        .reason-box {
-            display: flex;
-            align-items: flex-start;
-        }
-
-        .reason-number {
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-            margin-right: 15px;
-            flex-shrink: 0;
-        }
-
-        .reason-number.one {
-            background-color: #ff6b35;
-        }
-
-        .reason-number.two {
-            background-color: #2ecc71;
-        }
-
-        .reason-number.three {
-            background-color: #060d42;
-        }
-
-        .reason-number.four {
-            background-color: #ff6b6b;
-        }
-
-        .reason-number.five {
-            background-color: #9b59b6;
-        }
-
-        .reason-number.six {
-            background-color: #f39c12;
-        }
-
-        .reason-text {
-            flex-grow: 1;
-        }
-
-        .reason-text h3 {
-            margin-bottom: 5px;
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: bold;
-        }
-
-        .reason-text p {
-            font-size: 13px;
-            line-height: 1.4;
-        }
-
-    
-        /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            font-size: 24px;
-            cursor: pointer;
-            color: white;
-        }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 1024px) {
-            .container {
-                padding: 0 20px;
-            }
-            
-            .nav-menu li {
-                margin-left: 15px;
-            }
-            
-            .nav-menu li a {
-                font-size: 13px;
-            }
-        }
-
-        @media screen and (max-width: 991px) {
-            .vision-mission-content {
-                flex-direction: column;
-            }
-            
-            .vision-box, .mission-box, .goal-box {
-                width: 100%;
-                margin-bottom: 20px;
-            }
-            
-            .footer-column {
-                width: 48%;
-            }
-        }
-
-        @media screen and (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .nav-menu {
-                position: fixed;
-                top: 70px;
-                left: -100%;
-                background-color: #060d42;
-                width: 100%;
-                height: calc(100vh - 70px);
-                flex-direction: column;
-                align-items: center;
-                justify-content: flex-start;
-                padding-top: 30px;
-                transition: 0.3s;
-                z-index: 999;
-            }
-            
-            .nav-menu.active {
-                left: 0;
-            }
-            
-            .nav-menu li {
-                margin: 15px 0;
-            }
-            
-            .nav-menu li a {
-                font-size: 20px;
-            }
-            
-            .hero-content {
-                flex-direction: column;
-                gap: 20px;
-            }
-            
-            .hero-text, .hero-image {
-                width: 100%;
-            }
-            
-            .hero-text h1 {
-                font-size: 32px;
-            }
-            
-            .hero-text p {
-                font-size: 24px;
-            }
-            
-            .hero-image {
-                margin-top: 20px;
-            }
-            
-            .who-we-are-content {
-                flex-direction: column;
-            }
-            
-            .who-we-are-image, .who-we-are-text {
-                width: 100%;
-            }
-            
-            .who-we-are-image {
-                margin-bottom: 20px;
-            }
-            
-            .why-choose-content {
-                flex-direction: column;
-                gap: 30px;
-            }
-            
-            .why-choose-text, .reasons-column {
-                width: 100%;
-            }
-            
-            .reasons-column {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .reason-box {
-                flex-direction: row;
-                align-items: flex-start;
-                text-align: left;
-            }
-            
-            .reason-number {
-                margin-right: 15px;
-                margin-bottom: 0;
-            }
-            
-            .footer-content {
-                flex-direction: column;
-            }
-            
-            .footer-column {
-                width: 100%;
-            }
-        }
-
-        @media screen and (max-width: 480px) {
-            .hero-text h1 {
-                font-size: 28px;
-            }
-            
-            .hero-text p {
-                font-size: 20px;
-            }
-            
-            .who-we-are-header h2,
-            .why-choose-header h2 {
-                font-size: 24px;
-            }
-            
-            .reason-number {
-                width: 40px;
-                height: 40px;
-                font-size: 20px;
-            }
-            
-            .reason-text h3 {
-                font-size: 13px;
-            }
-            
-            .reason-text p {
-                font-size: 12px;
-            }
+            font-family: 'Poppins', sans-serif;
         }
     </style>
 </head>
-<body>
+<body class="text-gray-700 overflow-x-hidden">
     <!-- Header Section -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN 1.svg" alt="Company Logo">
-                    </a>
-                </div>
-                <div class="mobile-menu-btn">☰</div>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                    <li><a href="homeloan.html">Home LOAN</a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-
+    
+<div id="header-container" class="relative"></div>
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1>About <span>Us</span></h1>
-                    <p>What do we do? We turn your endless property scrolling into actual <span>homeownership!</span></p>
-                </div>
-                <div class="hero-image">
-                    <img src="assets/images/free_property_listing_websites.png" alt="City Buildings">
-                </div>
+    <section class="bg-[#060d42] text-white py-16 md:py-24 relative">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-8">
+            <div class="relative z-10 w-full md:w-3/4 text-center md:text-left">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-light mb-6">About <span class="text-[#ff6b35] font-semibold">Us</span></h1>
+                <p class="text-2xl md:text-3xl lg:text-4xl leading-relaxed">What do we do? We turn your endless property scrolling into actual <span class="font-bold">homeownership!</span></p>
+            </div>
+            <div class="w-full md:w-1/3 mt-8 md:mt-0">
+                <img src="assets/images/free_property_listing_websites.png" alt="City Buildings" class="w-full rounded-lg shadow-lg">
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <p>We take pride in being a unique and customer-centric platform that helps people find places they can call of their own and live in. Every day we look for better ways to serve our clients and keep ourselves as a top choice for the people of Delhi, NCR.</p>
-                <p>Although today we indeed do more than just finding you a place to reside in, we simplify the search for a home, free from fake listings and endless site visits. But, our business is all about People and Places!</p>
-            </div>
+    <section class="bg-gray-100 py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-base md:text-lg mb-4">We take pride in being a unique and customer-centric platform that helps people find places they can call of their own and live in. Every day we look for better ways to serve our clients and keep ourselves as a top choice for the people of Delhi, NCR.</p>
+            <p class="text-base md:text-lg">Although today we indeed do more than just finding you a place to reside in, we simplify the search for a home, free from fake listings and endless site visits. But, our business is all about People and Places!</p>
         </div>
     </section>
 
     <!-- Who We Are Section -->
-    <section class="who-we-are">
-        <div class="container">
-            <div class="who-we-are-header">
-                <h2>WHO <span>WE ARE</span></h2>
-            </div>
-            <div class="who-we-are-content">
-                <div class="who-we-are-image">
-                    <div id="first-image">
-                        <img src="assets/images/568e57d643f8ec23ca4b0be2c0d556e6.png" alt="Our Team" style="">
-                    </div>
-                    <!-- <div id="second-image">
-                        <img src="assets\images\a840f999cdc23e0ea8dbd538ed1122df.png" alt="Our Team">
-                    </div> -->
+    <section class="py-10 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">WHO <span class="text-[#ff6b35]">WE ARE</span></h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-1/3 relative">
+                    <img src="assets/images/568e57d643f8ec23ca4b0be2c0d556e6.png" alt="Our Team" class="w-full rounded-lg shadow-md">
                 </div>
-                <div class="who-we-are-text">
-                    <p>The first thing we ask everyone we meet, right after we get to know their name, is “Where is your home?”</p>
-                    <p>The single greatest excitement we seen in people is when a home changes its meaning from a place to a feeling to shelter.</p>
-                    <p>It’s where you can get out of your comfy bed in the morning, a tiny bedroom for your child can become the entire universe of imagination, it tracks both up with you in the bedtime, where you catch fireflies in the evening, your parties, where papacitos are always in the freezer, and where the sun peeks through the window every morning.</p>
-                    <p>Since touching the concept of a home is in human nature to want a place to belong.</p>
-                    <div class="who-we-are-bullets">
-                        <p>A place that gives them Safety, Security, and Stability</p>
-                        <p>A place to bring and create new memories</p>
-                        <p>A place and opportunity for the future</p>
-                        <p>A place to set foundations for the future</p>
-                        <p>"The very biggest house is one of happiness that connects people and places"... That very thought made us redefine our business.</p>
+                <div class="w-full md:w-2/3 text-sm md:text-base">
+                    <p class="mb-4">The first thing we ask everyone we meet, right after we get to know their name, is “Where is your home?”</p>
+                    <p class="mb-4">The single greatest excitement we seen in people is when a home changes its meaning from a place to a feeling to shelter.</p>
+                    <p class="mb-4">It’s where you can get out of your comfy bed in the morning, a tiny bedroom for your child can become the entire universe of imagination, it tracks both up with you in the bedtime, where you catch fireflies in the evening, your parties, where papacitos are always in the freezer, and where the sun peeks through the window every morning.</p>
+                    <p class="mb-4">Since touching the concept of a home is in human nature to want a place to belong.</p>
+                    <div class="space-y-2">
+                        <p class="relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-[#ff6b35]">A place that gives them Safety, Security, and Stability</p>
+                        <p class="relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-[#ff6b35]">A place to bring and create new memories</p>
+                        <p class="relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-[#ff6b35]">A place and opportunity for the future</p>
+                        <p class="relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-[#ff6b35]">A place to set foundations for the future</p>
+                        <p class="relative pl-5 before:content-['•'] before:absolute before:left-0 before:text-[#ff6b35]">"The very biggest house is one of happiness that connects people and places"... That very thought made us redefine our business.</p>
                     </div>
                 </div>
             </div>
@@ -659,36 +68,35 @@
     </section>
 
     <!-- Additional Text -->
-    <section class="about">
-        <div class="container">
-            <div class="about-content">
-                <p>Since the time we started meeting people, till today when we have become one of the best free property listing websites in Delhi NCR, we loyal to our customers. We love the process, and there's no going back.</p>
-                <p>We take pride in providing people with unaltered memories that will last forever.</p>
-                <p>The only one-stop solution for all your property-related needs. Whether you're searching for your book flat, the moment you put out finding your dream home to the moment you step in with a sweet smile and say, "Hello, new home!"</p>
-            </div>
+    <section class="bg-gray-100 py-8 md:py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-base md:text-lg mb-4">Since the time we started meeting people, till today when we have become one of the best free property listing websites in Delhi NCR, we loyal to our customers. We love the process, and there's no going back.</p>
+            <p class="text-base md:text-lg mb-4">We take pride in providing people with unaltered memories that will last forever.</p>
+            <p class="text-base md:text-lg">The only one-stop solution for all your property-related needs. Whether you're searching for your book flat, the moment you put out finding your dream home to the moment you step in with a sweet smile and say, "Hello, new home!"</p>
         </div>
     </section>
 
     <!-- Vision Mission Goal Section -->
-    <section class="vision-mission">
-        <div class="container">
-            <div class="vision-mission-content">
-                <div class="vision-box">
-                    <img src="assets\images\e76bb6c6836eb7c53117211bf53269e8.png" alt="Vision Icon">
-                    <h3>Our Vision:</h3>
-                    <p>We believe a trustworthy relationship between our clients and us is vital. Therefore, we aim for an enduring and balanced relationship with our clients and shape a better future – of the Real Estate Sector in Delhi, NCR, and of the people, of course!</p>
+    <section class="py-10 md:py-16 bg-cover bg-center relative" style="background-image: url('/assets/images/rahul-ranjit-4Pmr__6Cme4-unsplash.jpg')">
+        <div class="absolute inset-0 bg-[#010A3A]/60 backdrop-blur-sm"></div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row gap-6">
+                <div class="bg-gray-800/20 p-6 rounded-lg text-center w-full md:w-1/3 backdrop-blur-md">
+                    <img src="assets/images/e76bb6c6836eb7c53117211bf53269e8.png" alt="Vision Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Our Vision:</h3>
+                    <p class="text-white text-sm text-left">We believe a trustworthy relationship between our clients and us is vital. Therefore, we aim for an enduring and balanced relationship with our clients and shape a better future – of the Real Estate Sector in Delhi, NCR, and of the people, of course!</p>
                 </div>
-                <div class="mission-box">
-                    <img src="assets\images\370b59b4925208bb005461d63f19a2fc.png" alt="Mission Icon">
-                    <h3>Our Mission:</h3>
-                    <p>We thrive on meeting and exceeding the property objectives of the people of Delhi, NCR, by providing clear, concise, and personalized advice through our deep understanding of the property sector. Also, we leave no stone unturned to provide you with innovative property solutions that add value to their lives and property.</p>
+                <div class="bg-gray-800/20 p-6 rounded-lg text-center w-full md:w-1/3 backdrop-blur-md">
+                    <img src="assets/images/370b59b4925208bb005461d63f19a2fc.png" alt="Mission Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Our Mission:</h3>
+                    <p class="text-white text-sm text-left">We thrive on meeting and exceeding the property objectives of the people of Delhi, NCR, by providing clear, concise, and personalized advice through our deep understanding of the property sector. Also, we leave no stone unturned to provide you with innovative property solutions that add value to their lives and property.</p>
                 </div>
-                <div class="goal-box">
-                    <img src="assets\images\6d634f5f334a4b442c71892ac137637f.png" alt="Goal Icon">
-                    <h3>Our Goal:</h3>
-                    <ul>
-                        <li>To work responsibly in partnership to enhance people’s life and living conditions, to be the team behind every right choice you make, and to be the partners you can rely upon in your renting, buying, or selling journey.</li>
-                        <li>We achieve our goals by putting data, design, technology, and one secret ingredient to use.</li>
+                <div class="bg-gray-800/20 p-6 rounded-lg text-center w-full md:w-1/3 backdrop-blur-md">
+                    <img src="assets/images/6d634f5f334a4b442c71892ac137637f.png" alt="Goal Icon" class="w-16 h-16 mx-auto mb-4">
+                    <h3 class="text-white text-lg font-semibold mb-4">Our Goal:</h3>
+                    <ul class="text-white text-sm text-left list-disc pl-5">
+                        <li class="mb-2">To work responsibly in partnership to enhance people’s life and living conditions, to be the team behind every right choice you make, and to be the partners you can rely upon in your renting, buying, or selling journey.</li>
+                        <li class="mb-2">We achieve our goals by putting data, design, technology, and one secret ingredient to use.</li>
                         <li>Know what the secret ingredient is? Our passion is to deliver value to our people and shareholders!</li>
                     </ul>
                 </div>
@@ -697,57 +105,55 @@
     </section>
 
     <!-- Why Choose Us Section -->
-    <section class="why-choose">
-        <div class="container">
-            <div class="why-choose-header">
-                <h2>Why choose <span>Us?</span></h2>
-            </div>
-            <div class="why-choose-content">
-                <div class="why-choose-text">
-                    <p>We understand that a new home is an investment that will reap the rewards for a lifetime. Therefore, we make our happy place with our clients and give them reasons (good ones) to choose us.</p>
+    <section class="py-10 md:py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Why choose <span class="text-[#ff6b35]">Us?</span></h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="w-full md:w-5/12 text-sm md:text-base">
+                    <p class="mb-4">We understand that a new home is an investment that will reap the rewards for a lifetime. Therefore, we make our happy place with our clients and give them reasons (good ones) to choose us.</p>
                     <p>Here is your time to know your why...</p>
                 </div>
-                <div class="reasons-column">
-                    <div class="reason-box">
-                        <div class="reason-number one">1</div>
-                        <div class="reason-text">
-                            <h3>Trust:</h3>
-                            <p>Trust is the main pillar of the relationship with our clients. We earn trust by proving ourselves more than just a brokerage. We don’t leave our customers in the middle of nowhere. Our dedicated team is here to provide transparent insights, advice, and solutions to support your financial strategies.</p>
+                <div class="w-full md:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#ff6b35] rounded-full mr-4">1</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Trust:</h3>
+                            <p class="text-xs md:text-sm">Trust is the main pillar of the relationship with our clients. We earn trust by proving ourselves more than just a brokerage. We don’t leave our customers in the middle of nowhere. Our dedicated team is here to provide transparent insights, advice, and solutions to support your financial strategies.</p>
                         </div>
                     </div>
-                    <div class="reason-box">
-                        <div class="reason-number two">2</div>
-                        <div class="reason-text">
-                            <h3>Accessibility:</h3>
-                            <p>With our phone lines open Monday to Friday, you can reach out to us on working days between 9 am to 6 pm. Or, email us for any further assistance or concerns.</p>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#2ecc71] rounded-full mr-4">2</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Accessibility:</h3>
+                            <p class="text-xs md:text-sm">With our phone lines open Monday to Friday, you can reach out to us on working days between 9 am to 6 pm. Or, email us for any further assistance or concerns.</p>
                         </div>
                     </div>
-                    <div class="reason-box">
-                        <div class="reason-number three">3</div>
-                        <div class="reason-text">
-                            <h3>Knowledge of the locations:</h3>
-                            <p>Our team, with its best knowledge and matchless expertise, guides you about the region of Delhi, Noida, Ghaziabad, Gurugram, and Faridabad.</p>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#060d42] rounded-full mr-4">3</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Knowledge of the locations:</h3>
+                            <p class="text-xs md:text-sm">Our team, with its best knowledge and matchless expertise, guides you about the region of Delhi, Noida, Ghaziabad, Gurugram, and Faridabad.</p>
                         </div>
                     </div>
-                    <div class="reason-box">
-                        <div class="reason-number four">4</div>
-                        <div class="reason-text">
-                            <h3>Comprehensive services:</h3>
-                            <p>We deal in property and housing-related services and serve the people of the Region of Delhi NCR.</p>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#ff6b6b] rounded-full mr-4">4</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Comprehensive services:</h3>
+                            <p class="text-xs md:text-sm">We deal in property and housing-related services and serve the people of the Region of Delhi NCR.</p>
                         </div>
                     </div>
-                    <div class="reason-box">
-                        <div class="reason-number five">5</div>
-                        <div class="reason-text">
-                            <h3>Video-oriented site experience:</h3>
-                            <p>While partnering with us, you don’t need to visit the site physically. You can get the whole idea of the site with our detail-oriented video.</p>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#9b59b6] rounded-full mr-4">5</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Video-oriented site experience:</h3>
+                            <p class="text-xs md:text-sm">While partnering with us, you don’t need to visit the site physically. You can get the whole idea of the site with our detail-oriented video.</p>
                         </div>
                     </div>
-                    <div class="reason-box">
-                        <div class="reason-number six">6</div>
-                        <div class="reason-text">
-                            <h3>Our app:</h3>
-                            <p>Even better, you can use our app to make things a lot easier. For example, you can use filters to search, find new projects, stay up to date, manage your listings and connect with other buyers/sellers.</p>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 flex items-center justify-center text-white font-bold text-xl bg-[#f39c12] rounded-full mr-4">6</div>
+                        <div>
+                            <h3 class="text-sm font-bold uppercase mb-2">Our app:</h3>
+                            <p class="text-xs md:text-sm">Even better, you can use our app to make things a lot easier. For example, you can use filters to search, find new projects, stay up to date, manage your listings and connect with other buyers/sellers.</p>
                         </div>
                     </div>
                 </div>
@@ -755,63 +161,17 @@
         </div>
     </section>
 
-    <!-- Footer Section -->
-  <footer class="bg-black text-white py-10 md:py-20 px-6 md:px-20">
-    <div class="container  mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-        <div>
-            <h3 class="text-[28px] font-semibold mb-4">Company</h3>
-            <ul class="space-y-2 text-[22px]">
-                <li><a href="about.html" class="hover:text-gray-400">About</a></li>
-                <li><a href="contact.html" class="hover:text-gray-400">Contact</a></li>
-                <li><a href="terms_conditions.html" class="hover:text-gray-400">Terms & Conditions</a></li>
-                <li><a href="privacy_policy.html" class="hover:text-gray-400">Privacy Policy</a></li>
-                <li><a href="faq.html" class="hover:text-gray-400">FAQ</a></li>
-            </ul>
-        </div>
-        <div>
-            <h3 class="text-[28px] font-semibold mb-4">Contact</h3>
-            <p class="flex items-center gap-2 justify-center md:justify-start"><i style="font-size: 30px;" class="fas fa-map-marker-alt"></i> Address: No 56/6, 6th C Main Road 4th Block East,Jayanagar Bengaluru-560041</p> <br>
-            <p class="flex items-center gap-2 justify-center md:justify-start"><i style="font-size: 30px;" class="fas fa-phone"></i> +91 73030 62845,</p><br>
-             <p class="flex items-center gap-2 justify-center md:justify-start"><i style="font-size: 30px;" style="font-size: 30px;" class="fa-brands fa-whatsapp"></i> +91 97183 61550</p><br>
-            <p class="flex items-center gap-2 justify-center md:justify-start"><i style="font-size: 30px;" class="fas fa-envelope"></i> info@deccanrealty.com</p><br>
-            <div class="flex justify-center md:justify-start space-x-4 mt-4">
-            </div>
-        </div>
-        <div>
-          <div class="ml-14">
-            <div class="justify-center md:justify-start mb-10 ">
-                <a href="#" class="logo-link">
-                    <img src="assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" class="w-38 sm:w-50">
-                </a>
-                <div class="anchor-icon  flex justify-center md:justify-start space-x-4 mt-4">
-                    <a href="#" style="margin-left: 15px;" class="text-white hover:text-gray-300">
-                        <div class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800">
-                            <i style="font-size: 30px" class="fab fa-youtube"></i>
-                        </div>
-                    </a>
-                    <a href="#" style="margin-left: 15px;" class="text-white hover:text-gray-300">
-                        <div class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800">
-                            <i style="font-size: 30px;" class="fab fa-facebook-f"></i>
-                        </div>
-                    </a>
-                    <a href="#" style="margin-left: 15px;" class="text-white hover:text-gray-300">
-                        <div class="w-15 h-15 flex items-center justify-center rounded-full bg-gray-800">
-                            <i style="font-size: 30px" class="fab fa-linkedin-in"></i>
-                        </div>
-                    </a>
-                </div>
-            </div>
-</footer>
+    <!-- Footer -->
+<div id="footer-container"></div>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- Mobile Menu Script -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-            const navMenu = document.querySelector('.nav-menu');
-            
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
             mobileMenuBtn.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
-                mobileMenuBtn.textContent = navMenu.classList.contains('active') ? '✕' : '☰';
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
             });
         });
     </script>

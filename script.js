@@ -201,3 +201,49 @@ document.addEventListener("DOMContentLoaded", () => {
     gridContainer.classList.add("items-start");
   }
 });
+
+
+// testimonial js
+
+
+ const reviews = [
+   {
+     name: "Rajiv Singh",
+     review:
+       "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
+   },
+   {
+     name: "John Doe",
+     review:
+       "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
+   },
+   {
+     name: "Jane Smith",
+     review:
+       "Excellent service and attention to detail. We are very satisfied with the outcome.",
+   },
+ ];
+
+ let currentReviewIndex = 0;
+
+ const customerName = document.getElementById("customerName");
+ const customerReview = document.getElementById("customerReview");
+
+ const updateReview = (index) => {
+   customerName.textContent = reviews[index].name;
+   customerReview.textContent = reviews[index].review;
+ };
+
+ document.getElementById("prevBtn").addEventListener("click", () => {
+   currentReviewIndex =
+     (currentReviewIndex - 1 + reviews.length) % reviews.length;
+   updateReview(currentReviewIndex);
+ });
+
+ document.getElementById("nextBtn").addEventListener("click", () => {
+   currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+   updateReview(currentReviewIndex);
+ });
+
+ // Initialize with the first review
+ updateReview(currentReviewIndex);
