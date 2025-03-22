@@ -204,78 +204,91 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // testimonial js
- const reviews = [
-        {
-            name: "Rajiv Singh",
-            review: "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
-            textContent: {
-                heading: "What we have done & what our Customers say",
-                paragraph: "We are here to help you build an excellent build, with us nothing is impossible. See what we have done and what they have to say about our work performance."
-            }
-        },
-        {
-            name: "John Doe",
-            review: "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
-            textContent: {
-                heading: "Our Commitment to Excellence",
-                paragraph: "We strive to deliver the best results for our clients. Our team is dedicated to ensuring your satisfaction."
-            }
-        },
-        {
-            name: "Jane Smith",
-            review: "Excellent service and attention to detail. We are very satisfied with the outcome.",
-            textContent: {
-                heading: "Building Trust Through Quality",
-                paragraph: "Trust is the foundation of our work. We ensure every project meets the highest standards."
-            }
-        }
-    ];
+const reviews = [
+  {
+    name: "Kirti Sharma",
+    review:
+      "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
+    image: "assets/images/profilefl.jpg", // Change this to the actual image path
+    textContent: {
+      heading: "What we have done & what our Customers say",
+      paragraph:
+        "We are here to help you build an excellent build, with us nothing is impossible. See what we have done and what they have to say about our work performance.",
+    },
+  },
+  {
+    name: "John Doe",
+    review:
+      "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
+    image: "assets/images/profiledemologo.jpg", // Change this to the actual image path
+    textContent: {
+      heading: "Our Commitment to Excellence",
+      paragraph:
+        "We strive to deliver the best results for our clients. Our team is dedicated to ensuring your satisfaction.",
+    },
+  },
+  {
+    name: "Neha Patel",
+    review:
+      "Excellent service and attention to detail. We are very satisfied with the outcome.",
+    image: "assets/images/profilefl.jpg", // Change this to the actual image path
+    textContent: {
+      heading: "Building Trust Through Quality",
+      paragraph:
+        "Trust is the foundation of our work. We ensure every project meets the highest standards.",
+    },
+  },
+];
 
-    let currentReviewIndex = 0;
+let currentReviewIndex = 0;
 
-    const customerName = document.getElementById('customerName');
-    const customerReview = document.getElementById('customerReview');
-    const reviewContent = document.getElementById('reviewContent');
-    const textContent = document.getElementById('textContent');
-    const heading = textContent.querySelector('h2');
-    const paragraph = textContent.querySelector('p');
+const customerImage = document.getElementById("customerImage");
+const customerName = document.getElementById("customerName");
+const customerReview = document.getElementById("customerReview");
+const reviewContent = document.getElementById("reviewContent");
+const textContent = document.getElementById("textContent");
+const heading = textContent.querySelector("h2");
+const paragraph = textContent.querySelector("p");
 
-    const updateReview = (index) => {
-        // Fade out animation for review and text content
-        reviewContent.style.opacity = 0;
-        reviewContent.style.transform = "translateY(20px)";
-        textContent.style.opacity = 0;
-        textContent.style.transform = "translateY(20px)";
+const updateReview = (index) => {
+  reviewContent.style.opacity = 0;
+  reviewContent.style.transform = "translateY(20px)";
+  textContent.style.opacity = 0;
+  textContent.style.transform = "translateY(20px)";
 
-        setTimeout(() => {
-            // Update review content
-            customerName.textContent = reviews[index].name;
-            customerReview.textContent = reviews[index].review;
+  setTimeout(() => {
+    // Update customer image
+    customerImage.src = reviews[index].image;
 
-            // Update text content
-            heading.textContent = reviews[index].textContent.heading;
-            paragraph.textContent = reviews[index].textContent.paragraph;
+    // Update review content
+    customerName.textContent = reviews[index].name;
+    customerReview.textContent = reviews[index].review;
 
-            // Fade in animation for review and text content
-            reviewContent.style.opacity = 1;
-            reviewContent.style.transform = "translateY(0)";
-            textContent.style.opacity = 1;
-            textContent.style.transform = "translateY(0)";
-        }, 300); // Match this duration with the CSS transition duration
-    };
+    // Update text content
+    heading.textContent = reviews[index].textContent.heading;
+    paragraph.textContent = reviews[index].textContent.paragraph;
 
-    document.getElementById('prevBtn').addEventListener('click', () => {
-        currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
-        updateReview(currentReviewIndex);
-    });
+    reviewContent.style.opacity = 1;
+    reviewContent.style.transform = "translateY(0)";
+    textContent.style.opacity = 1;
+    textContent.style.transform = "translateY(0)";
+  }, 300);
+};
 
-    document.getElementById('nextBtn').addEventListener('click', () => {
-        currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-        updateReview(currentReviewIndex);
-    });
+document.getElementById("prevBtn").addEventListener("click", () => {
+  currentReviewIndex =
+    (currentReviewIndex - 1 + reviews.length) % reviews.length;
+  updateReview(currentReviewIndex);
+});
 
-    // Initialize with the first review
-    updateReview(currentReviewIndex);
+document.getElementById("nextBtn").addEventListener("click", () => {
+  currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
+  updateReview(currentReviewIndex);
+});
+
+// Initialize with the first review
+updateReview(currentReviewIndex);
+
 
 
 
