@@ -1,16 +1,14 @@
 // Function to create the Header
 function createHeader() {
-   const header = document.createElement("header");
-  header.className = "bg-[#060d42] text-white p-4 sticky top-0 z-50 w-full";
-  header.style.position = "sticky";
-  header.style.top = "0";
-  header.style.zIndex = "50";
+  const header = document.createElement("header");
+  header.className = "bg-[#060d42] text-white p-4 w-full relative";
   header.style.width = "100%";
   header.innerHTML = `
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
         <a href="index.html">
-          <img src="./assets/logos/WhiteLogoDeccan.png" alt="Deccan Realty Logo" class="w-24 h-24 rounded-full md:w-28 md:h-28 mix-blend-screen">
+          <img src="./assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" 
+               class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 mix-blend-screen object-contain">
         </a>
       </div>
       <button class="md:hidden text-2xl text-white mobile-menu-btn">☰</button>
@@ -21,17 +19,21 @@ function createHeader() {
         <li><a href="faq.html" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">FAQ</a></li>
         <li><a href="homeloan.html" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition hover:bg-white hover:text-[#060d42]">Home Loan</a></li>
       </ul>
-      <ul class="mobile-menu hidden md:hidden flex-col items-center bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300">
-        <li class="w-full"><a href="index.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">Home</a></li>
-        <li class="w-full"><a href="about.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">About</a></li>
-        <li class="w-full"><a href="contact.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">Contact</a></li>
-        <li class="w-full"><a href="faq.html" class="block text-lg font-medium py-3 w-full text-center hover:text-gray-300">FAQ</a></li>
-        <li class="w-full"><a href="homeloan.html" class="block text-lg font-medium border border-white px-3 py-1 rounded-md hover:bg-white hover:text-[#060d42] transition w-full text-center">Home Loan</a></li>
+      <ul class="mobile-menu hidden md:hidden flex-col bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300 z-50">
+        <li class="w-full flex justify-center"><a href="index.html" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">Home</a></li>
+        <li class="w-full flex justify-center"><a href="about.html" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">About</a></li>
+        <li class="w-full flex justify-center"><a href="contact.html" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">Contact</a></li>
+        <li class="w-full flex justify-center"><a href="faq.html" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">FAQ</a></li>
+        <li class="w-full flex justify-center">
+          <a href="homeloan.html" 
+             class="block text-lg font-medium py-1 px-3 border border-white rounded-md hover:bg-white hover:text-[#060d42] transition text-center max-w-[200px]">
+            Home Loan
+          </a>
+        </li>
       </ul>
     </div>
   `;
 
-  // Insert header at the top of the body
   document.body.insertBefore(header, document.body.firstChild);
 
   // Highlight active page
@@ -48,14 +50,29 @@ function createHeader() {
           "hover:bg-white",
           "hover:text-[#060d42]"
         );
-        link.classList.add("bg-orange-500", "text-white");
+        link.classList.add("bg-orange-500", "text-white", "rounded-md"); // Ensure rounded-md is added
+        link.style.display = "inline-block"; // Limits width to content
+        link.style.width = "auto"; // Prevents stretching
+        // Increase size when active
+        link.style.padding = link.classList.contains("border")
+          ? "0.375rem 1rem"
+          : "1rem 1rem"; // Larger padding (py-1.5 px-4 for Home Loan, py-4 px-4 for others)
+        link.style.fontSize = "1.25rem"; // Slightly larger text (20px instead of 18px)
+        // Ensure centering
+        link.parentElement.style.display = "flex";
+        link.parentElement.style.justifyContent = "center";
       }
     });
   });
 
-  // Mobile menu toggle
+  // Mobile menu toggle and positioning
   const mobileMenuBtn = header.querySelector(".mobile-menu-btn");
   const mobileMenu = header.querySelector(".mobile-menu");
+
+  mobileMenu.style.left = "0";
+  mobileMenu.style.width = "100%";
+  mobileMenu.style.top = "100%";
+
   mobileMenuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("hidden");
     mobileMenuBtn.textContent = mobileMenu.classList.contains("hidden")
@@ -63,7 +80,6 @@ function createHeader() {
       : "✕";
   });
 }
-
 // Function to create the Footer
 function createFooter() {
   const footerContainer = document.querySelector("#footer-container");

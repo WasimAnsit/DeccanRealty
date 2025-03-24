@@ -267,3 +267,39 @@
     transform: rotate(360deg);
   }
 }
+
+.logo img {
+  width: 128px;
+  height: 128px;
+}
+
+@media (min-width: 768px) {
+  .logo img {
+    width: 144px;
+    height: 144px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo img {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* testimonial */
+@media (max-width: 768px) {
+  #reviewContent {
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  #customerImage {
+    width: 100%;
+    max-width: 150px;
+  }
+
+  .flex-col {
+    gap: 1.5rem;
+  }
+}

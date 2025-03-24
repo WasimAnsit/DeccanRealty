@@ -209,33 +209,33 @@ const reviews = [
     name: "Kirti Sharma",
     review:
       "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
-    image: "assets/images/profilefl.jpg", // Change this to the actual image path
+    image: "assets/images/profilefl.jpg",
     textContent: {
-      heading: "What we have done & what our Customers say",
+      heading: "What Our Customers Say",
       paragraph:
-        "We are here to help you build an excellent build, with us nothing is impossible. See what we have done and what they have to say about our work performance.",
+        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
     },
   },
   {
     name: "John Doe",
     review:
       "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
-    image: "assets/images/profiledemologo.jpg", // Change this to the actual image path
+    image: "assets/images/profiledemologo.jpg",
     textContent: {
-      heading: "Our Commitment to Excellence",
+      heading: "What Our Customers Say",
       paragraph:
-        "We strive to deliver the best results for our clients. Our team is dedicated to ensuring your satisfaction.",
+        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
     },
   },
   {
     name: "Neha Patel",
     review:
       "Excellent service and attention to detail. We are very satisfied with the outcome.",
-    image: "assets/images/profilefl.jpg", // Change this to the actual image path
+    image: "assets/images/profilefl.jpg",
     textContent: {
-      heading: "Building Trust Through Quality",
+      heading: "What Our Customers Say",
       paragraph:
-        "Trust is the foundation of our work. We ensure every project meets the highest standards.",
+        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
     },
   },
 ];
@@ -246,49 +246,41 @@ const customerImage = document.getElementById("customerImage");
 const customerName = document.getElementById("customerName");
 const customerReview = document.getElementById("customerReview");
 const reviewContent = document.getElementById("reviewContent");
-const textContent = document.getElementById("textContent");
-const heading = textContent.querySelector("h2");
-const paragraph = textContent.querySelector("p");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
 
 const updateReview = (index) => {
   reviewContent.style.opacity = 0;
-  reviewContent.style.transform = "translateY(20px)";
-  textContent.style.opacity = 0;
-  textContent.style.transform = "translateY(20px)";
 
   setTimeout(() => {
-    // Update customer image
     customerImage.src = reviews[index].image;
-
-    // Update review content
     customerName.textContent = reviews[index].name;
     customerReview.textContent = reviews[index].review;
 
-    // Update text content
-    heading.textContent = reviews[index].textContent.heading;
-    paragraph.textContent = reviews[index].textContent.paragraph;
-
     reviewContent.style.opacity = 1;
-    reviewContent.style.transform = "translateY(0)";
-    textContent.style.opacity = 1;
-    textContent.style.transform = "translateY(0)";
   }, 300);
 };
 
-document.getElementById("prevBtn").addEventListener("click", () => {
+const setInitialReview = (index) => {
+  customerImage.src = reviews[index].image;
+  customerName.textContent = reviews[index].name;
+  customerReview.textContent = reviews[index].review;
+  reviewContent.style.opacity = 1;
+};
+
+prevBtn.addEventListener("click", () => {
   currentReviewIndex =
     (currentReviewIndex - 1 + reviews.length) % reviews.length;
   updateReview(currentReviewIndex);
 });
 
-document.getElementById("nextBtn").addEventListener("click", () => {
+nextBtn.addEventListener("click", () => {
   currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
   updateReview(currentReviewIndex);
 });
 
-// Initialize with the first review
-updateReview(currentReviewIndex);
-
+// Initial load
+setInitialReview(currentReviewIndex);
 
 
 //home laon contact us form js
