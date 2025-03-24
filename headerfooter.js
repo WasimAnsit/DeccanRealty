@@ -140,21 +140,21 @@ function createFooter() {
       <div class="flex justify-center px-4 sm:px-6 md:px-8">
         <div class="text-center">
           <div class="mb-8 sm:mb-10">
-            <a href="#" class="logo-link" area-label="imglogo">
+            <a href="index.html" class="logo-link" area-label="imglogo">
               <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
             </a>
             <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
-              <a href="#" area-label="youtube"  class="text-white hover:text-gray-300">
+              <a href="https://youtube.com" area-label="youtube"  class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
                   <i class="fab fa-youtube text-lg sm:text-xl md:text-2xl"></i>
                 </div>
               </a>
-              <a href="#"  area-label="facebook" class="text-white hover:text-gray-300">
+              <a href="https://facebook.com"  area-label="facebook" class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
                   <i class="fab fa-facebook-f text-lg sm:text-xl md:text-2xl"></i>
                 </div>
               </a>
-              <a href="#"  area-label="linkedin" class="text-white hover:text-gray-300">
+              <a href="https://linkedin.com"  area-label="linkedin" class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
                   <i class="fab fa-linkedin-in text-lg sm:text-xl md:text-2xl"></i>
                 </div>

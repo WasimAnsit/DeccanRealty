@@ -999,9 +999,9 @@
   .bg-\[\#060d42\] {
     background-color: #060d42;
   }
-  .bg-\[\#\] {
+  /* .bg-\[\#\] {
     background-color: #;
-  }
+  } */
   .bg-\[\#b1923f\] {
     background-color: #b1923f;
   }
@@ -1098,9 +1098,10 @@
   .bg-green-600 {
     background-color: var(--color-green-600);
   }
-  .bg-orange-500 {
-    background-color: var(--color-orange-500);
-  }
+    .bg-orange-600 {
+      background-color: #ea580c;
+      /* Darker orange */
+    }
   .bg-pink-500 {
     background-color: var(--color-pink-500);
   }
@@ -1470,9 +1471,9 @@
   .text-\[\#ff7b2a\] {
     color: #ff7b2a;
   }
-  .text-black {
-    color: var(--color-black);
-  }
+ .text-black {
+   color: black;
+ }
   .text-blue-600 {
     color: var(--color-blue-600);
   }
@@ -1856,7 +1857,7 @@
   .hover\:text-\[\#\#b1923f\] {
     &:hover {
       @media (hover: hover) {
-        color: ##b1923f;
+        color: #b1923f;
       }
     }
   }

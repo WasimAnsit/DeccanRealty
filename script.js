@@ -132,7 +132,7 @@ function createCard(item, type) {
                         </div>
                     `
                         : `
-                        <h4 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h4>
+                        <h3 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h3>
                         <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
                     `
                     }
