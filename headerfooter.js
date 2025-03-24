@@ -1,7 +1,7 @@
 // Function to create the Header
 function createHeader() {
   const header = document.createElement("header");
-  header.className = "bg-[#060d42] text-white p-4 w-full relative";
+  header.className = "bg-[#060d42] text-white w-full relative";
   header.style.width = "100%";
   header.innerHTML = `
     <div class="container mx-auto px-4 flex justify-between items-center">
