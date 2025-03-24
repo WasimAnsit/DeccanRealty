@@ -7,7 +7,7 @@ function createHeader() {
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
         <a href="index.html">
-          <img src="./assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" 
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" 
                class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 mix-blend-screen object-contain">
         </a>
       </div>
@@ -124,7 +124,7 @@ function createFooter() {
         <div class="text-center">
           <div class="mb-8 sm:mb-10">
             <a href="#" class="logo-link">
-              <img src="assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
+              <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
             </a>
             <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
               <a href="#" class="text-white hover:text-gray-300">

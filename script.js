@@ -1,7 +1,7 @@
 const properties = [
   {
     imageURL: {
-      src: "assets/images/GODREJ LAKESIDE ORCHARD.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815515/GODREJ_LAKESIDE_ORCHARD_vfejmm.jpg",
       alt: "Modern House",
     },
     propertyName: "Godrej Lakeside Orchard",
@@ -15,7 +15,10 @@ const properties = [
     propertyDescription: "",
   },
   {
-    imageURL: { src: "assets/images/BIRLA EVARA.jpg", alt: "Luxury Villa" },
+    imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BIRLA_EVARA_mkqgmm.jpg",
+      alt: "Luxury Villa",
+    },
     propertyName: "Birla Evara",
     priceRange: "₹71.0 L - 3.16 Cr",
     location: "Kodathi Vilage, East Bangalore",
@@ -27,7 +30,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "assets/images/NAMBIAR DISTRICT 25.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815520/NAMBIAR_DISTRICT_25_esdnh7.jpg",
       alt: "Modern Apartment",
     },
     propertyName: "Nambiar District 25",
@@ -41,7 +44,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "assets/images/PRESTIEGE PINE FOREST.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815521/PRESTIEGE_PINE_FOREST_et69ai.jpg",
       alt: "Modern House",
     },
     propertyName: "Prestige Pine Forest",
@@ -57,26 +60,38 @@ const properties = [
 
 const services = [
   {
-    imageURL: { src: "assets/images/BUY.jpg", alt: "Buy Service" },
+    imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BUY_zlwlgm.jpg",
+      alt: "Buy Service",
+    },
     serviceTitle: "Buy Your Dream Property",
     serviceAddress:
       "Looking for a home in Bangalore? DeccanRealty.com offers the best residential listings with exclusive features and immersive video experiences. Start your search today!",
   },
   {
-    imageURL: { src: "assets/images/SELL.jpg", alt: "Sell Service" },
+    imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815523/SELL_gvuvjh.jpg",
+      alt: "Sell Service",
+    },
     serviceTitle: "Sell Your Property with Ease",
     serviceAddress:
       "Looking for the right buyer? DeccanRealty.com simplifies the selling process, ensuring a smooth and stress-free experience. Trust us to find the perfect buyer and support you every step of the way!",
   },
   {
-    imageURL: { src: "assets/images/RENT.jpg", alt: "Rent Service" },
+    imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815524/RENT_ntuh4o.jpg",
+      alt: "Rent Service",
+    },
     serviceTitle: "Find Your Perfect Rental Home",
     serviceAddress:
       "Looking to rent a home in Bangalore? DeccanRealty.com offers top-quality, ready-to-move-in apartments for a hassle-free living experience. Let us help you find the perfect place!",
   },
   {
-    imageURL: { src: "assets/images/COMMERCIAL.jpg", alt: "Buy Service" },
-    serviceTitle:  "Invest in Prime Commercial Properties",
+    imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/COMMERCIAL_wfr8xx.jpg",
+      alt: "Buy Service",
+    },
+    serviceTitle: "Invest in Prime Commercial Properties",
     serviceAddress:
       "Looking for rental income or short-term investment opportunities? DeccanRealty.com offers premium, ready-to-move-in commercial properties in Bangalore for a seamless investment and leasing experience.",
   },
