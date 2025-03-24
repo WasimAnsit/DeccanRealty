@@ -142,7 +142,7 @@ function createCard(item, type) {
                         class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
                         Enquiry Now  
                     </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
+                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" area-label="connect to whatsapp" class="whatsapp-btn">
                         <i class="fab fa-whatsapp"></i>
                     </a>
                 </div>
