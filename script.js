@@ -142,9 +142,14 @@ function createCard(item, type) {
                         class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
                         Enquiry Now  
                     </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" area-label="connect to whatsapp" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
+                   <a href="https://api.whatsapp.com/send?phone=917303062845" 
+   target="_blank" 
+   class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
+   aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span class="sr-only">Chat on WhatsApp</span>
+</a>
+                  
                 </div>
             </div>
         </div>
