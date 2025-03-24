@@ -913,7 +913,7 @@
     color: var(--color-orange-500);
   }
   .text-white {
-    color: var(--color-white);
+  color: #fff;
   }
   .underline {
     text-decoration-line: underline;
