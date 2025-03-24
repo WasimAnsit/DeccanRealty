@@ -119,20 +119,18 @@ function createCard(item, type) {
                       type === "property"
                         ? `
                         <div class="property-header mb-4">
-    <h3 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h3>
+    <h2 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h2>
     <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
     <span class="property-price text-[16px] font-semibold text-black block">${item.priceRange}<span class="text-[12px]"> (${item.pricePerSqFt})</span></span>
 </div>
                         <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
-                            
-                        <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
+                            <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
                             <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
-                           
                             <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
                         </div>
                     `
                         : `
-                        <h3 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h3>
+                        <h2 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h2>
                         <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
                     `
                     }
@@ -149,7 +147,6 @@ function createCard(item, type) {
     <i class="fab fa-whatsapp" aria-hidden="true"></i>
     <span class="sr-only">Chat on WhatsApp</span>
 </a>
-                  
                 </div>
             </div>
         </div>
