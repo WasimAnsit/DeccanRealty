@@ -70,58 +70,60 @@ function createFooter() {
   if (!footerContainer) return;
 
   const footer = document.createElement("footer");
-  footer.className = "bg-black text-white  md:py-4 px-4 md:px-20";
+  footer.className =
+    "bg-black text-white py-6 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-12";
   footer.innerHTML = `
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
-      <div>
-        <h3 class="text-2xl md:text-3xl font-semibold mb-4">Company</h3>
-        <ul class="space-y-2 text-lg md:text-xl">
-          <li><a href="about.html" class="hover:text-gray-400 transition">About</a></li>
-          <li><a href="contact.html" class="hover:text-gray-400 transition">Contact</a></li>
-          <li><a href="terms_conditions.html" class="hover:text-gray-400 transition">Terms & Conditions</a></li>
-          <li><a href="privacy_policy.html" class="hover:text-gray-400 transition">Privacy Policy</a></li>
-          <li><a href="faq.html" class="hover:text-gray-400 transition">FAQ</a></li>
-        </ul>
-      </div>
-      <div>
-        <h3 class="text-2xl md:text-3xl font-semibold mb-4">Contact</h3>
-        <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
-          <i class="fas fa-map-marker-alt text-2xl"></i> 
-          Address: No 56/6, 6th C Main Road 4th Block East, Jayanagar Bengaluru-560041
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center font-semibold md:text-left">
+      <div class="mb-8 sm:mb-10 px-4 sm:px-6 md:px-8">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">Office</h3>
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+          <i class="fas fa-map-marker-alt text-lg sm:text-xl md:text-2xl"></i> 
+          No 56/6, 6th C Main Road <br> 4th Block East, Jayanagar<br> Bengaluru-560041
         </p>
-        <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
-          <i class="fas fa-phone text-2xl"></i> 
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+          <i class="fas fa-phone text-lg sm:text-xl md:text-2xl"></i> 
           <a href="https://api.whatsapp.com/send?phone=917303062845">+91 73030 62845</a>
         </p>
-        <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
-          <i class="fa-brands fa-whatsapp text-2xl"></i> 
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+          <i class="fa-brands fa-whatsapp text-lg sm:text-xl md:text-2xl"></i> 
           <a href="https://api.whatsapp.com/send?phone=917718361550">+91 97183 61550</a>
         </p>
-        <p class="flex items-center justify-center md:justify-start gap-2 mb-4 text-sm md:text-base">
-          <i class="fas fa-envelope text-2xl"></i> 
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+          <i class="fas fa-envelope text-lg sm:text-xl md:text-2xl"></i> 
           info@deccanrealty.com
         </p>
       </div>
-      <div class="flex justify-center md:justify-start">
-        <div class="md:ml-12">
-          <div class="mb-10">
+      <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick links</h3>
+        <ul class="space-y-3 sm:space-y-4 font-semibold">
+          <li><a href="index.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
+          <li><a href="about.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
+          <li><a href="contact.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact Us</a></li>
+          <li><a href="faq.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
+          <li><a href="terms_conditions.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
+          <li><a href="privacy_policy.html" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <div class="flex justify-center px-4 sm:px-6 md:px-8">
+        <div class="text-center">
+          <div class="mb-8 sm:mb-10">
             <a href="#" class="logo-link">
-              <img src="assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" class="w-32 sm:w-40 md:w-48 mx-auto md:mx-0">
+              <img src="assets/logos/DECCAN REALTY WHITE LOGO.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
             </a>
-            <div class="flex justify-center md:justify-start space-x-4 mt-4">
+            <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
               <a href="#" class="text-white hover:text-gray-300">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-youtube text-2xl"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
+                  <i class="fab fa-youtube text-lg sm:text-xl md:text-2xl"></i>
                 </div>
               </a>
               <a href="#" class="text-white hover:text-gray-300">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-facebook-f text-2xl"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
+                  <i class="fab fa-facebook-f text-lg sm:text-xl md:text-2xl"></i>
                 </div>
               </a>
               <a href="#" class="text-white hover:text-gray-300">
-                <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-linkedin-in text-2xl"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
+                  <i class="fab fa-linkedin-in text-lg sm:text-xl md:text-2xl"></i>
                 </div>
               </a>
             </div>
@@ -129,9 +131,9 @@ function createFooter() {
         </div>
       </div>
     </div>
-   <div  class="bg-black text-center text-white  text-base md:text-lg">
-  Copyright ©2025 deccanrealty.com All rights reserved.
-</div>
+    <div class="bg-black text-center font-semibold text-white text-xs sm:text-sm md:text-base lg:text-lg">
+      Copyright ©2024-2025 DeccanRealty.com All rights reserved.
+    </div>
   `;
 
   footerContainer.innerHTML = "";
