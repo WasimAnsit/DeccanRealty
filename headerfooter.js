@@ -92,22 +92,39 @@ function createFooter() {
     <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center font-semibold md:text-left">
       <div class="mb-8 sm:mb-10 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">Office</h3>
-        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
-          <i class="fas fa-map-marker-alt text-lg sm:text-xl md:text-2xl"></i> 
-          No 56/6, 6th C Main Road <br> 4th Block East, Jayanagar<br> Bengaluru-560041
-        </p>
-        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
-          <i class="fas fa-phone text-lg sm:text-xl md:text-2xl"></i> 
-          <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat on WhatsApp">+91 73030 62845</a>
-        </p>
-        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
-          <i class="fa-brands fa-whatsapp text-lg sm:text-xl md:text-2xl"></i> 
-          <a href="https://api.whatsapp.com/send?phone=917718361550" target="_blank" aria-label="Chat on WhatsApp">+91 97183 61550</a>
-        </p>
-        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
-          <i class="fas fa-envelope text-lg sm:text-xl md:text-2xl"></i> 
-          info@deccanrealty.com
-        </p>
+      <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+    <i class="fas fa-map-marker-alt text-lg sm:text-xl md:text-2xl"></i> 
+    <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar,+Bengaluru-560041" 
+       target="_blank" 
+       aria-label="View location on Google Maps"
+       class="not-italic inline-block">
+        No 56/6, 6th C Main Road<br> 4th Block East <br> Jayanagar, Bengaluru-560041
+    </a>
+</p>
+
+
+       <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" 
+       aria-label="Chat on WhatsApp" class="flex items-center gap-2">
+        <i class="fas fa-phone text-lg sm:text-xl md:text-2xl"></i> 
+        +91 73030 62845
+    </a>
+</p>
+
+       <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+    <a href="https://api.whatsapp.com/send?phone=917718361550" target="_blank" 
+       aria-label="Chat on WhatsApp" class="flex items-center gap-2">
+        <i class="fa-brands fa-whatsapp text-lg sm:text-xl md:text-2xl"></i> 
+        +91 97183 61550
+    </a>
+</p>
+       <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+    <a href="mailto:info@deccanrealty.com" aria-label="Send an email to info@deccanrealty.com" 
+       class="flex items-center gap-2">
+        <i class="fas fa-envelope text-lg sm:text-xl md:text-2xl"></i> 
+        info@deccanrealty.com
+    </a>
+</p>
       </div>
       <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick links</h3>
