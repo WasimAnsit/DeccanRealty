@@ -184,15 +184,32 @@
 
 /* Card toggle CSS */
 .description-container {
-  max-height: 100px;
+  max-height: 4rem;
   overflow: hidden;
   transition: max-height 0.3s ease;
 }
 
 .description-container.expanded {
-  max-height: 500px;
+  max-height: 20rem;
+  /* Adjust as needed */
+}
+.property-card {
+  position: relative;
+  z-index: 1;
 }
 
+.property-card:hover {
+  z-index: 2;
+}
+
+/* Container adjustments for mobile */
+@media (max-width: 639px) {
+  .container {
+    max-width: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 /* Modified property card styles */
 .property-card {
   display: flex;

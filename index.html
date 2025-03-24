@@ -13,60 +13,39 @@
     <script src="headerfooter.js" defer></script>
     <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="testimonial.css">
+    <script src="enquiryForm.js" defer></script>
 </head>
 
 <body>
-    <section>
+<!-- <div id="footer-container"></div> -->
+ <div id="index.html"></div>
 
-        <header class="h-screen bg-cover bg-center bg-no-repeat p-5" 
-            style="background-image: url('assets/images/homeimg.png');">
-            <nav class="w-full flex justify-between items-center ">
-                <!-- Logo -->
-                <div>
-                    <img src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN 1.svg" alt="Logo" class="w-40">
-                </div>
-
-                <!-- Desktop Menu -->
-                <ul class="hidden md:flex gap-5 p-3 rounded-lg">
-                    <li>
-                        <a href="index.html"
-                            class="text-white text-[20px] font-bold bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">HOME</a>
-                    </li>
-                    <li>
-                        <a href="about.html"
-                            class="text-white text-[20px] font-bold bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">ABOUT</a>
-                    </li>
-                    <li>
-                        <a href="contact.html"
-                            class="text-white text-[20px] font-bold bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">CONTACT</a>
-                    </li>
-                    <li>
-                        <a href="faq.html"
-                            class="text-white text-[20px] font-bold bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">FAQ</a>
-                    </li>
-                    <li>
-                        <a href="homeloan.html"
-                            class="text-white text-[20px] font-bold bg-black/30 px-4 py-2 rounded-lg hover:bg-black/50 transition">HOME
-                            LOAN</a>
-                    </li>
-                </ul>
-                <!-- Mobile Menu Button -->
-                <button id="menu-btn" class="md:hidden text-black text-3xl">
-                    &#9776; <!-- Hamburger Icon -->
-                </button>
-            </nav>
-
-            <!-- Mobile Menu -->
-            <ul id="mobile-menu"
-                class="hidden flex-col items-center bg-black/50 text-white text-center w-full md:hidden">
-                <li class="py-2"><a href="index.html">Home</a></li>
-                <li class="py-2"><a href="about.html">About</a></li>
-                <li class="py-2"><a href="contact.html">Contact</a></li>
-                <li class="py-2"><a href="faq.html">Faq</a></li>
-                <li class="py-2"><a href="homeloan.html">Home Loan</a></li>
-            </ul>
-        </header>
-    </section>
+<section>
+  <div class="relative h-[80vh]">
+ 
+    <img 
+      src="/assets/images/Home_Page_Deccan_Realty.jpg" 
+      alt="Deccan Realty Home Page" 
+      class="absolute top-0 left-0 w-full h-full object-cover z-0"
+    >
+    <!-- Overlay for better text readability -->
+    <div class="absolute inset-0 bg-black/50 bg-opacity-40 z-10"></div>
+    <!-- Content Container -->
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-4 z-20">
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 transform transition duration-300 hover:scale-105 hover:text-amber-300">
+        Discover beautifully designed homes in Bangalore
+      </h1>
+      <p class="text-xl md:text-2xl lg:text-3xl mb-8 transform transition duration-300 hover:scale-105 hover:text-amber-300 max-w-3xl">
+        Start your property journey with us, where dreams take shape into exceptional living spaces
+      </p>
+      <a onclick="openEnquiryForm()" 
+         class="bg-amber-500 text-white px-6 py-3 rounded-lg text-lg font-semibold cursor-pointer 
+                hover:bg-amber-600 transition duration-300 transform hover:scale-105">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>
 
     <section class="px-10 mt-10">
             <h2 class="text-3xl text-green-700 font-bold">Properties That stand Out</h2>
@@ -92,198 +71,190 @@
 </section>
     
     <!-- properly mainted property -->
-<section class="container mx-auto p-6 text-center">
-        <h2 class="text-4xl text-green-700 font-bold text-center">Properly Maintained Property</h2>
-        <p class="text-lg text-gray-600 mb-6">Join us as we go around the globe in pursuit of a sanctuary that resonates with your beliefs and principles.</p>
+<section class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl text-green-700 font-bold mb-4">Properly Maintained Property</h2>
+    <p class="text-base sm:text-lg text-gray-600 mb-6 md:mb-8">Join us as we go around the globe in pursuit of a sanctuary that resonates with your beliefs and principles.</p>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 gap-y-10">
-            <!-- Card 1 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/1.jpg" alt="White Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">SOBHA Royal Pavilion</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-1">
-                        <p>SOBHA Royal Pavilion – Rajasthan-themed luxury apartments in<span class="font-bold"> Hadosiddapura, Sarjapur Road, Bengaluru. Offering 2, 3 & 4 BHK homes</span> ranging from <span class="font-bold">1300 to 2232.2 sq. ft.,</span>  starting from  <span class="font-bold">₹ 1.18 Crore.</span>
-A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-1">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                       <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-y-8 md:gap-y-10 justify-center">
+        <!-- Card 1 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/1.jpg" alt="White Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
             </div>
-
-            <!-- Card 2 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/2.jpg" alt="Modern Red Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">SOBHA Royal Pavilion</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-1">
+                    <p>SOBHA Royal Pavilion – Rajasthan-themed luxury apartments in<span class="font-bold"> Hadosiddapura, Sarjapur Road, Bengaluru. Offering 2, 3 & 4 BHK homes</span> ranging from <span class="font-bold">1300 to 2232.2 sq. ft.,</span> starting from <span class="font-bold">₹ 1.18 Crore.</span>
+                    A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.</p>
                 </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">GODREJ SPLENDOUR</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-2">
-                        <p>Godrej Splendour, located in the heart of <span class="font-bold">Whitefield, Bengaluru,</span>offers a splendid lifestyle with unmatched comfort and convenience. Priced at <span class="font-bold">₹ 1.10 Cr.</span> onwards, this <span class="font-bold">2 BHK</span> residence is designed to provide a perfect blend of luxury and connectivity. The project is set for possession in September 2027 and is strategically situated just a short drive from renowned IT hubs, top schools, and prestigious colleges. With Godrej Splendour, experience modern living in one of Bangalore’s most sought-after localities.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-2">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                       <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-1">See More</span>
             </div>
-
-            <!-- Card 3 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/3.jpg" alt="Colorful Residential Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">GODREJ PARK RETREAT</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-3">
-                        <p>Godrej Park Retreat, located on <span class="font-bold">Sarjapur Road, Bengaluru,</span> offers a lifestyle that goes beyond expectations. This <span class="font-bold">1 BHK</span> residence comes with a <span class="font-bold">28,000 sq. ft.</span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-3">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between gap-4">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                       <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/4.jpg" alt="Modern Apartment Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">GODREJ 24</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-4">
-                        <p>Godrej 24 Bangalore, located on <span class="font-bold">Sarjapur Road, Bengaluru</span> , is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-4">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                         <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/5.jpg" alt="White Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">PRESTIAGE CITY AVALON PARK</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-5">
-                        <p>Prestige City Avalon Park offers <span class="font-bold">1, 2, 3, and 4 BHK apartments</span>  with a price range of  <span class="font-bold">₹80 L - ₹3.6 Cr </span>+ charges. Developed by the renowned Prestige Group, known for its innovation and excellence, the project ensures premium living with thoughtfully designed homes. With a diverse real estate portfolio, Prestige Group has completed 300+ projects across residential, commercial, and hospitality sectors, making it a trusted name in the industry.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-5">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                         <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/6.jpg" alt="Modern Red Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">SARAJPUR, BANGALORE</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-6">
-                        <p>A ready-to-move <span class="font-bold">3BHK duplex</span> in Confident Orion, <span class="font-bold">Sarjapur, Bangalore,</span> priced at <span class="font-bold">₹1.5 Cr</span> + Govt Charges & Tax <span class="font-bold">(₹8,333 per sq. ft., negotiable), offers 1800 sq. ft.</span> of premium living space. Featuring <span class="font-bold">3 bedrooms, 3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span></p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-6">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                         <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/7.jpg" alt="Colorful Residential Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">AHAD SERENITY</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-7">
-                        <p>Ahad Serenity, <span class="font-bold">Sarjapur Road – ₹89.01 L - 1.66 Cr 1, 2, 3 BHK Ready-to-Move Apartments.</span> Spanning 8 acres with 85% open space, this <span class="font-bold">gated community</span> offers modern homes with <span class="font-bold">vitrified & wooden flooring, premium fittings, and modular kitchens</span>.Spanning 8 acres with 85% open space, this gated community offers modern homes with vitrified & wooden flooring, premium fittings, and modular kitchens.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-7">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                         <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105">
-                <div class="relative overflow-hidden">
-                    <img src="assets/images/8.jpeg" alt="Modern Apartment Building" class="w-full h-60 object-cover transition-transform duration-300 hover:scale-110">
-                </div>
-                <div class="content-wrapper p-4 text-center">
-                    <h3 class="text-xl font-semibold text-green-700 mb-2">SOBHA Royal Pavilion</h3>
-                    <div class="description-container text-sm text-gray-600" id="desc-8">
-                        <p>Luxury Gated Community in <span class="font-bold">Bengaluru</span>  Exclusive <span class="font-bold">2, 3 & 4 BHK villas and apartments</span> with modern architecture, lush greenery, and premium amenities. Secure gated access ensures privacy and comfort.
-Bengaluru |   <span class="font-bold">Starting from ₹ 1.5 Crore</span> Experience elegance, security, and seamless connectivity in a serene setting.</p>
-                    </div>
-                    <span class="toggle-btn" data-target="desc-8">See More</span>
-                </div>
-                <div class="border-t border-gray-200 p-3 flex justify-between">
-                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                        <a href="contact.html">Enquire Now
-                    </a> 
-                    </button>
-                    <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
             </div>
         </div>
-    </section>
+
+        <!-- Card 2 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/2.jpg" alt="Modern Red Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">GODREJ SPLENDOUR</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-2">
+                    <p>Godrej Splendour, located in the heart of <span class="font-bold">Whitefield, Bengaluru,</span>offers a splendid lifestyle with unmatched comfort and convenience. Priced at <span class="font-bold">₹ 1.10 Cr.</span> onwards, this <span class="font-bold">2 BHK</span> residence is designed to provide a perfect blend of luxury and connectivity. The project is set for possession in September 2027 and is strategically situated just a short drive from renowned IT hubs, top schools, and prestigious colleges. With Godrej Splendour, experience modern living in one of Bangalore’s most sought-after localities.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-2">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/3.jpg" alt="Colorful Residential Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">GODREJ PARK RETREAT</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-3">
+                    <p>Godrej Park Retreat, located on <span class="font-bold">Sarjapur Road, Bengaluru,</span> offers a lifestyle that goes beyond expectations. This <span class="font-bold">1 BHK</span> residence comes with a <span class="font-bold">28,000 sq. ft.</span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-3">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/4.jpg" alt="Modern Apartment Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">GODREJ 24</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-4">
+                    <p>Godrej 24 Bangalore, located on <span class="font-bold">Sarjapur Road, Bengaluru</span>, is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-4">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/5.jpg" alt="White Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">PRESTIGE CITY AVALON PARK</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-5">
+                    <p>Prestige City Avalon Park offers <span class="font-bold">1, 2, 3, and 4 BHK apartments</span> with a price range of <span class="font-bold">₹80 L - ₹3.6 Cr</span> + charges. Developed by the renowned Prestige Group, known for its innovation and excellence, the project ensures premium living with thoughtfully designed homes. With a diverse real estate portfolio, Prestige Group has completed 300+ projects across residential, commercial, and hospitality sectors, making it a trusted name in the industry.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-5">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/6.jpg" alt="Modern Red Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">SARJAPUR, BANGALORE</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-6">
+                    <p>A ready-to-move <span class="font-bold">3BHK duplex</span> in Confident Orion, <span class="font-bold">Sarjapur, Bangalore,</span> priced at <span class="font-bold">₹1.5 Cr</span> + Govt Charges & Tax <span class="font-bold">(₹8,333 per sq. ft., negotiable), offers 1800 sq. ft.</span> of premium living space. Featuring <span class="font-bold">3 bedrooms, 3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span></p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-6">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/7.jpg" alt="Colorful Residential Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">AHAD SERENITY</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-7">
+                    <p>Ahad Serenity, <span class="font-bold">Sarjapur Road – ₹89.01 L - 1.66 Cr 1, 2, 3 BHK Ready-to-Move Apartments.</span> Spanning 8 acres with 85% open space, this <span class="font-bold">gated community</span> offers modern homes with <span class="font-bold">vitrified & wooden flooring, premium fittings, and modular kitchens</span>. Spanning 8 acres with 85% open space, this gated community offers modern homes with vitrified & wooden flooring, premium fittings, and modular kitchens.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-7">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto">
+            <div class="relative overflow-hidden">
+                <img src="assets/images/8.jpeg" alt="Modern Apartment Building" class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110">
+            </div>
+            <div class="content-wrapper p-4 text-center">
+                <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">SOBHA Royal Pavilion</h3>
+                <div class="description-container text-sm text-gray-600" id="desc-8">
+                    <p>Luxury Gated Community in <span class="font-bold">Bengaluru</span> Exclusive <span class="font-bold">2, 3 & 4 BHK villas and apartments</span> with modern architecture, lush greenery, and premium amenities. Secure gated access ensures privacy and comfort.
+                    Bengaluru | <span class="font-bold">Starting from ₹ 1.5 Crore</span> Experience elegance, security, and seamless connectivity in a serene setting.</p>
+                </div>
+                <span class="toggle-btn text-sm text-blue-600 cursor-pointer" data-target="desc-8">See More</span>
+            </div>
+            <div class="border-t border-gray-200 p-3 flex justify-between items-center">
+                <button onclick="openEnquiryForm()" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
+                    Enquire Now
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700">
+                    <i class="fab fa-whatsapp text-lg sm:text-xl"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
       <!-- Quote Section -->
    <section class="text-center  text-xl px-10 mt-20">
    <span class="font-bold">&quot;</span> <span class="quote">Helping you find not just a property, but a place to call home.</span><span class="font-bold">&quot;</span>

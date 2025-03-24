@@ -123,7 +123,7 @@ function createCard(item, type) {
                     }
                 </div>
                 <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
-                    <button onclick="window.location.href='contact.html'" 
+                    <button onclick="openEnquiryForm()"
                         class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
                         Enquiry Now
                     </button>

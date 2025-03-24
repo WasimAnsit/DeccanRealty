@@ -1,11 +1,6 @@
 // Function to create the Header
 function createHeader() {
-  const isHomePage =
-    window.location.pathname.endsWith("index.html") ||
-    window.location.pathname === "/";
-  if (isHomePage) return; // Skip header for homepage
-
-  const header = document.createElement("header");
+   const header = document.createElement("header");
   header.className = "bg-[#060d42] text-white p-4 sticky top-0 z-50 w-full";
   header.style.position = "sticky";
   header.style.top = "0";
@@ -15,7 +10,7 @@ function createHeader() {
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
         <a href="index.html">
-          <img src="assets/logos/Most final logo DECCAN REALTY.COM GOLDEN 1.svg" alt="Deccan Realty Logo" class="w-24 h-24 rounded-full md:w-28 md:h-28">
+          <img src="./assets/logos/WhiteLogoDeccan.png" alt="Deccan Realty Logo" class="w-24 h-24 rounded-full md:w-28 md:h-28 mix-blend-screen">
         </a>
       </div>
       <button class="md:hidden text-2xl text-white mobile-menu-btn">☰</button>
