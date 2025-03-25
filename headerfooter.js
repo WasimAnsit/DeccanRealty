@@ -14,11 +14,11 @@ function createHeader(container) {  // Accept container as parameter
       </div>
       <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
       <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
-        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">HOME</a></li>
-        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">ABOUT</a></li>
-        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">CONTACT</a></li>
-        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">FAQ</a></li>
-        <li><a href="homeloan.html" aria-label="HomeLoan" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition text-black hover:text-green-500">HOME LOAN</a></li>
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">HOME</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">FAQ</a></li>
+        <li><a href="homeloan.html" aria-label="HomeLoan" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition text-black hover:text-black">HOME LOAN</a></li>
       </ul>
       <ul class="mobile-menu hidden md:hidden flex-col bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300 z-50">
         <li class="w-full flex justify-center"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">Home</a></li>
@@ -48,7 +48,7 @@ function createHeader(container) {  // Accept container as parameter
     linkSet.forEach((link) => {
       const href = link.getAttribute("href");
       if (href === currentPath) {
-        link.classList.add("bg-orange-500", "text-black", "rounded-md");
+        link.classList.add("bg-[#b1923f]", "text-white", "rounded-md");
         link.style.display = "inline-block";
         link.style.width = "auto";
         link.style.padding = link.classList.contains("border")
@@ -141,20 +141,20 @@ function createFooter() {
             </a>
             <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
               <a href="https://youtube.com" aria-label="Visit our YouTube page"  class="text-white hover:text-gray-300">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-youtube text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class="text-red-600 fab fa-youtube text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">YouTube</span>
                 </div>
               </a>
               <a href="https://facebook.com"  aria-label="Visit our Facebook page" class="text-white hover:text-gray-300">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-facebook-f text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class=" text-blue-600 fab fa-facebook-f text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">Facebook</span>
                 </div>
               </a>
               <a href="https://linkedin.com"  aria-label="Visit our LinkedIn page" class="text-white hover:text-gray-300">
-                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-gray-800">
-                  <i class="fab fa-linkedin-in text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class=" text-blue-600 fab fa-linkedin-in text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">LinkedIn</span>
                 </div>
               </a>
