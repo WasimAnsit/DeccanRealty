@@ -226,7 +226,8 @@ const reviews = [
     name: "Kirti Sharma",
     review:
       "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
-    image: "assets/images/profilefl.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/3_us1xt7.jpg",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:
@@ -237,7 +238,8 @@ const reviews = [
     name: "John Doe",
     review:
       "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
-    image: "assets/images/profiledemologo.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/4_wtkxdr.jpg",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:
@@ -248,7 +250,8 @@ const reviews = [
     name: "Neha Patel",
     review:
       "Excellent service and attention to detail. We are very satisfied with the outcome.",
-    image: "assets/images/profilefl.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/3_us1xt7.jpg",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:

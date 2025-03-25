@@ -13,7 +13,7 @@ function createHeader(container) {  // Accept container as parameter
         </a>
       </div>
       <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
-      <ul class="nav-menu hidden md:flex items-center space-x-4">
+      <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
         <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">Home</a></li>
         <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">ABOUT</a></li>
         <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">CONTACT</a></li>
@@ -89,12 +89,12 @@ function createFooter() {
       <div class="mb-8 sm:mb-10 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">Office</h3>
       <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
-    <i class="fas fa-map-marker-alt text-lg sm:text-xl md:text-2xl"></i> 
-    <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar,+Bangalore-560041" 
+    <i class="fas fa-map-marker-alt text-[25px] sm:text-xl md:text-2xl "></i> 
+    <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar+Bangalore-560041" 
        target="_blank" 
        aria-label="View location on Google Maps"
        class="not-italic inline-block">
-        No 56/6, 6th C Main Road<br> 4th Block East <br> Jayanagar, Bangalore-560041
+        No 56/6, 6th C Main Road<br> 4th Block, East Jayanagar <br> Bangalore-560041
     </a>
 </p>
 
@@ -123,8 +123,8 @@ function createFooter() {
 </p>
       </div>
       <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
-        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick links</h3>
-        <ul class="space-y-3 sm:space-y-4 font-bold">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-3 sm:space-y-4 font-semibold">
           <li><a href="index.html" aria-label="Home" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
           <li><a href="about.html" aria-label="About"  class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
           <li><a href="contact.html"  aria-label="Contact" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
