@@ -20,12 +20,12 @@ class EnquiryForm {
             <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Name is required</p>
           </div>
           <div class="relative">
-            <input id="enquiryEmail" type="email" placeholder="Email" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryEmail-error">
-            <p id="enquiryEmail-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Valid email is required</p>
-          </div>
-          <div class="relative">
             <input id="enquiryPhone" type="tel" placeholder="Mobile Number" maxlength="12" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryPhone-error">
             <p id="enquiryPhone-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Valid mobile number (max 12 digits) is required</p>
+          </div>
+          <div class="relative">
+            <input id="enquiryEmail" type="email" placeholder="Email" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryEmail-error">
+            <p id="enquiryEmail-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Valid email is required</p>
           </div>
           <div class="relative">
             <textarea id="enquiryMessage" placeholder="Your Message" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full h-20 sm:h-24 resize-none text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryMessage-error"></textarea>
@@ -150,10 +150,8 @@ class EnquiryForm {
         this.showError("enquiryName", "Name is required");
         isValid = false;
       }
-      if (!email) {
-        this.showError("enquiryEmail", "Email is required");
-        isValid = false;
-      } else if (!this.validateEmail(email)) {
+      if (email && !this.validateEmail(email)) {
+        // Only validate email if provided
         this.showError("enquiryEmail", "Please enter a valid email");
         isValid = false;
       }
@@ -164,13 +162,10 @@ class EnquiryForm {
         this.showError("enquiryPhone", "Max 12 digits allowed");
         isValid = false;
       }
-      if (!message) {
-        this.showError("enquiryMessage", "Message is required");
-        isValid = false;
-      }
+      // Removed message required validation
 
       if (!isValid) {
-        status.textContent = " Please fill all fields correctly";
+        status.textContent = " Please fill required fields correctly";
         status.classList.add("text-red-400");
         return;
       }
@@ -180,8 +175,8 @@ class EnquiryForm {
 
       const payload = {
         subject: "Enquiry property by Deccan Realty",
-        message: message,
-        email: email,
+        message: message || "No message provided", // Provide default if empty
+        email: email || "No email provided", // Provide default if empty
         name: name,
         phone: phone,
       };

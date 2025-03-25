@@ -7,7 +7,7 @@ function createHeader() {
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
         <a href="index.html" area-label="index.html">
-          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" 
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815528/Most_final_logo_DECCAN_REALTY.COM_GOLDEN_s6bray.png" alt="Deccan Realty Logo" 
                class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 mix-blend-screen object-contain">
         </a>
       </div>
@@ -94,11 +94,11 @@ function createFooter() {
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">Office</h3>
       <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
     <i class="fas fa-map-marker-alt text-lg sm:text-xl md:text-2xl"></i> 
-    <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar,+Bengaluru-560041" 
+    <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar,+Bangalore-560041" 
        target="_blank" 
        aria-label="View location on Google Maps"
        class="not-italic inline-block">
-        No 56/6, 6th C Main Road<br> 4th Block East <br> Jayanagar, Bengaluru-560041
+        No 56/6, 6th C Main Road<br> 4th Block East <br> Jayanagar, Bangalore-560041
     </a>
 </p>
 
