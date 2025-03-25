@@ -100,69 +100,75 @@ const services = [
 
 function createCard(item, type) {
   return `
-      <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-[0_10px_15px_rgba(0,0,0,0.1),10px_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_25px_rgba(0,0,0,0.15),15px_0_25px_rgba(0,0,0,0.15)] transform transition-all duration-300 ${
-        type === "property" ? "hover:scale-105" : "hover:scale-105"
-      } flex-shrink-0 card-container" data-type="${type}">
-            <div class="relative">
-                <img src="${item.imageURL.src}" alt="${
+    <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-[0_10px_15px_rgba(0,0,0,0.1),10px_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_25px_rgba(0,0,0,0.15),15px_0_25px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:scale-105 flex-shrink-0 card-container" data-type="${type}">
+      <div class="relative">
+        <img src="${item.imageURL.src}" alt="${
     item.imageURL.alt
   }" class="w-full 2xl:h-48 xl:h-34 object-cover transition-transform duration-300">
-                ${
-                  type === "property"
-                    ? `<span class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
-                    : ""
-                }
+        ${
+          type === "property"
+            ? `<span class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
+            : ""
+        }
+      </div>
+      <div class="p-5 flex flex-col h-full bg-gradient-to-b from-gray-50 to-white">
+        <div class="card-content flex-grow overflow-hidden">
+          ${
+            type === "property"
+              ? `
+            <div class="property-header mb-4">
+              <h2 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h2>
+              <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
+              <span class="property-price 2xl:text-[16px] xl:text-[14px] font-semibold text-black block">${item.priceRange}<span class="lg:text-[12px] xl:text-[10px]"> (${item.pricePerSqFt})</span></span>
             </div>
-            <div class="p-5 flex flex-col h-full bg-gradient-to-b from-gray-50 to-white">
-                <div class="card-content flex-grow overflow-hidden">
-                    ${
-                      type === "property"
-                        ? `
-                        <div class="property-header mb-4">
-    <h2 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h2>
-    <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
-    <span class="property-price 2xl:text-[16px] xl:text-[14px] font-semibold text-black block">${item.priceRange}<span class="lg:text-[12px] xl:text-[10px]"> (${item.pricePerSqFt})</span></span>
-</div>
-                        <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
-                            <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
-                            <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
-                            <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
-                        </div>
-                    `
-                        : `
-                        <h2 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h2>
-                        <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
-                    `
-                    }
-                </div>
-                <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
-                    <button onclick="openEnquiryForm()"
-                        class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300">
-                        Enquiry Now  
-                    </button>
-                   <a href="https://api.whatsapp.com/send?phone=917303062845" 
-   target="_blank" 
-   class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-   aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    <span class="sr-only">Chat on WhatsApp</span>
-</a>
-                </div>
+            <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
+              <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
+              <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
+              <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
             </div>
+          `
+              : `
+            <h2 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h2>
+            <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
+          `
+          }
         </div>
-    `;
+        <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
+          <button class="enquiry-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-type="${type}" data-id="${
+    type === "property" ? item.propertyName : item.serviceTitle
+  }">
+            Enquiry Now
+          </button>
+          <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center" aria-label="Chat on WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span class="sr-only">Chat on WhatsApp</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 
 // Function to populate and duplicate cards for infinite scroll
 function populateSlider(gridId, items, type) {
   const grid = document.getElementById(gridId);
-  const doubledItems = [...items, ...items]; // Duplicate items for seamless loop
-  grid.innerHTML = doubledItems.map(item => createCard(item, type)).join("");
+  const doubledItems = [...items, ...items];
+  grid.innerHTML = doubledItems.map((item) => createCard(item, type)).join("");
+  grid.style.animationDuration = `${items.length * 5}s`;
 
-  // Adjust animation duration based on number of items
-  const animationDuration = items.length * 5; // 5 seconds per item, adjust as needed
-  grid.style.animationDuration = `${animationDuration}s`;
+  // Add event listeners for enquiry buttons
+  grid.querySelectorAll(".enquiry-btn").forEach((button) => {
+    const buttonType = button.getAttribute("data-type");
+    const identifier = button.getAttribute("data-id");
+    button.addEventListener("click", () => {
+      const context =
+        buttonType === "property"
+          ? { propertyName: identifier }
+          : { serviceTitle: identifier };
+      enquiryForm.openForm(context);
+    });
+  });
 }
 
 // Populate both sections

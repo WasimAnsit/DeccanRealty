@@ -1,6 +1,6 @@
 class EnquiryForm {
   constructor() {
-    this.createForm();
+    this.elements = this.createForm();
     this.initializeEvents();
   }
 
@@ -17,15 +17,15 @@ class EnquiryForm {
         <form id="enquiryForm" class="flex flex-col gap-3 sm:gap-4">
           <div class="relative">
             <input id="enquiryName" type="text" placeholder="Name" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryName-error">
-            <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Name is required</p>
+            <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Please enter a valid name (letters only, min 2 characters)</p>
           </div>
           <div class="relative">
-            <input id="enquiryPhone" type="tel" placeholder="Mobile Number" maxlength="12" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryPhone-error">
-            <p id="enquiryPhone-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Valid mobile number (max 12 digits) is required</p>
+            <input id="enquiryPhone" type="tel" placeholder="Mobile Number" maxlength="10" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryPhone-error">
+            <p id="enquiryPhone-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Please enter a 10-digit mobile number</p>
           </div>
           <div class="relative">
             <input id="enquiryEmail" type="email" placeholder="Email" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryEmail-error">
-            <p id="enquiryEmail-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Valid email is required</p>
+            <p id="enquiryEmail-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Please enter a valid email</p>
           </div>
           <div class="relative">
             <textarea id="enquiryMessage" placeholder="Your Message" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full h-20 sm:h-24 resize-none text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryMessage-error"></textarea>
@@ -50,176 +50,251 @@ class EnquiryForm {
     `;
 
     document.body.appendChild(formContainer);
+    return {
+      overlay: formContainer,
+      modal: formContainer.querySelector("#enquiryModal"),
+      form: formContainer.querySelector("#enquiryForm"),
+      closeBtn: formContainer.querySelector("#closeEnquiryBtn"),
+      loader: formContainer.querySelector("#loaderOverlay"),
+      successPopup: formContainer.querySelector("#successPopup"),
+      closeSuccessBtn: formContainer.querySelector("#closeSuccessBtn"),
+      status: formContainer.querySelector("#enquiryStatus"),
+      submitBtn: formContainer.querySelector("#submitBtn"),
+      inputs: {
+        name: formContainer.querySelector("#enquiryName"),
+        phone: formContainer.querySelector("#enquiryPhone"),
+        email: formContainer.querySelector("#enquiryEmail"),
+        message: formContainer.querySelector("#enquiryMessage"),
+      },
+    };
   }
 
-  showError(inputId, message) {
-    const input = document.getElementById(inputId);
+  openForm(context = {}) {
+    const { propertyName, serviceTitle } = context;
+
+    if (propertyName) {
+      localStorage.setItem("enquiryContext", JSON.stringify({ propertyName }));
+      console.log("Stored in localStorage:", { propertyName });
+    } else if (serviceTitle) {
+      localStorage.setItem("enquiryContext", JSON.stringify({ serviceTitle }));
+      console.log("Stored in localStorage:", { serviceTitle });
+    } else {
+      localStorage.removeItem("enquiryContext");
+      console.log("No context stored in localStorage");
+    }
+
+    this.elements.overlay.classList.remove("hidden");
+    this.resetForm();
+    document.body.classList.add("overflow-hidden");
+    setTimeout(
+      () => this.elements.modal.classList.add("translate-y-0", "opacity-100"),
+      10
+    );
+  }
+
+  closeForm() {
+    this.elements.modal.classList.remove("translate-y-0", "opacity-100");
+    this.elements.modal.classList.add("-translate-y-full", "opacity-0");
+    setTimeout(() => {
+      this.elements.overlay.classList.add("hidden");
+      document.body.classList.remove("overflow-hidden");
+    }, 500);
+  }
+
+  resetForm() {
+    this.elements.form.reset();
+    this.resetErrors();
+  }
+
+  showError(input, message) {
     input.placeholder = message;
-    input.classList.add("border-red-500");
-    input.style.setProperty("color", "#f87171", "important");
-    input.classList.add("placeholder-red-400");
+    input.classList.add("border-red-500", "placeholder-red-400");
+    input.style.color = "#f87171";
+    input.nextElementSibling.classList.remove("hidden");
   }
 
   resetErrors() {
-    const inputs = [
-      "enquiryName",
-      "enquiryEmail",
-      "enquiryPhone",
-      "enquiryMessage",
-    ];
-    inputs.forEach((id) => {
-      const input = document.getElementById(id);
+    Object.values(this.elements.inputs).forEach((input) => {
       input.placeholder =
-        id === "enquiryMessage" ? "Your Message" : id.replace("enquiry", "");
-      input.classList.remove("border-red-500");
-      input.style.color = "inherit"; // Reset to default text color
-      input.classList.remove("placeholder-red-400");
-      document.getElementById(`${id}-error`).classList.add("hidden");
+        input.id === "enquiryMessage"
+          ? "Your Message"
+          : input.id.replace("enquiry", "");
+      input.classList.remove("border-red-500", "placeholder-red-400");
+      input.style.color = "inherit";
+      input.nextElementSibling.classList.add("hidden");
     });
+    this.elements.status.textContent = "";
+    this.elements.status.classList.remove("text-red-400");
+  }
+
+  validateName(name) {
+    // Allow only letters and spaces, minimum 2 characters
+    return /^[A-Za-z\s]{2,}$/.test(name);
+  }
+
+  validatePhone(phone) {
+    // Require exactly 10 digits
+    return /^\d{10}$/.test(phone);
   }
 
   validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    // Standard email regex
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  getDynamicSubject() {
+    const context = JSON.parse(localStorage.getItem("enquiryContext") || "{}");
+    const { propertyName, serviceTitle } = context;
+
+    const serviceMessages = {
+      "Buy Your Dream Home": "service asked buyer",
+      "Sell Your Property with Ease": "service asked seller",
+      "Find Your Perfect Rental Home": "service asked as rental",
+      "Invest in Prime Commercial Properties":
+        "service asked as commercial properties",
+    };
+
+    console.log("Retrieved from localStorage for subject:", context);
+
+    if (propertyName) {
+      return `User enquired about this property: ${propertyName}`;
+    }
+    if (serviceTitle) {
+      return serviceMessages[serviceTitle] || `Enquiry for ${serviceTitle}`;
+    }
+    return "Enquiry by Deccan Realty";
+  }
+
+  async submitForm() {
+    const { name, phone, email, message } = this.elements.inputs;
+    const values = {
+      name: name.value.trim(),
+      phone: phone.value.trim(),
+      email: email.value.trim(),
+      message: message.value.trim(),
+    };
+
+    this.resetErrors();
+
+    let isValid = true;
+
+    // Name validation: letters only, min 2 characters
+    if (!this.validateName(values.name)) {
+      this.showError(
+        name,
+        "Please enter a valid name (letters only, min 2 characters)"
+      );
+      isValid = false;
+    }
+
+    // Phone validation: exactly 10 digits
+    if (!this.validatePhone(values.phone)) {
+      this.showError(phone, "Please enter a 10-digit mobile number");
+      isValid = false;
+    }
+
+    // Email validation: optional, but must be valid if provided
+    if (values.email && !this.validateEmail(values.email)) {
+      this.showError(email, "Please enter a valid email");
+      isValid = false;
+    }
+
+    if (!isValid) {
+      this.elements.status.textContent =
+        "Please fill required fields correctly";
+      this.elements.status.classList.add("text-red-400");
+      return;
+    }
+
+    this.elements.submitBtn.disabled = true;
+    this.elements.loader.classList.remove("hidden");
+
+    const payload = {
+      subject: this.getDynamicSubject(),
+      message: values.message || "No message provided",
+      email: values.email || "No email provided",
+      name: values.name,
+      phone: values.phone,
+    };
+
+    console.log("Submitting payload:", payload);
+
+    try {
+      const response = await fetch(
+        "https://dncrnewapi-bmbfb6f6awd8b0bd.westindia-01.azurewebsites.net/properties/GetInTouch",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        }
+      );
+
+      if (!response.ok) throw new Error("Network response was not ok");
+
+      this.elements.form.reset();
+      this.elements.successPopup.classList.remove("hidden");
+      localStorage.removeItem("enquiryContext");
+      console.log("Cleared localStorage after successful submission");
+    } catch (error) {
+      this.elements.status.textContent =
+        "Failed to submit enquiry. Please try again.";
+      this.elements.status.classList.add("text-red-400");
+      console.error("Error:", error);
+    } finally {
+      this.elements.loader.classList.add("hidden");
+      this.elements.submitBtn.disabled = false;
+    }
   }
 
   initializeEvents() {
-    const overlay = document.getElementById("enquiryOverlay");
-    const modal = document.getElementById("enquiryModal");
-    const closeBtn = document.getElementById("closeEnquiryBtn");
-    const form = document.getElementById("enquiryForm");
-    const loaderOverlay = document.getElementById("loaderOverlay");
-    const successPopup = document.getElementById("successPopup");
-    const closeSuccessBtn = document.getElementById("closeSuccessBtn");
-    const body = document.body;
-    const phoneInput = document.getElementById("enquiryPhone");
-
-    // Restrict phone input to numbers only
-    phoneInput.addEventListener("input", (e) => {
-      e.target.value = e.target.value.replace(/[^0-9]/g, "");
-      if (e.target.value.length > 12) {
-        e.target.value = e.target.value.slice(0, 12);
-      }
+    this.elements.closeBtn.addEventListener("click", () => this.closeForm());
+    this.elements.closeSuccessBtn.addEventListener("click", () => {
+      this.elements.successPopup.classList.add("hidden");
+      this.closeForm();
     });
-
-    this.openForm = () => {
-      overlay.classList.remove("hidden");
-      this.resetErrors(); // Reset errors when opening form
-      form.reset(); // Reset form values when opening
-      body.classList.add("overflow-hidden");
-      setTimeout(() => modal.classList.add("translate-y-0", "opacity-100"), 10);
-    };
-
-    closeBtn.addEventListener("click", () =>
-      this.closeForm(modal, overlay, body)
-    );
-
-    closeSuccessBtn.addEventListener("click", () => {
-      successPopup.classList.add("hidden");
-      this.closeForm(modal, overlay, body);
-    });
-
-    // Change text color when user starts typing
-    ["enquiryName", "enquiryEmail", "enquiryPhone", "enquiryMessage"].forEach(
-      (id) => {
-        const input = document.getElementById(id);
-        input.addEventListener("input", () => {
-          if (input.value.trim()) {
-            input.style.color = "#1f2937"; // Tailwind gray-800
-            input.classList.remove("border-red-500");
-            document.getElementById(`${id}-error`).classList.add("hidden");
-          }
-        });
-      }
-    );
-
-    form.addEventListener("submit", async (e) => {
+    this.elements.form.addEventListener("submit", (e) => {
       e.preventDefault();
-      const status = document.getElementById("enquiryStatus");
-      const submitBtn = document.getElementById("submitBtn");
+      this.submitForm();
+    });
 
-      const name = document.getElementById("enquiryName").value.trim();
-      const email = document.getElementById("enquiryEmail").value.trim();
-      const phone = document.getElementById("enquiryPhone").value.trim();
-      const message = document.getElementById("enquiryMessage").value.trim();
-
-      this.resetErrors();
-
-      let isValid = true;
-      if (!name) {
-        this.showError("enquiryName", "Name is required");
-        isValid = false;
-      }
-      if (email && !this.validateEmail(email)) {
-        // Only validate email if provided
-        this.showError("enquiryEmail", "Please enter a valid email");
-        isValid = false;
-      }
-      if (!phone) {
-        this.showError("enquiryPhone", "Mobile Number is required");
-        isValid = false;
-      } else if (phone.length > 12) {
-        this.showError("enquiryPhone", "Max 12 digits allowed");
-        isValid = false;
-      }
-      // Removed message required validation
-
-      if (!isValid) {
-        status.textContent = " Please fill required fields correctly";
-        status.classList.add("text-red-400");
-        return;
-      }
-
-      submitBtn.disabled = true;
-      loaderOverlay.classList.remove("hidden");
-
-      const payload = {
-        subject: "Enquiry property by Deccan Realty",
-        message: message || "No message provided", // Provide default if empty
-        email: email || "No email provided", // Provide default if empty
-        name: name,
-        phone: phone,
-      };
-
-      try {
-        const response = await fetch(
-          "https://dncrnewapi-bmbfb6f6awd8b0bd.westindia-01.azurewebsites.net/properties/GetInTouch",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          }
-        );
-
-        loaderOverlay.classList.add("hidden");
-        submitBtn.disabled = false;
-
-        if (!response.ok) throw new Error("Network response was not ok");
-
-        form.reset();
-        successPopup.classList.remove("hidden");
-        status.textContent = "";
-      } catch (error) {
-        loaderOverlay.classList.add("hidden");
-        submitBtn.disabled = false;
-        status.textContent = "Failed to submit enquiry. Please try again.";
-        status.classList.add("text-red-400");
-        console.error("Error:", error);
+    // Restrict name to letters and spaces
+    this.elements.inputs.name.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/[^A-Za-z\s]/g, "");
+      if (e.target.value.trim()) {
+        e.target.style.color = "#1f2937";
+        e.target.classList.remove("border-red-500");
+        e.target.nextElementSibling.classList.add("hidden");
       }
     });
-  }
 
-  closeForm(modal, overlay, body) {
-    modal.classList.remove("translate-y-0", "opacity-100");
-    modal.classList.add("-translate-y-full", "opacity-0");
-    setTimeout(() => {
-      overlay.classList.add("hidden");
-      body.classList.remove("overflow-hidden");
-    }, 500);
+    // Restrict phone to 10 digits
+    this.elements.inputs.phone.addEventListener("input", (e) => {
+      e.target.value = e.target.value.replace(/[^0-9]/g, "").slice(0, 10);
+      if (e.target.value.trim()) {
+        e.target.style.color = "#1f2937";
+        e.target.classList.remove("border-red-500");
+        e.target.nextElementSibling.classList.add("hidden");
+      }
+    });
+
+    // Real-time feedback for email
+    this.elements.inputs.email.addEventListener("input", (e) => {
+      if (e.target.value.trim()) {
+        e.target.style.color = "#1f2937";
+        e.target.classList.remove("border-red-500");
+        e.target.nextElementSibling.classList.add("hidden");
+      }
+    });
+
+    this.elements.inputs.message.addEventListener("input", (e) => {
+      if (e.target.value.trim()) {
+        e.target.style.color = "#1f2937";
+        e.target.classList.remove("border-red-500");
+        e.target.nextElementSibling.classList.add("hidden");
+      }
+    });
   }
 }
 
 const enquiryForm = new EnquiryForm();
-window.openEnquiryForm = enquiryForm.openForm;
+window.openEnquiryForm = () => enquiryForm.openForm();
