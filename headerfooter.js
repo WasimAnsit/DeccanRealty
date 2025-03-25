@@ -14,7 +14,7 @@ function createHeader(container) {  // Accept container as parameter
       </div>
       <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
       <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
-        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">Home</a></li>
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">HOME</a></li>
         <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">ABOUT</a></li>
         <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">CONTACT</a></li>
         <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">FAQ</a></li>
