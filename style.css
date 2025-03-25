@@ -1,14 +1,8 @@
-/* Core animations */
-/* @keyframes slide {
-  0% {
-    transform: translateX(0);
-  }
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  100% {
-    transform: translateX(-50%);
-  }
-} */
-/* Move the logo upward */
+*{
+  font-family: "Mulish", sans-serif;
+}
 .logo-link img {
   margin-top: -1rem;
 
@@ -76,11 +70,11 @@
   padding-bottom: 1rem;
 }
 
-.property-price {
+/* .property-price {
   padding: 4px;
   border-radius: 9999px;
   display: inline-block;
-}
+} */
 
 .property-details {
   flex-grow: 1;
@@ -218,7 +212,7 @@
   height: auto !important;
   /* Force auto height instead of 100% */
   background-color: white;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   transform: scale(1);
@@ -284,6 +278,16 @@
   .logo img {
     width: 160px;
     height: 160px;
+  }
+}
+
+/* border radius */
+@media (max-width: 639px) {
+
+  /* Match Tailwind's 'sm' breakpoint */
+  .property-card {
+    border-radius: 0;
+    /* No border radius on small devices */
   }
 }
 

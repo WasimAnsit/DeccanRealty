@@ -33,6 +33,7 @@
   </head>
 
   <body>
+    <div id="header-container"></div>
     <header>
       <section>
         <div class="relative h-[80vh]">
@@ -50,14 +51,17 @@
             class="relative h-full flex flex-col items-center justify-center text-center text-white px-4 z-20"
           >
             <h1
-              class="text-4xl md:text-4xl lg:text-5xl font-bold mb-4 transform transition duration-300 hover:scale-105 hover:text-[#b1923f]"
+              class="text-4xl md:text-4xl lg:text-5xl font-bold mb-5 transform transition duration-300 hover:scale-105 hover:text-[#b1923f]"
             >
-              Discover beautifully designed homes in Bangalore
+              Discover beautifully designed homes in 
+            
+              <br>
+              <p class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl p-4 font-bold hover:text-[#b1923f]">BANGALORE</p>
             </h1>
             <p
-              class="text-xl md:text-2xl lg:text-3xl mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-3xl"
+              class="text-xl md:text-2xl lg:text-[20px] mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-3xl font-semibold"
             >
-              Start your property journey with us, where dreams take shape into
+              Start your property journey with us,<br> where dreams take shape into
               exceptional living spaces
             </p>
             <button
@@ -129,7 +133,7 @@
         >
           <!-- Card 1 -->
           <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
+            class="property-card bg-white rounded-none sm:rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
           >
             <div class="relative overflow-hidden">
               <img
@@ -640,6 +644,8 @@
         </div>
       </section>
     </main>
+
+    
 
     <!-- Testimonial -->
     <section 

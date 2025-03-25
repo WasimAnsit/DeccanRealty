@@ -64,7 +64,7 @@ const services = [
       src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BUY_zlwlgm.jpg",
       alt: "Buy Service",
     },
-    serviceTitle: "Buy Your Dream Property",
+    serviceTitle: "Buy Your Dream Home",
     serviceAddress:
       "Looking for a home in Bangalore? DeccanRealty.com offers the best residential listings with exclusive features and immersive video experiences. Start your search today!",
   },

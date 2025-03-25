@@ -1,32 +1,33 @@
 // Function to create the Header
-function createHeader() {
+// Function to create the Header
+function createHeader(container) {  // Accept container as parameter
   const header = document.createElement("header");
-  header.className = "bg-[#060d42] text-white w-full relative";
+  header.className = "bg-[#E8E8E8] text-black w-full relative";
   header.style.width = "100%";
   header.innerHTML = `
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
-        <a href="index.html" area-label="index.html">
-          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815528/Most_final_logo_DECCAN_REALTY.COM_GOLDEN_s6bray.png" alt="Deccan Realty Logo" 
-               class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 mix-blend-screen object-contain">
+        <a href="index.html" aria-label="index.html">
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/finalwhitelogo_bnxcp5.png" alt="Deccan Realty Logo" 
+               class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain">
         </a>
       </div>
-      <button class="md:hidden text-2xl text-white mobile-menu-btn">☰</button>
+      <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
       <ul class="nav-menu hidden md:flex items-center space-x-4">
-        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">Home</a></li>
-        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">About</a></li>
-        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">Contact</a></li>
-        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition hover:text-gray-300">FAQ</a></li>
-        <li><a href="homeloan.html" aria-label="HomeLoan"  class="font-medium text-lg border border-white px-3 py-1 rounded-md transition hover:bg-white hover:text-[#060d42]">Home Loan</a></li>
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">Home</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-green-500">FAQ</a></li>
+        <li><a href="homeloan.html" aria-label="HomeLoan" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition text-black hover:text-green-500">HOME LOAN</a></li>
       </ul>
       <ul class="mobile-menu hidden md:hidden flex-col bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300 z-50">
-        <li class="w-full flex justify-center"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">Home</a></li>
-        <li class="w-full flex justify-center"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">About</a></li>
-        <li class="w-full flex justify-center"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">Contact</a></li>
-        <li class="w-full flex justify-center"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-center hover:text-gray-300">FAQ</a></li>
+        <li class="w-full flex justify-center"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">Home</a></li>
+        <li class="w-full flex justify-center"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">About</a></li>
+        <li class="w-full flex justify-center"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">Contact</a></li>
+        <li class="w-full flex justify-center"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">FAQ</a></li>
         <li class="w-full flex justify-center">
           <a href="homeloan.html" 
-           area-label="HomeLoan"  class="block text-lg font-medium py-1 px-3 border border-white rounded-md hover:bg-white hover:text-[#060d42] transition text-center max-w-[200px]">
+             aria-label="HomeLoan" class="block text-lg font-medium py-1 px-3 border border-white rounded-md text-center text-white hover:text-green-500 hover:bg-black transition max-w-[200px]">
             Home Loan
           </a>
         </li>
@@ -34,7 +35,9 @@ function createHeader() {
     </div>
   `;
 
-  document.body.insertBefore(header, document.body.firstChild);
+  // Append to the provided container instead of body
+  container.innerHTML = "";  // Clear existing content
+  container.appendChild(header);
 
   // Highlight active page
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
@@ -45,20 +48,13 @@ function createHeader() {
     linkSet.forEach((link) => {
       const href = link.getAttribute("href");
       if (href === currentPath) {
-        link.classList.remove(
-          "hover:text-gray-300",
-          "hover:bg-white",
-          "hover:text-[#060d42]"
-        );
-        link.classList.add("bg-orange-500", "text-white", "rounded-md"); // Ensure rounded-md is added
-        link.style.display = "inline-block"; // Limits width to content
-        link.style.width = "auto"; // Prevents stretching
-        // Increase size when active
+        link.classList.add("bg-orange-500", "text-black", "rounded-md");
+        link.style.display = "inline-block";
+        link.style.width = "auto";
         link.style.padding = link.classList.contains("border")
           ? "0.375rem 1rem"
-          : "1rem 1rem"; // Larger padding (py-1.5 px-4 for Home Loan, py-4 px-4 for others)
-        link.style.fontSize = "1.25rem"; // Slightly larger text (20px instead of 18px)
-        // Ensure centering
+          : "1rem 1rem";
+        link.style.fontSize = "1.25rem";
         link.parentElement.style.display = "flex";
         link.parentElement.style.justifyContent = "center";
       }
@@ -128,10 +124,10 @@ function createFooter() {
       </div>
       <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick links</h3>
-        <ul class="space-y-3 sm:space-y-4 font-semibold">
+        <ul class="space-y-3 sm:space-y-4 font-bold">
           <li><a href="index.html" aria-label="Home" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
           <li><a href="about.html" aria-label="About"  class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
-          <li><a href="contact.html"  aria-label="Contact" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact Us</a></li>
+          <li><a href="contact.html"  aria-label="Contact" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
           <li><a href="faq.html" aria-label="FAQ" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
           <li><a href="terms_conditions.html" aria-label="Terms&condition" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
           <li><a href="privacy_policy.html" aria-label="Privacypolicy" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
@@ -178,6 +174,9 @@ function createFooter() {
 
 // Load components when DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
-  createHeader();
+  const headerContainer = document.querySelector("#header-container");
+  if (headerContainer) {
+    createHeader(headerContainer);
+  }
   createFooter();
 });
