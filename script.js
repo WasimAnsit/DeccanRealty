@@ -106,7 +106,7 @@ function createCard(item, type) {
             <div class="relative">
                 <img src="${item.imageURL.src}" alt="${
     item.imageURL.alt
-  }" class="w-full h-48 object-cover transition-transform duration-300">
+  }" class="w-full 2xl:h-48 xl:h-34 object-cover transition-transform duration-300">
                 ${
                   type === "property"
                     ? `<span class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
@@ -121,7 +121,7 @@ function createCard(item, type) {
                         <div class="property-header mb-4">
     <h2 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h2>
     <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
-    <span class="property-price text-[16px] font-semibold text-black block">${item.priceRange}<span class="text-[12px]"> (${item.pricePerSqFt})</span></span>
+    <span class="property-price 2xl:text-[16px] xl:text-[14px] font-semibold text-black block">${item.priceRange}<span class="lg:text-[12px] xl:text-[10px]"> (${item.pricePerSqFt})</span></span>
 </div>
                         <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
                             <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
