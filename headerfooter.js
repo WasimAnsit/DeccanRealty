@@ -140,19 +140,19 @@ function createFooter() {
               <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
             </a>
             <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
-              <a href="https://youtube.com" aria-label="Visit our YouTube page"  class="text-white hover:text-gray-300">
+              <a href="https://www.youtube.com/@deccan-realty" target="_blank" aria-label="Visit our YouTube page"  class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
                   <i class="text-red-600 fab fa-youtube text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">YouTube</span>
                 </div>
               </a>
-              <a href="https://facebook.com"  aria-label="Visit our Facebook page" class="text-white hover:text-gray-300">
+              <a href="https://www.facebook.com/deccanrealty.in/" target="_blank"   aria-label="Visit our Facebook page" class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
                   <i class=" text-blue-600 fab fa-facebook-f text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">Facebook</span>
                 </div>
               </a>
-              <a href="https://linkedin.com"  aria-label="Visit our LinkedIn page" class="text-white hover:text-gray-300">
+              <a href="https://www.linkedin.com/company/deccan-realty/" target="_blank" aria-label="Visit our LinkedIn page" class="text-white hover:text-gray-300">
                 <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
                   <i class=" text-blue-600 fab fa-linkedin-in text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
                   <span class="sr-only">LinkedIn</span>

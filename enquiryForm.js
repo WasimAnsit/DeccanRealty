@@ -143,6 +143,7 @@ class EnquiryForm {
   }
 
   getDynamicSubject() {
+   
     const context = JSON.parse(localStorage.getItem("enquiryContext") || "{}");
     const { propertyName, serviceTitle } = context;
 
@@ -298,3 +299,38 @@ class EnquiryForm {
 
 const enquiryForm = new EnquiryForm();
 window.openEnquiryForm = () => enquiryForm.openForm();
+
+const enquirybtn = document.getElementsByClassName("_propname");
+
+Array.from(enquirybtn).forEach((btn) => {
+  btn.addEventListener("click", function () {
+    const obj = {
+      serviceTitle: this.parentElement.previousElementSibling.children[0].innerText
+    }
+    localStorage.setItem("enquiryContext", JSON.stringify(obj));
+  });
+});
+
+//  moreinfobtn
+const moreinfobtn = document.getElementById("moreinfobtn");
+if (moreinfobtn){
+
+  moreinfobtn.addEventListener("click", function () {
+    const obj = {
+      serviceTitle: "Ask More properties"
+    }
+    localStorage.setItem("enquiryContext", JSON.stringify(obj));
+  });
+}
+
+// contactus btn
+
+const contactusbtn = document.getElementById("contactwebenquirybtn");
+if (contactusbtn) {
+  contactusbtn.addEventListener("click", function () {
+    const obj = {
+      serviceTitle: "Website Enquiry",
+    };
+    localStorage.setItem("enquiryContext", JSON.stringify(obj));
+  });
+}

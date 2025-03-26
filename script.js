@@ -309,11 +309,6 @@ nextBtn.addEventListener("click", () => {
 setInitialReview(currentReviewIndex);
 
 
-//home laon contact us form js
-
-
-
-
 
 
     

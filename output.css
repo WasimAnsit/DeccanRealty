@@ -1230,11 +1230,17 @@
   .text-\[\#008a46\] {
     color: #008a46;
   }
+  .text-\[\#\] {
+    color: #;
+  }
   .text-\[\#ff6b35\] {
     color: #ff6b35;
   }
   .text-\[\#ff7b2a\] {
     color: #ff7b2a;
+  }
+  .text-\[white\] {
+    color: white;
   }
   .text-black {
     color: var(--color-black);
