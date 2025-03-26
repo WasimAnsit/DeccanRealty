@@ -11,10 +11,10 @@ class EnquiryForm {
       "hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center";
 
     formContainer.innerHTML = `
-      <div id="enquiryModal" class="bg-[#5a4d5a] w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 max-w-lg p-4 sm:p-6 rounded-lg relative transform -translate-y-full opacity-0 transition-all duration-500 ease-in-out">
+      <div id="enquiryModal" class="bg-[#00000044] w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 max-w-lg p-4 sm:p-6 rounded-lg relative transform -translate-y-full opacity-0 transition-all duration-500 ease-in-out">
         <span id="closeEnquiryBtn" class="absolute top-2 right-2 text-white text-2xl cursor-pointer hover:text-gray-300">×</span>
         <h2 class="text-white text-lg sm:text-xl md:text-2xl font-medium text-center mb-5">Fill Your Enquiry Here</h2>
-        <form id="enquiryForm" class="flex flex-col gap-3 sm:gap-4">
+        <form id="enquiryForm" class="flex flex-col p-3 gap-3 sm:gap-4">
           <div class="relative">
             <input id="enquiryName" type="text" placeholder="Name" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500" aria-describedby="enquiryName-error">
             <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm absolute -bottom-5 left-0 hidden">Please enter a valid name (letters only, min 2 characters)</p>

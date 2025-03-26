@@ -16,6 +16,20 @@ const properties = [
   },
   {
     imageURL: {
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815521/PRESTIEGE_PINE_FOREST_et69ai.jpg",
+      alt: "Modern House",
+    },
+    propertyName: "Prestige Pine Forest",
+    priceRange: "₹ 3.76 Cr - 3.89 Cr.",
+    location: "Whitefield, East Bangalore",
+    pricePerSqFt: "₹10.94K - ₹14.351K /Sq.Ft.",
+    sizes: "(Super Area) 2621.00 - 3556.00 Sq.Ft.",
+    possessionDate: "Possession Starts Dec 2028",
+    configurations: "3BHK, 4BHK, Apartments Configuration",
+    propertyDescription: "",
+  },
+  {
+    imageURL: {
       src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BIRLA_EVARA_mkqgmm.jpg",
       alt: "Luxury Villa",
     },
@@ -40,20 +54,6 @@ const properties = [
     sizes: "(Super Area) 1200.00 - 2500 Sq.Ft.",
     possessionDate: "Possession Starts Jan 2030",
     configurations: "2BHK, 3BHK, 4BHK, Apartments Configuration",
-    propertyDescription: "",
-  },
-  {
-    imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815521/PRESTIEGE_PINE_FOREST_et69ai.jpg",
-      alt: "Modern House",
-    },
-    propertyName: "Prestige Pine Forest",
-    priceRange: "₹ 3.76 Cr - 3.89 Cr.",
-    location: "Whitefield, East Bangalore",
-    pricePerSqFt: "₹10.94K - ₹14.351K /Sq.Ft.",
-    sizes: "(Super Area) 2621.00 - 3556.00 Sq.Ft.",
-    possessionDate: "Possession Starts Dec 2028",
-    configurations: "3BHK, 4BHK, Apartments Configuration",
     propertyDescription: "",
   },
 ];
