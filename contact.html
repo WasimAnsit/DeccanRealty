@@ -24,38 +24,30 @@
   <body class="overflow-x-hidden">
     <div id="header-container"></div>
     <!-- Hero Section -->
-    <section class="bg-[#060d42] text-white py-10 md:py-16">
-      <div
-        class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-5"
+    <section 
+  class=" text-white min-h[500px] md:py-16 bg-cover bg-center bg-no-repeat " 
+  style="background-image: url('https://res.cloudinary.com/dzauu64ta/image/upload/v1742900492/unnamed_1_k7jeuo.jpg');"
+>
+  <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-5">
+    <div class="w-full md:w-3/5 text-center md:text-left bg-black/50 p-6 rounded-lg">
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4">
+        Get In <span class="text-[#ff6b35] font-semibold">Touch</span>
+      </h1>
+      <p class="text-xl sm:text-2xl md:text-3xl font-light">
+        Let's Connect & Find Your 
+        <span class="font-semibold">Dream Property</span>
+      </p>
+      <button
+        id="contactwebenquirybtn"
+        onclick="openEnquiryForm()"
+        class="mt-6 inline-block bg-[#2ecc71] text-white px-6 py-3 rounded-md font-medium text-base uppercase hover:bg-[#27ae60] transition cursor-pointer"
       >
-        <div class="w-full md:w-3/5 text-center md:text-left">
-          <h1
-            class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-4"
-          >
-            Get In <span class="text-[#ff6b35] font-semibold">Touch</span>
-          </h1>
-          <p class="text-xl sm:text-2xl md:text-3xl font-light">
-            Let's Connect & Find Your
-            <span class="font-semibold">Dream Property</span>
-          </p>
-          <button
-         id="contactwebenquirybtn"
-            onclick="openEnquiryForm()"
-            class="mt-6 inline-block bg-[#2ecc71] text-white px-6 py-3 rounded-md font-medium text-base uppercase hover:bg-[#27ae60] transition cursor-pointer"
-          >
-            Contact Us
-          </button>
-          <!-- <a href="#" onclick="openEnquiryForm()"  class="mt-6 inline-block bg-[#2ecc71] text-white px-6 py-3 rounded-md font-medium text-base uppercase hover:bg-[#27ae60] transition cursor-pointer">Contact Us</a> -->
-        </div>
-        <div class="w-full md:w-2/5 mt-6 md:mt-0">
-          <img
-            src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742900492/unnamed_1_k7jeuo.jpg"
-            alt="Property Image"
-            class="w-full h-auto max-h-[350px] object-cover rounded-lg shadow-lg"
-          />
-        </div>
-      </div>
-    </section>
+        Contact Us
+      </button>
+    </div>
+  </div>
+</section>
+
 
     <!-- Contact Section -->
     <section class="bg-white py-16 text-center">
