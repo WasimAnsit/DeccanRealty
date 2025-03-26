@@ -892,6 +892,9 @@
   .border-gray-300 {
     border-color: var(--color-gray-300);
   }
+  .border-gray-400 {
+    border-color: var(--color-gray-400);
+  }
   .border-gray-400\/70 {
     border-color: color-mix(in oklab, var(--color-gray-400) 70%, transparent);
   }
@@ -1590,6 +1593,48 @@
     --tw-ease: var(--ease-out);
     transition-timing-function: var(--ease-out);
   }
+  .group-hover\:text-\[\#008a46\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #008a46;
+      }
+    }
+  }
+  .group-hover\:text-\[\#ff7b2a\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: #ff7b2a;
+      }
+    }
+  }
+  .group-hover\:text-\[orange-500\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: orange-500;
+      }
+    }
+  }
+  .group-hover\:text-\[orange-\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: orange-;
+      }
+    }
+  }
+  .group-hover\:text-\[white\] {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: white;
+      }
+    }
+  }
+  .group-hover\:text-green-500 {
+    &:is(:where(.group):hover *) {
+      @media (hover: hover) {
+        color: var(--color-green-500);
+      }
+    }
+  }
   .before\:absolute {
     &::before {
       content: var(--tw-content);
@@ -1664,10 +1709,38 @@
       }
     }
   }
+  .hover\:bg-\[\#b1923f\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #b1923f;
+      }
+    }
+  }
+  .hover\:bg-\[\#b1933fac\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #b1933fac;
+      }
+    }
+  }
   .hover\:bg-\[\#e66a24\] {
     &:hover {
       @media (hover: hover) {
         background-color: #e66a24;
+      }
+    }
+  }
+  .hover\:bg-\[\#ff7b2a\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: #ff7b2a;
+      }
+    }
+  }
+  .hover\:bg-\[b1923f\] {
+    &:hover {
+      @media (hover: hover) {
+        background-color: b1923f;
       }
     }
   }
@@ -1706,6 +1779,13 @@
       }
     }
   }
+  .hover\:bg-orange-500 {
+    &:hover {
+      @media (hover: hover) {
+        background-color: var(--color-orange-500);
+      }
+    }
+  }
   .hover\:from-orange-600 {
     &:hover {
       @media (hover: hover) {
@@ -1722,10 +1802,24 @@
       }
     }
   }
+  .hover\:text-\[\#008a46\] {
+    &:hover {
+      @media (hover: hover) {
+        color: #008a46;
+      }
+    }
+  }
   .hover\:text-\[\#b1923f\] {
     &:hover {
       @media (hover: hover) {
         color: #b1923f;
+      }
+    }
+  }
+  .hover\:text-\[b1923f\] {
+    &:hover {
+      @media (hover: hover) {
+        color: b1923f;
       }
     }
   }

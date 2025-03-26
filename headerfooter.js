@@ -1,6 +1,6 @@
 // Function to create the Header
 // Function to create the Header
-function createHeader(container) {  // Accept container as parameter
+function createHeader(container) {
   const header = document.createElement("header");
   header.className = "bg-[#E8E8E8] text-black w-full relative";
   header.style.width = "100%";
@@ -15,10 +15,17 @@ function createHeader(container) {  // Accept container as parameter
       <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
       <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
         <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">HOME</a></li>
-        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">ABOUT</a></li>
-        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">CONTACT</a></li>
-        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">FAQ</a></li>
-        <li><a href="homeloan.html" aria-label="HomeLoan" class="font-medium text-lg border border-white px-3 py-1 rounded-md transition text-black hover:text-black">HOME LOAN</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">FAQ</a></li>
+<li class="group border border-white px-4 py-2 rounded-md transition hover:bg-[#ff7b2a]">
+    <a href="homeloan.html" 
+       aria-label="HomeLoan" 
+       class="font-medium text-lg text-black group-hover:text-[white]">
+        HOME LOAN
+    </a>
+</li>
+
       </ul>
       <ul class="mobile-menu hidden md:hidden flex-col bg-[#060d42] w-full absolute left-0 top-full py-4 transition-all duration-300 z-50">
         <li class="w-full flex justify-center"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-center text-white hover:text-green-500 hover:bg-black">Home</a></li>
