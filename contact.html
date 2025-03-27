@@ -170,22 +170,24 @@
             placeholder="Type your message here..."
           ></textarea>
         </div>
-        <div class="flex justify-between">
-          <div class="g-recaptcha" data-sitekey="6LcnSAErAAAAAA8xOAGV7LdFpBifzSKIqJA2mCN6"></div>
-          <button 
-            id="contactus-btn"
-            type="submit" 
-            class="w-64 bg-[#008a46] hover:bg-[#007a3e] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
-          >
-            <span id="button-text" class="font-bold lg:text-[20px]">Get a Callback</span>
-            <span id="loader" class="hidden ml-2">
-              <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-              </svg>
-            </span>
-          </button>
-        </div>
+       <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-between w-full">
+  <div class="g-recaptcha" data-sitekey="6LcnSAErAAAAAA8xOAGV7LdFpBifzSKIqJA2mCN6"></div>
+
+  <button 
+    id="contactus-btn"
+    type="submit" 
+    class="w-full md:w-64 bg-[#008a46] hover:bg-[#007a3e] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
+  >
+    <span id="button-text" class="font-bold text-[16px] md:text-[20px]">Get a Callback</span>
+    <span id="loader" class="hidden ml-2">
+      <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+    </span>
+  </button>
+</div>
+
       </form>
     </div>
   </div>
