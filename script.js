@@ -107,7 +107,7 @@ function createCard(item, type) {
   }" class="w-full 2xl:h-48 xl:h-34 object-cover transition-transform duration-300">
         ${
           type === "property"
-            ? `<span class="absolute top-3 right-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
+            ? `<span class="absolute top-3 right-3 bg-[#b1923f] text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
             : ""
         }
       </div>

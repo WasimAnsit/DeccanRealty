@@ -22,6 +22,24 @@
     ></script>
     <script src="enquiryForm.js" defer></script>
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script>
+    // Extend Tailwind Config directly
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mulish: ['Mulish', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Mulish', sans-serif;
+    }
+  </style>
   </head>
   <body class="overflow-x-hidden">
     <div id="header-container"></div>

@@ -17,10 +17,24 @@
 
     <script src="headerfooter.js" defer></script>
     <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous"></script>
-   
+   <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
    
     <script src="script.js" defer></script>
+     <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mulish: ['Mulish', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
     <style>
+        body {
+      font-family: 'Mulish', sans-serif;
+    }
         /* Animation Styles */
         .slide-in {
             transform: translateX(-30px);

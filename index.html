@@ -7,29 +7,36 @@
       name="description"
       content="Discover top real estate opportunities in Bangalore & South India with DECCAN REALTY. Expert guidance for buying, selling & investing."
     />
-    <meta name="keywords" content="Deccan Realty, real estate Bangalore, South India properties,  property investment, buy sell rent property, real estate consultancy, real estate experts, commercial properties, residential properties, real estate solutions"/>
-    <title>DECCAN REALTY | Southern Realty Simplified</title>
-    <link rel="icon" type="image/png" href="assets/logos/favicon.ico">
-    <link rel="stylesheet" href="output.css" />
-    <link
-      rel="stylesheet"
-      href="style.css"
-      media="print"
-      onload="this.media='all'"
+    <meta
+      name="keywords"
+      content="Deccan Realty, real estate Bangalore, South India properties,  property investment, buy sell rent property, real estate consultancy, real estate experts, commercial properties, residential properties, real estate solutions"
     />
+    <title>DECCAN REALTY | Southern Realty Simplified</title>
+    <link rel="icon" type="image/png" href="assets/logos/favicon.ico" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'" />
     <script src="script.js" defer></script>
     <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
     <script src="headerfooter.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/79772b0b50.js"
-      crossorigin="anonymous"
-    defer></script>
+    <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous" defer></script>
     <script src="enquiryForm.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
+      <script>
+    // Extend Tailwind Config directly
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mulish: ['Mulish', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   </head>
-
-  <body>
-    <div  id="header-container"></div>
-     <a
+  <body class="font-mulish">
+    <div id="header-container"></div>
+    <a
       href="https://api.whatsapp.com/send?phone=7303062845"
       target="_blank"
       area-label="connect to whatsapp"
@@ -41,7 +48,7 @@
       <section>
         <div class="relative h-[80vh]">
           <img
-          src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/Home_Page_Deccan_Realty_wiqxvg"
+            src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/Home_Page_Deccan_Realty_wiqxvg"
             alt="Deccan Realty Home Page"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"
             loading="lazy"
@@ -55,19 +62,23 @@
             <h1
               class="text-4xl md:text-4xl lg:text-5xl font-bold mb-5 transform transition duration-300 hover:scale-105 hover:text-[#b1923f]"
             >
-              Discover beautifully designed homes in 
-            
-              <br>
-              <p class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl p-4 font-bold hover:text-[#b1923f]">BANGALORE</p>
+              Discover beautifully designed homes in
+
+              <br />
+              <p
+                class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl p-4 font-bold hover:text-[#b1923f]"
+              >
+                BANGALORE
+              </p>
             </h1>
             <p
               class="text-xl md:text-2xl lg:text-[20px] mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-3xl font-semibold"
             >
-              Start your property journey with us,<br> where dreams take shape into
-              exceptional living spaces
+              Start your property journey with us,<br />
+              where dreams take shape into exceptional living spaces
             </p>
             <button
-            id="moreinfobtn"
+              id="moreinfobtn"
               onclick="openEnquiryForm()"
               class="bg-[#8a6c2c] text-white px-6 py-3 rounded-lg text-lg font-semibold cursor-pointer hover:bg-amber-600 transition duration-300 transform hover:scale-105"
             >
@@ -79,7 +90,7 @@
     </header>
 
     <main>
-      <section  class="px-10 mt-12">
+      <section class="px-10 mt-12">
         <!-- <h1 class="text-3xl text-green-700 font-bold sm:font-extrabold">
           Properties that stand out
         </h1>
@@ -89,13 +100,15 @@
         </p> -->
       </section>
 
-      <section  class="my-7 w-[95%] mx-auto">
+      <section class="my-7 w-[95%] mx-auto">
         <h2
-          class="text-4xl text-green-700 font-bold sm:font-extrabold text-center mb-4"
+          class="text-4xl lg:text-5xl text-green-700 font-bold sm:font-extrabold text-center mb-4"
         >
           Exceptional Properties, Unmatched Comfort
         </h2>
-        <p class="text-lg text-gray-700 text-center mb-6 px-4 md:px-0">
+        <p
+          class="text-lg text-black text-center mb-6 px-4 md:px-0 font-semibold"
+        >
           Find a home that reflects your individuality while offering the
           perfect blend of comfort and style.
         </p>
@@ -108,7 +121,7 @@
 
       <section role="region" class="my-7 w-[95%] mx-auto">
         <h2
-          class="text-4xl text-green-700 text-center mb-8 font-bold sm:font-extrabold"
+          class="text-4xl lg:text-5xl text-green-700 text-center mb-8 font-bold sm:font-extrabold"
         >
           Our Expertise
         </h2>
@@ -120,13 +133,17 @@
       </section>
 
       <!-- properly mainted property -->
-      <section role="region" class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center">
+      <section
+        role="region"
+        class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center"
+      >
         <h2
-          class="text-2xl sm:text-3xl md:text-4xl text-green-700 font-bold sm:font-extrabold mb-4"
+          class="text-2xl lg:text-5xl sm:text-3xl md:text-4xl text-green-700 font-bold sm:font-extrabold mb-4"
         >
-          Well-Maintained Homes for <br> Resale & Immediatate Move-In
+          Well-Maintained Homes for <br />
+          Resale & Immediatate Move-In
         </h2>
-        <p class="text-base sm:text-lg text-gray-600 mb-6 md:mb-8">
+        <p class="text-base sm:text-lg text-black mb-6 md:mb-8 font-semibold">
           Embark on a journey with us to find a home that reflects your values
           and lifestyle, right here in Bangalore
         </p>
@@ -161,13 +178,14 @@
                   >
                   ranging from
                   <span class="font-bold">1300 to 2232.2 sq. ft.,</span>
-                  starting from <span class="font-bold">₹ 1.18 Crore.</span> A
-                  masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends
-                  Rajasthani architectural brilliance with modern cosmopolitan
-                  elegance. Designed to reflect royal palatial living, this
-                  exquisite community offers world-class amenities, timeless
-                  luxury, and unmatched comfort, creating a lifestyle of
-                  sophistication and opulence.
+                  starting from
+                  <span class="font-bold">Price on Request.</span> A masterpiece
+                  of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani
+                  architectural brilliance with modern cosmopolitan elegance.
+                  Designed to reflect royal palatial living, this exquisite
+                  community offers world-class amenities, timeless luxury, and
+                  unmatched comfort, creating a lifestyle of sophistication and
+                  opulence.
                 </p>
               </div>
               <span
@@ -180,10 +198,9 @@
               class="border-t border-gray-200 p-3 flex justify-between items-center"
             >
               <button
-               
                 onclick="openEnquiryForm()"
-                
-                class="_propname  bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-property="Sobha Royal Pavilion"
+                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
+                data-property="Sobha Royal Pavilion"
               >
                 Unlock Pricing
               </button>
@@ -223,10 +240,13 @@
               >
                 <p>
                   Godrej Splendour, located in the heart of
-                  <span class="font-bold text-black">Whitefield, Bangalore,</span>offers a
-                  splendid lifestyle with unmatched comfort and convenience.
-                  Priced at <span class="font-bold text-black">₹ 1.10 Cr.</span> onwards,
-                  this <span class="font-bold text-black">2 BHK</span> residence is
+                  <span class="font-bold text-black"
+                    >Whitefield, Bangalore,</span
+                  >offers a splendid lifestyle with unmatched comfort and
+                  convenience.
+                  <span class="font-bold text-black">Price on Request</span>
+                  onwards, this
+                  <span class="font-bold text-black">2 BHK</span> residence is
                   designed to provide a perfect blend of luxury and
                   connectivity. The project is set for possession in September
                   2027 and is strategically situated just a short drive from
@@ -246,9 +266,10 @@
             >
               <button
                 onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-property="Godrej Splendour"
+                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
+                data-property="Godrej Splendour"
               >
-               Unlock Pricing
+                Unlock Pricing
               </button>
               <a
                 href="https://api.whatsapp.com/send?phone=917303062845"
@@ -286,15 +307,18 @@
               >
                 <p>
                   Godrej Park Retreat, located on
-                  <span class="font-bold text-black">Sarjapur Road, Bangalore,</span>
+                  <span class="font-bold text-black"
+                    >Sarjapur Road, Bangalore,</span
+                  >
                   offers a lifestyle that goes beyond expectations. This
-                  <span class="font-bold text-black">1 BHK</span> residence comes with a
-                  <span class="font-bold text-black">28,000 sq. ft.</span> clubhouse and
-                  over 50 lifestyle amenities, ensuring a luxurious living
-                  experience. With possession in June 2028, the project provides
-                  seamless connectivity and easy accessibility, keeping you
-                  well-connected to key destinations. Price available on
-                  request.
+                  <span class="font-bold text-black">1 BHK</span> residence
+                  comes with a
+                  <span class="font-bold text-black">Price on Request</span>
+                  clubhouse and over 50 lifestyle amenities, ensuring a
+                  luxurious living experience. With possession in June 2028, the
+                  project provides seamless connectivity and easy accessibility,
+                  keeping you well-connected to key destinations. Price
+                  available on request.
                 </p>
               </div>
               <span
@@ -348,14 +372,18 @@
               >
                 <p>
                   Godrej 24 Bangalore, located on
-                  <span class="font-bold text-black">Sarjapur Road, Bangalore</span>, is
-                  designed for a 24-hour lifestyle, offering round-the-clock
-                  conveniences. With seamless connectivity to Whitefield,
-                  Electronic City, and major IT hubs, this prime location is a
-                  hotspot for professionals and investors. The area enjoys
-                  strong residential demand, enhanced by the upcoming Metro
-                  extension, new flyovers, Outer Ring Road, and Peripheral Ring
-                  Road, making it a highly sought-after investment destination.
+                  <span class="font-bold text-black"
+                    >Sarjapur Road, Bangalore</span
+                  >, is designed for a 24-hour lifestyle, offering
+                  round-the-clock conveniences. With seamless connectivity to
+                  Whitefield, Electronic City, and major IT hubs, this prime
+                  location is a hotspot for professionals and investors. The
+                  area enjoys strong residential demand, enhanced by the
+                  upcoming Metro extension, new flyovers, Outer Ring Road, and
+                  Peripheral Ring Road, making it a highly sought-after
+                  investment destination.
+                  <span class="font-bold text-black">Price on request</span> for
+                  interested buyers and investors.
                 </p>
               </div>
               <span
@@ -409,9 +437,11 @@
               >
                 <p>
                   Prestige City Avalon Park offers
-                  <span class="font-bold text-black">1, 2, 3, and 4 BHK apartments</span>
-                  with a price range of
-                  <span class="font-bold text-black">₹80 L - ₹3.6 Cr</span> + charges.
+                  <span class="font-bold text-black"
+                    >1, 2, 3, and 4 BHK apartments</span
+                  >
+                  with
+                  <span class="font-bold text-black">Price on Request</span>.
                   Developed by the renowned Prestige Group, known for its
                   innovation and excellence, the project ensures premium living
                   with thoughtfully designed homes. With a diverse real estate
@@ -472,12 +502,14 @@
                 <p>
                   A ready-to-move <span class="font-bold">3BHK duplex</span> in
                   Confident Orion,
-                  <span class="font-bold text-black">Sarjapur Road, South Bangalore,</span>
-                  priced at <span class="font-bold text-black">₹1.5 Cr</span> + Govt
-                  Charges & Tax
                   <span class="font-bold text-black"
-                    >(₹8,333 per sq. ft., negotiable), offers 1800 sq. ft.</span
+                    >Sarjapur Road, South Bangalore,</span
                   >
+                  with<span class="font-bold text-black">
+                    Price on Request</span
+                  >
+                  offers
+                  <span class="font-bold text-black"> 1800 sq. ft.</span>
                   of premium living space. Featuring
                   <span class="font-bold text-black"
                     >3 bedrooms, 3 bathrooms, 3+ balconies, a servant room, and
@@ -539,12 +571,15 @@
                 <p>
                   Ahad Serenity,
                   <span class="font-bold"
-                    >Sarjapur Road – ₹89.01 L - 1.66 Cr 1, 2, 3 BHK
-                    Ready-to-Move Apartments.</span
+                    >Sarjapur Road – Price on Request
+                  </span>
+                  for
+                  <span class="font-bold">
+                    1, 2, 3 BHK Ready-to-Move Apartments.</span
                   >
                   Spanning 8 acres with 85% open space, this
-                  <span class="font-bold text-black">gated community</span> offers modern
-                  homes with
+                  <span class="font-bold text-black">gated community</span>
+                  offers modern homes with
                   <span class="font-bold text-black"
                     >vitrified & wooden flooring, premium fittings, and modular
                     kitchens</span
@@ -604,7 +639,9 @@
               >
                 <p>
                   Luxury Gated Community in
-                  <span class="font-bold text-black">Akshay Nagar,Bangalore</span>
+                  <span class="font-bold text-black"
+                    >Akshay Nagar,Bangalore</span
+                  >
                   Exclusive
                   <span class="font-bold text-black"
                     >2, 3 & 4 BHK villas and apartments</span
@@ -612,7 +649,7 @@
                   with modern architecture, lush greenery, and premium
                   amenities. Secure gated access ensures privacy and comfort.
                   Bangalore |
-                  <span class="font-bold text-black">Starting from ₹ 1.5 Crore</span>
+                  <span class="font-bold text-black">Price on Request</span>
                   Experience elegance, security, and seamless connectivity in a
                   serene setting.
                 </p>
@@ -650,10 +687,8 @@
       </section>
     </main>
 
-    
-
     <!-- Testimonial -->
-    <section 
+    <section
       class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100"
     >
       <!-- Testimonial Card -->
@@ -695,7 +730,7 @@
             ></h3>
             <p
               id="customerReview"
-              class="mt-2 text-gray-700 text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#9ec49137]  to-white p-4 rounded-lg shadow-inner"
+              class="mt-2 text-gray-700 text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner"
             >
               We like the final result of this project; it is extraordinary and
               also provides the best service to the client.
@@ -715,7 +750,7 @@
             id="nextBtn"
             class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
           >
-              <i class="fa-solid fa-arrow-right"></i>
+            <i class="fa-solid fa-arrow-right"></i>
           </button>
         </div>
       </div>
