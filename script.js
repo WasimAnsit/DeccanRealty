@@ -121,7 +121,7 @@ function createCard(item, type) {
               <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
               <span class="property-price 2xl:text-[16px] xl:text-[14px] font-semibold text-black block">${item.priceRange}<span class="lg:text-[12px] xl:text-[10px]"> (${item.pricePerSqFt})</span></span>
             </div>
-            <div class="property-details text-sm text-gray-600 space-y-2 max-h-40 overflow-y-auto">
+            <div class="property-details text-sm text-black space-y-2 max-h-40 overflow-y-auto">
               <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
               <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
               <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
@@ -129,7 +129,7 @@ function createCard(item, type) {
           `
               : `
             <h2 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h2>
-            <p class="text-gray-600 text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
+            <p class="text-black text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
           `
           }
         </div>
