@@ -21,6 +21,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="enquiryForm.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   </head>
   <body class="overflow-x-hidden">
     <div id="header-container"></div>
@@ -169,10 +170,10 @@
             placeholder="Type your message here..."
           ></textarea>
         </div>
-        
-        <div class="flex justify-center">
+        <div class="flex justify-between">
+          <div class="g-recaptcha" data-sitekey="6LcnSAErAAAAAA8xOAGV7LdFpBifzSKIqJA2mCN6"></div>
           <button 
-            id="contactus-btn" 
+            id="contactus-btn"
             type="submit" 
             class="w-64 bg-[#008a46] hover:bg-[#007a3e] text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center"
           >

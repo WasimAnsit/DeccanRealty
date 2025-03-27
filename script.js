@@ -133,16 +133,17 @@ function createCard(item, type) {
           `
           }
         </div>
-        <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
-          <button class="enquiry-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-type="${type}" data-id="${
+       <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
+  <button class="enquiry-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-type="${type}" data-id="${
     type === "property" ? item.propertyName : item.serviceTitle
   }">
-            Enquiry Now
-          </button>
-          <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center" aria-label="Chat on WhatsApp">
-            <i class="fab fa-whatsapp" aria-hidden="true"></i>
-            <span class="sr-only">Chat on WhatsApp</span>
-          </a>
+    ${type === "property" ? "Request Info" : "Explore More"}
+  </button>
+  <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center" aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp" aria-hidden="true"></i>
+    <span class="sr-only">Chat on WhatsApp</span>
+  </a>
+</div>
         </div>
       </div>
     </div>
@@ -196,10 +197,10 @@ document.addEventListener("DOMContentLoaded", () => {
       // Toggle only this specific description container
       if (desc.classList.contains("expanded")) {
         desc.classList.remove("expanded");
-        button.textContent = "See More";
+        button.textContent = "See More...";
       } else {
         desc.classList.add("expanded");
-        button.textContent = "See Less";
+        button.textContent = "See Less...";
       }
     });
 
