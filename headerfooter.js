@@ -13,7 +13,7 @@ function createHeader(container) {
         </a>
       </div>
       <button class="md:hidden text-2xl text-black mobile-menu-btn">☰</button>
-      <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
+      <ul class="nav-menu hidden md:flex items-center space-x-4 font-extrabold">
         <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black">HOME</a></li>
         <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">ABOUT</a></li>
         <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">CONTACT</a></li>
@@ -47,26 +47,49 @@ function createHeader(container) {
   container.appendChild(header);
 
   // Highlight active page
-  const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  const desktopLinks = header.querySelectorAll(".nav-menu a");
-  const mobileLinks = header.querySelectorAll(".mobile-menu a");
+ const currentPath = window.location.pathname.split("/").pop() || "index.html";
+ const desktopLinks = header.querySelectorAll(".nav-menu a");
+ const mobileLinks = header.querySelectorAll(".mobile-menu a");
 
-  [desktopLinks, mobileLinks].forEach((linkSet) => {
-    linkSet.forEach((link) => {
-      const href = link.getAttribute("href");
-      if (href === currentPath) {
-        link.classList.add("bg-[#b1923f]", "text-white", "rounded-md");
-        link.style.display = "inline-block";
-        link.style.width = "auto";
-        link.style.padding = link.classList.contains("border")
-          ? "0.375rem 1rem"
-          : "1rem 1rem";
-        link.style.fontSize = "1.25rem";
-        link.parentElement.style.display = "flex";
-        link.parentElement.style.justifyContent = "center";
-      }
-    });
-  });
+ function setActive(link) {
+   const li = link.closest("li");
+
+   if (li && li.classList.contains("group")) {
+     // For HOME LOAN
+     li.classList.add("bg-[#b1923f]", "rounded-md");
+     link.classList.add("text-white", "px-3", "py-1");
+   } else {
+     link.classList.add(
+       "bg-[#b1923f]",
+       "text-white",
+       "rounded-md",
+       "px-4",
+       "py-2"
+     );
+   }
+ }
+
+ [...desktopLinks, ...mobileLinks].forEach((link) => {
+   const href = link.getAttribute("href");
+   if (href === currentPath) {
+     setActive(link);
+   }
+
+   // OPTIONAL: Also highlight on click (for Single Page feel)
+   link.addEventListener("click", () => {
+     [...desktopLinks, ...mobileLinks].forEach((l) => {
+       l.classList.remove(
+         "bg-[#b1923f]",
+         "text-white",
+         "rounded-md",
+         "px-2",
+         "py-1"
+       );
+       l.closest("li")?.classList.remove("bg-[#b1923f]", "rounded-md");
+     });
+     setActive(link);
+   });
+ });
 
   // Mobile menu toggle and positioning
   const mobileMenuBtn = header.querySelector(".mobile-menu-btn");

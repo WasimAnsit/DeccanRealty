@@ -323,3 +323,14 @@ a:focus {
   /* White outline for visibility against dark backgrounds */
   outline-offset: 2px;
 }
+
+.nav-active {
+  background-color: #b1923f;
+  color: white !important;
+}
+
+.nav-group-active {
+  background-color: #b1923f;
+  color: white !important;
+  padding: 6px 12px;
+}
