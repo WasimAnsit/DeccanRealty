@@ -318,7 +318,11 @@
               >
             </div>
   <div class="flex flex-col md:flex-row gap-4 md:gap-6 items-center justify-between w-full">
-  <div class="g-recaptcha" data-sitekey="6LeCZAErAAAAADhoXltw5EyaYL9tP1f2g42i_aej"></div>
+  <div class="flex flex-col">
+
+          <div class="g-recaptcha" data-sitekey="6LeCZAErAAAAADhoXltw5EyaYL9tP1f2g42i_aej"></div>
+          <small id="recaptcha-req-getintouch" class="hidden text-red-500 text-xs text-center">Please verify the reCAPTCHA</small>
+        </div>
 
   <button 
     id="contactus-btn"
@@ -338,7 +342,7 @@
         </form>
 
         <!-- Success Popup -->
-       <div id="successPopup" class="hidden fixed inset-0 bg-[#0000006e] bg-opacity-50 flex items-center justify-center z-50 p-4">
+       <div id="successPopup" class="hidden fixed inset-0 bg-[#0000006e] bg-opacity-50 items-center justify-center z-50 p-4">
   <div class="bg-white rounded-lg p-6 max-w-md w-full mx-4">
     <div class="text-center">
       <svg class="mx-auto h-12 w-12 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -461,6 +465,16 @@
             isValid = false;
           }
 
+  const recaptchaResponse = grecaptcha.getResponse();
+      const recaptchaReqMessage = document.getElementById("recaptcha-req-getintouch");
+     
+       if (!recaptchaResponse) {
+  recaptchaReqMessage.classList.remove("hidden");
+  validationErrors.push("reCAPTCHA not verified");
+}
+
+
+
           if (!isValid) return;
 
           // Prepare payload
@@ -505,6 +519,7 @@
 
             // Reset form
             contactForm.reset();
+            grecaptcha.reset();
             submitBtn.disabled = false;
           } catch (error) {
             console.error("Error:", error);
