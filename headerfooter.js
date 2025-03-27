@@ -18,10 +18,10 @@ function createHeader(container) {
         <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">ABOUT</a></li>
         <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">CONTACT</a></li>
         <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46]">FAQ</a></li>
-<li class="group border border-white px-4 py-2 rounded-md transition hover:bg-[#ff7b2a]">
+<li class="group border border-[green] px-4 py-2 rounded-md transition hover:bg-[#008a46]">
     <a href="homeloan.html" 
        aria-label="HomeLoan" 
-       class="font-medium text-lg text-black group-hover:text-[white]">
+       class="font-medium text-lg text-black group-hover:text-[#ff7b2a]">
         HOME LOAN
     </a>
 </li>
