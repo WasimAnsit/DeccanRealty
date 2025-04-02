@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'">
 
     <meta
       name="description"
@@ -14,75 +13,73 @@
       content="Deccan Realty, real estate Bangalore, South India properties,  property investment, buy sell rent property, real estate consultancy, real estate experts, commercial properties, residential properties, real estate solutions"
     />
     <title>DECCAN REALTY | Southern Realty Simplified</title>
-    <link rel="icon" type="image/png" href="assets/logos/favicon.ico" />
+    <link rel="icon" type="image/png" href="src/assets/logo/favicon.ico" />
     <link rel="stylesheet" href="output.css" />
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./src/headerfooter.js" defer></script>
     <script src="script.js" defer></script>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <script src="headerfooter.js" defer></script>
-    <script src="https://kit.fontawesome.com/79772b0b50.js" crossorigin="anonymous" defer></script>
-    <script src="enquiryForm.js" defer></script>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;600;700&display=swap" rel="stylesheet">
-      <script>
-    // Extend Tailwind Config directly
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            mulish: ['Mulish', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
+    <script src="./src/Enquiryform.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/79772b0b50.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
   </head>
-  <body class="font-mulish">
-    <div id="header-container"></div>
-    <a
-      href="https://api.whatsapp.com/send?phone=7303062845"
-      target="_blank"
-      area-label="connect to whatsapp"
-      class="fixed bottom-10 right-10 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition duration-300 z-50"
-    >
-      <i class="fa fa-whatsapp fa-2x"></i>
-    </a>
+  <body class="font-family">
+    <!-- Navbar Container -->
     <header>
+      <div id="header-container"></div>
+
+      <a
+        href="https://api.whatsapp.com/send?phone=7303062845"
+        target="_blank"
+        aria-label="connect to whatsapp"
+        class="fixed bottom-10 right-4 bg-green-500 text-white rounded-full shadow-lg hover:bg-[#b1923f] transition duration-300 z-50 flex items-center justify-center p-2 h-12 w-12 sm:p-2 sm:h-12 sm:w-12 lg:p-4 lg:h-14 lg:w-14"
+      >
+        <i class="fab fa-whatsapp fa-2x"></i>
+      </a>
+
       <section>
-        <div class="relative h-[80vh]">
+        <div class="relative h-[80vh] min-h-[500px] w-full">
           <img
             src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/Home_Page_Deccan_Realty_wiqxvg"
             alt="Deccan Realty Home Page"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"
             loading="lazy"
           />
-          <!-- Overlay for better text readability -->
-          <div class="absolute inset-0 bg-black/50 bg-opacity-40 z-10"></div>
+          <!-- Overlay with gradient -->
+          <div
+            class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10"
+          ></div>
+
           <!-- Content Container -->
           <div
-            class="relative h-full flex flex-col items-center justify-center text-center text-white px-4 z-20"
+            class="relative h-full flex flex-col items-center justify-center text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 z-20"
           >
             <h1
               class="text-4xl md:text-4xl lg:text-5xl font-bold mb-5 transform transition duration-300 hover:scale-105 hover:text-[#b1923f]"
             >
               Discover beautifully designed homes in
-
               <br />
               <p
-                class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl p-4 font-bold hover:text-[#b1923f]"
+                class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl px-4 sm:px-5 py-3 sm:py-4 font-bold hover:text-[#b1923f]"
               >
                 BANGALORE
               </p>
             </h1>
+
             <p
-              class="text-xl md:text-2xl lg:text-[20px] mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-3xl font-semibold"
+              class="text-xl md:text-2xl lg:text-[20px] mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl font-semibold"
             >
-              Start your property journey with us,<br />
+              Start your property journey with us,
+              <br />
               where dreams take shape into exceptional living spaces
             </p>
+
             <button
               id="moreinfobtn"
               onclick="openEnquiryForm()"
-              class="bg-[#8a6c2c] text-white px-6 py-3 rounded-lg text-lg font-semibold cursor-pointer hover:bg-amber-600 transition duration-300 transform hover:scale-105"
+              class="bg-[#8a6c2c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-base sm:text-lg md:text-lg lg:text-lg font-semibold cursor-pointer hover:bg-amber-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
             >
               More Info
             </button>
@@ -92,672 +89,133 @@
     </header>
 
     <main>
-      <section class="px-10 mt-12">
-        <!-- <h1 class="text-3xl text-green-700 font-bold sm:font-extrabold">
-          Properties that stand out
-        </h1>
-        <p class="mb-16">
-          Find a place that both makes you feel comfortable and allows others to
-          realize how unique you are.
-        </p> -->
-      </section>
+      <!-- property render section -->
+      <section id="property-render-container">
+        <!-- 1st property card render  -->
+        <section class="mt-10 px-4">
+          <h2
+            class="font-extrabold text-3xl text-center text-green-800 2xl:text-5xl mb-4"
+          >
+            Exceptional Properties, Unmatched Comfort
+          </h2>
+          <p class="text-center font-semibold text-lg xl:text-[20px]">
+            Find a home that reflects your individuality while offering the
+            perfect blend of comfort and style.
+          </p>
+          <div
+            id="property-container"
+            class="container mx-auto mt-8 mb-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          ></div>
+        </section>
 
-      <section class="my-7 w-[95%] mx-auto">
-        <h2
-          class="text-4xl lg:text-5xl text-green-700 font-bold sm:font-extrabold text-center mb-4"
-        >
-          Exceptional Properties, Unmatched Comfort
-        </h2>
-        <p
-          class="text-lg text-black text-center mb-6 px-4 md:px-0 font-semibold"
-        >
-          Find a home that reflects your individuality while offering the
-          perfect blend of comfort and style.
-        </p>
-        <div class="relative overflow-hidden">
-          <div id="propertyGrid" class="flex gap-6 p-4 animate-slide">
-            <!-- Cards will be inserted here -->
+        <!-- our service  -->
+        <section class="mt-20 px-4">
+          <h2
+            class="font-extrabold text-3xl text-center text-green-800 2xl:text-5xl mb-4"
+          >
+            Our Expertise
+          </h2>
+          <div
+            id="service-container"
+            class="container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          >
+            <!-- Service cards will be dynamically inserted here -->
           </div>
-        </div>
-      </section>
+        </section>
 
-      <section role="region" class="my-7 w-[95%] mx-auto">
-        <h2
-          class="text-4xl lg:text-5xl text-green-700 text-center mb-8 font-bold sm:font-extrabold"
-        >
-          Our Expertise
-        </h2>
-        <div class="relative overflow-hidden">
-          <div id="servicesGrid" class="flex gap-6 p-4 animate-slide">
-            <!-- Cards will be inserted here -->
-          </div>
-        </div>
+        <!-- card-3 section -->
+        <section class="mt-20 px-4">
+          <h2
+            class="font-extrabold text-3xl text-center text-green-800 2xl:text-5xl mb-4"
+          >
+            Well-Maintained Homes<br />
+            for Resale & Immediate Move-In
+          </h2>
+          <p class="text-center font-semibold lg:text-[20px]">
+            Embark on a journey with us to find a home that reflects your values
+            and lifestyle, right here in Bangalore
+          </p>
+          <div
+            id="resale-property-container"
+            class="container mx-auto mt-8 mb-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+          ></div>
+        </section>
       </section>
+      <!-- Testimonial section -->
 
-      <!-- properly mainted property -->
       <section
-        role="region"
-        class="container mx-auto px-4 sm:px-6 lg:px-8 py-6 text-center"
+        class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100"
       >
-        <h2
-          class="text-2xl lg:text-5xl sm:text-3xl md:text-4xl text-green-700 font-bold sm:font-extrabold mb-4"
-        >
-          Well-Maintained Homes for <br />
-          Resale & Immediatate Move-In
-        </h2>
-        <p class="text-base sm:text-lg text-black mb-6 md:mb-8 font-semibold">
-          Embark on a journey with us to find a home that reflects your values
-          and lifestyle, right here in Bangalore
-        </p>
-
+        <!-- Testimonial Card -->
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 gap-y-8 md:gap-y-10 justify-center"
+          class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 h-auto"
         >
-          <!-- Card 1 -->
+          <!-- Heading and Subheading -->
+          <div class="text-center mb-8 md:mb-12">
+            <h2
+              class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text"
+            >
+              What Our Customers Say
+            </h2>
+            <p class="mt-2 text-sm sm:text-base md:text-lg">
+              Discover the voices of our happy homeowners – real experiences,
+              real satisfaction!
+            </p>
+          </div>
+
+          <!-- Testimonial Content -->
           <div
-            class="property-card bg-white rounded-none sm:rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
+            class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-xl shadow-2xl transition-all duration-500 ease-in-out"
           >
-            <div class="relative overflow-hidden">
+            <!-- Customer Image -->
+            <div class="w-full md:w-1/2 flex justify-center">
               <img
-                src="assets/images/1.jpg"
-                alt="White Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
+                id="customerImage"
+                src="assets/images/profiledemologo.jpg"
+                alt="Customer"
+                class="rounded-lg shadow-md w-40 sm:w-40 md:w-48 lg:w-70 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 object-cover border-4 border-[#b1923f]"
               />
             </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Sobha Royal Pavilion
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-1"
-              >
-                <p>
-                  Sobha Royal Pavilion – Rajasthan-themed luxury apartments
-                  in<span class="font-bold text-black">
-                    Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4
-                    BHK homes</span
-                  >
-                  ranging from
-                  <span class="font-bold">1300 to 2232.2 sq. ft.,</span>
-                  starting from
-                  <span class="font-bold">Price on Request.</span> A masterpiece
-                  of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani
-                  architectural brilliance with modern cosmopolitan elegance.
-                  Designed to reflect royal palatial living, this exquisite
-                  community offers world-class amenities, timeless luxury, and
-                  unmatched comfort, creating a lifestyle of sophistication and
-                  opulence.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-900 cursor-pointer"
-                data-target="desc-1"
-                >See More...</span
-              >
-            </div>
+            <!-- Review Content -->
             <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
+              id="reviewContent"
+              class="w-full md:w-2/3 text-center md:text-left transition-opacity duration-500 ease-in-out"
             >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-                data-property="Sobha Royal Pavilion"
+              <h3
+                id="customerName"
+                class="font-bold text-lg sm:text-xl md:text-2xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]"
+              ></h3>
+              <p
+                id="customerReview"
+                class="mt-2 text-gray-700 text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner"
               >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
+                We like the final result of this project; it is extraordinary
+                and also provides the best service to the client.
+              </p>
             </div>
           </div>
 
-          <!-- Card 2 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/2.jpg"
-                alt="Modern Red Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Godrej Splendour
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-2"
-              >
-                <p>
-                  Godrej Splendour, located in the heart of
-                  <span class="font-bold text-black"
-                    >Whitefield, Bangalore,</span
-                  >offers a splendid lifestyle with unmatched comfort and
-                  convenience.
-                  <span class="font-bold text-black">Price on Request</span>
-                  onwards, this
-                  <span class="font-bold text-black">2 BHK</span> residence is
-                  designed to provide a perfect blend of luxury and
-                  connectivity. The project is set for possession in September
-                  2027 and is strategically situated just a short drive from
-                  renowned IT hubs, top schools, and prestigious colleges. With
-                  Godrej Splendour, experience modern living in one of
-                  Bangalore’s most sought-after localities.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-2"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
+          <!-- Navigation Buttons -->
+          <div class="flex justify-center items-center mt-6 gap-3">
+            <button
+              id="prevBtn"
+              class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
             >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-                data-property="Godrej Splendour"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/3.jpg"
-                alt="Colorful Residential Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Godrej Park Retreat
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-3"
-              >
-                <p>
-                  Godrej Park Retreat, located on
-                  <span class="font-bold text-black"
-                    >Sarjapur Road, Bangalore,</span
-                  >
-                  offers a lifestyle that goes beyond expectations. This
-                  <span class="font-bold text-black">1 BHK</span> residence
-                  comes with a
-                  <span class="font-bold text-black">Price on Request</span>
-                  clubhouse and over 50 lifestyle amenities, ensuring a
-                  luxurious living experience. With possession in June 2028, the
-                  project provides seamless connectivity and easy accessibility,
-                  keeping you well-connected to key destinations. Price
-                  available on request.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-3"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
+              <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            <button
+              id="nextBtn"
+              class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
             >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/4.jpg"
-                alt="Modern Apartment Building"
-                class="_propname w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Godrej 24
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-4"
-              >
-                <p>
-                  Godrej 24 Bangalore, located on
-                  <span class="font-bold text-black"
-                    >Sarjapur Road, Bangalore</span
-                  >, is designed for a 24-hour lifestyle, offering
-                  round-the-clock conveniences. With seamless connectivity to
-                  Whitefield, Electronic City, and major IT hubs, this prime
-                  location is a hotspot for professionals and investors. The
-                  area enjoys strong residential demand, enhanced by the
-                  upcoming Metro extension, new flyovers, Outer Ring Road, and
-                  Peripheral Ring Road, making it a highly sought-after
-                  investment destination.
-                  <span class="font-bold text-black">Price on request</span> for
-                  interested buyers and investors.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-4"
-                >See More..</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
-            >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 5 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/5.jpg"
-                alt="White Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Prestige City Avalon Park
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-5"
-              >
-                <p>
-                  Prestige City Avalon Park offers
-                  <span class="font-bold text-black"
-                    >1, 2, 3, and 4 BHK apartments</span
-                  >
-                  with
-                  <span class="font-bold text-black">Price on Request</span>.
-                  Developed by the renowned Prestige Group, known for its
-                  innovation and excellence, the project ensures premium living
-                  with thoughtfully designed homes. With a diverse real estate
-                  portfolio, Prestige Group has completed 300+ projects across
-                  residential, commercial, and hospitality sectors, making it a
-                  trusted name in the industry.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-5"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
-            >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 6 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/6.jpg"
-                alt="Modern Red Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Confident Orion
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-6"
-              >
-                <p>
-                  A ready-to-move <span class="font-bold">3BHK duplex</span> in
-                  Confident Orion,
-                  <span class="font-bold text-black"
-                    >Sarjapur Road, South Bangalore,</span
-                  >
-                  with<span class="font-bold text-black">
-                    Price on Request</span
-                  >
-                  offers
-                  <span class="font-bold text-black"> 1800 sq. ft.</span>
-                  of premium living space. Featuring
-                  <span class="font-bold text-black"
-                    >3 bedrooms, 3 bathrooms, 3+ balconies, a servant room, and
-                    an attached backyard garden, this fully furnished home
-                    includes a modular kitchen, wardrobes, marble flooring,
-                    geysers, and Jacuzzi.</span
-                  >
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-6"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
-            >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 7 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/7.jpg"
-                alt="Colorful Residential Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Ahad Serenity
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-7"
-              >
-                <p>
-                  Ahad Serenity,
-                  <span class="font-bold"
-                    >Sarjapur Road – Price on Request
-                  </span>
-                  for
-                  <span class="font-bold">
-                    1, 2, 3 BHK Ready-to-Move Apartments.</span
-                  >
-                  Spanning 8 acres with 85% open space, this
-                  <span class="font-bold text-black">gated community</span>
-                  offers modern homes with
-                  <span class="font-bold text-black"
-                    >vitrified & wooden flooring, premium fittings, and modular
-                    kitchens</span
-                  >. Spanning 8 acres with 85% open space, this gated community
-                  offers modern homes with vitrified & wooden flooring, premium
-                  fittings, and modular kitchens.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-7"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
-            >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
-          </div>
-
-          <!-- Card 8 -->
-          <div
-            class="property-card bg-white rounded-lg shadow-[4px_4px_10px_rgba(0,0,0,0.2)] overflow-hidden transform transition duration-300 hover:scale-105 w-full max-w-[20rem] sm:max-w-none mx-auto"
-          >
-            <div class="relative overflow-hidden">
-              <img
-                src="assets/images/8.jpeg"
-                alt="Modern Apartment Building"
-                class="w-full h-48 sm:h-60 object-cover transition-transform duration-300 hover:scale-110"
-              />
-            </div>
-            <div class="content-wrapper p-4 text-center">
-              <h3 class="text-lg sm:text-xl font-semibold text-green-700 mb-2">
-                Suavity Otium
-              </h3>
-              <div
-                class="description-container text-sm text-slate-800"
-                id="desc-8"
-              >
-                <p>
-                  Luxury Gated Community in
-                  <span class="font-bold text-black"
-                    >Akshay Nagar,Bangalore</span
-                  >
-                  Exclusive
-                  <span class="font-bold text-black"
-                    >2, 3 & 4 BHK villas and apartments</span
-                  >
-                  with modern architecture, lush greenery, and premium
-                  amenities. Secure gated access ensures privacy and comfort.
-                  Bangalore |
-                  <span class="font-bold text-black">Price on Request</span>
-                  Experience elegance, security, and seamless connectivity in a
-                  serene setting.
-                </p>
-              </div>
-              <span
-                class="toggle-btn text-sm text-blue-600 cursor-pointer"
-                data-target="desc-8"
-                >See More...</span
-              >
-            </div>
-            <div
-              class="border-t border-gray-200 p-3 flex justify-between items-center"
-            >
-              <button
-                onclick="openEnquiryForm()"
-                class="_propname bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 sm:px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300"
-              >
-                Unlock Pricing
-              </button>
-              <a
-                href="https://api.whatsapp.com/send?phone=917303062845"
-                target="_blank"
-                class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center"
-                aria-label="Chat on WhatsApp"
-              >
-                <i
-                  class="fab fa-whatsapp text-lg sm:text-xl"
-                  aria-hidden="true"
-                ></i>
-                <span class="sr-only">Chat on WhatsApp</span>
-              </a>
-            </div>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </div>
       </section>
     </main>
-
-    <!-- Testimonial -->
-    <section
-      class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100"
-    >
-      <!-- Testimonial Card -->
-      <div class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 h-auto">
-        <!-- Heading and Subheading -->
-        <div class="text-center mb-8 md:mb-12">
-          <h2
-            class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text"
-          >
-            What Our Customers Say
-          </h2>
-          <p class="mt-2 text-sm sm:text-base md:text-lg">
-            Discover the voices of our happy homeowners – real experiences, real
-            satisfaction!
-          </p>
-        </div>
-
-        <!-- Testimonial Content -->
-        <div
-          class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-xl shadow-2xl transition-all duration-500 ease-in-out"
-        >
-          <!-- Customer Image -->
-          <div class="w-full md:w-1/2 flex justify-center">
-            <img
-              id="customerImage"
-              src="assets/images/profiledemologo.jpg"
-              alt="Customer"
-              class="rounded-lg shadow-md w-40 sm:w-40 md:w-48 lg:w-70 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 object-cover border-4 border-[#b1923f]"
-            />
-          </div>
-          <!-- Review Content -->
-          <div
-            id="reviewContent"
-            class="w-full md:w-2/3 text-center md:text-left transition-opacity duration-500 ease-in-out"
-          >
-            <h3
-              id="customerName"
-              class="font-bold text-lg sm:text-xl md:text-2xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]"
-            ></h3>
-            <p
-              id="customerReview"
-              class="mt-2 text-gray-700 text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner"
-            >
-              We like the final result of this project; it is extraordinary and
-              also provides the best service to the client.
-            </p>
-          </div>
-        </div>
-
-        <!-- Navigation Buttons -->
-        <div class="flex justify-center items-center mt-6 gap-3">
-          <button
-            id="prevBtn"
-            class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
-          >
-            <i class="fa-solid fa-arrow-left"></i>
-          </button>
-          <button
-            id="nextBtn"
-            class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
-          >
-            <i class="fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </section>
-    <!-- Footer -->
-    <div id="footer-container"></div>
+    <footer>
+      <!-- Footer -->
+      <div id="footer-container"></div>
+    </footer>
   </body>
 </html>

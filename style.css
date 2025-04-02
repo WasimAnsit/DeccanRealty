@@ -1,336 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 *{
-  font-family: "Mulish", sans-serif;
-  
-}
-.logo-link img {
-  margin-top: -1rem;
-
-  /* Adjust this value (e.g., -0.5rem, -2rem) to move it more or less upward */
-}
- #reviewContent,
- #textContent {
-   transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
- }
-/* Optional: Ensure responsiveness */
-@media (max-width: 768px) {
-  .logo-link img {
-    margin-bottom: 40px;
-    /* Slightly less movement on mobile if needed */
-  }
-  .anchor-icon{
-    margin-right: 6rem;
-  }
+   
+    font-family: 'Mulish', sans-serif;
 }
 
-.animate-slide {
-  display: flex;
-  animation: slide linear infinite;
-  will-change: transform;
-}
-
-.animate-slide:hover {
-  animation-play-state: paused;
-}
-
-#propertyGrid.animate-slide,
-#servicesGrid.animate-slide {
-  animation-duration: 40s;
-}
-
-/* Card styling */
-.card-container {
-  height: 520px;
-  max-width: 22vw;
-  display: flex;
-  flex-direction: column;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-}
-
-.card-container:hover img {
-  transform: scale(1.05) translateZ(20px);
-}
-
-.card-content {
-  flex-grow: 1;
-  transform: translateZ(10px);
-  display: flex;
-  flex-direction: column;
-}
-
-.card-buttons {
-  transform: translateZ(15px);
-  margin-top: auto;
-}
-
-/* Property specific styling */
-.property-header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding-bottom: 1rem;
-}
-
-/* .property-price {
-  padding: 4px;
-  border-radius: 9999px;
-  display: inline-block;
-} */
-
-.property-details {
-  flex-grow: 1;
-  overflow: hidden;
-  /* Changed from max-height: 40 to avoid clipping issues */
-}
-
-.property-details p {
-  display: flex;
-  align-items: center;
-  transition: transform 0.2s;
-}
-
-.property-details p:hover {
-  transform: translateX(5px) translateZ(5px);
-}
-
-/* WhatsApp button */
+/* Add this CSS to your stylesheet */
 .whatsapp-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
 
 .whatsapp-btn:hover {
-  transform: scale(1.1) translateZ(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1) translateZ(10px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .whatsapp-btn i {
-  color: white;
-  font-size: 1.75rem;
+    color: white;
+    font-size: 1.75rem;
 }
 
-@media(max-width:400px){
-  .property-card{
-    width: 83vw !important;
-  }
-}
-/* Responsive design */
-@media (max-width: 768px) {
+/* resale cardd toogle button css  */
 
-  /* Override sliding layout for mobile */
-#propertyGrid.animate-slide,
-  #servicesGrid.animate-slide {
-    display: flex;
-    flex-direction: column;
-    animation: none;
-    gap: 1.5rem;
-  }
-    #propertyGrid .card-container:nth-child(n + 5),
-    /* Assuming 4 original properties */
-    #servicesGrid .card-container:nth-child(n + 5) {
-      /* Assuming 4 original services */
-      display: none;
-    }
-  .card-container {
-    width: 100%;
-    /* Full width on mobile */
-    max-width: none;
-    /* Remove max-width constraint */
+/* Critical CSS fixes */
+.resale-card {
     height: auto;
-    /* Allow height to adjust based on content */
-    margin: 0 auto;
-    /* Center the cards */
-  }
+    align-self: start;
+}
 
-  .property-name {
-    font-size: 1rem;
-  }
-
-  .property-price {
-    font-size: 0.875rem;
-  }
-
-  .property-details {
-    font-size: 0.75rem;
-    max-height: none;
-    /* Allow full content visibility */
-  }
-
-  /* Adjust image size for mobile */
-  .card-container img {
-    height: 12rem;
-    /* Smaller image height on mobile */
-  }
-
-  /* Ensure container fits content */
-  .relative.overflow-hidden {
-    overflow: visible;
-    /* Prevent clipping on mobile */
-  }
+#resale-property-container {
+    display: grid;
+    align-items: start;
 }
 
 
+/* hOME LAOD CONTAC FOMR LAODER CSS */
+@keyframes pop {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
 
-/* Card toggle CSS */
-.description-container {
-  max-height: 4rem;
-  overflow: hidden;
-  transition: max-height 0.3s ease;
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
-.description-container.expanded {
-  max-height: 20rem;
-  /* Adjust as needed */
-}
-.property-card {
-  position: relative;
-  z-index: 1;
-}
+@keyframes check {
+    0% {
+        stroke-dasharray: 0 100;
+        opacity: 0;
+    }
 
-.property-card:hover {
-  z-index: 2;
-}
+    50% {
+        stroke-dasharray: 50 100;
+        opacity: 1;
+    }
 
-/* Container adjustments for mobile */
-@media (max-width: 639px) {
-  .container {
-    max-width: 100%;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-/* Modified property card styles */
-.property-card {
-  display: flex;
-  flex-direction: column;
-  width:22vw;
-  height: auto !important;
-  /* Force auto height instead of 100% */
-  background-color: white;
-  /* border-radius: 0.5rem; */
-  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
-  overflow: hidden;
-  transform: scale(1);
-  transition: transform 0.3s ease;
+    100% {
+        stroke-dasharray: 100 100;
+    }
 }
 
-.property-card:hover {
-  transform: scale(1.05);
+.animate-pop {
+    animation: pop 0.3s ease-out forwards;
 }
 
-.content-wrapper {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  text-align: center;
-}
-
-.toggle-btn {
-  color: blue;
-  cursor: pointer;
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  display: inline-block;
-}
-
-.toggle-btn.hidden {
-  display: none;
-}
-
-.loader {
-  border: 4px solid rgba(255, 255, 255, 0.3);
-  border-top: 4px solid #ffffff;
-  border-radius: 50%;
-  width: 48px;
-  height: 48px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.logo img {
-  width: 128px;
-  height: 128px;
-}
-
-@media (min-width: 768px) {
-  .logo img {
-    width: 144px;
-    height: 144px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .logo img {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* border radius */
-@media (max-width: 639px) {
-
-  /* Match Tailwind's 'sm' breakpoint */
-  .property-card {
-    border-radius: 0;
-    /* No border radius on small devices */
-  }
-}
-
-/* testimonial */
-@media (max-width: 768px) {
-  #reviewContent {
-    padding: 1rem;
-    font-size: 0.875rem;
-  }
-
-  #customerImage {
-    width: 100%;
-    max-width: 150px;
-  }
-
-  .flex-col {
-    gap: 1.5rem;
-  }
-}
-
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-a:focus {
-  outline: 2px solid #ffffff;
-  /* White outline for visibility against dark backgrounds */
-  outline-offset: 2px;
-}
-
-.nav-active {
-  background-color: #b1923f;
-  color: white !important;
-}
-
-.nav-group-active {
-  background-color: #b1923f;
-  color: white !important;
-  padding: 6px 12px;
+.animate-check {
+    stroke-dasharray: 100;
+    animation: check 0.8s ease-in-out forwards;
 }

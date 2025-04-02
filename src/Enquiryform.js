@@ -8,7 +8,7 @@ class EnquiryForm {
     const formContainer = document.createElement("div");
     formContainer.id = "enquiryOverlay";
     formContainer.className =
-      "hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center";
+      "hidden fixed inset-0 bg-black/50 backdrop-blur z-50 flex items-center justify-center";
 
     formContainer.innerHTML = `
       <div id="enquiryModal" class="bg-[#55420d95] w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 max-w-lg p-4 sm:p-6 rounded-lg relative transform -translate-y-full opacity-0 transition-all duration-500 ease-in-out">
@@ -66,11 +66,11 @@ class EnquiryForm {
       </div>
     `;
 
- const recaptchaScript = document.createElement("script");
- recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
- recaptchaScript.async = true;
- recaptchaScript.defer = true;
- document.body.appendChild(recaptchaScript);
+    const recaptchaScript = document.createElement("script");
+    recaptchaScript.src = "https://www.google.com/recaptcha/api.js";
+    recaptchaScript.async = true;
+    recaptchaScript.defer = true;
+    document.body.appendChild(recaptchaScript);
 
     document.body.appendChild(formContainer);
     return {
@@ -170,7 +170,6 @@ class EnquiryForm {
   }
 
   getDynamicSubject() {
-   
     const context = JSON.parse(localStorage.getItem("enquiryContext") || "{}");
     const { propertyName, serviceTitle } = context;
 
@@ -227,12 +226,11 @@ class EnquiryForm {
       isValid = false;
     }
 
-     const recaptchaResponse = grecaptcha.getResponse();
-     if (!recaptchaResponse) {
-       this.elements.recaptchaError.classList.remove("hidden");
-       isValid = false;
-     }
-
+    const recaptchaResponse = grecaptcha.getResponse();
+    if (!recaptchaResponse) {
+      this.elements.recaptchaError.classList.remove("hidden");
+      isValid = false;
+    }
 
     if (!isValid) {
       this.elements.status.textContent =
@@ -267,7 +265,7 @@ class EnquiryForm {
       if (!response.ok) throw new Error("Network response was not ok");
 
       this.elements.form.reset();
-        grecaptcha.reset(); 
+      grecaptcha.reset();
       this.elements.successPopup.classList.remove("hidden");
       localStorage.removeItem("enquiryContext");
       console.log("Cleared localStorage after successful submission");
@@ -333,27 +331,28 @@ class EnquiryForm {
 }
 
 const enquiryForm = new EnquiryForm();
-window.openEnquiryForm = () => enquiryForm.openForm();
+window.openEnquiryForm = (context = {}) => enquiryForm.openForm(context);
+// window.openEnquiryForm = () => enquiryForm.openForm();
 
 const enquirybtn = document.getElementsByClassName("_propname");
 
 Array.from(enquirybtn).forEach((btn) => {
   btn.addEventListener("click", function () {
     const obj = {
-      serviceTitle: this.parentElement.previousElementSibling.children[0].innerText
-    }
+      serviceTitle:
+        this.parentElement.previousElementSibling.children[0].innerText,
+    };
     localStorage.setItem("enquiryContext", JSON.stringify(obj));
   });
 });
 
 //  moreinfobtn
 const moreinfobtn = document.getElementById("moreinfobtn");
-if (moreinfobtn){
-
+if (moreinfobtn) {
   moreinfobtn.addEventListener("click", function () {
     const obj = {
-      serviceTitle: "Ask More properties"
-    }
+      serviceTitle: "Ask More properties",
+    };
     localStorage.setItem("enquiryContext", JSON.stringify(obj));
   });
 }

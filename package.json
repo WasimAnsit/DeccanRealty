@@ -1,16 +1,11 @@
 {
-  "name": "deccan-realty",
-  "version": "1.0.0",
-  "description": "Real Estate Website",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "npx @tailwindcss/cli -i ./src/input.css -o output.css --watch"
-  },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.0.9",
-    "tailwindcss": "^4.0.9"
+    "@tailwindcss/cli": "^4.0.17",
+    "tailwindcss": "^4.0.17"
+  },
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css",
+    "watch": "npx tailwindcss -i ./src/input.css -o output.css --watch"
   }
+
 }

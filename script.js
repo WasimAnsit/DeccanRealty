@@ -1,3 +1,4 @@
+// Property data - primary listings
 const properties = [
   {
     imageURL: {
@@ -58,6 +59,7 @@ const properties = [
   },
 ];
 
+// Services data
 const services = [
   {
     imageURL: {
@@ -93,141 +95,283 @@ const services = [
     },
     serviceTitle: "Invest in Prime Commercial Properties",
     serviceAddress:
-      "Looking for rental income or short-term investment opportunities? DeccanRealty.com offers premium, ready-to-move-in commercial properties in Bangalore for a seamless investment and leasing experience.",
+      "Looking for rental income or short-term investment opportunities? DeccanRealty.com offers premium, ready-to-move-in commercial properties in Bangalore for a seamless investment and leasing experience",
   },
 ];
 
+// Resale properties data
+const resaleProperties = [
+  {
+    image: "src/assets/images/1.jpg",
+    altText: "White Building",
+    name: "Sobha Royal Pavilion",
+    description:
+      "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
+  },
+  {
+    image: "src/assets/images/2.jpg",
+    altText: "Modern Red Building",
+    name: "Godrej Splendour",
+    description:
+      "Godrej Splendour, located in the heart of<span class='font-bold'> Whitefield, Bangalore,</span> offers a splendid lifestyle with unmatched comfort and convenience.<span class='font-bold'> Price on Request </span>onwards, this <span class='font-bold'> 2 BHK </span> residence is designed to provide a perfect blend of luxury and connectivity. The project is set for possession in September 2027 and is strategically situated just a short drive from renowned IT hubs, top schools, and prestigious colleges. With Godrej Splendour, experience modern living in one of Bangalore's most sought-after localities.",
+  },
+  {
+    image: "src/assets/images/3.jpg",
+    altText: "Colorful Residential Building",
+    name: "Godrej Park Retreat",
+    description:
+      "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
+  },
+  {
+    image: "src/assets/images/4.jpg",
+    altText: "Modern Apartment Building",
+    name: "Godrej 24",
+    description:
+      "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
+  },
+  {
+    image: "src/assets/images/5.jpg",
+    altText: "White Building",
+    name: "Prestige City Avalon Park",
+    description:
+      "Prestige City Avalon Park offers <span class='font-bold'> 1, 2, 3, and 4 BHK apartments </span> with <span class='font-bold'> Price on Request.</span> Developed by the renowned Prestige Group, known for its innovation and excellence, the project ensures premium living with thoughtfully designed homes. With a diverse real estate portfolio, Prestige Group has completed 300+ projects across residential, commercial, and hospitality sectors, making it a trusted name in the industry.",
+  },
+  {
+    image: "src/assets/images/6.jpg",
+    altText: "Modern Red Building",
+    name: "Confident Orion",
+    description:
+      "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
+  },
+  {
+    image: "src/assets/images/7.jpg",
+    altText: "Colorful Residential Building",
+    name: "Ahad Serenity",
+    description:
+      "Ahad Serenity, <span class='font-bold'>Sarjapur Road – Price on Request for 1, 2, 3 BHK Ready-to-Move Apartments.</span> Spanning 8 acres with 85% open space, this <span class='font-bold'> gated community</span> offers modern homes with <span class='font-bold'>vitrified & wooden flooring, premium fittings, and modular kitchens.</span>  Spanning 8 acres with 85% open space, this gated community offers modern homes with vitrified & wooden flooring, premium fittings, and modular kitchens.",
+  },
+  {
+    image: "src/assets/images/8.jpeg",
+    altText: "Modern Apartment Building",
+    name: "Suavity Otium",
+    description:
+      "Luxury Gated Community in <span class='font-bold'>Akshay Nagar, Bangalore.</span> Exclusive <span class='font-bold'>2, 3 & 4 BHK villas and apartments</span> with modern architecture, lush greenery, and premium amenities. Secure gated access ensures privacy and comfort. Bangalore | <span class='font-bold'>Price on Request.</span> Experience elegance, security, and seamless connectivity in a serene setting.",
+  },
+];
 
-function createCard(item, type) {
+// Card creation functions
+function createPropertyCard(item) {
   return `
-    <div class="relative w-96 bg-white rounded-xl overflow-hidden shadow-[0_10px_15px_rgba(0,0,0,0.1),10px_0_15px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_25px_rgba(0,0,0,0.15),15px_0_25px_rgba(0,0,0,0.15)] transform transition-all duration-300 hover:scale-105 flex-shrink-0 card-container" data-type="${type}">
-      <div class="relative">
-        <img src="${item.imageURL.src}" alt="${
-    item.imageURL.alt
-  }" class="w-full 2xl:h-48 xl:h-34 object-cover transition-transform duration-300">
-        ${
-          type === "property"
-            ? `<span class="absolute top-3 right-3 bg-[#b1923f] text-white px-3 py-1 text-sm rounded-full font-medium">Trending</span>`
-            : ""
-        }
-      </div>
-      <div class="p-5 flex flex-col h-full bg-gradient-to-b from-gray-50 to-white">
-        <div class="card-content flex-grow overflow-hidden">
-          ${
-            type === "property"
-              ? `
-            <div class="property-header mb-4">
-              <h2 class="property-name text-xl font-bold text-gray-900 leading-tight mb-1">${item.propertyName}</h2>
-              <p><i class="fas fa-map-marker-alt text-black mr-2 font-bold"></i>${item.location}</p>
-              <span class="property-price 2xl:text-[16px] xl:text-[14px] font-semibold text-black block">${item.priceRange}<span class="lg:text-[12px] xl:text-[10px]"> (${item.pricePerSqFt})</span></span>
-            </div>
-            <div class="property-details text-sm text-black space-y-2 max-h-40 overflow-y-auto">
-              <p><i class="fas fa-home text-green-500 mr-2"></i>${item.configurations}</p>
-              <p><i class="fas fa-ruler-combined text-green-500 mr-2"></i>${item.sizes}</p>
-              <p><i class="fas fa-calendar-alt text-green-500 mr-2"></i>${item.possessionDate}</p>
-            </div>
-          `
-              : `
-            <h2 class="text-[22px] font-bold text-gray-900 mb-4 text-center">${item.serviceTitle}</h2>
-            <p class="text-black text-sm leading-relaxed max-h-40 overflow-y-auto">${item.serviceAddress}</p>
-          `
-          }
+    <div class="w-full bg-white sm:rounded-xl rounded-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform flex flex-col justify-between min-h-[550px]">
+        <!-- Image Section -->
+        <div class="relative">
+            <img src="${item.imageURL.src}" alt="${item.imageURL.alt}" 
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+            <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">Trending</span>
         </div>
-       <div class="card-buttons flex justify-between items-center pt-4 border-t border-gray-200">
-  <button class="enquiry-btn bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-lg text-sm font-semibold hover:from-orange-600 hover:to-orange-700 transition-all duration-300" data-type="${type}" data-id="${
-    type === "property" ? item.propertyName : item.serviceTitle
-  }">
-    ${type === "property" ? "Request Info" : "Explore More"}
-  </button>
-  <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 hover:text-green-700 flex items-center" aria-label="Chat on WhatsApp">
-    <i class="fab fa-whatsapp" aria-hidden="true"></i>
-    <span class="sr-only">Chat on WhatsApp</span>
-  </a>
-</div>
+        
+        <!-- Content Section -->
+        <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
+            <div class="space-y-3 flex-grow">
+                <div>
+                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-semibold line-clamp-1">${item.propertyName}</h2>
+                    <p class="text-sm lg:text-black lg:font-semibold flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2"></i>${item.location}
+                    </p>
+                    <span class="text-base sm:text-lg lg:text-[16px] font-semibold lg:text-black block">
+                        ${item.priceRange}
+                        <span class="text-xs lg:text-black">(${item.pricePerSqFt})</span>
+                    </span>
+                </div>
+                
+                <div class="text-xs sm:text-sm space-y-2">
+                    <p class="flex items-center lg:text-black">
+                        <i class="fas fa-home text-green-500 mr-2"></i>
+                        <span class="line-clamp-2">${item.configurations}</span>
+                    </p>
+                    <p class="flex items-center lg:text-black">
+                        <i class="fas fa-ruler-combined text-green-500 mr-2"></i>
+                        ${item.sizes}
+                    </p>
+                    <p class="flex items-center lg:text-black">
+                        <i class="fas fa-calendar-alt text-green-500 mr-2"></i>
+                        ${item.possessionDate}
+                    </p>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div  
+             class="mt-auto pt-4 border-t border-gray-200 flex justify-between items-center gap-3">
+                <button  onclick="openEnquiryForm({ propertyName: '${item.propertyName}' })"
+                class="bg-orange-500 cursor-pointer  hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                    Request Info
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
         </div>
-      </div>
+    </div>
+  `;
+}
+
+function createServiceCard(item) {
+  return `
+    <div class="w-full bg-white sm:rounded-xl rounded-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform flex flex-col justify-between min-h-[550px]">
+        <!-- Image Section -->
+        <div class="relative">
+            <img src="${item.imageURL.src}" alt="${item.imageURL.alt}" 
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+            <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">Featured</span>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
+            <div class="space-y-3 flex-grow">
+                <div class="text-center">
+                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-bold line-clamp-1">${item.serviceTitle}</h2>
+                </div>
+                
+                <div class="text-sm space-y-2">
+                    <!-- No max-height limitation for service descriptions -->
+                    <p class="text-black text-center">${item.serviceAddress}</p>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="mt-auto pt-4 border-t border-gray-200 flex justify-between items-center gap-3">
+                <button onclick="openEnquiryForm({ serviceTitle: '${item.serviceTitle}' })"
+                 class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                    Explore More
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
+function createResalePropertyCard(property, index) {
+  return `
+    <div class="w-full bg-white sm:rounded-xl rounded-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform flex flex-col justify-between resale-card">
+        <!-- Image Section -->
+        <div class="relative">
+            <img src="${property.image}" alt="${property.altText}" 
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+            <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">Resale</span>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
+            <div class="space-y-3 flex-grow">
+                <div class="text-center">
+                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-semibold line-clamp-1">${
+                      property.name
+                    }</h2>
+                </div>
+                
+                <div class="text-sm space-y-2 resale-content-wrapper">
+                    <div class="description-container text-black text-center" id="desc-${
+                      index + 1
+                    }">
+                        <p class="desc-content">${property.description}</p>
+                    </div>
+                    <div class="text-center mt-2">
+                        <span class="toggle-btn text-blue-600 cursor-pointer text-sm inline-block" data-target="desc-${
+                          index + 1
+                        }">See More...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div 
+            class="mt-auto pt-4 border-t border-gray-200 flex justify-between items-center gap-3">
+                <button onclick="openEnquiryForm({ propertyName: '${
+                  property.name
+                }' })"
+                 class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                    Unlock Pricing
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
     </div>
   `;
 }
 
 
-// Function to populate and duplicate cards for infinite scroll
-function populateSlider(gridId, items, type) {
-  const grid = document.getElementById(gridId);
-  const doubledItems = [...items, ...items];
-  grid.innerHTML = doubledItems.map((item) => createCard(item, type)).join("");
-  grid.style.animationDuration = `${items.length * 5}s`;
+// Helper functions
+function setupToggleButtons() {
+  document.querySelectorAll(".description-container").forEach((container) => {
+    container.style.maxHeight = "80px"; // Initial collapsed state
+    container.style.overflow = "hidden";
+    container.style.transition = "max-height 0.3s ease";
+  });
+  // Set up toggle button functionality with independent card heights
+  document.querySelectorAll(".toggle-btn").forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const targetId = this.getAttribute("data-target");
+      const descContainer = document.getElementById(targetId);
 
-  // Add event listeners for enquiry buttons
-  grid.querySelectorAll(".enquiry-btn").forEach((button) => {
-    const buttonType = button.getAttribute("data-type");
-    const identifier = button.getAttribute("data-id");
-    button.addEventListener("click", () => {
-      const context =
-        buttonType === "property"
-          ? { propertyName: identifier }
-          : { serviceTitle: identifier };
-      enquiryForm.openForm(context);
+      if (
+        descContainer.style.maxHeight === "80px" ||
+        descContainer.style.maxHeight === ""
+      ) {
+        descContainer.style.maxHeight = descContainer.scrollHeight + "px"; // Expand to content height
+        this.textContent = "See Less...";
+      } else {
+        descContainer.style.maxHeight = "80px"; // Collapse back
+        this.textContent = "See More...";
+      }
     });
   });
 }
 
-// Populate both sections
-populateSlider("propertyGrid", properties, "property");
-populateSlider("servicesGrid", services, "service");
+// Placeholder function for the enquiry form
+// function openEnquiryForm() {
+//   alert("Enquiry form will open here for the selected property");
+// }
 
-
+// Main initialization
 document.addEventListener("DOMContentLoaded", () => {
-  // Attach event listeners to all toggle buttons
-  document.querySelectorAll(".toggle-btn").forEach((button) => {
-    button.addEventListener("click", (event) => {
-      // Prevent the default behavior and stop propagation
-      event.preventDefault();
-      event.stopPropagation();
+  // Identify containers by their IDs
+  const newPropertiesContainer = document.getElementById("property-container");
+  const resalePropertiesContainer = document.getElementById(
+    "resale-property-container"
+  );
+const serviceContainer = document.getElementById("service-container");
 
-      // Get the target ID for this specific button
-      const targetId = button.getAttribute("data-target");
-      const desc = document.getElementById(targetId);
+  // Render primary property listings
+ if (newPropertiesContainer) {
+   newPropertiesContainer.innerHTML = properties
+     .map(createPropertyCard)
+     .join("");
+ }
 
-      if (!desc) {
-        console.error(`Element with ID ${targetId} not found`);
-        return;
-      }
-
-      // Toggle only this specific description container
-      if (desc.classList.contains("expanded")) {
-        desc.classList.remove("expanded");
-        button.textContent = "See More...";
-      } else {
-        desc.classList.add("expanded");
-        button.textContent = "See Less...";
-      }
-    });
-
-    // Initially check if "See More" should be hidden because content fits
-    const targetId = button.getAttribute("data-target");
-    const desc = document.getElementById(targetId);
-
-    if (desc) {
-      // Use setTimeout to ensure content is fully rendered before checking height
-      setTimeout(() => {
-        const maxHeight = parseInt(window.getComputedStyle(desc).maxHeight);
-        if (desc.scrollHeight <= maxHeight) {
-          button.classList.add("hidden");
-        }
-      }, 10);
-    }
-  });
-
-  // Make sure grid container has correct alignment
-  const gridContainer = document.querySelector(".grid");
-  if (gridContainer) {
-    gridContainer.classList.add("items-start");
+ // Render service cards
+  if (serviceContainer) {
+    serviceContainer.innerHTML = services.map(createServiceCard).join("");
   }
+
+  // Render resale property listings
+ if (resalePropertiesContainer) {
+   resalePropertiesContainer.innerHTML = resaleProperties
+     .map((property, index) => createResalePropertyCard(property, index))
+     .join("");
+
+   // Setup toggle functionality for descriptions
+  setupToggleButtons();
+ }
+
 });
 
-
-// testimonial js
+// Testimonial javascript code
 const reviews = [
   {
     name: "Kirti Sharma",
@@ -308,8 +452,3 @@ nextBtn.addEventListener("click", () => {
 
 // Initial load
 setInitialReview(currentReviewIndex);
-
-
-
-
-    

@@ -2,35 +2,48 @@
 // Function to create the Header
 function createHeader(container) {
   const header = document.createElement("header");
-  header.className = "bg-[#E8E8E8] text-black w-full fixed top-0 left-0 z-50 shadow-md";
+  header.className = "bg-[#E8E8E8] text-black w-full relative";
+  header.style.width = "100%";
   header.innerHTML = `
-    <div class="container mx-auto px-4 flex justify-between items-center py-2">
+    <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
-        <a href="index.html" aria-label="Home">
-          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/finalwhitelogo_bnxcp5.png" 
-               alt="Deccan Realty Logo" 
-               class="w-24 h-24 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain rounded-full">
+        <a href="index.html" aria-label="index.html">
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/finalwhitelogo_bnxcp5.png" alt="Deccan Realty Logo" 
+               class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain">
         </a>
       </div>
-      <button class="md:hidden text-2xl text-black mobile-menu-btn" aria-label="Toggle Menu">
-        <i class="fas fa-bars"></i>
-      </button>
-      <ul class="nav-menu hidden md:flex items-center space-x-6 font-semibold">
-        <li><a href="index.html" aria-label="Home" class="px-3 py-2 rounded-md transition text-black hover:text-[#008a46]">HOME</a></li>
-        <li><a href="about.html" aria-label="About" class="px-3 py-2 rounded-md transition text-black hover:text-[#008a46]">ABOUT</a></li>
-        <li><a href="contact.html" aria-label="Contact" class="px-3 py-2 rounded-md transition text-black hover:text-[#008a46]">CONTACT</a></li>
-        <li><a href="faq.html" aria-label="FAQ" class="px-3 py-2 rounded-md transition text-black hover:text-[#008a46]">FAQ</a></li>
-        <li class="border border-[#008a46] px-4 py-2 rounded-md transition hover:bg-[#008a46] group">
-          <a href="homeloan.html" aria-label="Home Loan" class="text-black group-hover:text-white transition">HOME LOAN</a>
+      <button class="md:hidden text-2xl text-black mobile-menu-btn z-50">☰</button>
+      <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black lg:font-bold">HOME</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">FAQ</a></li>
+        <li class="group border border-[green] px-4 py-2 rounded-md transition hover:bg-[#008a46]">
+          <a href="homeloan.html" 
+             aria-label="HomeLoan" 
+             class="font-medium text-lg text-black group-hover:text-[#ff7b2a] lg:font-bold">
+              HOME LOAN
+          </a>
         </li>
       </ul>
-      <ul class="mobile-menu hidden md:hidden flex-col bg-[#060d42] w-3/4 absolute right-0 top-full py-6 px-4 transition-all duration-300 ease-in-out transform translate-x-full z-50">
-        <li class="w-full"><a href="index.html" aria-label="Home" class="block py-3 px-4 text-white hover:bg-[#008a46] hover:text-white rounded-md transition">Home</a></li>
-        <li class="w-full"><a href="about.html" aria-label="About" class="block py-3 px-4 text-white hover:bg-[#008a46] hover:text-white rounded-md transition">About</a></li>
-        <li class="w-full"><a href="contact.html" aria-label="Contact" class="block py-3 px-4 text-white hover:bg-[#008a46] hover:text-white rounded-md transition">Contact</a></li>
-        <li class="w-full"><a href="faq.html" aria-label="FAQ" class="block py-3 px-4 text-white hover:bg-[#008a46] hover:text-white rounded-md transition">FAQ</a></li>
-        <li class="w-full">
-          <a href="homeloan.html" aria-label="Home Loan" class="block py-3 px-4 border border-white text-white hover:bg-[#008a46] hover:border-[#008a46] rounded-md transition text-center">
+    </div>
+    
+    <!-- Side drawer overlay -->
+    <div class="overlay fixed inset-0  bg-opacity-50 z-40 hidden"></div>
+    
+    <!-- Side drawer menu -->
+    <div class="side-drawer fixed top-0 right-0 h-full w-64 bg-[#237f51] z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+      <div class="flex justify-end p-4">
+        <button class="drawer-close text-white text-2xl">✕</button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li class="w-full"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black lg:font-bold">Home</a></li>
+        <li class="w-full"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">About</a></li>
+        <li class="w-full"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">Contact</a></li>
+        <li class="w-full"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">FAQ</a></li>
+        <li class="w-full mt-4">
+          <a href="homeloan.html" 
+             aria-label="HomeLoan" class="block text-lg font-medium py-2 px-3 border border-white rounded-md text-white hover:text-green-500 hover:bg-black transition">
             Home Loan
           </a>
         </li>
@@ -38,68 +51,99 @@ function createHeader(container) {
     </div>
   `;
 
-  // Clear and append to container
-  container.innerHTML = "";
+  // Append to the provided container instead of body
+  container.innerHTML = ""; // Clear existing content
   container.appendChild(header);
-
-  // Add FontAwesome dynamically if not already present
-  if (!document.querySelector('link[href*="fontawesome"]')) {
-    const link = document.createElement("link");
-    link.rel = "stylesheet";
-    link.href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
-    document.head.appendChild(link);
-  }
 
   // Highlight active page
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
   const desktopLinks = header.querySelectorAll(".nav-menu a");
-  const mobileLinks = header.querySelectorAll(".mobile-menu a");
+  const mobileLinks = header.querySelectorAll(".side-drawer a");
 
-  const setActive = (link) => {
+  function setActive(link) {
     const li = link.closest("li");
-    link.classList.add("bg-[#b1923f]", "text-white", "rounded-md");
-    if (li.classList.contains("group")) {
-      li.classList.add("bg-[#b1923f]", "border-[#b1923f]");
+
+    if (li && li.classList.contains("group")) {
+      // For HOME LOAN
+      li.classList.add("bg-[#b1923f]", "rounded-md");
+      link.classList.add("text-white", "px-3", "py-1");
+    } else {
+      link.classList.add(
+        "bg-[#b1923f]",
+        "text-white",
+        "rounded-md",
+        "px-4",
+        "py-2"
+      );
     }
-  };
+  }
 
   [...desktopLinks, ...mobileLinks].forEach((link) => {
-    if (link.getAttribute("href") === currentPath) setActive(link);
+    const href = link.getAttribute("href");
+    if (href === currentPath) {
+      setActive(link);
+    }
 
+    // OPTIONAL: Also highlight on click (for Single Page feel)
     link.addEventListener("click", () => {
       [...desktopLinks, ...mobileLinks].forEach((l) => {
-        l.classList.remove("bg-[#b1923f]", "text-white", "rounded-md");
-        l.closest("li")?.classList.remove("bg-[#b1923f]", "border-[#b1923f]");
+        l.classList.remove(
+          "bg-[#b1923f]",
+          "text-white",
+          "rounded-md",
+          "px-2",
+          "py-1"
+        );
+        l.closest("li")?.classList.remove("bg-[#b1923f]", "rounded-md");
       });
       setActive(link);
+
+      // Close drawer when clicking a link
+      toggleDrawer(false);
     });
   });
 
-  // Mobile menu toggle
+  // Side drawer toggle functionality
   const mobileMenuBtn = header.querySelector(".mobile-menu-btn");
-  const mobileMenu = header.querySelector(".mobile-menu");
-  let isOpen = false;
+  const sideDrawer = header.querySelector(".side-drawer");
+  const overlay = header.querySelector(".overlay");
+  const closeBtn = header.querySelector(".drawer-close");
+
+  function toggleDrawer(show) {
+    if (show) {
+      sideDrawer.classList.remove("translate-x-full");
+      overlay.classList.remove("hidden");
+      document.body.style.overflow = "hidden"; // Prevent scrolling when drawer is open
+      mobileMenuBtn.textContent = "✕";
+    } else {
+      sideDrawer.classList.add("translate-x-full");
+      overlay.classList.add("hidden");
+      document.body.style.overflow = "";
+      mobileMenuBtn.textContent = "☰";
+    }
+  }
 
   mobileMenuBtn.addEventListener("click", () => {
-    isOpen = !isOpen;
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("translate-x-full");
-    mobileMenuBtn.innerHTML = isOpen ? '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
+    const isOpen = !sideDrawer.classList.contains("translate-x-full");
+    toggleDrawer(!isOpen);
   });
 
-  // Close mobile menu when clicking outside
-  document.addEventListener("click", (e) => {
-    if (isOpen && !header.contains(e.target)) {
-      mobileMenu.classList.add("hidden", "translate-x-full");
-      mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-      isOpen = false;
+  closeBtn.addEventListener("click", () => {
+    toggleDrawer(false);
+  });
+
+  overlay.addEventListener("click", () => {
+    toggleDrawer(false);
+  });
+
+  // Close drawer on window resize if screen becomes larger
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+      // md breakpoint in Tailwind
+      toggleDrawer(false);
     }
   });
 }
-
-// Usage: Call this function with a container element
-const headerContainer = document.querySelector("#header-container"); // Adjust selector as needed
-if (headerContainer) createHeader(headerContainer);
 // Function to create the Footer
 function createFooter() {
   const footerContainer = document.querySelector("#footer-container");
@@ -153,8 +197,8 @@ function createFooter() {
           <li><a href="about.html" aria-label="About"  class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
           <li><a href="contact.html"  aria-label="Contact" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
           <li><a href="faq.html" aria-label="FAQ" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
-          <li><a href="terms_conditions.html" aria-label="Terms&condition" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
-          <li><a href="privacy_policy.html" aria-label="Privacypolicy" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
+          <li><a href="terms&condition.html" target="_blank" aria-label="Terms&condition" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
+          <li><a href="privacypolicy.html" target="_blank" aria-label="Privacypolicy" class="hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="flex justify-center px-4 sm:px-6 md:px-8">
