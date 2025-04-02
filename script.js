@@ -215,7 +215,7 @@ function createPropertyCard(item) {
                 class="bg-orange-500 cursor-pointer  hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                     Request Info
                 </button>
-                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat with us on WhatsApp"  class="whatsapp-btn text-green-600 text-2xl">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -253,7 +253,7 @@ function createServiceCard(item) {
                  class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                     Explore More
                 </button>
-                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat with us on WhatsApp" class="whatsapp-btn text-green-600 text-2xl">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
@@ -304,7 +304,7 @@ function createResalePropertyCard(property, index) {
                  class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
                     Unlock Pricing
                 </button>
-                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" class="whatsapp-btn text-green-600 text-2xl">
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat with us on WhatsApp" class="whatsapp-btn text-green-600 text-2xl">
                     <i class="fab fa-whatsapp"></i>
                 </a>
             </div>
