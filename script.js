@@ -2,7 +2,7 @@
 const properties = [
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815515/GODREJ_LAKESIDE_ORCHARD_vfejmm.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsfjbja7uuxxzylb9ia0",
       alt: "Modern House",
     },
     propertyName: "Godrej Lakeside Orchard",
@@ -17,7 +17,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815521/PRESTIEGE_PINE_FOREST_et69ai.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/llagqnpijsyqwz6yanhr",
       alt: "Modern House",
     },
     propertyName: "Prestige Pine Forest",
@@ -31,7 +31,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BIRLA_EVARA_mkqgmm.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/h9gshymxylsp8ipkogfk",
       alt: "Luxury Villa",
     },
     propertyName: "Birla Evara",
@@ -45,7 +45,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815520/NAMBIAR_DISTRICT_25_esdnh7.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/hznztyciv6uvjrdth5l1",
       alt: "Modern Apartment",
     },
     propertyName: "Nambiar District 25",
@@ -63,7 +63,7 @@ const properties = [
 const services = [
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/BUY_zlwlgm.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/j0dnulpp3nqsgjijfkzv",
       alt: "Buy Service",
     },
     serviceTitle: "Buy Your Dream Home",
@@ -72,7 +72,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815523/SELL_gvuvjh.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/dbniooqkfnemwwgmd8nb",
       alt: "Sell Service",
     },
     serviceTitle: "Sell Your Property with Ease",
@@ -81,7 +81,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815524/RENT_ntuh4o.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/nutcpd127olazbwpg1uv",
       alt: "Rent Service",
     },
     serviceTitle: "Find Your Perfect Rental Home",
@@ -90,7 +90,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/v1742815510/COMMERCIAL_wfr8xx.jpg",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/y54hiuzuuykfqz6rlfzm",
       alt: "Buy Service",
     },
     serviceTitle: "Invest in Prime Commercial Properties",
@@ -102,56 +102,64 @@ const services = [
 // Resale properties data
 const resaleProperties = [
   {
-    image: "src/assets/images/1.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/utrwefotkfdx0hiipw8d",
     altText: "White Building",
     name: "Sobha Royal Pavilion",
     description:
       "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
   },
   {
-    image: "src/assets/images/2.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
     altText: "Modern Red Building",
     name: "Godrej Splendour",
     description:
       "Godrej Splendour, located in the heart of<span class='font-bold'> Whitefield, Bangalore,</span> offers a splendid lifestyle with unmatched comfort and convenience.<span class='font-bold'> Price on Request </span>onwards, this <span class='font-bold'> 2 BHK </span> residence is designed to provide a perfect blend of luxury and connectivity. The project is set for possession in September 2027 and is strategically situated just a short drive from renowned IT hubs, top schools, and prestigious colleges. With Godrej Splendour, experience modern living in one of Bangalore's most sought-after localities.",
   },
   {
-    image: "src/assets/images/3.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
     altText: "Colorful Residential Building",
     name: "Godrej Park Retreat",
     description:
       "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
   },
   {
-    image: "src/assets/images/4.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
     altText: "Modern Apartment Building",
     name: "Godrej 24",
     description:
       "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
   },
   {
-    image: "src/assets/images/5.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/cvybg1l5a0oyctseohsr",
     altText: "White Building",
     name: "Prestige City Avalon Park",
     description:
       "Prestige City Avalon Park offers <span class='font-bold'> 1, 2, 3, and 4 BHK apartments </span> with <span class='font-bold'> Price on Request.</span> Developed by the renowned Prestige Group, known for its innovation and excellence, the project ensures premium living with thoughtfully designed homes. With a diverse real estate portfolio, Prestige Group has completed 300+ projects across residential, commercial, and hospitality sectors, making it a trusted name in the industry.",
   },
   {
-    image: "src/assets/images/6.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/zxsxo88cb6vkr6zs9evj",
     altText: "Modern Red Building",
     name: "Confident Orion",
     description:
       "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
   },
   {
-    image: "src/assets/images/7.jpg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/i1gba3ykzhaswgeqpt3v",
     altText: "Colorful Residential Building",
     name: "Ahad Serenity",
     description:
       "Ahad Serenity, <span class='font-bold'>Sarjapur Road – Price on Request for 1, 2, 3 BHK Ready-to-Move Apartments.</span> Spanning 8 acres with 85% open space, this <span class='font-bold'> gated community</span> offers modern homes with <span class='font-bold'>vitrified & wooden flooring, premium fittings, and modular kitchens.</span>  Spanning 8 acres with 85% open space, this gated community offers modern homes with vitrified & wooden flooring, premium fittings, and modular kitchens.",
   },
   {
-    image: "src/assets/images/8.jpeg",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/khdiqzb5rcskjqtbm7l9",
     altText: "Modern Apartment Building",
     name: "Suavity Otium",
     description:
@@ -378,7 +386,7 @@ const reviews = [
     review:
       "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/3_us1xt7.jpg",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:
@@ -390,7 +398,7 @@ const reviews = [
     review:
       "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/4_wtkxdr.jpg",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/d5zo5bconzxz1puzijfu",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:
@@ -402,7 +410,7 @@ const reviews = [
     review:
       "Excellent service and attention to detail. We are very satisfied with the outcome.",
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/v1742886978/3_us1xt7.jpg",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:
