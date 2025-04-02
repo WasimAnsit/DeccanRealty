@@ -193,12 +193,12 @@ function createFooter() {
       <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
         <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick Links</h3>
         <ul class="space-y-3 sm:space-y-4 font-semibold">
-          <li><a href="index.html" aria-label="Home" class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
-          <li><a href="about.html" aria-label="About"  class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
-          <li><a href="contact.html"  aria-label="Contact" class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
-          <li><a href="faq.html" aria-label="FAQ" class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
-          <li><a href="terms&condition.html" target="_blank" aria-label="Terms&condition" class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
-          <li><a href="privacypolicy.html" target="_blank" aria-label="Privacypolicy" class="text-black hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
+          <li><a href="index.html" aria-label="Home" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
+          <li><a href="about.html" aria-label="About"  class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
+          <li><a href="contact.html"  aria-label="Contact" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
+          <li><a href="faq.html" aria-label="FAQ" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
+          <li><a href="terms&condition.html" target="_blank" aria-label="Terms&condition" class=" text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
+          <li><a href="privacypolicy.html" target="_blank" aria-label="Privacypolicy" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
         </ul>
       </div>
       <div class="flex justify-center px-4 sm:px-6 md:px-8">
