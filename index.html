@@ -141,77 +141,58 @@
           ></div>
         </section>
       </div>
-      <!-- Testimonial section -->
-
-      <section
-        class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100"
+   <!-- Testimonial section -->
+<section
+  class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100 "
+>
+  <!-- Testimonial Container -->
+  <div
+    class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-[90vw] h-auto "
+  >
+    <!-- Heading and Subheading -->
+    <div class="text-center mb-8 md:mb-12">
+      <h2
+        class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text"
       >
-        <!-- Testimonial Card -->
-        <div
-          class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-8/12 h-auto"
-        >
-          <!-- Heading and Subheading -->
-          <div class="text-center mb-8 md:mb-12">
-            <h2
-              class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text"
-            >
-              What Our Customers Say
-            </h2>
-            <p class="mt-2 text-sm sm:text-base md:text-lg">
-              Discover the voices of our happy homeowners – real experiences,
-              real satisfaction!
-            </p>
-          </div>
+        What Our Customers Say
+      </h2>
+      <p class="mt-2 text-sm sm:text-base md:text-lg">
+        Discover the voices of our happy homeowners – real experiences,
+        real satisfaction!
+      </p>
+    </div>
 
-          <!-- Testimonial Content -->
-          <div
-            class="flex flex-col md:flex-row items-center gap-6 p-6 bg-white rounded-xl shadow-2xl transition-all duration-500 ease-in-out"
-          >
-            <!-- Customer Image -->
-            <div class="w-full md:w-1/2 flex justify-center">
-              <img
-                src="https://via.placeholder.com/150" 
-                id="customerImage"
-                alt="Customer"
-                class="rounded-lg shadow-md w-40 sm:w-40 md:w-48 lg:w-70 lg:h-80 transition-transform duration-500 ease-in-out transform hover:scale-105 object-cover border-4 border-[#b1923f]"
-              />
-            </div>
-            <!-- Review Content -->
-            <div
-              id="reviewContent"
-              class="w-full md:w-2/3 text-center md:text-left transition-opacity duration-500 ease-in-out"
-            >
-              <h3
-                id="customerName"
-                class="font-bold text-lg sm:text-xl md:text-2xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]"
-              > Loading...</h3>
-              <p
-                id="customerReview"
-                class="mt-2 text-black text-sm sm:text-base md:text-lg bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner"
-              >
-                We like the final result of this project; it is extraordinary
-                and also provides the best service to the client.
-              </p>
-            </div>
-          </div>
+    <!-- Carousel Outer Container -->
+    <div class="relative overflow-hidden">
+      <!-- Testimonial Cards Container -->
+      <div id="testimonialCarousel" class="flex transition-transform duration-1000">
+        <!-- Cards will be inserted here by JavaScript -->
+      </div>
+    </div>
 
-          <!-- Navigation Buttons -->
-          <div class="flex justify-center items-center mt-6 gap-3">
-            <button
-              id="prevBtn" aria-label="Previous step"
-              class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
-            >
-              <i class="fa-solid fa-arrow-left"></i>
-            </button>
-            <button
-              id="nextBtn" aria-label="Next step"
-              class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110"
-            >
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-          </div>
-        </div>
-      </section>
+    <!-- Navigation Buttons -->
+    <div class="flex justify-center items-center mt-6 gap-3">
+      <button
+        id="prevBtn" aria-label="Previous testimonials"
+        class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20"
+      >
+        <i class="fa-solid fa-arrow-left"></i>
+      </button>
+      
+      <!-- Indicator Dots - Moved inside navigation container for better visibility -->
+      <div class="flex justify-center items-center gap-2" id="indicators">
+        <!-- Dots will be inserted here by JavaScript -->
+      </div>
+      
+      <button
+        id="nextBtn" aria-label="Next testimonials"
+        class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20"
+      >
+        <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </div>
+</section>
     </main>
     <footer>
       <!-- Footer -->
