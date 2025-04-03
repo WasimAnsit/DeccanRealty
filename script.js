@@ -382,9 +382,9 @@ const serviceContainer = document.getElementById("service-container");
 // Testimonial javascript code
 const reviews = [
   {
-    name: "Kirti Sharma",
+    name: "Ms. Sony (Owner/Seller)",
     review:
-      "We like the final result of this project; it is extraordinary and also provides the best service to the client.",
+      "Deccan Realty Team sold my flat seamlessly. Since I reside outside Bangalore, they managed the entire process with the new buyer professionally, without requiring my physical presence. Truly excellent service!",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
     textContent: {
@@ -394,9 +394,9 @@ const reviews = [
     },
   },
   {
-    name: "John Doe",
+    name: "Mr. Avinash (Buyer)",
     review:
-      "The team delivered beyond our expectations. Highly recommended for anyone looking for quality work.",
+      "Deccan Realty team facilitated the purchase of my flat in Whitefield, Bangalore, at a commendable price as per the market rate. Their expertise and professionalism made the entire process seamless.",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/d5zo5bconzxz1puzijfu",
     textContent: {
@@ -406,11 +406,23 @@ const reviews = [
     },
   },
   {
-    name: "Neha Patel",
+    name: "Ms. Fauzia (Tenant)",
     review:
-      "Excellent service and attention to detail. We are very satisfied with the outcome.",
+      "I am truly impressed by the Deccan Realty team's efficiency in securing a rental flat for me at ₹50K per month in South Bangalore. This accommodation perfectly meets my needs and is truly awesome for me!",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
+    textContent: {
+      heading: "What Our Customers Say",
+      paragraph:
+        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
+    },
+  },
+  {
+    name: "Mr. Pankaj (Buyer)",
+    review:
+      "I praise the Deccan Realty team for their professional assistance in facilitating my house purchase in a new and renowned project on Sarjapur Road, Bangalore. They secured a genuinely favorable rate, inclusive of multiple offers from the builder. I truly appreciate their efforts in making my home-buying journey remarkably easy. Thank you!",
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/d5zo5bconzxz1puzijfu",
     textContent: {
       heading: "What Our Customers Say",
       paragraph:

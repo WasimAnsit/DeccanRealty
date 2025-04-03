@@ -11,32 +11,41 @@ class EnquiryForm {
       "hidden fixed inset-0 bg-black/50 backdrop-blur z-50 flex items-center justify-center";
 
     formContainer.innerHTML = `
+    <style>
+   #enquiryForm input::placeholder,#enquiryForm textarea::placeholder{
+   color: #BEBEBE;  
+      }
+    </style>
       <div id="enquiryModal" class="bg-[#55420d95] w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 xl:w-2/5 max-w-lg p-4 sm:p-6 rounded-lg relative transform -translate-y-full opacity-0 transition-all duration-500 ease-in-out">
         <span id="closeEnquiryBtn" class="absolute top-2 right-2 text-white text-2xl cursor-pointer hover:text-gray-300">×</span>
         <h2 class="text-white text-lg sm:text-xl md:text-2xl font-medium text-center mb-5">Fill Your Enquiry Here</h2>
       <form id="enquiryForm" class="flex flex-col p-3 gap-6 sm:gap-6">
   <div class="relative flex flex-col gap-1">
-    <input id="enquiryName" type="text" placeholder="Name" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
-    <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm hidden min-h-[16px]">Please enter a valid name (letters only, min 2 characters)</p>
+  <label for="enquiryName" class="text-white text-sm sm:text-base font-medium">Your Name</label>
+    <input id="enquiryName" type="text" placeholder="John Doe" class="p-2 sm:p-3 rounded-md  text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
+    <p id="enquiryName-error" class="text-red-400 text-xs sm:text-sm hidden min-h-[16px]">Please enter a valid name</p>
   </div>
 
   <div class="relative flex flex-col gap-1">
-    <input id="enquiryPhone" type="tel" placeholder="Mobile Number" maxlength="10" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
+  <label for="enquiryName" class="text-white text-sm sm:text-base font-medium">Your Phone</label>
+    <input id="enquiryPhone" type="tel" placeholder="1234567890" maxlength="10" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
     <p id="enquiryPhone-error" class="text-red-400 text-xs sm:text-sm hidden min-h-[16px]">Please enter a 10-digit mobile number</p>
   </div>
 
   <div class="relative flex flex-col gap-1">
-    <input id="enquiryEmail" type="email" placeholder="Email" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
+ <label for="enquiryName" class="text-white text-sm sm:text-base font-medium">Your Email</label>
+    <input id="enquiryEmail" type="email" placeholder="john@example.com" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500">
     <p id="enquiryEmail-error" class="text-red-400 text-xs sm:text-sm hidden min-h-[16px]">Please enter a valid email</p>
   </div>
 
   <div class="relative flex flex-col gap-1">
-    <textarea id="enquiryMessage" placeholder="Your Message" class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full h-20 sm:h-24 resize-none text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
+   <label for="enquiryName" class="text-white text-sm sm:text-base font-medium">Your Message</label>
+    <textarea id="enquiryMessage" placeholder="Type your message here..." class="p-2 sm:p-3 rounded-md text-gray-800 bg-white w-full h-20 sm:h-24 resize-none text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-red-500"></textarea>
     <p id="enquiryMessage-error" class="text-red-400 text-xs sm:text-sm hidden min-h-[16px]">Message is required</p>
   </div>
 
   <!-- reCAPTCHA & Submit -->
-  <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 mt-4">
+  <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 mt-4 ">
     <!-- reCAPTCHA -->
     <div class="flex flex-col justify-center items-center gap-1">
       <div class="g-recaptcha" data-sitekey="6LeCZAErAAAAADhoXltw5EyaYL9tP1f2g42i_aej"></div>
@@ -131,7 +140,7 @@ class EnquiryForm {
   }
 
   showError(input, message) {
-    input.placeholder = message;
+   
     input.classList.add("border-red-500", "placeholder-red-400");
     input.style.color = "#f87171";
     input.nextElementSibling.classList.remove("hidden");
@@ -139,10 +148,15 @@ class EnquiryForm {
 
   resetErrors() {
     Object.values(this.elements.inputs).forEach((input) => {
-      input.placeholder =
-        input.id === "enquiryMessage"
-          ? "Your Message"
-          : input.id.replace("enquiry", "");
+      // Set default placeholders explicitly
+     const placeholderMap = {
+       enquiryName: "John Doe",
+       enquiryPhone: "1234567890",
+       enquiryEmail: "john@example.com",
+       enquiryMessage: "Type your message here...",
+     };
+
+    input.placeholder = placeholderMap[input.id];
       input.classList.remove("border-red-500", "placeholder-red-400");
       input.style.color = "inherit";
       input.nextElementSibling.classList.add("hidden");
@@ -235,7 +249,7 @@ class EnquiryForm {
     if (!isValid) {
       this.elements.status.textContent =
         "Please fill required fields correctly";
-      this.elements.status.classList.add("text-red-400");
+      this.elements.status.classList.add("text-red-400 ");
       return;
     }
 
