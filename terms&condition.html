@@ -28,23 +28,27 @@
     <header>
       <div id="header-container"></div>
     </header>
-    <main>
+    <main class="bg-gray-50">
       <div class="min-h-screen">
         <!-- Hero Section -->
-        <div class="relative w-full h-72 md:h-96">
+        <div
+          class="relative w-full h-72 sm:h-80 md:h-96 lg:h-[28rem] overflow-hidden"
+        >
           <img
             src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/lts/qo4mt7thzj5uxekadud1"
             alt="Deccan Realty"
-            class="w-full h-full object-cover"
+            class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
             id="terms-bg-image"
           />
           <div
-            class="absolute inset-0 bg-gradient-to-r from-gray-900/80 to-transparent flex items-center justify-center"
+            class="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/70 to-transparent flex items-center justify-center"
           >
             <h1
-              class="text-[white] text-3xl md:text-5xl font-extrabold text-center px-6"
+              class="text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-extrabold text-center px-4 sm:px-6 animate-fade-in"
             >
-              Terms and Conditions <br /><span class="text-4xl"
+              Terms and Conditions
+              <br />
+              <span class="text-xl sm:text-2xl md:text-3xl lg:text-4xl"
                 >Deccan Realty</span
               >
             </h1>
@@ -52,203 +56,391 @@
         </div>
 
         <!-- Main Content -->
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12 max-w-7xl">
-          <!-- Changed from max-w-5xl to max-w-7xl -->
-          <div class="bg-white rounded-2xl shadow-xl p-6 md:p-10">
+        <div
+          class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 max-w-7xl"
+        >
+          <div
+            class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 transition-all duration-300 hover:shadow-3xl"
+          >
             <!-- Section: Introduction -->
-            <section class="content-section">
+            <section class="content-section mb-10">
               <h1
-                class="text-3xl md:text-4xl font-bold text-[#008a46] mb-6 text-center slide-in"
+                class="text-2xl sm:text-3xl md:text-4xl font-bold text-[#008a46] mb-4 sm:mb-6 animate-slide-in"
               >
                 Terms and Conditions
+                <br /><br />
+                <span
+                  class="text-lg sm:text-xl md:text-[20px] font-bold text-black"
+                  >Effective Date: 28th March 2025</span
+                >
               </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Please read these Terms and Conditions carefully. By visiting
-                our website or using the mobile application, you agree to be
-                bound by the Terms and Conditions set by Deccan Realty. If you
-                do not agree to any of our Terms and Conditions, you must not
-                use or access deccanrealty.com.
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up"
+              >
+                Welcome to Deccan Realty! These Terms and Conditions govern your
+                use of our website, deccanrealty.com, and any associated
+                services. By accessing or using this platform, you acknowledge
+                and agree to comply with these Terms. If you do not agree,
+                please refrain from using our website or services.
               </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                If you have any questions regarding the Terms and Conditions of
-                this website, reach out to us by
-                <span class="italic">email</span>.
-              </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Deccan Realty (the "Website") offers services on this platform.
-                This Agreement incorporates the policies and guidelines
-                referenced below. Deccan Realty reserves the right to change or
-                revise these terms at any time by posting updates on this
-                Website.
-              </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                We will notify you about changes by indicating the last revised
-                date at the top of this Agreement. Changes apply immediately
-                upon posting. Stay informed by periodically reviewing our Terms
-                and Conditions.
-              </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Non-compliance with these Terms and Conditions may result in
-                Deccan Realty blocking your usage.
-              </p>
+              <br>
+
+             <p class="text-black text-base sm:text-lg leading-relaxed animate-scale-up">
+For any queries regarding these Terms and Conditions, you may contact us via email.
+             </p> 
             </section>
 
-            <!-- Section: Services -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 1: Acceptance of Terms -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Services
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                "Services" refers to the interactive online information offered
-                by Deccan Realty, providing users access to property-related
-                information. The website offers specific services for sales. By
-                subscribing, you agree to the terms in this Agreement.
+                1. Acceptance of Terms -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Deccan Realty ("we," "us," or "our") operates this website to
+                provide real estate-related services and information. By
+                accessing or using the website, you agree to be bound by these
+                Terms. We reserve the right to update or modify these Terms at
+                any time, and such changes shall be effective immediately upon
+                posting. Your continued use of the website constitutes
+                acceptance of the revised Terms.
               </p>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Section: Customer Solicitations -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 2: Services -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Customer Solicitations and Opt-Out Procedure
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                If you disagree, notify Deccan Realty sales representatives or
-                our third-party call center when contacted. Failure to opt-out
-                implies agreement to these terms.
-              </p>
-              <p class="text-gray-700 mb-4 leading-relaxed scale-up">
-                Opt-out options:
-              </p>
-              <ol
-                class="list-decimal list-inside text-gray-700 mb-6 space-y-2 scale-up"
+                2. Services -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
               >
-                <li>Use the link in any email received</li>
-                <li>Opt-out via email</li>
-                <li>
-                  Send a written request to our registered office at Jamia
-                  Nagar, New Delhi - 110 025.
-                </li>
-              </ol>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                <span class="font-semibold">Proprietary Rights:</span> Deccan
-                Realty reserves all proprietary rights. You may not copy, reuse,
-                reproduce, or redistribute our services.
+                Deccan Realty offers online real estate services, including
+                property listings, consultancy, and transaction facilitation. By
+                using our services, you acknowledge that your engagement is
+                subject to these Terms.
               </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                <span class="font-semibold">Service Tax:</span> Subscribed
-                members must pay applicable service tax as per government law.
-              </p>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Section: Website -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 3: Customer Solicitations and Opt-Out Policy -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Website
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                <span class="font-semibold">Content:</span> The website includes
-                third-party and marketing links, plus matrimonial service
-                information, protected by intellectual property laws of India
-                and international bodies.
-              </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Your use of the website content is for personal, non-commercial
-                purposes only.
-              </p>
+                3. Customer Solicitations and Opt-Out Policy -
+              </h2>
+              <div class="inline">
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+                >
+                  If you do not wish to receive marketing communications from
+                  Deccan Realty, you may opt-out using the following methods:
+                </p>
+                <ul
+                  class="list-disc list-inside text-black text-base sm:text-lg leading-relaxed space-y-2 animate-scale-up mt-2 block"
+                >
+                  <li>
+                    Click the unsubscribe link provided in any email
+                    communication.
+                  </li>
+                  <li>Send an opt-out request via email.</li>
+                  <li>
+                    Submit a written request to our registered office: East
+                    Jayanagar, Bangalore - 560041.
+                  </li>
+                </ul>
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up block mt-2"
+                >
+                  Failure to opt-out explicitly will be deemed as your consent
+                  to receive communications.
+                </p>
+              </div>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Subsection: Use of Website -->
-            <section class="content-section">
-              <h6
-                class="text-xl md:text-2xl font-bold text-[#008a46] mb-4 slide-in"
+            <!-- Section 4: Proprietary Rights -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Use of Website
-              </h6>
-              <p class="text-gray-700 mb-4 leading-relaxed scale-up">
-                Deccan Realty is not responsible for your use or loss related to
-                third-party websites.
+                4. Proprietary Rights -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                All content, trademarks, and services on this website are the
+                exclusive property of Deccan Realty. Unauthorized reproduction,
+                distribution, or modification of any material from our website
+                is strictly prohibited.
               </p>
-              <ol
-                class="list-decimal list-inside text-gray-700 mb-6 space-y-2 scale-up"
-              >
-                <li>No illegal activities</li>
-                <li>Comply with these Terms and Conditions</li>
-                <li>Do not disrupt other users’ experience</li>
-                <li>No spamming, defaming, or harassing others</li>
-                <li>Do not resell services or materials</li>
-              </ol>
-            </section>
-            <!-- Section: Disclaimer -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
-              >
-                Disclaimer of Warranties
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Deccan Realty disclaims all warranties. You use the website and
-                services at your own risk.
-              </p>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Section: Privacy -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 5: Payment & Taxes -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Privacy
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                Deccan Realty respects user privacy. Refer to our Privacy Policy
-                for details on data usage.
+                5. Payment & Taxes -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Users subscribing to paid services must comply with applicable
+                tax regulations. Service tax and other statutory levies shall be
+                paid by the subscriber as per government laws.
               </p>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Section: General Matters -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 6: Website Usage -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                General Matters
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                You are responsible for your account’s security. Use a strong,
-                unique password. Deccan Realty is not liable for data loss due
-                to incorrect email addresses or password breaches.
-              </p>
+                6. Website Usage -
+              </h2>
+              <div class="inline">
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+                >
+                  Users must adhere to the following guidelines while accessing
+                  the website:
+                </p>
+                <ul
+                  class="list-disc list-inside text-black text-base sm:text-lg leading-relaxed space-y-2 animate-scale-up mt-2 block"
+                >
+                  <li>No engagement in illegal activities.</li>
+                  <li>No disruption of website functionality.</li>
+                  <li>No spamming, defamatory content, or harassment.</li>
+                  <li>No resale or redistribution of website services.</li>
+                  <li>No unauthorized data extraction or scraping.</li>
+                </ul>
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up block mt-2"
+                >
+                  Deccan Realty is not responsible for losses incurred due to
+                  third-party website interactions.
+                </p>
+              </div>
+              <hr class="mt-6 border-gray-200" />
             </section>
 
-            <!-- Section: Website Disclaimer -->
-            <section class="content-section">
-              <h1
-                class="text-2xl md:text-3xl font-bold text-[#008a46] mb-6 slide-in"
+            <!-- Section 7: Disclaimer of Warranties -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
               >
-                Website Disclaimer
-              </h1>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                This website provides general information only. Deccan Realty
-                strives to keep it accurate and updated but makes no warranties.
-                Use at your own risk.
+                7. Disclaimer of Warranties -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Deccan Realty provides its website and services on an "as is"
+                and "as available" basis. We make no warranties regarding the
+                accuracy, reliability, or availability of the content or
+                services provided. Users access and utilize the website at their
+                own risk.
               </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                We are not liable for any loss or damage from website use.
-                Third-party links are provided without endorsement.
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 8: Privacy Policy -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                8. Privacy Policy -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Deccan Realty is committed to protecting user privacy. Please
+                review our Privacy Policy for details regarding the collection,
+                use, and protection of your personal data.
               </p>
-              <p class="text-gray-700 mb-6 leading-relaxed scale-up">
-                We aim for seamless website operation, but temporary technical
-                issues are beyond our control.
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 9: Limitation of Liability -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                9. Limitation of Liability -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Deccan Realty shall not be liable for any direct, indirect,
+                incidental, or consequential damages resulting from the use or
+                inability to use this website or services. Third-party links
+                provided on our platform are for informational purposes only,
+                and we do not endorse or assume liability for external content.
               </p>
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 10: Account Security -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                10. Account Security -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Users are responsible for maintaining the security of their
+                account credentials. Deccan Realty will not be liable for any
+                losses arising from unauthorized account access due to weak
+                passwords or compromised credentials.
+              </p>
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 11: General Disclaimer -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                11. General Disclaimer -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                Deccan Realty strives to ensure the accuracy of information
+                provided on this platform. However, we do not warrant the
+                completeness or reliability of any content. Users acknowledge
+                that all transactions and interactions are undertaken at their
+                own discretion.
+              </p>
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 12: Website Availability -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                12. Website Availability -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                We endeavor to maintain uninterrupted service; however,
+                technical issues may occur beyond our control. Deccan Realty is
+                not liable for temporary website unavailability due to
+                maintenance, server downtime, or unforeseen circumstances.
+              </p>
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 13: Governing Law & Jurisdiction -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                13. Governing Law & Jurisdiction -
+              </h2>
+              <p
+                class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+              >
+                These Terms and Conditions are governed by the laws of India.
+                Any disputes arising from or related to the use of Deccan
+                Realty’s website or services shall be subject to the exclusive
+                jurisdiction of the courts in Bangalore, Karnataka.
+              </p>
+              <hr class="mt-6 border-gray-200" />
+            </section>
+
+            <!-- Section 14: Contact Information -->
+            <section class="content-section mb-10">
+              <h2
+                class="text-xl sm:text-2xl md:text-[20px] font-extrabold text-[#008a46] mb-4 sm:mb-6 animate-slide-in inline"
+              >
+                14. Contact Information -
+              </h2>
+              <div class="inline">
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up inline"
+                >
+                  For any concerns regarding these Terms, you may reach us at:
+                </p>
+                <p
+                  class="text-black text-base sm:text-lg leading-relaxed animate-scale-up block mt-2"
+                >
+               <span class="font-bold"> Deccan Realty, East Jayanagar, Bangalore - 560041</span>   
+                  <br />
+              <span class="font-bold">
+ Email:
+ <a
+ href="mailto:info@deccanrealty.com"
+ class="text-[#008a46] hover:underline"
+ >info@deccanrealty.com</a
+ >
+</span>   
+                  <br />
+                  By continuing to use Deccan Realty’s website, you affirm that
+                  you have read, understood, and agreed to these Terms and
+                  Conditions.
+                </p>
+              </div>
+          
             </section>
           </div>
         </div>
       </div>
     </main>
+
+    <!-- Add Tailwind CSS Animation Keyframes -->
+    <style>
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes slide-in {
+        from {
+          transform: translateY(20px);
+          opacity: 0;
+        }
+        to {
+          transform: translateY(0);
+          opacity: 1;
+        }
+      }
+      @keyframes scale-up {
+        from {
+          transform: scale(0.95);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .animate-fade-in {
+        animation: fade-in 0.8s ease-out;
+      }
+      .animate-slide-in {
+        animation: slide-in 0.6s ease-out;
+      }
+      .animate-scale-up {
+        animation: scale-up 0.6s ease-out;
+      }
+    </style>
     <footer>
       <div id="footer-container"></div>
     </footer>
