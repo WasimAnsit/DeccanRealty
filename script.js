@@ -2,7 +2,7 @@
 const properties = [
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsfjbja7uuxxzylb9ia0",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Trending/nf5fbl8k6d28y6wfnx0r",
       alt: "Modern House",
     },
     propertyName: "Godrej Lakeside Orchard",
@@ -17,7 +17,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/llagqnpijsyqwz6yanhr",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Trending/e449n5522ehtq3dqpmx2",
       alt: "Modern House",
     },
     propertyName: "Prestige Pine Forest",
@@ -31,7 +31,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/h9gshymxylsp8ipkogfk",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Trending/ruw9ixq1cf46glf7lcud",
       alt: "Luxury Villa",
     },
     propertyName: "Birla Evara",
@@ -45,7 +45,7 @@ const properties = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/hznztyciv6uvjrdth5l1",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Trending/j9rir2bifjdtoquql0pf",
       alt: "Modern Apartment",
     },
     propertyName: "Nambiar District 25",
@@ -103,7 +103,7 @@ const services = [
 const resaleProperties = [
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/utrwefotkfdx0hiipw8d",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
     altText: "White Building",
     name: "Sobha Royal Pavilion",
     description:
@@ -111,7 +111,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/vpyrwrofozc1l961yirf",
     altText: "Modern Red Building",
     name: "Godrej Splendour",
     description:
@@ -119,7 +119,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/tfnql8cedpat3rh5u8xc",
     altText: "Colorful Residential Building",
     name: "Godrej Park Retreat",
     description:
@@ -127,7 +127,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/vuh5a0omnqp7vzefhk7n",
     altText: "Modern Apartment Building",
     name: "Godrej 24",
     description:
@@ -135,7 +135,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/cvybg1l5a0oyctseohsr",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/nfumyhhrjjktyxzeikpf",
     altText: "White Building",
     name: "Prestige City Avalon Park",
     description:
@@ -143,7 +143,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/zxsxo88cb6vkr6zs9evj",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/aqidwfp3puomvb4lht6x",
     altText: "Modern Red Building",
     name: "Confident Orion",
     description:
@@ -151,7 +151,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/i1gba3ykzhaswgeqpt3v",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/jov6ogdqywyxhrah3gwu",
     altText: "Colorful Residential Building",
     name: "Ahad Serenity",
     description:
@@ -159,7 +159,7 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/khdiqzb5rcskjqtbm7l9",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/jjbnqpeb8ok603mwfcsd",
     altText: "Modern Apartment Building",
     name: "Suavity Otium",
     description:
@@ -313,7 +313,6 @@ function createResalePropertyCard(property, index) {
   `;
 }
 
-
 // Helper functions
 function setupToggleButtons() {
   document.querySelectorAll(".description-container").forEach((container) => {
@@ -353,32 +352,30 @@ document.addEventListener("DOMContentLoaded", () => {
   const resalePropertiesContainer = document.getElementById(
     "resale-property-container"
   );
-const serviceContainer = document.getElementById("service-container");
+  const serviceContainer = document.getElementById("service-container");
 
   // Render primary property listings
- if (newPropertiesContainer) {
-   newPropertiesContainer.innerHTML = properties
-     .map(createPropertyCard)
-     .join("");
- }
+  if (newPropertiesContainer) {
+    newPropertiesContainer.innerHTML = properties
+      .map(createPropertyCard)
+      .join("");
+  }
 
- // Render service cards
+  // Render service cards
   if (serviceContainer) {
     serviceContainer.innerHTML = services.map(createServiceCard).join("");
   }
 
   // Render resale property listings
- if (resalePropertiesContainer) {
-   resalePropertiesContainer.innerHTML = resaleProperties
-     .map((property, index) => createResalePropertyCard(property, index))
-     .join("");
+  if (resalePropertiesContainer) {
+    resalePropertiesContainer.innerHTML = resaleProperties
+      .map((property, index) => createResalePropertyCard(property, index))
+      .join("");
 
-   // Setup toggle functionality for descriptions
-  setupToggleButtons();
- }
-
+    // Setup toggle functionality for descriptions
+    setupToggleButtons();
+  }
 });
-
 
 // Testimonial javascript code
 const reviews = [
@@ -447,8 +444,8 @@ let cloneCount = 2; // Number of times to clone the cards for seamless scroll
 
 // Function to create testimonial cards
 const createTestimonialCards = () => {
-  carousel.innerHTML = ''; // Clear existing content first
-  
+  carousel.innerHTML = ""; // Clear existing content first
+
   // Add clones at the end
   for (let i = 0; i < cloneCount; i++) {
     reviews.forEach((review, index) => {
@@ -456,13 +453,13 @@ const createTestimonialCards = () => {
       carousel.appendChild(card);
     });
   }
-  
+
   // Add original cards in the middle
   reviews.forEach((review, index) => {
     const card = createCard(review, index, false);
     carousel.appendChild(card);
   });
-  
+
   // Add clones at the beginning (we'll position these before the viewing area)
   for (let i = 0; i < cloneCount; i++) {
     reviews.forEach((review, index) => {
@@ -470,7 +467,7 @@ const createTestimonialCards = () => {
       carousel.prepend(card);
     });
   }
-  
+
   // Update layout based on screen size
   updateCarouselLayout();
 };
@@ -478,9 +475,11 @@ const createTestimonialCards = () => {
 // Create a single card
 const createCard = (review, index, isClone = false) => {
   const card = document.createElement("div");
-  card.className = `testimonial-card flex-shrink-0 p-4 transition-all duration-300 ease-in-out ${isClone ? 'clone' : 'original'}`;
+  card.className = `testimonial-card flex-shrink-0 p-4 transition-all duration-300 ease-in-out ${
+    isClone ? "clone" : "original"
+  }`;
   card.dataset.index = index;
-  
+
   card.innerHTML = `
     <div class="flex flex-col bg-white border-2 border-[#b1933f60] lg:w-[500px] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-full">
       <!-- Customer Image -->
@@ -504,35 +503,36 @@ const createCard = (review, index, isClone = false) => {
       </div>
     </div>
   `;
-  
+
   // Fix: Only pause the specific card being hovered, not the entire carousel
   card.addEventListener("mouseenter", () => {
     // We'll handle pause in the animation function
-    card.classList.add('hovered');
+    card.classList.add("hovered");
   });
-  
+
   card.addEventListener("mouseleave", () => {
-    card.classList.remove('hovered');
+    card.classList.remove("hovered");
   });
-  
+
   return card;
 };
 
 // Create indicator dots
 const createIndicators = () => {
-  indicatorsContainer.innerHTML = '';
-  
+  indicatorsContainer.innerHTML = "";
+
   reviews.forEach((_, index) => {
     const dot = document.createElement("button");
-    dot.className = "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
+    dot.className =
+      "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
     dot.classList.add(index === 0 ? "bg-[#008a46]" : "bg-gray-300");
     dot.setAttribute("aria-label", `Go to testimonial group ${index + 1}`);
-    
+
     dot.addEventListener("click", () => {
       goToSlide(index);
       updateIndicators(index);
     });
-    
+
     indicatorsContainer.appendChild(dot);
   });
 };
@@ -540,10 +540,11 @@ const createIndicators = () => {
 // Update active indicator
 const updateIndicators = (activeIndex) => {
   const indicators = indicatorsContainer.querySelectorAll("button");
-  
+
   // Ensure activeIndex is within valid range (0 to reviews.length-1)
-  const normalizedIndex = ((activeIndex % reviews.length) + reviews.length) % reviews.length;
-  
+  const normalizedIndex =
+    ((activeIndex % reviews.length) + reviews.length) % reviews.length;
+
   indicators.forEach((dot, index) => {
     if (index === normalizedIndex) {
       dot.classList.remove("bg-gray-300");
@@ -561,19 +562,19 @@ const updateCarouselLayout = () => {
   const carouselContainer = carousel.parentElement;
   const totalWidth = carouselContainer.offsetWidth;
   const cards = carousel.querySelectorAll(".testimonial-card");
-  
+
   // Calculate card width based on screen size
   let cardsPerView = isSmallScreen ? 1 : 2; // Show fewer cards for better visibility
   const cardWidth = totalWidth / cardsPerView;
-  
+
   // Set each card's width
-  cards.forEach(card => {
+  cards.forEach((card) => {
     card.style.width = `${cardWidth}px`;
   });
-  
+
   // Reset the carousel position and variables
   resetCarouselPosition(cardWidth);
-  
+
   // Start or stop animation based on screen size
   if (isSmallScreen) {
     stopAnimation();
@@ -588,14 +589,14 @@ const resetCarouselPosition = (cardWidth) => {
   initialPosition = cloneCount * totalOriginalWidth;
   currentScrollPosition = initialPosition;
   carousel.style.transform = `translateX(-${initialPosition}px)`;
-  carousel.style.transition = 'none'; // Disable transition for immediate positioning
-  
+  carousel.style.transition = "none"; // Disable transition for immediate positioning
+
   // Force a reflow to ensure the style change takes effect
   carousel.offsetHeight;
-  
+
   // Re-enable transitions
   setTimeout(() => {
-    carousel.style.transition = 'transform 500ms ease-out';
+    carousel.style.transition = "transform 500ms ease-out";
   }, 50);
 };
 
@@ -608,16 +609,16 @@ const startAnimation = () => {
   if (animationFrameId) {
     cancelAnimationFrame(animationFrameId);
   }
-  
+
   // Get the width of all cards to determine when to reset
   const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
   const totalOriginalWidth = cardWidth * reviews.length;
   initialPosition = cloneCount * totalOriginalWidth;
   currentScrollPosition = initialPosition;
-  
+
   // Set initial position
   carousel.style.transform = `translateX(-${initialPosition}px)`;
-  
+
   // Start the animation
   animateScroll();
 };
@@ -625,42 +626,44 @@ const startAnimation = () => {
 // Animate the continuous scroll
 const animateScroll = () => {
   // Check if any card is being hovered
-  const anyCardHovered = carousel.querySelector('.testimonial-card.hovered');
+  const anyCardHovered = carousel.querySelector(".testimonial-card.hovered");
   isPaused = !!anyCardHovered;
-  
+
   if (!isPaused && !isSmallScreen) {
     currentScrollPosition += scrollSpeed;
-    
+
     // Calculate which card is currently most visible
     const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
     const totalOriginalWidth = cardWidth * reviews.length;
-    
+
     // Reset position when we've scrolled one complete set
     if (currentScrollPosition >= initialPosition + totalOriginalWidth) {
       // Instead of jumping, smoothly transition
       currentScrollPosition = initialPosition;
-      carousel.style.transition = 'none';
+      carousel.style.transition = "none";
       carousel.style.transform = `translateX(-${currentScrollPosition}px)`;
-      
+
       // Force reflow
       carousel.offsetHeight;
-      
+
       // Re-enable transition
       setTimeout(() => {
-        carousel.style.transition = 'transform 500ms ease-out';
+        carousel.style.transition = "transform 500ms ease-out";
       }, 50);
     } else {
       // Normal scroll
       carousel.style.transform = `translateX(-${currentScrollPosition}px)`;
     }
-    
+
     // Update indicator based on visible card
-    const visibleIndex = Math.floor((currentScrollPosition - initialPosition) / cardWidth) % reviews.length;
+    const visibleIndex =
+      Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
+      reviews.length;
     if (visibleIndex >= 0) {
       updateIndicators(visibleIndex);
     }
   }
-  
+
   animationFrameId = requestAnimationFrame(animateScroll);
 };
 
@@ -675,10 +678,10 @@ const stopAnimation = () => {
 // Go to a specific slide
 const goToSlide = (index) => {
   // Fix: Apply proper transition for smooth sliding
-  carousel.style.transition = 'transform 500ms ease-out';
-  
+  carousel.style.transition = "transform 500ms ease-out";
+
   const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  const targetPosition = initialPosition + (index * cardWidth);
+  const targetPosition = initialPosition + index * cardWidth;
   currentScrollPosition = targetPosition;
   carousel.style.transform = `translateX(-${targetPosition}px)`;
 };
@@ -687,8 +690,10 @@ const goToSlide = (index) => {
 prevBtn.addEventListener("click", () => {
   // Fix: Properly calculate previous index
   const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  let targetIndex = Math.floor((currentScrollPosition - initialPosition) / cardWidth) % reviews.length;
-  
+  let targetIndex =
+    Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
+    reviews.length;
+
   // Go to previous slide
   targetIndex = (targetIndex - 1 + reviews.length) % reviews.length;
   goToSlide(targetIndex);
@@ -698,8 +703,10 @@ prevBtn.addEventListener("click", () => {
 nextBtn.addEventListener("click", () => {
   // Fix: Properly calculate next index
   const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  let targetIndex = Math.floor((currentScrollPosition - initialPosition) / cardWidth) % reviews.length;
-  
+  let targetIndex =
+    Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
+    reviews.length;
+
   // Go to next slide
   targetIndex = (targetIndex + 1) % reviews.length;
   goToSlide(targetIndex);
@@ -710,7 +717,7 @@ nextBtn.addEventListener("click", () => {
 window.addEventListener("resize", () => {
   // Clear any existing timeout to debounce resize event
   if (window.resizeTimeout) clearTimeout(window.resizeTimeout);
-  
+
   window.resizeTimeout = setTimeout(() => {
     updateCarouselLayout();
   }, 250);
@@ -763,7 +770,7 @@ document.addEventListener("DOMContentLoaded", () => {
   addStyles();
   createTestimonialCards();
   createIndicators();
-  
+
   // Start the animation for larger screens after a short delay
   setTimeout(() => {
     if (!isSmallScreen) {
@@ -773,12 +780,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // For browsers where DOMContentLoaded already fired
-if (document.readyState === "complete" || document.readyState === "interactive") {
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
   setTimeout(() => {
     addStyles();
     createTestimonialCards();
     createIndicators();
-    
+
     if (!isSmallScreen) {
       startAnimation();
     }
