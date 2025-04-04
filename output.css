@@ -470,6 +470,21 @@
   .h-72 {
     height: calc(var(--spacing) * 72);
   }
+  .h-\[7vh\] {
+    height: 7vh;
+  }
+  .h-\[75vh\] {
+    height: 75vh;
+  }
+  .h-\[76vh\] {
+    height: 76vh;
+  }
+  .h-\[77vh\] {
+    height: 77vh;
+  }
+  .h-\[78vh\] {
+    height: 78vh;
+  }
   .h-\[80vh\] {
     height: 80vh;
   }
@@ -2453,6 +2468,21 @@
   .lg\:text-black {
     @media (width >= 64rem) {
       color: var(--color-black);
+    }
+  }
+  .xl\:h-\[75vh\] {
+    @media (width >= 80rem) {
+      height: 75vh;
+    }
+  }
+  .xl\:h-\[78\] {
+    @media (width >= 80rem) {
+      height: 78;
+    }
+  }
+  .xl\:h-\[78vh\] {
+    @media (width >= 80rem) {
+      height: 78vh;
     }
   }
   .xl\:w-2\/5 {
