@@ -441,16 +441,18 @@ const indicatorsContainer = document.getElementById("indicators");
 let currentIndex = 0;
 let autoPlayInterval = null;
 const transitionDuration = 3000;
+let isPaused = false;
 
+// Function to create a single testimonial card
 // Function to create a single testimonial card
 const createCard = (review, index) => {
   const card = document.createElement("div");
-  card.className = "testimonial-card flex-shrink-0 p-4 w-full opacity-0 transition-opacity duration-500";
+  card.className = "testimonial-card flex-shrink-0 p-4 w-full max-w-[500px] opacity-0 transition-opacity duration-500";
   card.dataset.index = index;
 
   card.innerHTML = `
-    <div class="flex flex-col bg-white border-2 border-[#b1933f60] lg:w-[500px] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-full mx-auto">
-      <div class="w-full flex justify-center space-around mb-4">
+    <div class="flex flex-col bg-white border-2 border-[#b1933f60] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-[400px]">
+      <div class="w-full flex justify-center mb-4">
         <img
           src="${review.image}"
           alt="${review.name}"
@@ -458,10 +460,10 @@ const createCard = (review, index) => {
         />
       </div>
       <div class="w-full text-center flex flex-col flex-grow">
-        <h3 class="font-bold text-lg sm:text-xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]">
+        <h3 class="font-bolduns bold text-lg sm:text-xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]">
           ${review.name}
         </h3>
-        <div class="mt-2 flex-grow">
+        <div class="mt-2 flex-grow flex items-center">
           <p class="text-black text-sm sm:text-base bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner">
             ${review.review}
           </p>
@@ -469,18 +471,29 @@ const createCard = (review, index) => {
       </div>
     </div>
   `;
+
+  card.addEventListener("mouseenter", () => {
+    isPaused = true;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    isPaused = false;
+    if (!autoPlayInterval) {
+      startAutoPlay();
+    }
+  });
+
   return card;
 };
 
 // Function to show a specific card
 const showCard = (index) => {
-  // Normalize index for infinite loop
   currentIndex = (index % reviews.length + reviews.length) % reviews.length;
   
   // Clear existing content
   carousel.innerHTML = '';
   
-  // Create and append new card
+  // Create and append new card with fixed dimensions
   const card = createCard(reviews[currentIndex], currentIndex);
   carousel.appendChild(card);
   
@@ -489,7 +502,6 @@ const showCard = (index) => {
     card.classList.add('opacity-100');
   }, 50);
   
-  // Update indicators
   updateIndicators(currentIndex);
 };
 
@@ -524,18 +536,17 @@ const updateIndicators = (activeIndex) => {
 
 // Start automatic cycling
 const startAutoPlay = () => {
-  stopAutoPlay(); // Clear any existing interval
+  stopAutoPlay();
   autoPlayInterval = setInterval(() => {
-    // Fade out current card
-    const currentCard = carousel.querySelector('.testimonial-card');
-    if (currentCard) {
-      currentCard.classList.remove('opacity-100');
-      currentCard.classList.add('opacity-0');
-      
-      // Wait for fade out, then show next card
-      setTimeout(() => {
-        showCard(currentIndex + 1);
-      }, 500); // Wait for fade-out transition
+    if (!isPaused) {
+      const currentCard = carousel.querySelector('.testimonial-card');
+      if (currentCard) {
+        currentCard.classList.remove('opacity-100');
+        currentCard.classList.add('opacity-0');
+        setTimeout(() => {
+          showCard(currentIndex + 1);
+        }, 500);
+      }
     }
   }, transitionDuration);
 };
@@ -583,11 +594,14 @@ const addStyles = () => {
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 400px; /* Adjust based on your card height */
+      min-height: 450px;
+      width: 100%;
     }
     
     .testimonial-card {
       transition: opacity 0.5s ease-in-out;
+      width: 100%;
+      max-width: 500px;
     }
     
     #indicators button {
@@ -613,7 +627,6 @@ document.addEventListener("DOMContentLoaded", () => {
   startAutoPlay();
 });
 
-// Handle case where DOM is already loaded
 if (document.readyState === "complete" || document.readyState === "interactive") {
   setTimeout(() => {
     addStyles();
