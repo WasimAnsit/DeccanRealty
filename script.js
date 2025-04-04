@@ -437,54 +437,19 @@ const prevBtn = document.getElementById("prevBtn");
 const nextBtn = document.getElementById("nextBtn");
 const indicatorsContainer = document.getElementById("indicators");
 
-// Variables for carousel
-let scrollSpeed = 0.5; // Slower scroll speed for better readability
-let isSmallScreen = window.innerWidth < 768;
-let isPaused = false;
-let animationFrameId = null;
-let cloneCount = 2; // Number of times to clone the cards for seamless scroll
+// Variables
+let currentIndex = 0;
+let autoPlayInterval = null;
+const transitionDuration = 3000;
 
-// Function to create testimonial cards
-const createTestimonialCards = () => {
-  carousel.innerHTML = ""; // Clear existing content first
-
-  // Add clones at the end
-  for (let i = 0; i < cloneCount; i++) {
-    reviews.forEach((review, index) => {
-      const card = createCard(review, index, true);
-      carousel.appendChild(card);
-    });
-  }
-
-  // Add original cards in the middle
-  reviews.forEach((review, index) => {
-    const card = createCard(review, index, false);
-    carousel.appendChild(card);
-  });
-
-  // Add clones at the beginning (we'll position these before the viewing area)
-  for (let i = 0; i < cloneCount; i++) {
-    reviews.forEach((review, index) => {
-      const card = createCard(review, index, true);
-      carousel.prepend(card);
-    });
-  }
-
-  // Update layout based on screen size
-  updateCarouselLayout();
-};
-
-// Create a single card
-const createCard = (review, index, isClone = false) => {
+// Function to create a single testimonial card
+const createCard = (review, index) => {
   const card = document.createElement("div");
-  card.className = `testimonial-card flex-shrink-0 p-4 transition-all duration-300 ease-in-out ${
-    isClone ? "clone" : "original"
-  }`;
+  card.className = "testimonial-card flex-shrink-0 p-4 w-full opacity-0 transition-opacity duration-500";
   card.dataset.index = index;
 
   card.innerHTML = `
-    <div class="flex flex-col bg-white border-2 border-[#b1933f60] lg:w-[500px] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-full">
-      <!-- Customer Image -->
+    <div class="flex flex-col bg-white border-2 border-[#b1933f60] lg:w-[500px] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-full mx-auto">
       <div class="w-full flex justify-center space-around mb-4">
         <img
           src="${review.image}"
@@ -492,7 +457,6 @@ const createCard = (review, index, isClone = false) => {
           class="rounded-lg shadow-md w-32 h-32 object-cover border-4 border-[#b1923f] transition-transform duration-500 ease-in-out transform hover:scale-105"
         />
       </div>
-      <!-- Review Content -->
       <div class="w-full text-center flex flex-col flex-grow">
         <h3 class="font-bold text-lg sm:text-xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]">
           ${review.name}
@@ -505,34 +469,43 @@ const createCard = (review, index, isClone = false) => {
       </div>
     </div>
   `;
-
-  // Fix: Only pause the specific card being hovered, not the entire carousel
-  card.addEventListener("mouseenter", () => {
-    // We'll handle pause in the animation function
-    card.classList.add("hovered");
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.classList.remove("hovered");
-  });
-
   return card;
+};
+
+// Function to show a specific card
+const showCard = (index) => {
+  // Normalize index for infinite loop
+  currentIndex = (index % reviews.length + reviews.length) % reviews.length;
+  
+  // Clear existing content
+  carousel.innerHTML = '';
+  
+  // Create and append new card
+  const card = createCard(reviews[currentIndex], currentIndex);
+  carousel.appendChild(card);
+  
+  // Trigger fade-in animation
+  setTimeout(() => {
+    card.classList.add('opacity-100');
+  }, 50);
+  
+  // Update indicators
+  updateIndicators(currentIndex);
 };
 
 // Create indicator dots
 const createIndicators = () => {
   indicatorsContainer.innerHTML = "";
-
   reviews.forEach((_, index) => {
     const dot = document.createElement("button");
-    dot.className =
-      "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
+    dot.className = "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
     dot.classList.add(index === 0 ? "bg-[#008a46]" : "bg-gray-300");
-    dot.setAttribute("aria-label", `Go to testimonial group ${index + 1}`);
+    dot.setAttribute("aria-label", `Go to testimonial ${index + 1}`);
 
     dot.addEventListener("click", () => {
-      goToSlide(index);
-      updateIndicators(index);
+      stopAutoPlay();
+      showCard(index);
+      startAutoPlay();
     });
 
     indicatorsContainer.appendChild(dot);
@@ -542,203 +515,81 @@ const createIndicators = () => {
 // Update active indicator
 const updateIndicators = (activeIndex) => {
   const indicators = indicatorsContainer.querySelectorAll("button");
-
-  // Ensure activeIndex is within valid range (0 to reviews.length-1)
-  const normalizedIndex =
-    ((activeIndex % reviews.length) + reviews.length) % reviews.length;
-
   indicators.forEach((dot, index) => {
-    if (index === normalizedIndex) {
-      dot.classList.remove("bg-gray-300");
-      dot.classList.add("bg-[#008a46]", "scale-110");
-    } else {
-      dot.classList.remove("bg-[#008a46]", "scale-110");
-      dot.classList.add("bg-gray-300");
-    }
+    dot.classList.toggle("bg-[#008a46]", index === activeIndex);
+    dot.classList.toggle("bg-gray-300", index !== activeIndex);
+    dot.classList.toggle("scale-110", index === activeIndex);
   });
 };
 
-// Handle responsive layout
-const updateCarouselLayout = () => {
-  isSmallScreen = window.innerWidth < 768;
-  const carouselContainer = carousel.parentElement;
-  const totalWidth = carouselContainer.offsetWidth;
-  const cards = carousel.querySelectorAll(".testimonial-card");
-
-  // Calculate card width based on screen size
-  let cardsPerView = isSmallScreen ? 1 : 2; // Show fewer cards for better visibility
-  const cardWidth = totalWidth / cardsPerView;
-
-  // Set each card's width
-  cards.forEach((card) => {
-    card.style.width = `${cardWidth}px`;
-  });
-
-  // Reset the carousel position and variables
-  resetCarouselPosition(cardWidth);
-
-  // Start or stop animation based on screen size
-  if (isSmallScreen) {
-    stopAnimation();
-  } else {
-    startAnimation();
-  }
-};
-
-// Reset carousel position to show original cards
-const resetCarouselPosition = (cardWidth) => {
-  const totalOriginalWidth = cardWidth * reviews.length;
-  initialPosition = cloneCount * totalOriginalWidth;
-  currentScrollPosition = initialPosition;
-  carousel.style.transform = `translateX(-${initialPosition}px)`;
-  carousel.style.transition = "none"; // Disable transition for immediate positioning
-
-  // Force a reflow to ensure the style change takes effect
-  carousel.offsetHeight;
-
-  // Re-enable transitions
-  setTimeout(() => {
-    carousel.style.transition = "transform 500ms ease-out";
-  }, 50);
-};
-
-// Variables for continuous scrolling
-let currentScrollPosition = 0;
-let initialPosition = 0;
-
-// Start the continuous scrolling animation
-const startAnimation = () => {
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId);
-  }
-
-  // Get the width of all cards to determine when to reset
-  const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  const totalOriginalWidth = cardWidth * reviews.length;
-  initialPosition = cloneCount * totalOriginalWidth;
-  currentScrollPosition = initialPosition;
-
-  // Set initial position
-  carousel.style.transform = `translateX(-${initialPosition}px)`;
-
-  // Start the animation
-  animateScroll();
-};
-
-// Animate the continuous scroll
-const animateScroll = () => {
-  // Check if any card is being hovered
-  const anyCardHovered = carousel.querySelector(".testimonial-card.hovered");
-  isPaused = !!anyCardHovered;
-
-  if (!isPaused && !isSmallScreen) {
-    currentScrollPosition += scrollSpeed;
-
-    // Calculate which card is currently most visible
-    const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-    const totalOriginalWidth = cardWidth * reviews.length;
-
-    // Reset position when we've scrolled one complete set
-    if (currentScrollPosition >= initialPosition + totalOriginalWidth) {
-      // Instead of jumping, smoothly transition
-      currentScrollPosition = initialPosition;
-      carousel.style.transition = "none";
-      carousel.style.transform = `translateX(-${currentScrollPosition}px)`;
-
-      // Force reflow
-      carousel.offsetHeight;
-
-      // Re-enable transition
+// Start automatic cycling
+const startAutoPlay = () => {
+  stopAutoPlay(); // Clear any existing interval
+  autoPlayInterval = setInterval(() => {
+    // Fade out current card
+    const currentCard = carousel.querySelector('.testimonial-card');
+    if (currentCard) {
+      currentCard.classList.remove('opacity-100');
+      currentCard.classList.add('opacity-0');
+      
+      // Wait for fade out, then show next card
       setTimeout(() => {
-        carousel.style.transition = "transform 500ms ease-out";
-      }, 50);
-    } else {
-      // Normal scroll
-      carousel.style.transform = `translateX(-${currentScrollPosition}px)`;
+        showCard(currentIndex + 1);
+      }, 500); // Wait for fade-out transition
     }
-
-    // Update indicator based on visible card
-    const visibleIndex =
-      Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
-      reviews.length;
-    if (visibleIndex >= 0) {
-      updateIndicators(visibleIndex);
-    }
-  }
-
-  animationFrameId = requestAnimationFrame(animateScroll);
+  }, transitionDuration);
 };
 
-// Stop the animation
-const stopAnimation = () => {
-  if (animationFrameId) {
-    cancelAnimationFrame(animationFrameId);
-    animationFrameId = null;
+// Stop automatic cycling
+const stopAutoPlay = () => {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
   }
 };
 
-// Go to a specific slide
-const goToSlide = (index) => {
-  // Fix: Apply proper transition for smooth sliding
-  carousel.style.transition = "transform 500ms ease-out";
-
-  const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  const targetPosition = initialPosition + index * cardWidth;
-  currentScrollPosition = targetPosition;
-  carousel.style.transform = `translateX(-${targetPosition}px)`;
-};
-
-// Event Listeners for buttons
+// Button event listeners
 prevBtn.addEventListener("click", () => {
-  // Fix: Properly calculate previous index
-  const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  let targetIndex =
-    Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
-    reviews.length;
-
-  // Go to previous slide
-  targetIndex = (targetIndex - 1 + reviews.length) % reviews.length;
-  goToSlide(targetIndex);
-  updateIndicators(targetIndex);
+  stopAutoPlay();
+  const currentCard = carousel.querySelector('.testimonial-card');
+  if (currentCard) {
+    currentCard.classList.remove('opacity-100');
+    currentCard.classList.add('opacity-0');
+    setTimeout(() => {
+      showCard(currentIndex - 1);
+      startAutoPlay();
+    }, 500);
+  }
 });
 
 nextBtn.addEventListener("click", () => {
-  // Fix: Properly calculate next index
-  const cardWidth = carousel.querySelector(".testimonial-card").offsetWidth;
-  let targetIndex =
-    Math.floor((currentScrollPosition - initialPosition) / cardWidth) %
-    reviews.length;
-
-  // Go to next slide
-  targetIndex = (targetIndex + 1) % reviews.length;
-  goToSlide(targetIndex);
-  updateIndicators(targetIndex);
+  stopAutoPlay();
+  const currentCard = carousel.querySelector('.testimonial-card');
+  if (currentCard) {
+    currentCard.classList.remove('opacity-100');
+    currentCard.classList.add('opacity-0');
+    setTimeout(() => {
+      showCard(currentIndex + 1);
+      startAutoPlay();
+    }, 500);
+  }
 });
 
-// Handle window resize
-window.addEventListener("resize", () => {
-  // Clear any existing timeout to debounce resize event
-  if (window.resizeTimeout) clearTimeout(window.resizeTimeout);
-
-  window.resizeTimeout = setTimeout(() => {
-    updateCarouselLayout();
-  }, 250);
-});
-
-// Add CSS for better styling
+// Add CSS styles
 const addStyles = () => {
   const style = document.createElement("style");
   style.textContent = `
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
+    #testimonialCarousel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 400px; /* Adjust based on your card height */
     }
     
     .testimonial-card {
-      animation: fadeIn 0.5s ease-out;
+      transition: opacity 0.5s ease-in-out;
     }
     
-    /* Make indicators more visible */
     #indicators button {
       width: 12px;
       height: 12px;
@@ -746,22 +597,9 @@ const addStyles = () => {
       margin: 0 6px;
     }
     
-    #indicators button.bg-\\[\\#008a46\\] {
+    #indicators button.bg-[#008a46] {
       transform: scale(1.2);
       box-shadow: 0 2px 6px rgba(0,138,70,0.5);
-    }
-    
-    /* Fix for carousel container */
-    #testimonialCarousel {
-      will-change: transform;
-      transition: transform 500ms ease-out;
-    }
-    
-    /* Fix for carousel container parent */
-    #testimonialCarousel.parent {
-      overflow: hidden;
-      position: relative;
-      width: 100%;
     }
   `;
   document.head.appendChild(style);
@@ -770,29 +608,17 @@ const addStyles = () => {
 // Initialize
 document.addEventListener("DOMContentLoaded", () => {
   addStyles();
-  createTestimonialCards();
   createIndicators();
-
-  // Start the animation for larger screens after a short delay
-  setTimeout(() => {
-    if (!isSmallScreen) {
-      startAnimation();
-    }
-  }, 100);
+  showCard(0);
+  startAutoPlay();
 });
 
-// For browsers where DOMContentLoaded already fired
-if (
-  document.readyState === "complete" ||
-  document.readyState === "interactive"
-) {
+// Handle case where DOM is already loaded
+if (document.readyState === "complete" || document.readyState === "interactive") {
   setTimeout(() => {
     addStyles();
-    createTestimonialCards();
     createIndicators();
-
-    if (!isSmallScreen) {
-      startAnimation();
-    }
+    showCard(0);
+    startAutoPlay();
   }, 100);
 }
