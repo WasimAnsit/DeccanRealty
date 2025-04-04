@@ -238,7 +238,7 @@ function createServiceCard(item) {
         <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
             <div class="space-y-3 flex-grow">
                 <div class="text-center">
-                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-bold line-clamp-1">${item.serviceTitle}</h2>
+                    <h2 class="text-lg sm:text-xl 2xl:text-lg font-bold lg:text-black lg:font-bold line-clamp-1">${item.serviceTitle}</h2>
                 </div>
                 
                 <div class="text-sm space-y-2">
