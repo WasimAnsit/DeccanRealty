@@ -1216,6 +1216,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .whitespace-normal {
+    white-space: normal;
+  }
   .text-\[\#008a46\] {
     color: #008a46;
   }
@@ -2470,6 +2473,12 @@
   .xl\:px-16 {
     @media (width >= 80rem) {
       padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .xl\:text-lg {
+    @media (width >= 80rem) {
+      font-size: var(--text-lg);
+      line-height: var(--tw-leading, var(--text-lg--line-height));
     }
   }
   .xl\:text-\[20px\] {
