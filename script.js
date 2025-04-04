@@ -63,7 +63,7 @@ const properties = [
 const services = [
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/j0dnulpp3nqsgjijfkzv",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Featured/kzwwgujgkyuxoq6gthj6",
       alt: "Buy Service",
     },
     serviceTitle: "Buy Your Dream Home",
@@ -72,7 +72,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/dbniooqkfnemwwgmd8nb",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Featured/zegxw172eer5s3qupxcq",
       alt: "Sell Service",
     },
     serviceTitle: "Sell Your Property with Ease",
@@ -81,7 +81,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/nutcpd127olazbwpg1uv",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Featured/bpoocf190welnpywsvy1",
       alt: "Rent Service",
     },
     serviceTitle: "Find Your Perfect Rental Home",
@@ -90,7 +90,7 @@ const services = [
   },
   {
     imageURL: {
-      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/y54hiuzuuykfqz6rlfzm",
+      src: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/Featured/kpggvi3ixke4enyfcmxf",
       alt: "Buy Service",
     },
     serviceTitle: "Invest in Prime Commercial Properties",
