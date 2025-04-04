@@ -41,13 +41,24 @@
 
       <section>
         <div class="relative xl:h-[78vh] h-[80vh] min-h-[500px] w-full">
-          <img
+          <!-- <img
             src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr"
             alt="Deccan_Home_Page_image"
             class="absolute top-0 left-0 w-full h-full object-cover z-0"
             loading="eager"
      fetchpriority="high"
-          />
+          /> -->
+         <img 
+  src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr" 
+  srcset="
+    https://res.cloudinary.com/dzauu64ta/image/upload/w_300/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 300w,
+    https://res.cloudinary.com/dzauu64ta/image/upload/w_600/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 600w,
+    https://res.cloudinary.com/dzauu64ta/image/upload/w_900/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 900w"
+  sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+  alt="Deccan_Home_Page_image"
+  class="absolute top-0 left-0 w-full h-full object-cover z-0"
+  loading="eager"
+  fetchpriority="high">
           <!-- Overlay with gradient -->
           <div
             class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10"
