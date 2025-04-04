@@ -230,7 +230,8 @@ function createServiceCard(item) {
         <!-- Image Section -->
         <div class="relative">
             <img src="${item.imageURL.src}" alt="${item.imageURL.alt}" 
-                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110"
+                 >
             <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">Featured</span>
         </div>
         

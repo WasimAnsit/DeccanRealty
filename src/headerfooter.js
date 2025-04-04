@@ -7,8 +7,8 @@ function createHeader(container) {
   header.innerHTML = `
     <div class="container mx-auto px-4 flex justify-between items-center">
       <div class="logo">
-        <a href="index.html" aria-label="index.html">
-          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/finalwhitelogo_bnxcp5" alt="Deccan Realty Logo" 
+        <a href="index.html" aria-label="index.html">  
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/finalwhitelogo_bnxcp5"  alt="Deccan Realty Logo" 
                class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain">
         </a>
       </div>
