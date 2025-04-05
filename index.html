@@ -154,52 +154,25 @@
         </section>
       </div>
    <!-- Testimonial section -->
-<section
-  class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100 "
->
-  <!-- Testimonial Container -->
-  <div
-    class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-[90vw] h-auto "
-  >
-    <!-- Heading and Subheading -->
+<section class="relative w-full flex items-center justify-center py-8 md:py-16 lg:py-20 bg-gradient-to-b from-white to-gray-100">
+  <div class="relative z-10 w-11/12 sm:w-10/12 md:w-9/12 lg:w-[90vw] h-auto">
     <div class="text-center mb-8 md:mb-12">
-      <h2
-        class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text"
-      >
+      <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold sm:font-extrabold text-[#008a46] bg-clip-text">
         What Our Customers Say
       </h2>
       <p class="mt-2 text-sm sm:text-base md:text-lg">
-        Discover the voices of our happy homeowners – real experiences,
-        real satisfaction!
+        Discover the voices of our happy homeowners – real experiences, real satisfaction!
       </p>
     </div>
-
-    <!-- Carousel Outer Container -->
     <div class="relative overflow-hidden">
-      <!-- Testimonial Cards Container -->
-      <div id="testimonialCarousel" class="flex transition-transform duration-1000">
-        <!-- Cards will be inserted here by JavaScript -->
-      </div>
+      <div id="testimonialCarousel" class="relative flex transition-all duration-700 ease-in-out"></div>
     </div>
-
-    <!-- Navigation Buttons -->
     <div class="flex justify-center items-center mt-6 gap-3">
-      <button
-        id="prevBtn" aria-label="Previous testimonials"
-        class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20"
-      >
+      <button id="prevBtn" aria-label="Previous testimonials" class="bg-[#008a4580] text-white p-3 rounded-full hover:bg-[#006d38] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20">
         <i class="fa-solid fa-arrow-left"></i>
       </button>
-      
-      <!-- Indicator Dots - Moved inside navigation container for better visibility -->
-      <div class="flex justify-center items-center gap-2" id="indicators">
-        <!-- Dots will be inserted here by JavaScript -->
-      </div>
-      
-      <button
-        id="nextBtn" aria-label="Next testimonials"
-        class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20"
-      >
+      <div class="flex justify-center items-center gap-2" id="indicators"></div>
+      <button id="nextBtn" aria-label="Next testimonials" class="bg-[#ff7c2a80] text-white p-3 rounded-full hover:bg-[#e66a24] text-sm transition-transform duration-300 ease-in-out transform hover:scale-110 z-20">
         <i class="fa-solid fa-arrow-right"></i>
       </button>
     </div>

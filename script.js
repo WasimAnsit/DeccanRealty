@@ -387,11 +387,6 @@ const reviews = [
       "Deccan Realty Team sold my flat seamlessly. Since I reside outside Bangalore, they managed the entire process with the new buyer professionally, without requiring my physical presence. Truly excellent service!",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
-    textContent: {
-      heading: "What Our Customers Say",
-      paragraph:
-        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
-    },
   },
   {
     name: "Mr. Avinash (Buyer)",
@@ -399,11 +394,6 @@ const reviews = [
       "Deccan Realty team facilitated the purchase of my flat in Whitefield, Bangalore, at a commendable price as per the market rate. Their expertise and professionalism made the entire process seamless.",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/d5zo5bconzxz1puzijfu",
-    textContent: {
-      heading: "What Our Customers Say",
-      paragraph:
-        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
-    },
   },
   {
     name: "Ms. Fauzia (Tenant)",
@@ -411,11 +401,6 @@ const reviews = [
       "I am truly impressed by the Deccan Realty team's efficiency in securing a rental flat for me at ₹50K per month in South Bangalore. This accommodation perfectly meets my needs and is truly awesome for me!",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/eiynhkneocoygez6zhyo",
-    textContent: {
-      heading: "What Our Customers Say",
-      paragraph:
-        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
-    },
   },
   {
     name: "Mr. Pankaj (Buyer)",
@@ -423,11 +408,6 @@ const reviews = [
       "I praise the Deccan Realty team for their professional assistance in facilitating my house purchase in a new and renowned project on Sarjapur Road, Bangalore. They secured a genuinely favorable rate, inclusive of multiple offers from the builder. I truly appreciate their efforts in making my home-buying journey remarkably easy. Thank you!",
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/d5zo5bconzxz1puzijfu",
-    textContent: {
-      heading: "What Our Customers Say",
-      paragraph:
-        "Discover the voices of our happy homeowners – real experiences, real satisfaction!",
-    },
   },
 ];
 
@@ -442,67 +422,82 @@ let currentIndex = 0;
 let autoPlayInterval = null;
 const transitionDuration = 3000;
 let isPaused = false;
+let isAnimating = false;
 
-// Function to create a single testimonial card
 // Function to create a single testimonial card
 const createCard = (review, index) => {
   const card = document.createElement("div");
-  card.className = "testimonial-card flex-shrink-0 p-4 w-full max-w-[500px] opacity-0 transition-opacity duration-500";
+  card.className =
+    "testimonial-card absolute top-0 left-0 w-full max-w-[500px] opacity-0 transition-all duration-700 ease-in-out";
   card.dataset.index = index;
 
   card.innerHTML = `
-    <div class="flex flex-col bg-white border-2 border-[#b1933f60] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out hover:shadow-xl p-4 justify-around h-[400px]">
+    <div class="flex flex-col bg-white border-2 border-[#b1933f60] rounded-xl shadow-lg overflow-hidden transition-all duration-500 ease-in-out cursor-pointer hover:shadow-xl p-4 justify-around h-[400px]">
       <div class="w-full flex justify-center mb-4">
-        <img
-          src="${review.image}"
-          alt="${review.name}"
-          class="rounded-lg shadow-md w-32 h-32 object-cover border-4 border-[#b1923f] transition-transform duration-500 ease-in-out transform hover:scale-105"
-        />
+        <img src="${review.image}" alt="${review.name}" class="rounded-lg shadow-md w-32 h-32 object-cover border-4 border-[#b1923f] transition-transform duration-500 ease-in-out transform hover:scale-105"/>
       </div>
       <div class="w-full text-center flex flex-col flex-grow">
-        <h3 class="font-bolduns bold text-lg sm:text-xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]">
-          ${review.name}
-        </h3>
+        <h3 class="font-bold text-lg sm:text-xl text-[#008a46] bg-gradient-to-r from-[#e3874da8]">${review.name}</h3>
         <div class="mt-2 flex-grow flex items-center">
-          <p class="text-black text-sm sm:text-base bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner">
-            ${review.review}
-          </p>
+          <p class="text-black text-sm sm:text-base bg-gradient-to-r from-[#9ec49137] to-white p-4 rounded-lg shadow-inner">${review.review}</p>
         </div>
       </div>
     </div>
   `;
 
-  card.addEventListener("mouseenter", () => {
-    isPaused = true;
-  });
-
+  card.addEventListener("mouseenter", () => (isPaused = true));
   card.addEventListener("mouseleave", () => {
     isPaused = false;
-    if (!autoPlayInterval) {
-      startAutoPlay();
-    }
+    if (!autoPlayInterval) startAutoPlay();
   });
 
   return card;
 };
 
-// Function to show a specific card
-const showCard = (index) => {
-  currentIndex = (index % reviews.length + reviews.length) % reviews.length;
-  
-  // Clear existing content
-  carousel.innerHTML = '';
-  
-  // Create and append new card with fixed dimensions
-  const card = createCard(reviews[currentIndex], currentIndex);
-  carousel.appendChild(card);
-  
-  // Trigger fade-in animation
+// Function to show a specific card with door-slide animation
+const showCard = (newIndex, direction = "next") => {
+  if (isAnimating) return;
+  isAnimating = true;
+
+  const currentCard = carousel.querySelector(
+    `.testimonial-card[data-index="${currentIndex}"]`
+  );
+  const nextCard = createCard(reviews[newIndex], newIndex);
+
+  // Append the next card
+  carousel.appendChild(nextCard);
+
+  // Initial positioning
+  if (direction === "next") {
+    nextCard.style.transform = "translateX(100%)";
+    nextCard.style.opacity = "1";
+    currentCard.style.transform = "translateX(0)";
+  } else {
+    nextCard.style.transform = "translateX(-100%)";
+    nextCard.style.opacity = "1";
+    currentCard.style.transform = "translateX(0)";
+  }
+
+  // Trigger animation
   setTimeout(() => {
-    card.classList.add('opacity-100');
+    if (direction === "next") {
+      currentCard.style.transform = "translateX(-100%)";
+      currentCard.style.opacity = "0";
+      nextCard.style.transform = "translateX(0)";
+    } else {
+      currentCard.style.transform = "translateX(100%)";
+      currentCard.style.opacity = "0";
+      nextCard.style.transform = "translateX(0)";
+    }
   }, 50);
-  
-  updateIndicators(currentIndex);
+
+  // Cleanup after animation
+  setTimeout(() => {
+    currentCard.remove();
+    currentIndex = newIndex;
+    updateIndicators(currentIndex);
+    isAnimating = false;
+  }, 800); // Matches the transition duration
 };
 
 // Create indicator dots
@@ -510,13 +505,15 @@ const createIndicators = () => {
   indicatorsContainer.innerHTML = "";
   reviews.forEach((_, index) => {
     const dot = document.createElement("button");
-    dot.className = "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
+    dot.className =
+      "w-3 h-3 rounded-full transition-all duration-300 transform hover:scale-125 focus:outline-none";
     dot.classList.add(index === 0 ? "bg-[#008a46]" : "bg-gray-300");
     dot.setAttribute("aria-label", `Go to testimonial ${index + 1}`);
 
     dot.addEventListener("click", () => {
       stopAutoPlay();
-      showCard(index);
+      const direction = index > currentIndex ? "next" : "prev";
+      showCard(index, direction);
       startAutoPlay();
     });
 
@@ -538,15 +535,9 @@ const updateIndicators = (activeIndex) => {
 const startAutoPlay = () => {
   stopAutoPlay();
   autoPlayInterval = setInterval(() => {
-    if (!isPaused) {
-      const currentCard = carousel.querySelector('.testimonial-card');
-      if (currentCard) {
-        currentCard.classList.remove('opacity-100');
-        currentCard.classList.add('opacity-0');
-        setTimeout(() => {
-          showCard(currentIndex + 1);
-        }, 500);
-      }
+    if (!isPaused && !isAnimating) {
+      const nextIndex = (currentIndex + 1) % reviews.length;
+      showCard(nextIndex, "next");
     }
   }, transitionDuration);
 };
@@ -562,28 +553,16 @@ const stopAutoPlay = () => {
 // Button event listeners
 prevBtn.addEventListener("click", () => {
   stopAutoPlay();
-  const currentCard = carousel.querySelector('.testimonial-card');
-  if (currentCard) {
-    currentCard.classList.remove('opacity-100');
-    currentCard.classList.add('opacity-0');
-    setTimeout(() => {
-      showCard(currentIndex - 1);
-      startAutoPlay();
-    }, 500);
-  }
+  const prevIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+  showCard(prevIndex, "prev");
+  startAutoPlay();
 });
 
 nextBtn.addEventListener("click", () => {
   stopAutoPlay();
-  const currentCard = carousel.querySelector('.testimonial-card');
-  if (currentCard) {
-    currentCard.classList.remove('opacity-100');
-    currentCard.classList.add('opacity-0');
-    setTimeout(() => {
-      showCard(currentIndex + 1);
-      startAutoPlay();
-    }, 500);
-  }
+  const nextIndex = (currentIndex + 1) % reviews.length;
+  showCard(nextIndex, "next");
+  startAutoPlay();
 });
 
 // Add CSS styles
@@ -591,17 +570,22 @@ const addStyles = () => {
   const style = document.createElement("style");
   style.textContent = `
     #testimonialCarousel {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 450px;
+      position: relative;
       width: 100%;
+      max-width: 500px;
+      height: 450px;
+      margin: 0 auto;
+      overflow: hidden;
     }
     
     .testimonial-card {
-      transition: opacity 0.5s ease-in-out;
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
       max-width: 500px;
+      height: 400px;
+      transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
     }
     
     #indicators button {
@@ -623,15 +607,28 @@ const addStyles = () => {
 document.addEventListener("DOMContentLoaded", () => {
   addStyles();
   createIndicators();
-  showCard(0);
+  carousel.innerHTML = "";
+  const initialCard = createCard(reviews[0], 0);
+  initialCard.style.opacity = "1";
+  initialCard.style.transform = "translateX(0)";
+  carousel.appendChild(initialCard);
+  updateIndicators(0);
   startAutoPlay();
 });
 
-if (document.readyState === "complete" || document.readyState === "interactive") {
+if (
+  document.readyState === "complete" ||
+  document.readyState === "interactive"
+) {
   setTimeout(() => {
     addStyles();
     createIndicators();
-    showCard(0);
+    carousel.innerHTML = "";
+    const initialCard = createCard(reviews[0], 0);
+    initialCard.style.opacity = "1";
+    initialCard.style.transform = "translateX(0)";
+    carousel.appendChild(initialCard);
+    updateIndicators(0);
     startAutoPlay();
-  }, 100);
+  }, 200);
 }
