@@ -103,7 +103,7 @@ const services = [
 const resaleProperties = [
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/utrwefotkfdx0hiipw8d",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
     altText: "White Building",
     name: "Sobha Royal Pavilion",
     description:
@@ -165,6 +165,36 @@ const resaleProperties = [
     description:
       "Luxury Gated Community in <span class='font-bold'>Akshay Nagar, Bangalore.</span> Exclusive <span class='font-bold'>2, 3 & 4 BHK villas and apartments</span> with modern architecture, lush greenery, and premium amenities. Secure gated access ensures privacy and comfort. Bangalore | <span class='font-bold'>Price on Request.</span> Experience elegance, security, and seamless connectivity in a serene setting.",
   },
+];
+
+// Add this after the resaleProperties array
+
+// Rental properties data
+const rentalProperties = [
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
+    altText: "sobha royal",
+    name: "Sobha Royal Pavilion",
+    description: "Available for Rent: <span class='font-bold'>Luxury 3 BHK apartment in Sobha Royal Pavilion, Hadosiddapura, Sarjapur Road.</span> Featuring <span class='font-bold'>2000 sq. ft.</span> of premium living space with modern amenities. Monthly rent: <span class='font-bold'>₹45,000</span>. Includes maintenance, 2 covered parking spots, and 24/7 security.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
+    altText: "Modern Red Building",
+    name: "Godrej Splendour",
+    description: "For Rent: <span class='font-bold'>Spacious 2 BHK apartment in Godrej Splendour, Whitefield.</span> <span class='font-bold'>1200 sq. ft.</span> of well-designed space. Monthly rent: <span class='font-bold'>₹35,000</span>. Semi-furnished with modular kitchen, wardrobes, and premium amenities.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
+    altText: "Colorful Residential Building",
+    name: "Godrej Park Retreat",
+    description: "Rental Available: <span class='font-bold'>Premium 4 BHK apartment in Godrej Park Retreat, Sarjapur Road.</span> Expansive <span class='font-bold'>2800 sq. ft.</span> living space. Monthly rent: <span class='font-bold'>₹65,000</span>. Fully furnished with high-end appliances and luxurious amenities.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
+    altText: "Modern Apartment Building",
+    name: "Godrej 24",
+    description: "For Rent: <span class='font-bold'>Contemporary 3 BHK in Godrej 24, Sarjapur Road.</span> Features <span class='font-bold'>1800 sq. ft.</span> of modern living space. Monthly rent: <span class='font-bold'>₹40,000</span>. Semi-furnished with quality fittings and exclusive community amenities.",
+  }
 ];
 
 // Card creation functions
@@ -313,29 +343,86 @@ function createResalePropertyCard(property, index) {
   `;
 }
 
+// Add this function after createResalePropertyCard
+function createRentalPropertyCard(property, index) {
+  return `
+    <div class="w-full bg-white sm:rounded-xl rounded-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform flex flex-col justify-between rental-card">
+        <!-- Image Section -->
+        <div class="relative">
+            <img src="${property.image}" alt="${property.altText}" 
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+            <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">For Rent</span>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
+            <div class="space-y-3 flex-grow">
+                <div class="text-center">
+                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-semibold line-clamp-1">${property.name}</h2>
+                </div>
+                
+                <div class="text-sm space-y-2 rental-content-wrapper">
+                    <div class="description-container text-black text-center" id="rental-desc-${index + 1}">
+                        <p class="desc-content">${property.description}</p>
+                    </div>
+                    <div class="text-center mt-2">
+                        <span class="toggle-btn text-blue-600 cursor-pointer text-sm inline-block" data-target="rental-desc-${index + 1}">See More...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="mt-auto pt-4 border-t border-gray-200 flex justify-between items-center gap-3">
+                <button onclick="openEnquiryForm({ propertyName: '${property.name}' })"
+                 class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                    Schedule Visit
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat with us on WhatsApp" class="whatsapp-btn text-green-600 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  `;
+}
 
 // Helper functions
 function setupToggleButtons() {
-  document.querySelectorAll(".description-container").forEach((container) => {
-    container.style.maxHeight = "80px"; // Initial collapsed state
-    container.style.overflow = "hidden";
-    container.style.transition = "max-height 0.3s ease";
+  // Initialize all description containers
+  const allContainers = document.querySelectorAll('.description-container');
+  allContainers.forEach((container) => {
+    container.style.maxHeight = '80px';
+    container.style.overflow = 'hidden';
+    container.style.transition = 'max-height 0.3s ease';
   });
-  // Set up toggle button functionality with independent card heights
-  document.querySelectorAll(".toggle-btn").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-target");
-      const descContainer = document.getElementById(targetId);
 
-      if (
-        descContainer.style.maxHeight === "80px" ||
-        descContainer.style.maxHeight === ""
-      ) {
-        descContainer.style.maxHeight = descContainer.scrollHeight + "px"; // Expand to content height
-        this.textContent = "See Less...";
+  // Set up toggle button functionality for both resale and rental cards
+  document.querySelectorAll('.toggle-btn').forEach((btn) => {
+    btn.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const descContainer = document.getElementById(targetId);
+      const card = this.closest('.resale-card, .rental-card');
+
+      if (descContainer.style.maxHeight === '80px' || descContainer.style.maxHeight === '') {
+        // Store original card height before expanding
+        const originalHeight = card.offsetHeight;
+        
+        // Temporarily remove transition for accurate height calculation
+        descContainer.style.transition = 'none';
+        descContainer.style.maxHeight = 'none';
+        const fullHeight = descContainer.scrollHeight;
+        descContainer.style.maxHeight = '80px';
+        
+        // Restore transition and set full height
+        setTimeout(() => {
+          descContainer.style.transition = 'max-height 0.3s ease';
+          descContainer.style.maxHeight = fullHeight + 'px';
+        }, 0);
+
+        this.textContent = 'See Less...';
       } else {
-        descContainer.style.maxHeight = "80px"; // Collapse back
-        this.textContent = "See More...";
+        descContainer.style.maxHeight = '80px';
+        this.textContent = 'See More...';
       }
     });
   });
@@ -350,9 +437,7 @@ function setupToggleButtons() {
 document.addEventListener("DOMContentLoaded", () => {
   // Identify containers by their IDs
   const newPropertiesContainer = document.getElementById("property-container");
-  const resalePropertiesContainer = document.getElementById(
-    "resale-property-container"
-  );
+ 
 const serviceContainer = document.getElementById("service-container");
 
   // Render primary property listings
@@ -368,15 +453,23 @@ const serviceContainer = document.getElementById("service-container");
   }
 
   // Render resale property listings
- if (resalePropertiesContainer) {
-   resalePropertiesContainer.innerHTML = resaleProperties
-     .map((property, index) => createResalePropertyCard(property, index))
-     .join("");
+  const resalePropertiesContainer = document.getElementById("resale-property-container");
+  if (resalePropertiesContainer) {
+    resalePropertiesContainer.innerHTML = resaleProperties
+      .map((property, index) => createResalePropertyCard(property, index))
+      .join("");
+  }
 
-   // Setup toggle functionality for descriptions
+  // Render rental property listings
+  const rentalPropertiesContainer = document.getElementById("rental-property-container");
+  if (rentalPropertiesContainer) {
+    rentalPropertiesContainer.innerHTML = rentalProperties
+      .map((property, index) => createRentalPropertyCard(property, index))
+      .join("");
+  }
+
+  // Setup toggle functionality for all descriptions after both sections are rendered
   setupToggleButtons();
- }
-
 });
 
 // Testimonial javascript code

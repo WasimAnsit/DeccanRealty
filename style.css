@@ -77,3 +77,21 @@
     stroke-dasharray: 100;
     animation: check 0.8s ease-in-out forwards;
 }
+
+/* Resale card css */
+
+.rental-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 550px;
+}
+
+.description-container {
+  position: relative;
+  width: 100%;
+}
+
+.desc-content {
+  width: 100%;
+}
