@@ -103,15 +103,7 @@ const services = [
 const resaleProperties = [
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
-    altText: "White Building",
-    name: "Sobha Royal Pavilion",
-    description:
-      "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/vpyrwrofozc1l961yirf",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
     altText: "Modern Red Building",
     name: "Godrej Splendour",
     description:
@@ -119,23 +111,15 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/tfnql8cedpat3rh5u8xc",
-    altText: "Colorful Residential Building",
-    name: "Godrej Park Retreat",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/qw0cnoas4nllfnms7lzo",
+    altText: "Birla Tisya",
+    name: "Birla Tisya",
     description:
-      "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
+      "Birla Tisya, located in the premium locale of <span class='font-bold'>Rajajinagar, Bangalore,</span> redefines luxury high-rise living with elegant <span class='font-bold'> 3 & 4 BHK apartments.</span> With <span class='font-bold'> Price on Request,</span> this under-construction project offers thoughtfully curated amenities for an elevated lifestyle.<span class='font-bold'> Possession begins December 2026 onwards,</span> blending modern comfort with prime connectivity. Discover a life of sophistication and convenience at Birla Tisya, where every detail is crafted to perfection.",
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/vuh5a0omnqp7vzefhk7n",
-    altText: "Modern Apartment Building",
-    name: "Godrej 24",
-    description:
-      "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/nfumyhhrjjktyxzeikpf",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/cvybg1l5a0oyctseohsr",
     altText: "White Building",
     name: "Prestige City Avalon Park",
     description:
@@ -143,15 +127,44 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/aqidwfp3puomvb4lht6x",
-    altText: "Modern Red Building",
-    name: "Confident Orion",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/tzrpse4gevzzkqdsjfm2",
+    altText: "Prestiage City Eden Park",
+    name: "Prestige City Eden Park",
     description:
-      "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
+      "Prestige Eden Park at The Prestige City, Sarjapur, offers smartly designed <span class='font-bold'>1 & 2 BHK apartments </span> across <span class='font-bold'>9.7 acres.</span>  With  <span class='font-bold>Price on Request</span> this IGBC pre-certified project combines sustainable living with modern design. Homes feature <span class='font-bold'>spacious layouts, three balconies, and ample natural light.</span> Located in a well-connected neighborhood with excellent social infrastructure, Eden Park delivers comfort, style, and everyday convenience.",
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/jov6ogdqywyxhrah3gwu",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
+    altText: "White Building",
+    name: "Sobha Royal Pavilion",
+    description:
+      "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
+  },
+ 
+ 
+ 
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
+    altText: "Colorful Residential Building",
+    name: "Godrej Park Retreat",
+    description:
+      "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
+    altText: "Modern Apartment Building",
+    name: "Godrej 24",
+    description:
+      "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
+  },
+ 
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/i1gba3ykzhaswgeqpt3v",
     altText: "Colorful Residential Building",
     name: "Ahad Serenity",
     description:
@@ -159,12 +172,49 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/jjbnqpeb8ok603mwfcsd",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/zxsxo88cb6vkr6zs9evj",
+    altText: "Modern Red Building",
+    name: "Confident Orion",
+    description:
+      "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
+  },
+ 
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/khdiqzb5rcskjqtbm7l9",
     altText: "Modern Apartment Building",
     name: "Suavity Otium",
     description:
       "Luxury Gated Community in <span class='font-bold'>Akshay Nagar, Bangalore.</span> Exclusive <span class='font-bold'>2, 3 & 4 BHK villas and apartments</span> with modern architecture, lush greenery, and premium amenities. Secure gated access ensures privacy and comfort. Bangalore | <span class='font-bold'>Price on Request.</span> Experience elegance, security, and seamless connectivity in a serene setting.",
   },
+];
+
+// Rental properties data
+const rentalProperties = [
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/te2bvkg3exhnklg5tslz",
+    altText: "Prestige Finsbury Park",
+    name: "Prestige Finsbury Park",
+    description: "Available for Rent: <span class='font-bold'>Luxury 3 BHK apartment in Sobha Royal Pavilion, Hadosiddapura, Sarjapur Road.</span> Featuring <span class='font-bold'>2000 sq. ft.</span> of premium living space with modern amenities. Monthly rent: <span class='font-bold'>₹45,000</span>. Includes maintenance, 2 covered parking spots, and 24/7 security.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
+    altText: "Sobha Royal Pavilion, Sarjapur Road",
+    name: "Sobha Royal Pavilion",
+    description: "Sobha Royal Pavilion – Rajasthan-themed luxury apartment  s in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/dqbgazwluq9hoxjcgxk7",
+    altText: "Prestige St Johns Wood",
+    name: "Prestige St Johns Wood",
+    description: "Prestige St. Johns Wood, located in <span class='font-bold'> Tavarekere, Bangalore,</span> offers premium rental living in one of South Bangalore’s well-connected neighborhoods. Surrounded by prime areas like <span class='font-bold'>BTM Layout and Maruthi Nagar,</span>  the project enjoys excellent access to <span class='font-bold'>metro stations </span> including BTM Layout and <span class='font-bold'>Jayadeva Interchange. With nearby schools, hospitals, markets, and malls, everyday conveniences are just minutes away.</span> Rental prices start from <span class='font-bold'> Price on Request,</span> making it ideal for a range of lifestyles. Enjoy urban comfort in a locality <span class='font-bold'>rated 4.3/5</span> for connectivity and  <span class='font-bold'>4.2/5</span> for safety.",
+  },
+  {
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/ezcfmxuyatsdsne1jezm",
+    altText: "Sobha Morzaria Grandeur",
+    name: "Sobha Morzaria Grandeur",
+    description: "Sobha Morzaria Grandeur, located at <span class='fnt-bold'>Dairy Circle, Bangalore,</span> offers spacious <span class='font-bold'>2,3 & 4 BHK rental </span> residences ideal for <span class='font-bold'>families and women</span> professionals. With thoughtfully designed homes featuring <span class='font-bold>pooja rooms, servant quarters, and generous balconies,</span> this semi-furnished project promises both comfort and functionality. <span class='font-bold'>Price on Request,</span> the project is well-connected via metro and major transport hubs like Majestic and KSR Railway Station. Surrounded by reputed schools, hospitals, and entertainment zones, Sobha Morzaria Grandeur stands out as a preferred choice in a locality rated 4.1/5 for connectivity and 3.7/5 for safety.",
+  }
 ];
 
 // Card creation functions
@@ -314,29 +364,88 @@ function createResalePropertyCard(property, index) {
     </div>
   `;
 }
+// Add this function after createResalePropertyCard
+function createRentalPropertyCard(property, index) {
+  return `
+    <div class="w-full bg-white sm:rounded-xl rounded-none overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform flex flex-col justify-between rental-card">
+        <!-- Image Section -->
+        <div class="relative">
+            <img src="${property.image}" alt="${property.altText}" 
+                 class="w-full h-48 sm:h-56 md:h-64 object-cover transition-transform duration-300 hover:scale-110">
+            <span class="absolute top-2 right-2 bg-[#b1923f] text-white px-3 py-1 text-xs sm:text-sm rounded-full font-medium">For Rent</span>
+        </div>
+        
+        <!-- Content Section -->
+        <div class="p-4 sm:p-5 bg-gradient-to-b from-gray-50 to-white flex flex-col flex-grow">
+            <div class="space-y-3 flex-grow">
+                <div class="text-center">
+                    <h2 class="text-lg sm:text-xl font-bold lg:text-black lg:font-semibold line-clamp-1">${property.name}</h2>
+                </div>
+                
+                <div class="text-sm space-y-2 rental-content-wrapper">
+                    <div class="description-container text-black text-center" id="rental-desc-${index + 1}">
+                        <p class="desc-content">${property.description}</p>
+                    </div>
+                    <div class="text-center mt-2">
+                        <span class="toggle-btn text-blue-600 cursor-pointer text-sm inline-block" data-target="rental-desc-${index + 1}">See More...</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons Section -->
+            <div class="mt-auto pt-4 border-t border-gray-200 flex justify-between items-center gap-3">
+                <button onclick="openEnquiryForm({ propertyName: '${property.name}' })"
+                 class="bg-orange-500 cursor-pointer hover:bg-orange-600 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-colors duration-300">
+                    Schedule Visit
+                </button>
+                <a href="https://api.whatsapp.com/send?phone=917303062845" target="_blank" aria-label="Chat with us on WhatsApp" class="whatsapp-btn text-green-600 text-2xl">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+  `;
+}
+
 
 // Helper functions
 function setupToggleButtons() {
-  document.querySelectorAll(".description-container").forEach((container) => {
-    container.style.maxHeight = "80px"; // Initial collapsed state
-    container.style.overflow = "hidden";
-    container.style.transition = "max-height 0.3s ease";
+  // Initialize all description containers
+  const allContainers = document.querySelectorAll('.description-container');
+  allContainers.forEach((container) => {
+    container.style.maxHeight = '80px';
+    container.style.overflow = 'hidden';
+    container.style.transition = 'max-height 0.3s ease';
   });
-  // Set up toggle button functionality with independent card heights
-  document.querySelectorAll(".toggle-btn").forEach((btn) => {
-    btn.addEventListener("click", function () {
-      const targetId = this.getAttribute("data-target");
-      const descContainer = document.getElementById(targetId);
 
-      if (
-        descContainer.style.maxHeight === "80px" ||
-        descContainer.style.maxHeight === ""
-      ) {
-        descContainer.style.maxHeight = descContainer.scrollHeight + "px"; // Expand to content height
-        this.textContent = "See Less...";
+  // Set up toggle button functionality for both resale and rental cards
+  document.querySelectorAll('.toggle-btn').forEach((btn) => {
+    btn.addEventListener('click', function() {
+      const targetId = this.getAttribute('data-target');
+      const descContainer = document.getElementById(targetId);
+     
+      const card = this.closest('.resale-card, .rental-card');
+
+      if (descContainer.style.maxHeight === '80px' || descContainer.style.maxHeight === '') {
+        // Store original card height before expanding
+        const originalHeight = card.offsetHeight;
+        
+        // Temporarily remove transition for accurate height calculation
+        descContainer.style.transition = 'none';
+        descContainer.style.maxHeight = 'none';
+        const fullHeight = descContainer.scrollHeight;
+        descContainer.style.maxHeight = '80px';
+        
+        // Restore transition and set full height
+        setTimeout(() => {
+          descContainer.style.transition = 'max-height 0.3s ease';
+          descContainer.style.maxHeight = fullHeight + 'px';
+        }, 0);
+
+        this.textContent = 'See Less...';
       } else {
-        descContainer.style.maxHeight = "80px"; // Collapse back
-        this.textContent = "See More...";
+        descContainer.style.maxHeight = '80px';
+        this.textContent = 'See More...';
       }
     });
   });
@@ -351,34 +460,40 @@ function setupToggleButtons() {
 document.addEventListener("DOMContentLoaded", () => {
   // Identify containers by their IDs
   const newPropertiesContainer = document.getElementById("property-container");
-  const resalePropertiesContainer = document.getElementById(
-    "resale-property-container"
-  );
-  const serviceContainer = document.getElementById("service-container");
+ 
+const serviceContainer = document.getElementById("service-container");
 
   // Render primary property listings
-  if (newPropertiesContainer) {
-    newPropertiesContainer.innerHTML = properties
-      .map(createPropertyCard)
-      .join("");
-  }
+ if (newPropertiesContainer) {
+   newPropertiesContainer.innerHTML = properties
+     .map(createPropertyCard)
+     .join("");
+ }
 
-  // Render service cards
+ // Render service cards
   if (serviceContainer) {
     serviceContainer.innerHTML = services.map(createServiceCard).join("");
   }
 
   // Render resale property listings
+  const resalePropertiesContainer = document.getElementById("resale-property-container");
   if (resalePropertiesContainer) {
     resalePropertiesContainer.innerHTML = resaleProperties
       .map((property, index) => createResalePropertyCard(property, index))
       .join("");
-
-    // Setup toggle functionality for descriptions
-    setupToggleButtons();
   }
-});
 
+  // Render rental property listings
+  const rentalPropertiesContainer = document.getElementById("rental-property-container");
+  if (rentalPropertiesContainer) {
+    rentalPropertiesContainer.innerHTML = rentalProperties
+      .map((property, index) => createRentalPropertyCard(property, index))
+      .join("");
+  }
+
+  // Setup toggle functionality for all descriptions after both sections are rendered
+  setupToggleButtons();
+});
 // Testimonial javascript code
 const reviews = [
   {
