@@ -195,7 +195,7 @@ const rentalProperties = [
     image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/te2bvkg3exhnklg5tslz",
     altText: "Prestige Finsbury Park",
     name: "Prestige Finsbury Park",
-    description: "Available for Rent: <span class='font-bold'>Luxury 3 BHK apartment in Sobha Royal Pavilion, Hadosiddapura, Sarjapur Road.</span> Featuring <span class='font-bold'>2000 sq. ft.</span> of premium living space with modern amenities. Monthly rent: <span class='font-bold'>₹45,000</span>. Includes maintenance, 2 covered parking spots, and 24/7 security.",
+    description: "Prestige Finsbury Park Located in <span class='font-bold'>Bagalur, Bangalore,</span> Prestige Finsbury Park – Hyde offers <span class='font-bold'>ready-to-move</span>-in <span class='font-bold'> semi-furnished 2 & 3 BHK apartments,</span> available on rent with <span class='font-bold'> Price on Request.</span> Designed for modern urban living, these well-ventilated homes boast <span class='font-bold'>ambient sunlight, modular kitchens with chimneys, sliding wardrobes, and thoughtfully designed interiors.</span> With contemporary fittings and smart storage solutions, the residences promise comfort and convenience in every corner. Experience refined living in a vibrant community with excellent connectivity and lifestyle amenities.",
   },
   {
     image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
