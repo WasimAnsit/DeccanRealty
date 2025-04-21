@@ -80,18 +80,58 @@
 
 /* Resale card css */
 
+/* Update the rental card styles */
 .rental-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  height: fit-content !important;
   min-height: 550px;
 }
 
+/* Update description container styles */
 .description-container {
   position: relative;
   width: 100%;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
 }
 
 .desc-content {
   width: 100%;
+  height: auto;
+}
+
+/* Add these new styles */
+.rental-content-wrapper {
+  position: relative;
+  height: auto;
+  z-index: 1;
+}
+
+/* Update container styles */
+#rental-property-container {
+  display: grid;
+  align-items: start;
+  grid-auto-rows: unset;
+}
+
+/* Add these styles for smooth transitions */
+#reviewContent {
+  transition: opacity 0.3s ease-in-out;
+}
+
+#customerImage {
+  transition: all 0.3s ease-in-out;
+}
+
+.testimonial-section {
+  position: relative;
+}
+
+/* Optional: Add fade animation for smoother transitions */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in-out;
 }

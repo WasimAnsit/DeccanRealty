@@ -103,14 +103,6 @@ const services = [
 const resaleProperties = [
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
-    altText: "White Building",
-    name: "Sobha Royal Pavilion",
-    description:
-      "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
-  },
-  {
-    image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
     altText: "Modern Red Building",
     name: "Godrej Splendour",
@@ -119,19 +111,11 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
-    altText: "Colorful Residential Building",
-    name: "Godrej Park Retreat",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/qw0cnoas4nllfnms7lzo",
+    altText: "Birla Tisya",
+    name: "Birla Tisya",
     description:
-      "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
-    altText: "Modern Apartment Building",
-    name: "Godrej 24",
-    description:
-      "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
+      "Birla Tisya, located in the premium locale of <span class='font-bold'>Rajajinagar, Bangalore,</span> redefines luxury high-rise living with elegant <span class='font-bold'> 3 & 4 BHK apartments.</span> With <span class='font-bold'> Price on Request,</span> this under-construction project offers thoughtfully curated amenities for an elevated lifestyle.<span class='font-bold'> Possession begins December 2026 onwards,</span> blending modern comfort with prime connectivity. Discover a life of sophistication and convenience at Birla Tisya, where every detail is crafted to perfection.",
   },
   {
     image:
@@ -143,12 +127,41 @@ const resaleProperties = [
   },
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/zxsxo88cb6vkr6zs9evj",
-    altText: "Modern Red Building",
-    name: "Confident Orion",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/tzrpse4gevzzkqdsjfm2",
+    altText: "Prestiage City Eden Park",
+    name: "Prestige City Eden Park",
     description:
-      "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
+      "Prestige Eden Park at The Prestige City, Sarjapur, offers smartly designed <span class='font-bold'>1 & 2 BHK apartments </span> across <span class='font-bold'>9.7 acres.</span>  With  <span class='font-bold>Price on Request</span> this IGBC pre-certified project combines sustainable living with modern design. Homes feature <span class='font-bold'>spacious layouts, three balconies, and ample natural light.</span> Located in a well-connected neighborhood with excellent social infrastructure, Eden Park delivers comfort, style, and everyday convenience.",
   },
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
+    altText: "White Building",
+    name: "Sobha Royal Pavilion",
+    description:
+      "Sobha Royal Pavilion – Rajasthan-themed luxury apartments in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
+  },
+ 
+ 
+ 
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
+    altText: "Colorful Residential Building",
+    name: "Godrej Park Retreat",
+    description:
+      "Godrej Park Retreat, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span> offers a lifestyle that goes beyond expectations. This <span class='font-bold'>1 BHK</span>  residence comes with a <span class='font-bold'> Price on Request </span> clubhouse and over 50 lifestyle amenities, ensuring a luxurious living experience. With possession in June 2028, the project provides seamless connectivity and easy accessibility, keeping you well-connected to key destinations. Price available on request.",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
+    altText: "Modern Apartment Building",
+    name: "Godrej 24",
+    description:
+      "Godrej 24 Bangalore, located on <span class='font-bold'>Sarjapur Road, Bangalore,</span>  is designed for a 24-hour lifestyle, offering round-the-clock conveniences. With seamless connectivity to Whitefield, Electronic City, and major IT hubs, this prime location is a hotspot for professionals and investors. The area enjoys strong residential demand, enhanced by the upcoming Metro extension, new flyovers, Outer Ring Road, and Peripheral Ring Road, making it a highly sought-after investment destination. <span class='font-bold'>Price on request</span>  for interested buyers and investors.",
+  },
+ 
   {
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/i1gba3ykzhaswgeqpt3v",
@@ -157,6 +170,15 @@ const resaleProperties = [
     description:
       "Ahad Serenity, <span class='font-bold'>Sarjapur Road – Price on Request for 1, 2, 3 BHK Ready-to-Move Apartments.</span> Spanning 8 acres with 85% open space, this <span class='font-bold'> gated community</span> offers modern homes with <span class='font-bold'>vitrified & wooden flooring, premium fittings, and modular kitchens.</span>  Spanning 8 acres with 85% open space, this gated community offers modern homes with vitrified & wooden flooring, premium fittings, and modular kitchens.",
   },
+  {
+    image:
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/zxsxo88cb6vkr6zs9evj",
+    altText: "Modern Red Building",
+    name: "Confident Orion",
+    description:
+      "A ready-to-move <span class='font-bold'>3BHK duplex</span> in Confident Orion, <span class='font-bold'>Sarjapur Road, South Bangalore,</span> with  <span class='font-bold'>Price on Request</span> offers <span class='font-bold'>1800 sq. ft.</span> of premium living space. Featuring 3 bedrooms, <span class='font-bold'>3 bathrooms, 3+ balconies, a servant room, and an attached backyard garden, this fully furnished home includes a modular kitchen, wardrobes, marble flooring, geysers, and Jacuzzi.</span>",
+  },
+ 
   {
     image:
       "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/khdiqzb5rcskjqtbm7l9",
@@ -172,28 +194,28 @@ const resaleProperties = [
 // Rental properties data
 const rentalProperties = [
   {
-    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
-    altText: "sobha royal",
-    name: "Sobha Royal Pavilion",
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/te2bvkg3exhnklg5tslz",
+    altText: "Prestige Finsbury Park",
+    name: "Prestige Finsbury Park",
     description: "Available for Rent: <span class='font-bold'>Luxury 3 BHK apartment in Sobha Royal Pavilion, Hadosiddapura, Sarjapur Road.</span> Featuring <span class='font-bold'>2000 sq. ft.</span> of premium living space with modern amenities. Monthly rent: <span class='font-bold'>₹45,000</span>. Includes maintenance, 2 covered parking spots, and 24/7 security.",
   },
   {
-    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/sqiktbmv5o03fvnqbck7",
-    altText: "Modern Red Building",
-    name: "Godrej Splendour",
-    description: "For Rent: <span class='font-bold'>Spacious 2 BHK apartment in Godrej Splendour, Whitefield.</span> <span class='font-bold'>1200 sq. ft.</span> of well-designed space. Monthly rent: <span class='font-bold'>₹35,000</span>. Semi-furnished with modular kitchen, wardrobes, and premium amenities.",
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/rckt1yxcilk56kjggvn0",
+    altText: "Sobha Royal Pavilion, Sarjapur Road",
+    name: "Sobha Royal Pavilion",
+    description: "Sobha Royal Pavilion – Rajasthan-themed luxury apartment  s in <span class='font-bold'> Hadosiddapura, Sarjapur Road, Bangalore. Offering 2, 3 & 4 BHK homes </span> ranging from <span class='font-bold'>1300 to 2232.2 sq. ft.,</span> starting from  <span class='font-bold'>Price on Request.</span> A masterpiece of Rajput grandeur, SOBHA Royal Pavilion blends Rajasthani architectural brilliance with modern cosmopolitan elegance. Designed to reflect royal palatial living, this exquisite community offers world-class amenities, timeless luxury, and unmatched comfort, creating a lifestyle of sophistication and opulence.",
   },
   {
-    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/jsnhv0q4rlcaxuxdqz1f",
-    altText: "Colorful Residential Building",
-    name: "Godrej Park Retreat",
-    description: "Rental Available: <span class='font-bold'>Premium 4 BHK apartment in Godrej Park Retreat, Sarjapur Road.</span> Expansive <span class='font-bold'>2800 sq. ft.</span> living space. Monthly rent: <span class='font-bold'>₹65,000</span>. Fully furnished with high-end appliances and luxurious amenities.",
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/dqbgazwluq9hoxjcgxk7",
+    altText: "Prestige St Johns Wood",
+    name: "Prestige St Johns Wood",
+    description: "Prestige St. Johns Wood, located in <span class='font-bold'> Tavarekere, Bangalore,</span> offers premium rental living in one of South Bangalore’s well-connected neighborhoods. Surrounded by prime areas like <span class='font-bold'>BTM Layout and Maruthi Nagar,</span>  the project enjoys excellent access to <span class='font-bold'>metro stations </span> including BTM Layout and <span class='font-bold'>Jayadeva Interchange. With nearby schools, hospitals, markets, and malls, everyday conveniences are just minutes away.</span> Rental prices start from <span class='font-bold'> Price on Request,</span> making it ideal for a range of lifestyles. Enjoy urban comfort in a locality <span class='font-bold'>rated 4.3/5</span> for connectivity and  <span class='font-bold'>4.2/5</span> for safety.",
   },
   {
-    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/v4jrbibwzb30e34ue7l5",
-    altText: "Modern Apartment Building",
-    name: "Godrej 24",
-    description: "For Rent: <span class='font-bold'>Contemporary 3 BHK in Godrej 24, Sarjapur Road.</span> Features <span class='font-bold'>1800 sq. ft.</span> of modern living space. Monthly rent: <span class='font-bold'>₹40,000</span>. Semi-furnished with quality fittings and exclusive community amenities.",
+    image: "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/Rent/ezcfmxuyatsdsne1jezm",
+    altText: "Sobha Morzaria Grandeur",
+    name: "Sobha Morzaria Grandeur",
+    description: "Sobha Morzaria Grandeur, located at <span class='fnt-bold'>Dairy Circle, Bangalore,</span> offers spacious <span class='font-bold'>2,3 & 4 BHK rental </span> residences ideal for <span class='font-bold'>families and women</span> professionals. With thoughtfully designed homes featuring <span class='font-bold>pooja rooms, servant quarters, and generous balconies,</span> this semi-furnished project promises both comfort and functionality. <span class='font-bold'>Price on Request,</span> the project is well-connected via metro and major transport hubs like Majestic and KSR Railway Station. Surrounded by reputed schools, hospitals, and entertainment zones, Sobha Morzaria Grandeur stands out as a preferred choice in a locality rated 4.1/5 for connectivity and 3.7/5 for safety.",
   }
 ];
 
@@ -401,6 +423,7 @@ function setupToggleButtons() {
     btn.addEventListener('click', function() {
       const targetId = this.getAttribute('data-target');
       const descContainer = document.getElementById(targetId);
+     
       const card = this.closest('.resale-card, .rental-card');
 
       if (descContainer.style.maxHeight === '80px' || descContainer.style.maxHeight === '') {
