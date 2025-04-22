@@ -48,7 +48,7 @@ class EnquiryForm {
   <div class="flex flex-col lg:flex-row lg:items-center lg:gap-4 mt-4 ">
     <!-- reCAPTCHA -->
     <div class="flex flex-col justify-center items-center gap-1">
-      <div class="g-recaptcha" data-sitekey="6LcuYQErAAAAABipSbojJUMPXQaMSxRGqt_i-1jA"></div>
+      <div class="g-recaptcha" data-sitekey="6LeCZAErAAAAADhoXltw5EyaYL9tP1f2g42i_aej"></div>
       <small id="recaptcha-req-getintouch" class="hidden text-red-500 text-xs text-center block w-full mt-1">Please verify the reCAPTCHA</small>
     </div>
 
