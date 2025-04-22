@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>sample Page 2</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header class="bg-[#E8E8E8] text-black w-full relative">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Home">
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/mvkyoqagcwzy4cyb83gj" alt="Deccan Realty Logo" class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-2xl text-black mobile-menu-btn z-50" aria-label="Toggle Menu">☰</button>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black lg:font-bold">HOME</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">FAQ</a></li>
+        <li class="group border border-green-600 px-4 py-2 rounded-md transition hover:bg-[#008a46]">
+          <a href="homeloan.html" aria-label="Home Loan" class="font-medium text-lg text-black group-hover:text-[#ff7b2a] lg:font-bold">HOME LOAN</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Side Drawer Menu -->
+    <div class="side-drawer fixed top-0 right-0 h-full w-64 bg-[#237f51] z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+      <div class="flex justify-end p-4">
+        <button class="drawer-close text-white text-2xl" aria-label="Close Menu">✕</button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li class="w-full"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black lg:font-bold">Home</a></li>
+        <li class="w-full"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">About</a></li>
+        <li class="w-full"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">Contact</a></li>
+        <li class="w-full"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">FAQ</a></li>
+        <li class="w-full mt-4">
+          <a href="homeloan.html" aria-label="Home Loan" class="block text-lg font-medium py-2 px-3 border border-white rounded-md text-white hover:text-green-500 hover:bg-black transition">Home Loan</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative xl:h-[78vh] h-[80vh] min-h-[500px] w-full">
+    <!-- Background Image -->
+    <img 
+      src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr" 
+      srcset="
+        https://res.cloudinary.com/dzauu64ta/image/upload/w_300/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 300w,
+        https://res.cloudinary.com/dzauu64ta/image/upload/w_600/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 600w,
+        https://res.cloudinary.com/dzauu64ta/image/upload/w_900/v1/DeccanRealty/images/lts/spbn6t3yldwclq3s7shr 900w"
+      sizes="(max-width: 600px) 300px, (max-width: 900px) 600px, 900px"
+      alt="Deccan_Home_Page_image"
+      class="absolute top-0 left-0 w-full h-full object-cover z-0"
+      loading="eager"
+      fetchpriority="high">
+
+    <!-- Overlay with Gradient -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10"></div>
+
+    <!-- Content Container -->
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 z-20">
+      <h1 class="text-4xl md:text-4xl lg:text-5xl font-bold mb-5 transform transition duration-300 hover:scale-105 hover:text-[#b1923f]">
+        Discover beautifully designed homes in
+        <br>
+        <span class="mt-8 inline-block bg-[#4e3b1360] text-white rounded-2xl px-4 sm:px-5 py-3 sm:py-4 font-bold hover:text-[#b1923f]">
+          BANGALORE
+        </span>
+      </h1>
+
+      <p class="text-xl md:text-2xl lg:text-[20px] mb-8 transform transition duration-300 hover:scale-105 hover:text-[#b1923f] max-w-md sm:max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl font-semibold">
+        Start your property journey with us,
+        <br>
+        where dreams take shape into exceptional living spaces
+      </p>
+
+      <button 
+        id="moreinfobtn" 
+        onclick="openEnquiryForm()" 
+        class="bg-[#8a6c2c] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg text-base sm:text-lg md:text-lg lg:text-lg font-semibold cursor-pointer hover:bg-amber-600 transition duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+        More Info
+      </button>
+    </div>
+  </section>
+
+  <!-- SEO Content Section -->
+  <section class="bg-[#f7e1a1] py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-[#4e3b13] tracking-tight transform transition duration-300 hover:scale-105 hover:text-[#8a6c2c] shadow-md">
+        Put SEO Contents Here
+      </h2>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="bg-black text-white py-6 sm:py-8 px-4 sm:px-6 md:px-8 lg:px-12">
+    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 text-center font-semibold md:text-left">
+      <!-- Office Section -->
+      <div class="mb-8 sm:mb-10 px-4 sm:px-6 md:px-8">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4 sm:mb-6">Office</h3>
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+          <i class="fas fa-map-marker-alt text-[25px] sm:text-xl md:text-2xl"></i>
+          <a href="https://www.google.com/maps/search/?api=1&query=No+56%2F6,+6th+C+Main+Road,+4th+Block+East,+Jayanagar+Bangalore-560041" 
+             target="_blank" 
+             aria-label="View location on Google Maps"
+             class="not-italic inline-block">
+            No 56/6, 6th C Main Road<br> 4th Block, East Jayanagar <br> Bangalore-560041
+          </a>
+        </p>
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+          <a href="https://api.whatsapp.com/send?phone=917303062845" 
+             target="_blank" 
+             aria-label="Chat on WhatsApp" 
+             class="flex items-center gap-2">
+            <i class="fas fa-phone text-lg sm:text-xl md:text-2xl"></i> 
+            +91 73030 62845
+          </a>
+        </p>
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 sm:mb-6 text-xs sm:text-sm md:text-base">
+          <a href="https://api.whatsapp.com/send?phone=917718361550" 
+             target="_blank" 
+             aria-label="Chat on WhatsApp" 
+             class="flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg sm:text-xl md:text-2xl"></i> 
+            +91 97183 61550
+          </a>
+        </p>
+        <p class="flex items-center justify-center md:justify-start gap-3 sm:gap-4 mb-4 text-xs sm:text-sm md:text-base">
+          <a href="mailto:info@deccanrealty.com" 
+             aria-label="Send an email to info@deccanrealty.com" 
+             class="flex items-center gap-2">
+            <i class="fas fa-envelope text-lg sm:text-xl md:text-2xl"></i> 
+            info@deccanrealty.com
+          </a>
+        </p>
+      </div>
+
+      <!-- Quick Links Section -->
+      <div class="mb-8 sm:mb-0 px-4 sm:px-6 md:px-8">
+        <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-3 sm:space-y-4 font-semibold">
+          <li><a href="index.html" aria-label="Home" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Home</a></li>
+          <li><a href="about.html" aria-label="About" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">About</a></li>
+          <li><a href="contact.html" aria-label="Contact" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Contact</a></li>
+          <li><a href="faq.html" aria-label="FAQ" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">FAQ</a></li>
+          <li><a href="terms&condition.html" target="_blank" aria-label="Terms & Conditions" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Terms & Conditions</a></li>
+          <li><a href="privacypolicy.html" target="_blank" aria-label="Privacy Policy" class="text-white hover:text-gray-400 transition text-xs sm:text-sm md:text-base">Privacy Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Logo and Social Media Section -->
+      <div class="flex justify-center px-4 sm:px-6 md:px-8">
+        <div class="text-center">
+          <div class="mb-8 sm:mb-10">
+            <a href="index.html" class="logo-link" aria-label="Deccan Realty Home">
+              <img src="https://res.cloudinary.com/dzauu64ta/image/upload/v1742815527/DECCAN_REALTY_WHITE_LOGO_tqdoxy.png" alt="Deccan Realty Logo" class="w-28 sm:w-32 md:w-40 lg:w-48 mx-auto">
+            </a>
+            <div class="flex justify-center space-x-3 sm:space-x-4 mt-4">
+              <a href="https://www.youtube.com/@deccan-realty" 
+                 target="_blank" 
+                 aria-label="Visit our YouTube page" 
+                 class="text-white hover:text-gray-300">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class="text-red-600 fab fa-youtube text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                  <span class="sr-only">YouTube</span>
+                </div>
+              </a>
+              <a href="https://www.facebook.com/deccanrealty.in/" 
+                 target="_blank" 
+                 aria-label="Visit our Facebook page" 
+                 class="text-white hover:text-gray-300">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class="text-blue-600 fab fa-facebook-f text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                  <span class="sr-only">Facebook</span>
+                </div>
+              </a>
+              <a href="https://www.linkedin.com/company/deccan-realty/" 
+                 target="_blank" 
+                 aria-label="Visit our LinkedIn page" 
+                 class="text-white hover:text-gray-300">
+                <div class="w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center rounded-full bg-white">
+                  <i class="text-blue-600 fab fa-linkedin-in text-lg sm:text-xl md:text-2xl" aria-hidden="true"></i>
+                  <span class="sr-only">LinkedIn</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copyright Section -->
+    <div class="bg-black text-center font-semibold text-white text-xs sm:text-sm md:text-base lg:text-lg py-4">
+      Copyright ©2024-2025 DeccanRealty.com All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    // Header Functionality
+    // Highlight active page
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const desktopLinks = document.querySelectorAll(".nav-menu a");
+    const mobileLinks = document.querySelectorAll(".side-drawer a");
+
+    function setActive(link) {
+      const li = link.closest("li");
+      if (li && li.classList.contains("group")) {
+        li.classList.add("bg-[#b1923f]", "rounded-md");
+        link.classList.add("text-white", "px-3", "py-1");
+      } else {
+        link.classList.add("bg-[#b1923f]", "text-white", "rounded-md", "px-4", "py-2");
+      }
+    }
+
+    [...desktopLinks, ...mobileLinks].forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === currentPath) {
+        setActive(link);
+      }
+
+      link.addEventListener("click", () => {
+        [...desktopLinks, ...mobileLinks].forEach((l) => {
+          l.classList.remove("bg-[#b1923f]", "text-white", "rounded-md", "px-2", "py-1");
+          l.closest("li")?.classList.remove("bg-[#b1923f]", "rounded-md");
+        });
+        setActive(link);
+        toggleDrawer(false);
+      });
+    });
+
+    // Side drawer toggle functionality
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const sideDrawer = document.querySelector(".side-drawer");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".drawer-close");
+
+    function toggleDrawer(show) {
+      if (show) {
+        sideDrawer.classList.remove("translate-x-full");
+        overlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        mobileMenuBtn.textContent = "✕";
+      } else {
+        sideDrawer.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        mobileMenuBtn.textContent = "☰";
+      }
+    }
+
+    mobileMenuBtn.addEventListener("click", () => {
+      const isOpen = !sideDrawer.classList.contains("translate-x-full");
+      toggleDrawer(!isOpen);
+    });
+
+    closeBtn.addEventListener("click", () => {
+      toggleDrawer(false);
+    });
+
+    overlay.addEventListener("click", () => {
+      toggleDrawer(false);
+    });
+
+    // Close drawer on window resize if screen becomes larger
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) {
+        toggleDrawer(false);
+      }
+    });
+
+    // Hero Section Functionality
+    // Placeholder function for the enquiry form
+   
+  </script>
+</body>
+</html>

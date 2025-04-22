@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Header</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <header class="bg-[#E8E8E8] text-black w-full relative">
+    <div class="container mx-auto px-4 flex justify-between items-center py-4">
+      <!-- Logo -->
+      <div class="logo">
+        <a href="index.html" aria-label="Home">
+          <img src="https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/logos/mvkyoqagcwzy4cyb83gj" alt="Deccan Realty Logo" class="w-32 h-32 rounded-full md:w-36 md:h-36 lg:w-40 lg:h-40 object-contain">
+        </a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-2xl text-black mobile-menu-btn z-50" aria-label="Toggle Menu">☰</button>
+
+      <!-- Desktop Navigation -->
+      <ul class="nav-menu hidden md:flex items-center space-x-4 font-bold">
+        <li><a href="index.html" aria-label="Home" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-black lg:font-bold">HOME</a></li>
+        <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">ABOUT</a></li>
+        <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">CONTACT</a></li>
+        <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">FAQ</a></li>
+        <li class="group border border-green-600 px-4 py-2 rounded-md transition hover:bg-[#008a46]">
+          <a href="homeloan.html" aria-label="Home Loan" class="font-medium text-lg text-black group-hover:text-[#ff7b2a] lg:font-bold">HOME LOAN</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay fixed inset-0 bg-black bg-opacity-50 z-40 hidden"></div>
+
+    <!-- Side Drawer Menu -->
+    <div class="side-drawer fixed top-0 right-0 h-full w-64 bg-[#237f51] z-50 transform translate-x-full transition-transform duration-300 ease-in-out shadow-lg">
+      <div class="flex justify-end p-4">
+        <button class="drawer-close text-white text-2xl" aria-label="Close Menu">✕</button>
+      </div>
+      <ul class="flex flex-col space-y-4 p-4">
+        <li class="w-full"><a href="index.html" aria-label="Home" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black lg:font-bold">Home</a></li>
+        <li class="w-full"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">About</a></li>
+        <li class="w-full"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">Contact</a></li>
+        <li class="w-full"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">FAQ</a></li>
+        <li class="w-full mt-4">
+          <a href="homeloan.html" aria-label="Home Loan" class="block text-lg font-medium py-2 px-3 border border-white rounded-md text-white hover:text-green-500 hover:bg-black transition">Home Loan</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <script>
+    // Highlight active page
+    const currentPath = window.location.pathname.split("/").pop() || "index.html";
+    const desktopLinks = document.querySelectorAll(".nav-menu a");
+    const mobileLinks = document.querySelectorAll(".side-drawer a");
+
+    function setActive(link) {
+      const li = link.closest("li");
+      if (li && li.classList.contains("group")) {
+        li.classList.add("bg-[#b1923f]", "rounded-md");
+        link.classList.add("text-white", "px-3", "py-1");
+      } else {
+        link.classList.add("bg-[#b1923f]", "text-white", "rounded-md", "px-4", "py-2");
+      }
+    }
+
+    [...desktopLinks, ...mobileLinks].forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === currentPath) {
+        setActive(link);
+      }
+
+      link.addEventListener("click", () => {
+        [...desktopLinks, ...mobileLinks].forEach((l) => {
+          l.classList.remove("bg-[#b1923f]", "text-white", "rounded-md", "px-2", "py-1");
+          l.closest("li")?.classList.remove("bg-[#b1923f]", "rounded-md");
+        });
+        setActive(link);
+        toggleDrawer(false);
+      });
+    });
+
+    // Side drawer toggle functionality
+    const mobileMenuBtn = document.querySelector(".mobile-menu-btn");
+    const sideDrawer = document.querySelector(".side-drawer");
+    const overlay = document.querySelector(".overlay");
+    const closeBtn = document.querySelector(".drawer-close");
+
+    function toggleDrawer(show) {
+      if (show) {
+        sideDrawer.classList.remove("translate-x-full");
+        overlay.classList.remove("hidden");
+        document.body.style.overflow = "hidden";
+        mobileMenuBtn.textContent = "✕";
+      } else {
+        sideDrawer.classList.add("translate-x-full");
+        overlay.classList.add("hidden");
+        document.body.style.overflow = "";
+        mobileMenuBtn.textContent = "☰";
+      }
+    }
+
+    mobileMenuBtn.addEventListener("click", () => {
+      const isOpen = !sideDrawer.classList.contains("translate-x-full");
+      toggleDrawer(!isOpen);
+    });
+
+    closeBtn.addEventListener("click", () => {
+      toggleDrawer(false);
+    });
+
+    overlay.addEventListener("click", () => {
+      toggleDrawer(false);
+    });
+
+    // Close drawer on window resize if screen becomes larger
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) {
+        toggleDrawer(false);
+      }
+    });
+  </script>
+</body>
+</html>
