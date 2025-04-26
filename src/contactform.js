@@ -128,6 +128,7 @@ document.addEventListener("DOMContentLoaded", function () {
       email: document.getElementById("CUemail1").value.trim(),
       name: document.getElementById("CUname").value.trim(),
       phone: mobileInput.value.trim(),
+      domain: "deccanrealty.com",
     };
 
     try {

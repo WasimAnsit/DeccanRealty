@@ -262,6 +262,7 @@ class EnquiryForm {
       email: values.email || "No email provided",
       name: values.name,
       phone: values.phone,
+      domain: "deccanrealty.com",
     };
 
     console.log("Submitting payload:", payload);
