@@ -305,6 +305,9 @@
   .z-60 {
     z-index: 60;
   }
+  .z-1000000 {
+    z-index: 1000000;
+  }
   .order-1 {
     order: 1;
   }
@@ -776,6 +779,9 @@
     border-bottom-style: var(--tw-border-style);
     border-bottom-width: 2px;
   }
+  .border-\[\#008a46\] {
+    border-color: #008a46;
+  }
   .border-\[\#b1923f\] {
     border-color: #b1923f;
   }
@@ -817,6 +823,9 @@
   }
   .border-white\/20 {
     border-color: color-mix(in oklab, var(--color-white) 20%, transparent);
+  }
+  .border-t-transparent {
+    border-top-color: transparent;
   }
   .bg-\[\#1e40af\] {
     background-color: #1e40af;

@@ -141,12 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           const inputs = e.target.querySelectorAll('input');
           const otp = Array.from(inputs).map(input => input.value).join('');
-          if (/^\d{6}$/.test(otp)) {
-              alert('OTP verified successfully!');
-              window.hideModal();
-          } else {
-              alert('Please enter a valid 6-digit OTP');
-          }
+          
       }
   });
 });

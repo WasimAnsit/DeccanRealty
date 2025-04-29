@@ -61,7 +61,7 @@ function createSellerSignupForm() {
         <label for="terms" class="ml-2 block text-sm text-gray-900">I accept the terms and conditions</label>
       </div>
       <button type="submit" class="w-full bg-[#008a46] text-white py-2 px-4 rounded-md hover:bg-[#006d38] transition">
-        Submit
+        Continue
       </button>
     </form>
   `;
@@ -142,12 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
           e.preventDefault();
           const inputs = e.target.querySelectorAll('input');
           const otp = Array.from(inputs).map(input => input.value).join('');
-          if (/^\d{6}$/.test(otp)) {
-              alert('OTP verified successfully!');
-              window.hideModal();
-          } else {
-              alert('Please enter a valid 6-digit OTP');
-          }
+          
       }
   });
 });

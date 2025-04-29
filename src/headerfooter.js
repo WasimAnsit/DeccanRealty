@@ -50,6 +50,16 @@ function createHeader(container) {
         <li class="w-full"><a href="about.html" aria-label="About" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">About</a></li>
         <li class="w-full"><a href="contact.html" aria-label="Contact" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">Contact</a></li>
         <li class="w-full"><a href="faq.html" aria-label="FAQ" class="block text-lg font-medium py-3 px-3 rounded-md text-white hover:text-green-500 hover:bg-black">FAQ</a></li>
+         <li>
+          <button onclick="showLoginForm()" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">
+            LOGIN
+          </button>
+        </li>
+         <li>
+          <button onclick="showSellerSignupForm()" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">
+            LIST YOUR PROPERTY
+          </button>
+        </li>
         <li class="w-full mt-4">
           <a href="homeloan.html" 
              aria-label="HomeLoan" class="block text-lg font-medium py-2 px-3 border border-white rounded-md text-white hover:text-green-500 hover:bg-black transition">

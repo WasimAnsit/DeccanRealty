@@ -1,3 +1,16 @@
+let apiUrl = "https://mtestatesapi-f0bthnfwbtbxcecu.southindia-01.azurewebsites.net/";
+
+// Global loader functions
+window.showLoader = function() {
+  const loader = document.querySelector('#loader');
+  if (loader) loader.classList.remove('hidden');
+};
+
+window.hideLoader = function() {
+  const loader = document.querySelector('#loader');
+  if (loader) loader.classList.add('hidden');
+};
+
 function initializeAuthModal(container) {
   if (document.getElementById('auth-modal')) return;
   const modal = document.createElement('div');
@@ -11,6 +24,9 @@ function initializeAuthModal(container) {
         </svg>
       </button>
       <div id="form-container"></div>
+      <div id="loader" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-60">
+        <div class="animate-spin rounded-full h-12 w-12 border-4 border-[#008a46] border-t-transparent"></div>
+      </div>
     </div>
   `;
   container.appendChild(modal);
@@ -34,6 +50,7 @@ function initializeAuthModal(container) {
 function createLoginForm() {
   return `
     <h2 class="text-2xl font-bold mb-4 text-center text-[#008a46]">Login</h2>
+    <div id="error-message" class="hidden text-red-500 text-sm text-center mb-2"></div>
     <form id="login-form" class="space-y-4">
       <div>
         <label for="email" class="block text-sm font-medium text-gray-700">Enter your registered email</label>
@@ -41,7 +58,7 @@ function createLoginForm() {
                class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[#008a46] focus:border-[#008a46] sm:text-sm">
       </div>
       <button type="submit" class="w-full bg-[#008a46] text-white py-2 px-4 rounded-md hover:bg-[#006d38] transition">
-        Submit
+        Continue
       </button>
     </form>
     <p class="mt-4 text-center text-sm">
@@ -56,6 +73,7 @@ function createOtpForm(email) {
     <h2 class="text-2xl font-bold mb-4 text-center text-[#008a46]">Enter OTP</h2>
     <p class="text-sm text-gray-600 mb-4 text-center">A 6-digit OTP has been sent to ${email}</p>
     <div id="otp-warning" class="hidden text-red-500 text-sm text-center mb-2">Only numeric input is allowed</div>
+    <div id="error-message" class="hidden text-red-500 text-sm text-center mb-2"></div>
     <form id="otp-form" class="space-y-4">
       <div class="flex justify-between gap-2">
         ${[...Array(6)].map((_, i) => `
@@ -93,6 +111,82 @@ function handleKeydown(event, current, index) {
   }
 }
 
+function urlRedirection(token) {
+  if (token) {
+
+    window.location.href = `https://mtmtestatesapp-cjcxafhrgnenbydc.centralindia-01.azurewebsites.net/Redirecting/?tok=${token}`;
+  } else {
+    console.error('No token provided for redirection');
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = 'Failed to redirect: No token received';
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+  }
+}
+
+async function handleLogin(email) {
+  try {
+    window.showLoader();
+    const response = await fetch(`${apiUrl}/account/otp-verification`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+    const result = await response.json();
+   
+    if (result.success) {
+      window.showOtpForm(email);
+    } else {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = result.message || 'Failed to send OTP';
+      errorMessage.classList.remove('hidden');
+      setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+    }
+  } catch (error) {
+    console.error('Login API error:', error);
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = 'An error occurred. Please try again.';
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+  } finally {
+    window.hideLoader();
+  }
+}
+
+async function handleOtpVerification(email, otp) {
+  try {
+    window.showLoader();
+    const response = await fetch(`${apiUrl}/account/otp-verification`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, otp }),
+    });
+    const result = await response.json();
+    
+    if (result.success && result.data) {
+      window.hideModal();
+      urlRedirection(result.data);
+    } else {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = result.message || 'Invalid OTP';
+      errorMessage.classList.remove('hidden');
+      setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+    }
+  } catch (error) {
+    console.error('OTP verification API error:', error);
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = 'An error occurred. Please try again.';
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+  } finally {
+    window.hideLoader();
+  }
+}
+
 window.showLoginForm = function() {
   const container = document.getElementById('auth-modal-container') || document.body;
   initializeAuthModal(container);
@@ -103,31 +197,50 @@ window.showOtpForm = function(email) {
   window.showModal(createOtpForm(email));
 };
 
+// Use a single event listener to prevent multiple bindings
+let submitHandler = null;
+
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.getElementById('auth-modal-container') || document.body;
   initializeAuthModal(container);
 
-  document.addEventListener('submit', (e) => {
-      if (e.target.id === 'login-form') {
-          e.preventDefault();
-          const email = e.target.querySelector('#email').value;
-          if (validateEmail(email)) {
-              window.showOtpForm(email);
-          } else {
-              alert('Please enter a valid email address');
-          }
-      } else if (e.target.id === 'otp-form') {
-          e.preventDefault();
-          const inputs = e.target.querySelectorAll('input');
-          const otp = Array.from(inputs).map(input => input.value).join('');
-          if (/^\d{6}$/.test(otp)) {
-              alert('OTP verified successfully!');
-              window.hideModal();
-          } else {
-              alert('Please enter a valid 6-digit OTP');
-          }
+  // Remove any existing submit handler
+
+  if (submitHandler) {
+    document.removeEventListener('submit', submitHandler);
+  }
+
+  submitHandler = async (e) => {
+    e.preventDefault();
+    
+    if (e.target.id === 'login-form') {
+      const email = e.target.querySelector('#email').value;
+      if (validateEmail(email)) {
+        await handleLogin(email);
+      } else {
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = 'Please enter a valid email address';
+        errorMessage.classList.remove('hidden');
+        setTimeout(() => errorMessage.classList.add('hidden'), 3000);
       }
-  });
+    } else if (e.target.id === 'otp-form') {
+      const inputs = e.target.querySelectorAll('input');
+      const otp = Array.from(inputs).map(input => input.value).join('');
+      const emailElement = e.target.parentElement.querySelector('p');
+      const email = emailElement ? emailElement.textContent.match(/to (.+)$/)?.[1] : '';
+      
+      if (/^\d{6}$/.test(otp) && email) {
+        await handleOtpVerification(email, otp);
+      } else {
+        const errorMessage = document.getElementById('error-message');
+        errorMessage.textContent = 'Please enter a valid 6-digit OTP';
+        errorMessage.classList.remove('hidden');
+        setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+      }
+    }
+  };
+
+  document.addEventListener('submit', submitHandler);
 });
 
 function validateEmail(email) {
