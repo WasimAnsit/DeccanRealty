@@ -18,6 +18,16 @@ function createHeader(container) {
         <li><a href="about.html" aria-label="About" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">ABOUT</a></li>
         <li><a href="contact.html" aria-label="Contact" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">CONTACT</a></li>
         <li><a href="faq.html" aria-label="FAQ" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">FAQ</a></li>
+        <li>
+          <button onclick="showLoginForm()" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">
+            LOGIN
+          </button>
+        </li>
+         <li>
+          <button onclick="showSellerSignupForm()" class="font-medium text-lg px-3 py-1 rounded-md transition text-black hover:text-[#008a46] lg:font-bold">
+            LIST YOUR PROPERTY
+          </button>
+        </li>
         <li class="group border border-[green] px-4 py-2 rounded-md transition hover:bg-[#008a46]">
           <a href="homeloan.html" 
              aria-label="HomeLoan" 
