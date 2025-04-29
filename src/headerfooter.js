@@ -1,5 +1,4 @@
 // Function to create the Header
-// Function to create the Header
 function createHeader(container) {
   const header = document.createElement("header");
   header.className = "bg-[#E8E8E8] text-black w-full relative";
