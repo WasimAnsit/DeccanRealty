@@ -113,7 +113,6 @@ function handleKeydown(event, current, index) {
 
 function urlRedirection(token) {
   if (token) {
-
     window.location.href = `https://mtmtestatesapp-cjcxafhrgnenbydc.centralindia-01.azurewebsites.net/Redirecting/?tok=${token}`;
   } else {
     console.error('No token provided for redirection');
@@ -124,8 +123,52 @@ function urlRedirection(token) {
   }
 }
 
+async function handleCheckEmail(email) {
+  try {
+    window.showLoader();
+    
+    // Construct query parameters
+    const queryParams = new URLSearchParams({
+      email: email,
+      web: "DeccanRealty.in"
+    });
+    // Send GET request with query parameters
+    const response = await fetch(`${apiUrl}/account/check-email?${queryParams.toString()}`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+
+    const result = await response.json();
+    if (result.success && result.message === "Data Found") {
+      return true;
+    } else {
+      const errorMessage = document.getElementById('error-message');
+      errorMessage.textContent = result.message || 'Email not registered';
+      errorMessage.classList.remove('hidden');
+      setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+      return false;
+    }
+  } catch (error) {
+    console.error('Check email API error:', error);
+    const errorMessage = document.getElementById('error-message');
+    errorMessage.textContent = 'An error occurred while checking email. Please try again.';
+    errorMessage.classList.remove('hidden');
+    setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+    return false;
+  } finally {
+    window.hideLoader();
+  }
+}
+
+
 async function handleLogin(email) {
   try {
+    // First check if email exists
+    const emailExists = await handleCheckEmail(email);
+    if (!emailExists) return;
+
     window.showLoader();
     const response = await fetch(`${apiUrl}/account/otp-verification`, {
       method: 'POST',
@@ -205,7 +248,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initializeAuthModal(container);
 
   // Remove any existing submit handler
-
   if (submitHandler) {
     document.removeEventListener('submit', submitHandler);
   }
