@@ -1,3 +1,4 @@
+const hmctoken ='e74e1523bfaf582757ca621fd6166361a1df604b3c6369383f313fba83baceac'
 class EnquiryForm {
   constructor() {
     this.elements = this.createForm();
@@ -269,10 +270,11 @@ class EnquiryForm {
 
     try {
       const response = await fetch(
-        "https://dncrnewapi-bmbfb6f6awd8b0bd.westindia-01.azurewebsites.net/properties/GetInTouch",
+        "https://mtestatesapi-f0bthnfwbtbxcecu.southindia-01.azurewebsites.net/properties/GetInTouch",
         {
           method: "POST",
-          headers: { "Content-Type": "application/json" },
+          headers: { "Content-Type": "application/json",  'Authorization': 'Bearer ' + hmctoken, },
+
           body: JSON.stringify(payload),
         }
       );
