@@ -181,7 +181,7 @@ const resaleProperties = [
  
   {
     image:
-      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/khdiqzb5rcskjqtbm7l9",
+      "https://res.cloudinary.com/dzauu64ta/image/upload/f_auto,q_auto/v1/DeccanRealty/images/propertycardimages/ResalePropertyimg/ocvstqhyosu1n0xla3po",
     altText: "Modern Apartment Building",
     name: "Suavity Otium",
     description:
