@@ -274,7 +274,7 @@ header {
 
 /* Contact Section */
 .contact-section {
-    background: linear-gradient(135deg, #09898A, #0231319c);
+    background: linear-gradient(135deg, #8a6c2caf, #8a6c2caf);
     color: #fff;
     padding: 2rem;
     border-radius: 12px;
@@ -334,17 +334,17 @@ header {
 
 .call-button {
     background-color: #fff;
-    color: #1e90ff;
+    color: #8a6c2c;
 }
 
 .sms-button {
     background-color: #fff;
-    color: #6c757d;
+    color: #8a6c2c;
 }
 
 .whatsapp-button {
     background-color: #fff;
-    color: #25D366;
+    color: #8a6c2c;
 }
 
 .powered-by {
@@ -362,7 +362,7 @@ header {
 
 /* Footer */
 footer {
-    background: linear-gradient(135deg, #09898A, #0231319c);
+    background: linear-gradient(135deg, #8a6c2caf, #8a6c2caf);
     color: #fff;
     padding: 2rem;
     text-align: center;
@@ -460,7 +460,7 @@ footer {
     }
 
     .nav-links a.active {
-        background-color: #1e90ff;
+        background-color: #8a6c2c;
         color: #fff;
     }
 
